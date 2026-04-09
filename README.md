@@ -1,36 +1,113 @@
-## SoftREPA trained on paired COCO dataset (118K imgs)
-- Deepfashion dataset (25K imgs)
-![alt text](Architecture.png)
-![alt text](Scoring_Module.png)
+# SoftREPA Project Notes
+
+## 1. Project Overview
+SoftREPA is trained with paired COCO data and DeepFashion data.
+
+- Paired COCO dataset: 118K images
+- DeepFashion dataset: 25K images
+
+![Architecture](Architecture.png)
+![Scoring Module](Scoring_Module.png)
+
+SoftREPA also uses Diffusion-DPO (Direct Preference Optimization for Diffusion) and DDPO (Denoising Diffusion Policy Optimization).
+
+![Diffusion DPO](image.png)
+
+$$
+\mathcal{L}_{DPO}(\theta; \theta_{\text{ref}}) = -\mathbb{E}_{(x_w, x_l, c)} \left[ \log \sigma \left( \beta \cdot (\text{err}(x_l, \theta) - \text{err}(x_l, \theta_{\text{ref}})) - \beta \cdot (\text{err}(x_w, \theta) - \text{err}(x_w, \theta_{\text{ref}})) \right) \right]
+$$
+
+![DPO Diagram 1](image-1.png)
+![DPO Diagram 2](image-2.png)
 
 
-## SoftREPA also used Diffusion-DPO(Direct Preference Optimization for Diffusion), DDPO (Denoising Diffusion Policy Optimization)
-![alt text](image.png)
-
-$$\mathcal{L}_{DPO}(\theta; \theta_{\text{ref}}) = -\mathbb{E}_{(x_w, x_l, c)} \left[ \log \sigma \left( \beta \cdot (\text{err}(x_l, \theta) - \text{err}(x_l, \theta_{\text{ref}})) - \beta \cdot (\text{err}(x_w, \theta) - \text{err}(x_w, \theta_{\text{ref}})) \right) \right]$$
-![alt text](image-1.png)
-
-![alt text](image-2.png)
-
-
-## SoftREPA Reward function
+## 2. Reward Function
 - Reward model selection
-![alt text](image-3.png)
+![Reward Model Selection](image-3.png)
+
 - Reward score
-![alt text](image-4.png)
-- mean(Reward score)
-![alt text](image-5.png)
+![Reward Score](image-4.png)
+
+- Mean reward score
+![Mean Reward Score](image-5.png)
 
 
-##  angle condition
-- yaw > 40 | yaw < -40 (turn his/her head to his/her left/right over the shoulder)
-- yaw > 20 | yaw < -20 (turn his/her head to his/her left/right)
-- yaw < 20 & yaw > -20 (face forward)
-- pitch > 10 (look up)
-- pitch < -10 (look down)
+## 3. Data Path
+- DeepFashion training data:
+    - /media/ee303/4TB/DeepFashion_Training_Final
 
 
-## 預計測量比較:
-- 設定15種posture prompt，比較不同T2I model(PhotoMaker v2, UniProtrait, PuLID等)
-- 評估指標: CLIP, DINO, HPS, ImageReward, FID(SoftREPA用COCO-val 1K), LPIPS, Latency 
+## 4. Pose Pipeline (Yaw/Pitch)
+### 4.1 Predict yaw and pitch
+- Script:
+    - ./sam-3d-body/infer_v2.py
+- Output CSV:
+    - ./sam3-body/sam3_results.csv
 
+### 4.2 Angle rules
+- yaw > 40 or yaw < -40: turn head left/right over shoulder
+- yaw > 20 or yaw < -20: turn head left/right
+- -20 < yaw < 20: face forward
+- pitch > 10: look up
+- pitch < -10: look down
+
+### 4.3 Map angles to posture prompts
+- Script:
+    - ./sam3-body/label.py
+
+
+## 5. Prepare and Train T2I
+### 5.1 Prepare training data
+- Script:
+    - ./SoftREPA/prepare_training_data_from_csv.py
+- Output:
+    - ./sam3-body/sam3_labeded_training/deepfashion
+
+### 5.2 Train model
+- Script:
+    - ./SoftREPA/run_train_single_gpu.sh
+- Output:
+    - ./SoftREPA/data/deepfashion
+
+
+## 6. Inference
+### 6.1 SoftREPA T2I
+```bash
+python sample.py \
+    --model sd3 --use_dc --use_dc_t True \
+    --n_dc_tokens 4 --n_dc_layers 5 \
+    --img_size 1024 \
+    --NFE 28 --cfg_scale 4 \
+    --load_dir "tokens/sd3" \
+    --save_dir "generated/SoftREPA" \
+    --datadir "./Generic_prompts"  # or Posture_prompts
+```
+
+### 6.2 Lumina T2I
+```bash
+python Lumina_inference.py \
+    --input /media/ee303/4TB/SoftREPA/Posture_prompts/pose_prompts.jsonl \
+    --output_dir generated/lumina/PP
+```
+
+## 7. Visualization
+- Use show_image.py to visualize generated images in a grid format.
+```bash
+python show_image.py -f generated/SoftREPA -c 15 
+python show_image.py -f generated/lumina/PP -c 15
+```
+
+## 8. Planned Benchmark
+- Use 15 posture prompts to compare multiple T2I models (PhotoMaker v2, UniPortrait, PuLID, etc.)
+- Metrics:
+    - CLIP
+    - DINO
+    - HPS
+    - ImageReward
+    - FID (SoftREPA uses COCO-val 1K)
+    - LPIPS
+    - Latency
+
+## 9. Runtime Reference
+- Lumina: 13 seconds
+- SoftREPA: 4 seconds
