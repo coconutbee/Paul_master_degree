@@ -8,3 +8,5 @@ __pycache__
 *.DS_Store
 *.yaml
 *all*
+generated_jsonl_ramdon
+generated_jsonl

@@ -60,10 +60,9 @@ class EncodedDataset(Dataset):
 
 
 def get_target_dataset(name: str, datadir, train=False, transform=None):
-    if name == 'coco':
-        # import ipdb; ipdb.set_trace();
-        datapath = os.path.join(datadir, 'coco', 'train2017') if train else os.path.join(datadir, 'coco', 'val2017')
-        annpath = os.path.join(datadir, 'coco', 'annotations', 'captions_train2017.json') if train else os.path.join(datadir, 'coco', 'annotations', 'captions_val2017.json')
+    if name in ('coco', 'deepfashion'):
+        datapath = os.path.join(datadir, name, 'train2017') if train else os.path.join(datadir, name, 'val2017')
+        annpath = os.path.join(datadir, name, 'annotations', 'captions_train2017.json') if train else os.path.join(datadir, name, 'annotations', 'captions_val2017.json')
         dataset = COCODataset(root=datapath, train=train, annFile=annpath, transform=transform,)
     else:
         raise ValueError(f"Dataset {name} not supported.")

@@ -2,6 +2,7 @@ import argparse
 import csv
 import numpy as np
 import random, os
+import glob
 import re
 import time
 import torch
@@ -76,6 +77,24 @@ def sanitize_filename(name: str, max_len: int = 120) -> str:
     return cleaned[:max_len] if cleaned else 'empty_prompt'
 
 
+def resolve_token_path(load_dir: str, stem: str) -> str:
+    preferred = os.path.join(load_dir, f'{stem}.pth')
+    if os.path.isfile(preferred):
+        return preferred
+
+    candidates = glob.glob(os.path.join(load_dir, f'{stem}_*.pth'))
+    if not candidates:
+        raise FileNotFoundError(f'Cannot find {stem}.pth or {stem}_*.pth under: {load_dir}')
+
+    def extract_index(path: str) -> int:
+        name = os.path.basename(path)
+        match = re.search(rf'^{re.escape(stem)}_(\d+)\.pth$', name)
+        return int(match.group(1)) if match else -1
+
+    candidates.sort(key=extract_index)
+    return candidates[-1]
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     # sampling config
@@ -124,9 +143,30 @@ if __name__ == '__main__':
     
     # load tokens
     if args.load_dir is not None:
-        sampler.denoiser.dc_tokens = torch.load(os.path.join(args.load_dir, f'dc_tokens.pth'), map_location='cuda', weights_only=True)
+        dc_path = resolve_token_path(args.load_dir, 'dc_tokens')
+        dc_tokens = torch.load(dc_path, map_location='cpu', weights_only=False)
+
+        dc_t_tokens = None
         if args.use_dc_t:
-            sampler.denoiser.dc_t_prompts = torch.load(os.path.join(args.load_dir, f'dc_t_tokens.pth'), map_location='cuda', weights_only=False)
+            dc_t_path = resolve_token_path(args.load_dir, 'dc_t_tokens')
+            dc_t_tokens = torch.load(dc_t_path, map_location='cpu', weights_only=False)
+
+        # Align checkpoint tensors to model parameter device/dtype before initialize_dc.
+        dc_tokens = dc_tokens.to(
+            device=sampler.denoiser.dc_tokens.device,
+            dtype=sampler.denoiser.dc_tokens.dtype,
+        )
+        if dc_t_tokens is not None:
+            dc_t_tokens = dc_t_tokens.to(
+                device=sampler.denoiser.dc_t_tokens.weight.device,
+                dtype=sampler.denoiser.dc_t_tokens.weight.dtype,
+            )
+
+        # initialize_dc casts token dtype to match model dtype/device and avoids float/half mismatch.
+        sampler.initialize_dc(dc_tokens, dc_t_tokens)
+        print(f'Loaded dc tokens from: {dc_path}')
+        if args.use_dc_t:
+            print(f'Loaded dc_t tokens from: {dc_t_path}')
     
     # sample set
     if args.dataset is not None:
@@ -200,6 +240,16 @@ if __name__ == '__main__':
             elif os.path.exists(jsonl_path):
                 prompt_file_path = jsonl_path
                 prompt_file_type = 'jsonl'
+            else:
+                # Fallback: auto-detect the first prompt file in the directory.
+                jsonl_candidates = sorted(glob.glob(os.path.join(args.datadir, '*.jsonl')))
+                csv_candidates = sorted(glob.glob(os.path.join(args.datadir, '*.csv')))
+                if jsonl_candidates:
+                    prompt_file_path = jsonl_candidates[0]
+                    prompt_file_type = 'jsonl'
+                elif csv_candidates:
+                    prompt_file_path = csv_candidates[0]
+                    prompt_file_type = 'csv'
 
         if args.prompt == "" and prompt_file_path is not None and os.path.exists(prompt_file_path):
             prompts = []

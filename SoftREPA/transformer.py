@@ -7,6 +7,32 @@ import torch
 import torch.nn as nn
 
 
+def _coerce_to_tensor(value, name: str) -> torch.Tensor:
+    if value is None:
+        raise TypeError(f"{name} is None")
+
+    if torch.is_tensor(value):
+        return value
+
+    if isinstance(value, nn.Parameter):
+        return value.data
+
+    if isinstance(value, nn.Embedding):
+        return value.weight.data
+
+    if isinstance(value, dict):
+        # Support both direct weights and module state_dict formats.
+        for key in ("weight", "dc_tokens", "dc_tokens.weight", "dc_t_tokens", "dc_t_tokens.weight"):
+            item = value.get(key)
+            if torch.is_tensor(item):
+                return item
+
+    if hasattr(value, "weight") and torch.is_tensor(getattr(value, "weight")):
+        return value.weight.data
+
+    raise TypeError(f"{name} must be a Tensor/Parameter/Embedding/state_dict, got {type(value).__name__}")
+
+
 class SD3Transformer2DModel_DC(nn.Module):
     def __init__(self, base_model, n_dc_tokens:int=8, use_dc_t=True, n_dc_layers:int=6): #check
         super().__init__()
@@ -39,9 +65,14 @@ class SD3Transformer2DModel_DC(nn.Module):
         return self
     
     def initialize_dc(self, dc_tokens, dc_t_tokens=None):
-        self.dc_tokens.data = dc_tokens.type(self.dc_tokens.data.dtype)
+        dc_tokens = _coerce_to_tensor(dc_tokens, "dc_tokens")
+        self.dc_tokens.data = dc_tokens.to(device=self.dc_tokens.device, dtype=self.dc_tokens.dtype)
         if dc_t_tokens is not None:
-            self.dc_t_tokens.weight.data = dc_t_tokens.type(self.dc_tokens.data.dtype)
+            dc_t_tokens = _coerce_to_tensor(dc_t_tokens, "dc_t_tokens")
+            self.dc_t_tokens.weight.data = dc_t_tokens.to(
+                device=self.dc_t_tokens.weight.device,
+                dtype=self.dc_t_tokens.weight.dtype,
+            )
     
     def forward(
         self,
@@ -109,6 +140,10 @@ class SD3Transformer2DModel_DC(nn.Module):
             if dc_tokens and index_block<self.n_dc_layers: #check
                 dc1 = self.dc_tokens[index_block].expand(encoder_hidden_states.shape[0], -1, -1)
                 if dc1.shape[-1] == 4096:
+                    dc1 = dc1.to(
+                        device=self.base_model.context_embedder.weight.device,
+                        dtype=self.base_model.context_embedder.weight.dtype,
+                    )
                     dc1 = self.base_model.context_embedder(dc1)
                 if self.use_dc_t:
                     dc2 = dctemb[index_block].unsqueeze(1).expand(-1, self.n_dc_tokens, -1)
@@ -194,9 +229,14 @@ class UNet2DConditionModel_DC(nn.Module):
         '''
 
     def initialize_dc(self, dc_tokens, dc_t_tokens=None):
-        self.dc_tokens.data = dc_tokens.type(self.dc_tokens.data.dtype)
+        dc_tokens = _coerce_to_tensor(dc_tokens, "dc_tokens")
+        self.dc_tokens.data = dc_tokens.to(device=self.dc_tokens.device, dtype=self.dc_tokens.dtype)
         if dc_t_tokens is not None:
-            self.dc_t_tokens.weight.data = dc_t_tokens
+            dc_t_tokens = _coerce_to_tensor(dc_t_tokens, "dc_t_tokens")
+            self.dc_t_tokens.weight.data = dc_t_tokens.to(
+                device=self.dc_t_tokens.weight.device,
+                dtype=self.dc_t_tokens.weight.dtype,
+            )
 
     def to(self, device):
         super().to(device)
@@ -445,9 +485,14 @@ class UNet2DConditionModel_DC3(nn.Module):
             nn.init.normal_(self.dc_t_tokens.weight, mean=0, std=0.02)
 
     def initialize_dc(self, dc_tokens, dc_t_tokens=None):
-        self.dc_tokens.data = dc_tokens.type(self.dc_tokens.data.dtype)
+        dc_tokens = _coerce_to_tensor(dc_tokens, "dc_tokens")
+        self.dc_tokens.data = dc_tokens.to(device=self.dc_tokens.device, dtype=self.dc_tokens.dtype)
         if dc_t_tokens is not None:
-            self.dc_t_tokens.weight.data = dc_t_tokens
+            dc_t_tokens = _coerce_to_tensor(dc_t_tokens, "dc_t_tokens")
+            self.dc_t_tokens.weight.data = dc_t_tokens.to(
+                device=self.dc_t_tokens.weight.device,
+                dtype=self.dc_t_tokens.weight.dtype,
+            )
 
     def to(self, device):
         super().to(device)
