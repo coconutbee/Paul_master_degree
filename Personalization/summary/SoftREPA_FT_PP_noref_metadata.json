@@ -1,0 +1,5814 @@
+[
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a boy head facing forward straight..jpg",
+        "prompt": "head and shoulders portrait, photography, a boy head facing forward straight.",
+        "gt_expression": "confuse",
+        "gt_gender": "Male",
+        "gt_pose": "Frontal",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Head_Turn_Left",
+        "ref_pose": "Frontal",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 21.13437453668216,
+        "t2i_head_pitch": -4.834714087118069,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her left",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.3,
+        "t2i_scenario_reasoning": "- Extracted Context: head and shoulders portrait, photography, a boy head facing forward straight.\n- Visual Evidence: The image shows a head and shoulders portrait of a person facing slightly to the side, not directly forward.\n- Match Score: 0.3",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2353,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.7309,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.7558
+            ],
+            [
+                "and",
+                0.5648
+            ],
+            [
+                "shoulders",
+                0.7727
+            ],
+            [
+                "portrait",
+                0.7793
+            ],
+            [
+                ",",
+                0.6159
+            ],
+            [
+                "photography",
+                0.8471
+            ],
+            [
+                ",",
+                0.631
+            ],
+            [
+                "a",
+                0.4469
+            ],
+            [
+                "boy",
+                0.2555
+            ],
+            [
+                "head",
+                0.705
+            ],
+            [
+                "facing",
+                0.5551
+            ],
+            [
+                "forward",
+                0.6079
+            ],
+            [
+                "straight",
+                0.6459
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a boy head tilted down..jpg",
+        "prompt": "head and shoulders portrait, photography, a boy head tilted down.",
+        "gt_expression": "others",
+        "gt_gender": "Male",
+        "gt_pose": "Frontal",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Head_Turn_Right",
+        "ref_pose": "Frontal",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -21.06123495046672,
+        "t2i_head_pitch": -5.158315612698196,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her right",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.3,
+        "t2i_scenario_reasoning": "- Extracted Context: head and shoulders portrait, photography, a boy head tilted down.\n- Visual Evidence: The image shows a head and shoulders portrait of a person, but the person appears to be a young woman, not a boy. The head is not tilted down.\n- Match Score: 0.3",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2477,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.4537,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.7096
+            ],
+            [
+                "and",
+                0.4921
+            ],
+            [
+                "shoulders",
+                0.8124
+            ],
+            [
+                "portrait",
+                0.7757
+            ],
+            [
+                ",",
+                0.5796
+            ],
+            [
+                "photography",
+                0.8471
+            ],
+            [
+                ",",
+                0.6044
+            ],
+            [
+                "a",
+                0.4061
+            ],
+            [
+                "boy",
+                0.147
+            ],
+            [
+                "head",
+                0.604
+            ],
+            [
+                "tilted",
+                0.4081
+            ],
+            [
+                "down",
+                0.3784
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a boy head tilted up..jpg",
+        "prompt": "head and shoulders portrait, photography, a boy head tilted up.",
+        "gt_expression": "others",
+        "gt_gender": "Male",
+        "gt_pose": "Frontal",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Frontal",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 0.22577632584173674,
+        "t2i_head_pitch": -9.664195129098047,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head facing forward straight",
+        "pose_match": 1,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.8,
+        "t2i_scenario_reasoning": "- Extracted Context: head and shoulders portrait, photography, a boy head tilted up.\n- Visual Evidence: The image shows a head and shoulders portrait of two individuals. The boy on the left is facing forward, while the girl on the right has her head tilted slightly to the side.\n- Match Score: 0.8",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2903,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 2.2076,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.7154
+            ],
+            [
+                "and",
+                0.5663
+            ],
+            [
+                "shoulders",
+                0.7512
+            ],
+            [
+                "portrait",
+                0.7587
+            ],
+            [
+                ",",
+                0.5891
+            ],
+            [
+                "photography",
+                0.8447
+            ],
+            [
+                ",",
+                0.639
+            ],
+            [
+                "a",
+                0.4155
+            ],
+            [
+                "boy",
+                0.2758
+            ],
+            [
+                "head",
+                0.5767
+            ],
+            [
+                "tilted",
+                0.2869
+            ],
+            [
+                "up",
+                0.2819
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a boy head turned to his left and tilted down..jpg",
+        "prompt": "head and shoulders portrait, photography, a boy head turned to his left and tilted down.",
+        "gt_expression": "others",
+        "gt_gender": "Male",
+        "gt_pose": "Head_Turn_Left",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Head_Turn_Left",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -12.849778759008148,
+        "t2i_head_pitch": -12.28812150862715,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head tilted down",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.5,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a boy head turned to his left and tilted down\"\n- Visual Evidence: The image shows a boy facing slightly to his left, but his head is not tilted down; it is upright.\n- Match Score: 0.5",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.257,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.5557,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.7882
+            ],
+            [
+                "and",
+                0.6094
+            ],
+            [
+                "shoulders",
+                0.7382
+            ],
+            [
+                "portrait",
+                0.7626
+            ],
+            [
+                ",",
+                0.6668
+            ],
+            [
+                "photography",
+                0.8595
+            ],
+            [
+                ",",
+                0.6466
+            ],
+            [
+                "a",
+                0.4628
+            ],
+            [
+                "boy",
+                0.5347
+            ],
+            [
+                "head",
+                0.7768
+            ],
+            [
+                "turned",
+                0.5544
+            ],
+            [
+                "to",
+                0.5318
+            ],
+            [
+                "his",
+                0.5321
+            ],
+            [
+                "left",
+                0.4493
+            ],
+            [
+                "and",
+                0.5286
+            ],
+            [
+                "tilted",
+                0.4162
+            ],
+            [
+                "down",
+                0.3736
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a boy head turned to his left and tilted up..jpg",
+        "prompt": "head and shoulders portrait, photography, a boy head turned to his left and tilted up.",
+        "gt_expression": "others",
+        "gt_gender": "Male",
+        "gt_pose": "Head_Turn_Left",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Head_Turn_Left",
+        "ref_pose": "Head_Turn_Left",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 29.28793310277274,
+        "t2i_head_pitch": -13.174160898289571,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her left and tilted down",
+        "pose_match": 1,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.5,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a boy head turned to his left and tilted up\"\n- Visual Evidence: The boy is facing forward with his head slightly tilted up, but not turned to his left.\n- Match Score: 0.5",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2881,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 3.222,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.8589
+            ],
+            [
+                "and",
+                0.7604
+            ],
+            [
+                "shoulders",
+                0.851
+            ],
+            [
+                "portrait",
+                0.8899
+            ],
+            [
+                ",",
+                0.773
+            ],
+            [
+                "photography",
+                0.9039
+            ],
+            [
+                ",",
+                0.7285
+            ],
+            [
+                "a",
+                0.6413
+            ],
+            [
+                "boy",
+                0.7583
+            ],
+            [
+                "head",
+                0.8525
+            ],
+            [
+                "turned",
+                0.6198
+            ],
+            [
+                "to",
+                0.6575
+            ],
+            [
+                "his",
+                0.6547
+            ],
+            [
+                "left",
+                0.5759
+            ],
+            [
+                "and",
+                0.6912
+            ],
+            [
+                "tilted",
+                0.6153
+            ],
+            [
+                "up",
+                0.6381
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a boy head turned to his left over the shoulder and tilted down..jpg",
+        "prompt": "head and shoulders portrait, photography, a boy head turned to his left over the shoulder and tilted down.",
+        "gt_expression": "others",
+        "gt_gender": "Male",
+        "gt_pose": "Back_Over_Shoulder",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Head_Turn_Right",
+        "ref_pose": "Back_Over_Shoulder",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -23.052962685709655,
+        "t2i_head_pitch": -21.98485028813228,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her right and tilted down",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.5,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a boy head turned to his left over the shoulder and tilted down\"\n- Visual Evidence: The image shows a boy facing forward with his head slightly tilted down, but not turned to his left over the shoulder.\n- Match Score: 0.5",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2843,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 3.2926,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.8669
+            ],
+            [
+                "and",
+                0.7444
+            ],
+            [
+                "shoulders",
+                0.8636
+            ],
+            [
+                "portrait",
+                0.8945
+            ],
+            [
+                ",",
+                0.7626
+            ],
+            [
+                "photography",
+                0.8929
+            ],
+            [
+                ",",
+                0.7265
+            ],
+            [
+                "a",
+                0.605
+            ],
+            [
+                "boy",
+                0.6533
+            ],
+            [
+                "head",
+                0.8711
+            ],
+            [
+                "turned",
+                0.6856
+            ],
+            [
+                "to",
+                0.5988
+            ],
+            [
+                "his",
+                0.6302
+            ],
+            [
+                "left",
+                0.5295
+            ],
+            [
+                "over",
+                0.4173
+            ],
+            [
+                "the",
+                0.6422
+            ],
+            [
+                "shoulder",
+                0.654
+            ],
+            [
+                "and",
+                0.6267
+            ],
+            [
+                "tilted",
+                0.5737
+            ],
+            [
+                "down",
+                0.5354
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a boy head turned to his left over the shoulder and tilted up..jpg",
+        "prompt": "head and shoulders portrait, photography, a boy head turned to his left over the shoulder and tilted up.",
+        "gt_expression": "others",
+        "gt_gender": "Male",
+        "gt_pose": "Back_Over_Shoulder",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Back_Over_Shoulder",
+        "ref_pose": "Back_Over_Shoulder",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 48.02282390867981,
+        "t2i_head_pitch": 11.116527647740703,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her left over the shoulder and tilted up",
+        "pose_match": 1,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.0,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a boy head turned to his left over the shoulder and tilted up\"\n- Visual Evidence: The image shows a person who appears to be a young woman, not a boy, with her head turned slightly to her left and tilted up.\n- Match Score: 0.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2345,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 2.4063,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.7102
+            ],
+            [
+                "and",
+                0.5035
+            ],
+            [
+                "shoulders",
+                0.8125
+            ],
+            [
+                "portrait",
+                0.7808
+            ],
+            [
+                ",",
+                0.5087
+            ],
+            [
+                "photography",
+                0.8622
+            ],
+            [
+                ",",
+                0.5331
+            ],
+            [
+                "a",
+                0.2874
+            ],
+            [
+                "boy",
+                0.127
+            ],
+            [
+                "head",
+                0.6438
+            ],
+            [
+                "turned",
+                0.5218
+            ],
+            [
+                "to",
+                0.4034
+            ],
+            [
+                "his",
+                0.2269
+            ],
+            [
+                "left",
+                0.5066
+            ],
+            [
+                "over",
+                0.4436
+            ],
+            [
+                "the",
+                0.4242
+            ],
+            [
+                "shoulder",
+                0.657
+            ],
+            [
+                "and",
+                0.3694
+            ],
+            [
+                "tilted",
+                0.5412
+            ],
+            [
+                "up",
+                0.5099
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a boy head turned to his left over the shoulder..jpg",
+        "prompt": "head and shoulders portrait, photography, a boy head turned to his left over the shoulder.",
+        "gt_expression": "others",
+        "gt_gender": "Male",
+        "gt_pose": "Back_Over_Shoulder",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Back_Over_Shoulder",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 1.095365259850544,
+        "t2i_head_pitch": -16.452961815871433,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head tilted down",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.9,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a boy head turned to his left over the shoulder\"\n- Visual Evidence: The image shows two individuals standing side by side. The person on the right has their head turned slightly to the left, which matches the description of \"a boy head turned to his left over the shoulder.\"\n- Match Score: 0.9",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2447,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.9191,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.8007
+            ],
+            [
+                "and",
+                0.6189
+            ],
+            [
+                "shoulders",
+                0.7803
+            ],
+            [
+                "portrait",
+                0.8302
+            ],
+            [
+                ",",
+                0.6947
+            ],
+            [
+                "photography",
+                0.8744
+            ],
+            [
+                ",",
+                0.6755
+            ],
+            [
+                "a",
+                0.4953
+            ],
+            [
+                "boy",
+                0.5518
+            ],
+            [
+                "head",
+                0.7924
+            ],
+            [
+                "turned",
+                0.48
+            ],
+            [
+                "to",
+                0.4445
+            ],
+            [
+                "his",
+                0.5429
+            ],
+            [
+                "left",
+                0.4297
+            ],
+            [
+                "over",
+                0.3356
+            ],
+            [
+                "the",
+                0.5383
+            ],
+            [
+                "shoulder",
+                0.4996
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a boy head turned to his left..jpg",
+        "prompt": "head and shoulders portrait, photography, a boy head turned to his left.",
+        "gt_expression": "others",
+        "gt_gender": "Male",
+        "gt_pose": "Head_Turn_Left",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Back_Over_Shoulder",
+        "ref_pose": "Head_Turn_Left",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -47.890176653600584,
+        "t2i_head_pitch": -16.121932751856406,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her right over the shoulder and tilted down",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.3,
+        "t2i_scenario_reasoning": "- Extracted Context: head and shoulders portrait, photography, a boy head turned to his left.\n- Visual Evidence: The image shows a head and shoulders portrait of a person with long hair, turned slightly to the left. The person appears to be a young woman, not a boy.\n- Match Score: 0.3",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2334,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.6513,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.7898
+            ],
+            [
+                "and",
+                0.5977
+            ],
+            [
+                "shoulders",
+                0.8236
+            ],
+            [
+                "portrait",
+                0.8109
+            ],
+            [
+                ",",
+                0.5597
+            ],
+            [
+                "photography",
+                0.8639
+            ],
+            [
+                ",",
+                0.573
+            ],
+            [
+                "a",
+                0.3631
+            ],
+            [
+                "boy",
+                0.1795
+            ],
+            [
+                "head",
+                0.7488
+            ],
+            [
+                "turned",
+                0.5363
+            ],
+            [
+                "to",
+                0.5115
+            ],
+            [
+                "his",
+                0.3749
+            ],
+            [
+                "left",
+                0.5074
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a boy head turned to his right and tilted down..jpg",
+        "prompt": "head and shoulders portrait, photography, a boy head turned to his right and tilted down.",
+        "gt_expression": "others",
+        "gt_gender": "Male",
+        "gt_pose": "Head_Turn_Right",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Head_Turn_Right",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 19.089607921043992,
+        "t2i_head_pitch": 11.694491441552948,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head tilted up",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.5,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a boy head turned to his right and tilted down\"\n- Visual Evidence: The image shows a boy looking to his right, but his head is not tilted down.\n- Match Score: 0.5",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2844,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.6837,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.8609
+            ],
+            [
+                "and",
+                0.7368
+            ],
+            [
+                "shoulders",
+                0.8652
+            ],
+            [
+                "portrait",
+                0.8695
+            ],
+            [
+                ",",
+                0.7254
+            ],
+            [
+                "photography",
+                0.8787
+            ],
+            [
+                ",",
+                0.7252
+            ],
+            [
+                "a",
+                0.5945
+            ],
+            [
+                "boy",
+                0.6314
+            ],
+            [
+                "head",
+                0.8609
+            ],
+            [
+                "turned",
+                0.6589
+            ],
+            [
+                "to",
+                0.655
+            ],
+            [
+                "his",
+                0.6827
+            ],
+            [
+                "right",
+                0.5995
+            ],
+            [
+                "and",
+                0.6634
+            ],
+            [
+                "tilted",
+                0.6126
+            ],
+            [
+                "down",
+                0.4162
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a boy head turned to his right and tilted up..jpg",
+        "prompt": "head and shoulders portrait, photography, a boy head turned to his right and tilted up.",
+        "gt_expression": "others",
+        "gt_gender": "Male",
+        "gt_pose": "Head_Turn_Right",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Head_Turn_Right",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -16.405295019592437,
+        "t2i_head_pitch": 9.434371554470877,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head facing forward straight",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.7,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a boy head turned to his right and tilted up\"\n- Visual Evidence: The boy is facing slightly to his right, but his head is not tilted up.\n- Match Score: 0.7",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2664,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.9591,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.8366
+            ],
+            [
+                "and",
+                0.7434
+            ],
+            [
+                "shoulders",
+                0.8451
+            ],
+            [
+                "portrait",
+                0.8682
+            ],
+            [
+                ",",
+                0.7644
+            ],
+            [
+                "photography",
+                0.8956
+            ],
+            [
+                ",",
+                0.7331
+            ],
+            [
+                "a",
+                0.6223
+            ],
+            [
+                "boy",
+                0.6572
+            ],
+            [
+                "head",
+                0.8289
+            ],
+            [
+                "turned",
+                0.6149
+            ],
+            [
+                "to",
+                0.6352
+            ],
+            [
+                "his",
+                0.6656
+            ],
+            [
+                "right",
+                0.573
+            ],
+            [
+                "and",
+                0.657
+            ],
+            [
+                "tilted",
+                0.6255
+            ],
+            [
+                "up",
+                0.651
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a boy head turned to his right over the shoulder and tilted down..jpg",
+        "prompt": "head and shoulders portrait, photography, a boy head turned to his right over the shoulder and tilted down.",
+        "gt_expression": "others",
+        "gt_gender": "Male",
+        "gt_pose": "Back_Over_Shoulder",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Back_Over_Shoulder",
+        "ref_pose": "Back_Over_Shoulder",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 59.18770794470204,
+        "t2i_head_pitch": 28.322287615277506,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her left over the shoulder and tilted up",
+        "pose_match": 1,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.9,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a boy head turned to his right over the shoulder and tilted down\"\n- Visual Evidence: The image shows a boy turned to his right, with his head slightly tilted down.\n- Match Score: 0.9",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2783,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 2.8724,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.7927
+            ],
+            [
+                "and",
+                0.7125
+            ],
+            [
+                "shoulders",
+                0.8612
+            ],
+            [
+                "portrait",
+                0.8186
+            ],
+            [
+                ",",
+                0.7367
+            ],
+            [
+                "photography",
+                0.8638
+            ],
+            [
+                ",",
+                0.7152
+            ],
+            [
+                "a",
+                0.594
+            ],
+            [
+                "boy",
+                0.6851
+            ],
+            [
+                "head",
+                0.8003
+            ],
+            [
+                "turned",
+                0.6934
+            ],
+            [
+                "to",
+                0.5895
+            ],
+            [
+                "his",
+                0.6122
+            ],
+            [
+                "right",
+                0.5437
+            ],
+            [
+                "over",
+                0.5222
+            ],
+            [
+                "the",
+                0.6433
+            ],
+            [
+                "shoulder",
+                0.7491
+            ],
+            [
+                "and",
+                0.6091
+            ],
+            [
+                "tilted",
+                0.5974
+            ],
+            [
+                "down",
+                0.5712
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a boy head turned to his right over the shoulder and tilted up..jpg",
+        "prompt": "head and shoulders portrait, photography, a boy head turned to his right over the shoulder and tilted up.",
+        "gt_expression": "others",
+        "gt_gender": "Male",
+        "gt_pose": "Back_Over_Shoulder",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Back_Over_Shoulder",
+        "ref_pose": "Back_Over_Shoulder",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -83.07509068728055,
+        "t2i_head_pitch": -17.055585712438457,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her right over the shoulder and tilted down",
+        "pose_match": 1,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.5,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a boy head turned to his right over the shoulder and tilted up\"\n- Visual Evidence: The image shows a person (appears to be a girl) turned to her right with her head tilted up slightly. However, the description specifies \"a boy,\" which does not match the visual evidence.\n- Match Score: 0.5",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.241,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 2.1995,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.6535
+            ],
+            [
+                "and",
+                0.4518
+            ],
+            [
+                "shoulders",
+                0.7841
+            ],
+            [
+                "portrait",
+                0.7397
+            ],
+            [
+                ",",
+                0.4315
+            ],
+            [
+                "photography",
+                0.8315
+            ],
+            [
+                ",",
+                0.4546
+            ],
+            [
+                "a",
+                0.2262
+            ],
+            [
+                "boy",
+                0.068
+            ],
+            [
+                "head",
+                0.4881
+            ],
+            [
+                "turned",
+                0.4422
+            ],
+            [
+                "to",
+                0.3182
+            ],
+            [
+                "his",
+                0.1634
+            ],
+            [
+                "right",
+                0.4378
+            ],
+            [
+                "over",
+                0.377
+            ],
+            [
+                "the",
+                0.3413
+            ],
+            [
+                "shoulder",
+                0.6015
+            ],
+            [
+                "and",
+                0.3016
+            ],
+            [
+                "tilted",
+                0.4984
+            ],
+            [
+                "up",
+                0.4843
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a boy head turned to his right over the shoulder..jpg",
+        "prompt": "head and shoulders portrait, photography, a boy head turned to his right over the shoulder.",
+        "gt_expression": "others",
+        "gt_gender": "Male",
+        "gt_pose": "Back_Over_Shoulder",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Back_Over_Shoulder",
+        "ref_pose": "Back_Over_Shoulder",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 82.5369659100839,
+        "t2i_head_pitch": -17.03668551775617,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her left over the shoulder and tilted down",
+        "pose_match": 1,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.3,
+        "t2i_scenario_reasoning": "- Extracted Context: head and shoulders portrait, photography, a boy head turned to his right over the shoulder.\n- Visual Evidence: The image shows a head and shoulders portrait of a person with long hair, turned slightly to the side. The person appears to be a girl, not a boy as described.\n- Match Score: 0.3",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2343,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 2.2372,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.6913
+            ],
+            [
+                "and",
+                0.4551
+            ],
+            [
+                "shoulders",
+                0.8034
+            ],
+            [
+                "portrait",
+                0.7349
+            ],
+            [
+                ",",
+                0.432
+            ],
+            [
+                "photography",
+                0.8381
+            ],
+            [
+                ",",
+                0.4332
+            ],
+            [
+                "a",
+                0.1928
+            ],
+            [
+                "boy",
+                0.042
+            ],
+            [
+                "head",
+                0.5057
+            ],
+            [
+                "turned",
+                0.3393
+            ],
+            [
+                "to",
+                0.2243
+            ],
+            [
+                "his",
+                0.1485
+            ],
+            [
+                "right",
+                0.3935
+            ],
+            [
+                "over",
+                0.2938
+            ],
+            [
+                "the",
+                0.2828
+            ],
+            [
+                "shoulder",
+                0.4496
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a boy head turned to his right..jpg",
+        "prompt": "head and shoulders portrait, photography, a boy head turned to his right.",
+        "gt_expression": "others",
+        "gt_gender": "Male",
+        "gt_pose": "Head_Turn_Right",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Head_Turn_Right",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 1.5218463842786263,
+        "t2i_head_pitch": -7.063312040073647,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head facing forward straight",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.5,
+        "t2i_scenario_reasoning": "- Extracted Context: head and shoulders portrait, photography, a boy head turned to his right.\n- Visual Evidence: The image shows a head and shoulders portrait of a boy facing forward, not turned to his right.\n- Match Score: 0.5",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2989,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.9704,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.8507
+            ],
+            [
+                "and",
+                0.7136
+            ],
+            [
+                "shoulders",
+                0.8202
+            ],
+            [
+                "portrait",
+                0.8541
+            ],
+            [
+                ",",
+                0.7157
+            ],
+            [
+                "photography",
+                0.872
+            ],
+            [
+                ",",
+                0.6982
+            ],
+            [
+                "a",
+                0.5615
+            ],
+            [
+                "boy",
+                0.5757
+            ],
+            [
+                "head",
+                0.8318
+            ],
+            [
+                "turned",
+                0.4684
+            ],
+            [
+                "to",
+                0.5463
+            ],
+            [
+                "his",
+                0.5767
+            ],
+            [
+                "right",
+                0.5158
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a girl head facing forward straight..jpg",
+        "prompt": "head and shoulders portrait, photography, a girl head facing forward straight.",
+        "gt_expression": "confuse",
+        "gt_gender": "Female",
+        "gt_pose": "Frontal",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Frontal",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 19.334968983580154,
+        "t2i_head_pitch": -22.560744641084398,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head tilted down",
+        "pose_match": 1,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: head and shoulders portrait, photography, a girl head facing forward straight.\n- Visual Evidence: The image shows a head and shoulders portrait of a girl facing forward straight. She is wearing a white dress and has blonde hair.\n- Match Score: 1.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2694,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 3.1916,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.7818
+            ],
+            [
+                "and",
+                0.6258
+            ],
+            [
+                "shoulders",
+                0.8164
+            ],
+            [
+                "portrait",
+                0.8163
+            ],
+            [
+                ",",
+                0.7555
+            ],
+            [
+                "photography",
+                0.8564
+            ],
+            [
+                ",",
+                0.7186
+            ],
+            [
+                "a",
+                0.6026
+            ],
+            [
+                "girl",
+                0.6224
+            ],
+            [
+                "head",
+                0.7575
+            ],
+            [
+                "facing",
+                0.5739
+            ],
+            [
+                "forward",
+                0.6219
+            ],
+            [
+                "straight",
+                0.6583
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a girl head tilted down..jpg",
+        "prompt": "head and shoulders portrait, photography, a girl head tilted down.",
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Frontal",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Head_Turn_Left",
+        "ref_pose": "Frontal",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 32.10982005877756,
+        "t2i_head_pitch": -3.000256185422689,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her left",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.5,
+        "t2i_scenario_reasoning": "- Extracted Context: head and shoulders portrait, photography, a girl head tilted down.\n- Visual Evidence: The image shows a head and shoulders portrait of a girl. However, her head is not tilted down as described; it appears to be facing forward.\n- Match Score: 0.5",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2915,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.6778,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.7898
+            ],
+            [
+                "and",
+                0.5806
+            ],
+            [
+                "shoulders",
+                0.8202
+            ],
+            [
+                "portrait",
+                0.814
+            ],
+            [
+                ",",
+                0.7356
+            ],
+            [
+                "photography",
+                0.8618
+            ],
+            [
+                ",",
+                0.7159
+            ],
+            [
+                "a",
+                0.5957
+            ],
+            [
+                "girl",
+                0.5867
+            ],
+            [
+                "head",
+                0.7277
+            ],
+            [
+                "tilted",
+                0.4503
+            ],
+            [
+                "down",
+                0.3692
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a girl head tilted up..jpg",
+        "prompt": "head and shoulders portrait, photography, a girl head tilted up.",
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Frontal",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Back_Over_Shoulder",
+        "ref_pose": "Frontal",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -50.66866432225342,
+        "t2i_head_pitch": 2.6732984457725344,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her right over the shoulder",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.5,
+        "t2i_scenario_reasoning": "- Extracted Context: head and shoulders portrait, photography, a girl head tilted up.\n- Visual Evidence: The image shows a head and shoulders portrait of a girl. However, the girl's head is not tilted up; it is facing forward.\n- Match Score: 0.5",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2394,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.2897,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.6515
+            ],
+            [
+                "and",
+                0.4995
+            ],
+            [
+                "shoulders",
+                0.6407
+            ],
+            [
+                "portrait",
+                0.6489
+            ],
+            [
+                ",",
+                0.6364
+            ],
+            [
+                "photography",
+                0.7701
+            ],
+            [
+                ",",
+                0.6199
+            ],
+            [
+                "a",
+                0.5208
+            ],
+            [
+                "girl",
+                0.4697
+            ],
+            [
+                "head",
+                0.5801
+            ],
+            [
+                "tilted",
+                0.3693
+            ],
+            [
+                "up",
+                0.3562
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a girl head turned to her left and tilted down..jpg",
+        "prompt": "head and shoulders portrait, photography, a girl head turned to her left and tilted down.",
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Head_Turn_Left",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Head_Turn_Left",
+        "ref_pose": "Head_Turn_Left",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 31.607082304504345,
+        "t2i_head_pitch": -12.239008653623529,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her left and tilted down",
+        "pose_match": 1,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.6,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a girl head turned to her left and tilted down\"\n- Visual Evidence: The girl in the image is facing slightly to her left, but her head is not tilted down; it is more level with her shoulders.\n- Match Score: 0.6",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2565,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 2.4754,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.6932
+            ],
+            [
+                "and",
+                0.4919
+            ],
+            [
+                "shoulders",
+                0.7163
+            ],
+            [
+                "portrait",
+                0.6786
+            ],
+            [
+                ",",
+                0.6098
+            ],
+            [
+                "photography",
+                0.8471
+            ],
+            [
+                ",",
+                0.5912
+            ],
+            [
+                "a",
+                0.4302
+            ],
+            [
+                "girl",
+                0.5051
+            ],
+            [
+                "head",
+                0.676
+            ],
+            [
+                "turned",
+                0.4419
+            ],
+            [
+                "to",
+                0.4537
+            ],
+            [
+                "her",
+                0.5164
+            ],
+            [
+                "left",
+                0.4156
+            ],
+            [
+                "and",
+                0.4587
+            ],
+            [
+                "tilted",
+                0.3766
+            ],
+            [
+                "down",
+                0.3642
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a girl head turned to her left and tilted up..jpg",
+        "prompt": "head and shoulders portrait, photography, a girl head turned to her left and tilted up.",
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Head_Turn_Left",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Head_Turn_Left",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 18.732067002787502,
+        "t2i_head_pitch": -2.9143695798272304,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head facing forward straight",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.9,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a girl head turned to her left and tilted up\"\n- Visual Evidence: The image shows a girl with her head turned slightly to her left and tilted upwards. Her hair is flowing to the sides, which matches the description.\n- Match Score: 0.9",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2969,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 3.2328,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.8533
+            ],
+            [
+                "and",
+                0.7117
+            ],
+            [
+                "shoulders",
+                0.851
+            ],
+            [
+                "portrait",
+                0.8444
+            ],
+            [
+                ",",
+                0.7416
+            ],
+            [
+                "photography",
+                0.9084
+            ],
+            [
+                ",",
+                0.7282
+            ],
+            [
+                "a",
+                0.659
+            ],
+            [
+                "girl",
+                0.682
+            ],
+            [
+                "head",
+                0.8488
+            ],
+            [
+                "turned",
+                0.5904
+            ],
+            [
+                "to",
+                0.6257
+            ],
+            [
+                "her",
+                0.6768
+            ],
+            [
+                "left",
+                0.5383
+            ],
+            [
+                "and",
+                0.6277
+            ],
+            [
+                "tilted",
+                0.6296
+            ],
+            [
+                "up",
+                0.6652
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a girl head turned to her left over the shoulder and tilted down..jpg",
+        "prompt": "head and shoulders portrait, photography, a girl head turned to her left over the shoulder and tilted down.",
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Back_Over_Shoulder",
+        "ref_pose": "Back_Over_Shoulder",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -75.82361933323288,
+        "t2i_head_pitch": -78.63362602471021,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her right over the shoulder and tilted down",
+        "pose_match": 1,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.7,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a girl head turned to her left over the shoulder and tilted down\"\n- Visual Evidence: The girl is facing slightly to her left with her head turned over her shoulder, but her head is not tilted down.\n- Match Score: 0.7",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2854,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 3.2159,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.8507
+            ],
+            [
+                "and",
+                0.7273
+            ],
+            [
+                "shoulders",
+                0.8891
+            ],
+            [
+                "portrait",
+                0.8811
+            ],
+            [
+                ",",
+                0.7847
+            ],
+            [
+                "photography",
+                0.9164
+            ],
+            [
+                ",",
+                0.7373
+            ],
+            [
+                "a",
+                0.648
+            ],
+            [
+                "girl",
+                0.6573
+            ],
+            [
+                "head",
+                0.8252
+            ],
+            [
+                "turned",
+                0.604
+            ],
+            [
+                "to",
+                0.5889
+            ],
+            [
+                "her",
+                0.6686
+            ],
+            [
+                "left",
+                0.549
+            ],
+            [
+                "over",
+                0.5345
+            ],
+            [
+                "the",
+                0.6862
+            ],
+            [
+                "shoulder",
+                0.8056
+            ],
+            [
+                "and",
+                0.6227
+            ],
+            [
+                "tilted",
+                0.6207
+            ],
+            [
+                "down",
+                0.6497
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a girl head turned to her left over the shoulder and tilted up..jpg",
+        "prompt": "head and shoulders portrait, photography, a girl head turned to her left over the shoulder and tilted up.",
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Back_Over_Shoulder",
+        "ref_pose": "Back_Over_Shoulder",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 80.43049863976017,
+        "t2i_head_pitch": 9.241538292221087,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her left over the shoulder",
+        "pose_match": 1,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a girl head turned to her left over the shoulder and tilted up\"\n- Visual Evidence: The image shows a girl facing slightly to her left with her head turned over her shoulder and tilted up.\n- Match Score: 1.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2595,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 3.3947,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.8546
+            ],
+            [
+                "and",
+                0.7294
+            ],
+            [
+                "shoulders",
+                0.8801
+            ],
+            [
+                "portrait",
+                0.8638
+            ],
+            [
+                ",",
+                0.7752
+            ],
+            [
+                "photography",
+                0.8946
+            ],
+            [
+                ",",
+                0.7517
+            ],
+            [
+                "a",
+                0.6608
+            ],
+            [
+                "girl",
+                0.6913
+            ],
+            [
+                "head",
+                0.852
+            ],
+            [
+                "turned",
+                0.6468
+            ],
+            [
+                "to",
+                0.5969
+            ],
+            [
+                "her",
+                0.6854
+            ],
+            [
+                "left",
+                0.5575
+            ],
+            [
+                "over",
+                0.5363
+            ],
+            [
+                "the",
+                0.6932
+            ],
+            [
+                "shoulder",
+                0.7995
+            ],
+            [
+                "and",
+                0.6363
+            ],
+            [
+                "tilted",
+                0.6264
+            ],
+            [
+                "up",
+                0.619
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a girl head turned to her left over the shoulder..jpg",
+        "prompt": "head and shoulders portrait, photography, a girl head turned to her left over the shoulder.",
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Back_Over_Shoulder",
+        "ref_pose": "Back_Over_Shoulder",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -74.86082920537962,
+        "t2i_head_pitch": 13.758344426306394,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her right over the shoulder and tilted up",
+        "pose_match": 1,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a girl head turned to her left over the shoulder\"\n- Visual Evidence: The image shows a girl with her head turned slightly to her left, showing her profile while looking over her shoulder.\n- Match Score: 1.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2772,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 3.4858,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.8213
+            ],
+            [
+                "and",
+                0.708
+            ],
+            [
+                "shoulders",
+                0.869
+            ],
+            [
+                "portrait",
+                0.8566
+            ],
+            [
+                ",",
+                0.7848
+            ],
+            [
+                "photography",
+                0.9043
+            ],
+            [
+                ",",
+                0.7392
+            ],
+            [
+                "a",
+                0.6503
+            ],
+            [
+                "girl",
+                0.6681
+            ],
+            [
+                "head",
+                0.7896
+            ],
+            [
+                "turned",
+                0.5916
+            ],
+            [
+                "to",
+                0.5253
+            ],
+            [
+                "her",
+                0.6631
+            ],
+            [
+                "left",
+                0.5239
+            ],
+            [
+                "over",
+                0.4975
+            ],
+            [
+                "the",
+                0.6626
+            ],
+            [
+                "shoulder",
+                0.7458
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a girl head turned to her left..jpg",
+        "prompt": "head and shoulders portrait, photography, a girl head turned to her left.",
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Head_Turn_Left",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Head_Turn_Left",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -3.0210566975020874,
+        "t2i_head_pitch": -5.9532259761130675,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head facing forward straight",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: head and shoulders portrait, photography, a girl head turned to her left.\n- Visual Evidence: The image shows a head and shoulders portrait of a girl. Her head is turned slightly to her left, matching the description.\n- Match Score: 1.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2746,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.3713,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.7259
+            ],
+            [
+                "and",
+                0.4778
+            ],
+            [
+                "shoulders",
+                0.7058
+            ],
+            [
+                "portrait",
+                0.6096
+            ],
+            [
+                ",",
+                0.599
+            ],
+            [
+                "photography",
+                0.8024
+            ],
+            [
+                ",",
+                0.5571
+            ],
+            [
+                "a",
+                0.4779
+            ],
+            [
+                "girl",
+                0.4835
+            ],
+            [
+                "head",
+                0.7019
+            ],
+            [
+                "turned",
+                0.3673
+            ],
+            [
+                "to",
+                0.3574
+            ],
+            [
+                "her",
+                0.494
+            ],
+            [
+                "left",
+                0.2938
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a girl head turned to her right and tilted down..jpg",
+        "prompt": "head and shoulders portrait, photography, a girl head turned to her right and tilted down.",
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Head_Turn_Right",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Head_Turn_Right",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 2.067886581636126,
+        "t2i_head_pitch": -22.919589891780745,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head tilted down",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.7,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a girl head turned to her right and tilted down\"\n- Visual Evidence: The girl is facing forward with her head slightly tilted to her right, but not tilted down.\n- Match Score: 0.7",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2903,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.6753,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.7624
+            ],
+            [
+                "and",
+                0.4817
+            ],
+            [
+                "shoulders",
+                0.7581
+            ],
+            [
+                "portrait",
+                0.7765
+            ],
+            [
+                ",",
+                0.6505
+            ],
+            [
+                "photography",
+                0.8523
+            ],
+            [
+                ",",
+                0.6237
+            ],
+            [
+                "a",
+                0.4975
+            ],
+            [
+                "girl",
+                0.5395
+            ],
+            [
+                "head",
+                0.7401
+            ],
+            [
+                "turned",
+                0.4292
+            ],
+            [
+                "to",
+                0.4663
+            ],
+            [
+                "her",
+                0.5285
+            ],
+            [
+                "right",
+                0.3728
+            ],
+            [
+                "and",
+                0.4786
+            ],
+            [
+                "tilted",
+                0.3894
+            ],
+            [
+                "down",
+                0.3745
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a girl head turned to her right and tilted up..jpg",
+        "prompt": "head and shoulders portrait, photography, a girl head turned to her right and tilted up.",
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Head_Turn_Right",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Back_Over_Shoulder",
+        "ref_pose": "Head_Turn_Right",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -77.57980244436385,
+        "t2i_head_pitch": 0.6708047985502503,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her right over the shoulder",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.9,
+        "t2i_scenario_reasoning": "- Extracted Context: head and shoulders portrait, a girl head turned to her right and tilted up.\n- Visual Evidence: The image shows a head and shoulders portrait of a girl. Her head is turned slightly to her right and tilted up.\n- Match Score: 0.9",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2961,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.8001,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.7692
+            ],
+            [
+                "and",
+                0.6779
+            ],
+            [
+                "shoulders",
+                0.8485
+            ],
+            [
+                "portrait",
+                0.8464
+            ],
+            [
+                ",",
+                0.7118
+            ],
+            [
+                "photography",
+                0.8974
+            ],
+            [
+                ",",
+                0.6918
+            ],
+            [
+                "a",
+                0.6195
+            ],
+            [
+                "girl",
+                0.6365
+            ],
+            [
+                "head",
+                0.7493
+            ],
+            [
+                "turned",
+                0.5607
+            ],
+            [
+                "to",
+                0.5518
+            ],
+            [
+                "her",
+                0.6535
+            ],
+            [
+                "right",
+                0.5111
+            ],
+            [
+                "and",
+                0.5696
+            ],
+            [
+                "tilted",
+                0.5165
+            ],
+            [
+                "up",
+                0.4664
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a girl head turned to her right over the shoulder and tilted down..jpg",
+        "prompt": "head and shoulders portrait, photography, a girl head turned to her right over the shoulder and tilted down.",
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Back_Over_Shoulder",
+        "ref_pose": "Back_Over_Shoulder",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -79.29392226946094,
+        "t2i_head_pitch": -18.752757715723106,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her right over the shoulder and tilted down",
+        "pose_match": 1,
+        "t2i_vlm_expression": "confuse",
+        "t2i_scenario_score": 0.7,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a girl head turned to her right over the shoulder and tilted down\"\n- Visual Evidence: The image shows a girl facing slightly to her right with her head turned over her shoulder. Her head is not tilted down.\n- Match Score: 0.7",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2801,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 2.8275,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.8124
+            ],
+            [
+                "and",
+                0.6615
+            ],
+            [
+                "shoulders",
+                0.8628
+            ],
+            [
+                "portrait",
+                0.8447
+            ],
+            [
+                ",",
+                0.7348
+            ],
+            [
+                "photography",
+                0.9029
+            ],
+            [
+                ",",
+                0.7157
+            ],
+            [
+                "a",
+                0.613
+            ],
+            [
+                "girl",
+                0.6873
+            ],
+            [
+                "head",
+                0.7991
+            ],
+            [
+                "turned",
+                0.5884
+            ],
+            [
+                "to",
+                0.5338
+            ],
+            [
+                "her",
+                0.6789
+            ],
+            [
+                "right",
+                0.5108
+            ],
+            [
+                "over",
+                0.5138
+            ],
+            [
+                "the",
+                0.6849
+            ],
+            [
+                "shoulder",
+                0.7884
+            ],
+            [
+                "and",
+                0.6052
+            ],
+            [
+                "tilted",
+                0.6045
+            ],
+            [
+                "down",
+                0.6001
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a girl head turned to her right over the shoulder and tilted up..jpg",
+        "prompt": "head and shoulders portrait, photography, a girl head turned to her right over the shoulder and tilted up.",
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Back_Over_Shoulder",
+        "ref_pose": "Back_Over_Shoulder",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -78.72228593253512,
+        "t2i_head_pitch": 37.017920876637476,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her right over the shoulder and tilted up",
+        "pose_match": 1,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a girl head turned to her right over the shoulder and tilted up\"\n- Visual Evidence: The image shows a girl with her head turned to her right, looking over her shoulder with her head tilted up.\n- Match Score: 1.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2807,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 2.8882,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.7672
+            ],
+            [
+                "and",
+                0.6752
+            ],
+            [
+                "shoulders",
+                0.8599
+            ],
+            [
+                "portrait",
+                0.8292
+            ],
+            [
+                ",",
+                0.7474
+            ],
+            [
+                "photography",
+                0.8996
+            ],
+            [
+                ",",
+                0.7192
+            ],
+            [
+                "a",
+                0.6117
+            ],
+            [
+                "girl",
+                0.6196
+            ],
+            [
+                "head",
+                0.7388
+            ],
+            [
+                "turned",
+                0.5907
+            ],
+            [
+                "to",
+                0.532
+            ],
+            [
+                "her",
+                0.6533
+            ],
+            [
+                "right",
+                0.5145
+            ],
+            [
+                "over",
+                0.5172
+            ],
+            [
+                "the",
+                0.673
+            ],
+            [
+                "shoulder",
+                0.7648
+            ],
+            [
+                "and",
+                0.6045
+            ],
+            [
+                "tilted",
+                0.6216
+            ],
+            [
+                "up",
+                0.6827
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a girl head turned to her right over the shoulder..jpg",
+        "prompt": "head and shoulders portrait, photography, a girl head turned to her right over the shoulder.",
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Back_Over_Shoulder",
+        "ref_pose": "Back_Over_Shoulder",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 64.63151209951975,
+        "t2i_head_pitch": 23.04546523047439,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her left over the shoulder and tilted up",
+        "pose_match": 1,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.9,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a girl head turned to her right over the shoulder\"\n- Visual Evidence: The image shows a girl with her head turned slightly to her right, displaying a profile view with her shoulder visible.\n- Match Score: 0.9",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2795,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 3.3425,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.8585
+            ],
+            [
+                "and",
+                0.728
+            ],
+            [
+                "shoulders",
+                0.8636
+            ],
+            [
+                "portrait",
+                0.8517
+            ],
+            [
+                ",",
+                0.7686
+            ],
+            [
+                "photography",
+                0.8998
+            ],
+            [
+                ",",
+                0.7275
+            ],
+            [
+                "a",
+                0.6386
+            ],
+            [
+                "girl",
+                0.6481
+            ],
+            [
+                "head",
+                0.8409
+            ],
+            [
+                "turned",
+                0.5776
+            ],
+            [
+                "to",
+                0.5259
+            ],
+            [
+                "her",
+                0.6483
+            ],
+            [
+                "right",
+                0.5169
+            ],
+            [
+                "over",
+                0.4576
+            ],
+            [
+                "the",
+                0.6484
+            ],
+            [
+                "shoulder",
+                0.6498
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a girl head turned to her right..jpg",
+        "prompt": "head and shoulders portrait, photography, a girl head turned to her right.",
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Head_Turn_Right",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Head_Turn_Right",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 7.224341127779504,
+        "t2i_head_pitch": -23.67070344973186,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head tilted down",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.5,
+        "t2i_scenario_reasoning": "- Extracted Context: head and shoulders portrait, photography, a girl head turned to her right.\n- Visual Evidence: The image shows a head and shoulders portrait of a girl. However, the girl is facing forward, not turned to her right as described.\n- Match Score: 0.5",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2539,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.3568,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.7018
+            ],
+            [
+                "and",
+                0.4447
+            ],
+            [
+                "shoulders",
+                0.7304
+            ],
+            [
+                "portrait",
+                0.7261
+            ],
+            [
+                ",",
+                0.5856
+            ],
+            [
+                "photography",
+                0.8396
+            ],
+            [
+                ",",
+                0.5542
+            ],
+            [
+                "a",
+                0.4354
+            ],
+            [
+                "girl",
+                0.499
+            ],
+            [
+                "head",
+                0.6524
+            ],
+            [
+                "turned",
+                0.3033
+            ],
+            [
+                "to",
+                0.3434
+            ],
+            [
+                "her",
+                0.4674
+            ],
+            [
+                "right",
+                0.288
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a man head facing forward straight..jpg",
+        "prompt": "head and shoulders portrait, photography, a man head facing forward straight.",
+        "gt_expression": "confuse",
+        "gt_gender": "Male",
+        "gt_pose": "Frontal",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Frontal",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 0.5880323524845985,
+        "t2i_head_pitch": -5.259420297972149,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head facing forward straight",
+        "pose_match": 1,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.0,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a man head facing forward straight\"\n- Visual Evidence: The image shows a head and shoulders portrait of a person facing forward straight, but the person appears to be a woman.\n- Match Score: 0.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2184,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 2.2754,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.7579
+            ],
+            [
+                "and",
+                0.4557
+            ],
+            [
+                "shoulders",
+                0.8071
+            ],
+            [
+                "portrait",
+                0.8111
+            ],
+            [
+                ",",
+                0.5732
+            ],
+            [
+                "photography",
+                0.8594
+            ],
+            [
+                ",",
+                0.5793
+            ],
+            [
+                "a",
+                0.4476
+            ],
+            [
+                "man",
+                0.148
+            ],
+            [
+                "head",
+                0.6369
+            ],
+            [
+                "facing",
+                0.4599
+            ],
+            [
+                "forward",
+                0.4601
+            ],
+            [
+                "straight",
+                0.6247
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a man head tilted down..jpg",
+        "prompt": "head and shoulders portrait, photography, a man head tilted down.",
+        "gt_expression": "others",
+        "gt_gender": "Male",
+        "gt_pose": "Frontal",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Back_Over_Shoulder",
+        "ref_pose": "Frontal",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 40.53277044398305,
+        "t2i_head_pitch": -10.057257928117878,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her left over the shoulder and tilted down",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.0,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a man head tilted down\"\n- Visual Evidence: The image shows a man facing forward with his head upright.\n- Match Score: 0.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2844,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.9686,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.8561
+            ],
+            [
+                "and",
+                0.7284
+            ],
+            [
+                "shoulders",
+                0.8867
+            ],
+            [
+                "portrait",
+                0.9212
+            ],
+            [
+                ",",
+                0.792
+            ],
+            [
+                "photography",
+                0.9032
+            ],
+            [
+                ",",
+                0.7862
+            ],
+            [
+                "a",
+                0.7102
+            ],
+            [
+                "man",
+                0.7858
+            ],
+            [
+                "head",
+                0.8045
+            ],
+            [
+                "tilted",
+                0.4843
+            ],
+            [
+                "down",
+                0.4557
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a man head tilted up..jpg",
+        "prompt": "head and shoulders portrait, photography, a man head tilted up.",
+        "gt_expression": "others",
+        "gt_gender": "Male",
+        "gt_pose": "Frontal",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Frontal",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 0.13858330379764616,
+        "t2i_head_pitch": -0.9291787316117848,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head facing forward straight",
+        "pose_match": 1,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.2,
+        "t2i_scenario_reasoning": "- Extracted Context: head and shoulders portrait, photography, a man head tilted up.\n- Visual Evidence: The image shows a head and shoulders portrait of a woman, not a man, and her head is not tilted up.\n- Match Score: 0.2",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2642,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 1.866,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.6419
+            ],
+            [
+                "and",
+                0.3223
+            ],
+            [
+                "shoulders",
+                0.7592
+            ],
+            [
+                "portrait",
+                0.7312
+            ],
+            [
+                ",",
+                0.409
+            ],
+            [
+                "photography",
+                0.8782
+            ],
+            [
+                ",",
+                0.4437
+            ],
+            [
+                "a",
+                0.2618
+            ],
+            [
+                "man",
+                0.0353
+            ],
+            [
+                "head",
+                0.3305
+            ],
+            [
+                "tilted",
+                0.2073
+            ],
+            [
+                "up",
+                0.2641
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a man head turned to his left and tilted down..jpg",
+        "prompt": "head and shoulders portrait, photography, a man head turned to his left and tilted down.",
+        "gt_expression": "others",
+        "gt_gender": "Male",
+        "gt_pose": "Head_Turn_Left",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Head_Turn_Left",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -11.021644533139751,
+        "t2i_head_pitch": -3.1627372477575193,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head facing forward straight",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.5,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a man head turned to his left and tilted down\"\n- Visual Evidence: The image shows a person facing forward with their head slightly tilted down, but not turned to the left as described.\n- Match Score: 0.5",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.1895,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.0385,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.7413
+            ],
+            [
+                "and",
+                0.4245
+            ],
+            [
+                "shoulders",
+                0.7719
+            ],
+            [
+                "portrait",
+                0.7051
+            ],
+            [
+                ",",
+                0.4895
+            ],
+            [
+                "photography",
+                0.842
+            ],
+            [
+                ",",
+                0.4954
+            ],
+            [
+                "a",
+                0.3543
+            ],
+            [
+                "man",
+                0.1534
+            ],
+            [
+                "head",
+                0.708
+            ],
+            [
+                "turned",
+                0.4537
+            ],
+            [
+                "to",
+                0.4306
+            ],
+            [
+                "his",
+                0.278
+            ],
+            [
+                "left",
+                0.4421
+            ],
+            [
+                "and",
+                0.3767
+            ],
+            [
+                "tilted",
+                0.3753
+            ],
+            [
+                "down",
+                0.2837
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a man head turned to his left and tilted up..jpg",
+        "prompt": "head and shoulders portrait, photography, a man head turned to his left and tilted up.",
+        "gt_expression": "others",
+        "gt_gender": "Male",
+        "gt_pose": "Head_Turn_Left",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Head_Turn_Left",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -1.8859748766317008,
+        "t2i_head_pitch": -14.173101343814949,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head tilted down",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.5,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a man head turned to his left and tilted up\"\n- Visual Evidence: The image shows three individuals, each facing slightly to their left. However, none of them appear to have their heads tilted up.\n- Match Score: 0.5",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2305,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.3743,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.7884
+            ],
+            [
+                "and",
+                0.6309
+            ],
+            [
+                "shoulders",
+                0.7692
+            ],
+            [
+                "portrait",
+                0.7519
+            ],
+            [
+                ",",
+                0.6514
+            ],
+            [
+                "photography",
+                0.8825
+            ],
+            [
+                ",",
+                0.6254
+            ],
+            [
+                "a",
+                0.5168
+            ],
+            [
+                "man",
+                0.6205
+            ],
+            [
+                "head",
+                0.7604
+            ],
+            [
+                "turned",
+                0.5682
+            ],
+            [
+                "to",
+                0.5465
+            ],
+            [
+                "his",
+                0.5556
+            ],
+            [
+                "left",
+                0.505
+            ],
+            [
+                "and",
+                0.5063
+            ],
+            [
+                "tilted",
+                0.4521
+            ],
+            [
+                "up",
+                0.4112
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a man head turned to his left over the shoulder and tilted down..jpg",
+        "prompt": "head and shoulders portrait, photography, a man head turned to his left over the shoulder and tilted down.",
+        "gt_expression": "others",
+        "gt_gender": "Male",
+        "gt_pose": "Back_Over_Shoulder",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Back_Over_Shoulder",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -17.6793253374406,
+        "t2i_head_pitch": 4.428791958249079,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head facing forward straight",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.5,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a man head turned to his left over the shoulder and tilted down\"\n- Visual Evidence: The image shows two individuals. The person on the left has their head turned slightly to the left, but there is no significant tilt down as described. The person on the right is facing forward.\n- Match Score: 0.5",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2037,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.0916,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.6755
+            ],
+            [
+                "and",
+                0.5685
+            ],
+            [
+                "shoulders",
+                0.8065
+            ],
+            [
+                "portrait",
+                0.7868
+            ],
+            [
+                ",",
+                0.5528
+            ],
+            [
+                "photography",
+                0.8825
+            ],
+            [
+                ",",
+                0.5419
+            ],
+            [
+                "a",
+                0.391
+            ],
+            [
+                "man",
+                0.4784
+            ],
+            [
+                "head",
+                0.593
+            ],
+            [
+                "turned",
+                0.3274
+            ],
+            [
+                "to",
+                0.3193
+            ],
+            [
+                "his",
+                0.4472
+            ],
+            [
+                "left",
+                0.3758
+            ],
+            [
+                "over",
+                0.271
+            ],
+            [
+                "the",
+                0.4601
+            ],
+            [
+                "shoulder",
+                0.5435
+            ],
+            [
+                "and",
+                0.3825
+            ],
+            [
+                "tilted",
+                0.3352
+            ],
+            [
+                "down",
+                0.2986
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a man head turned to his left over the shoulder and tilted up..jpg",
+        "prompt": "head and shoulders portrait, photography, a man head turned to his left over the shoulder and tilted up.",
+        "gt_expression": "others",
+        "gt_gender": "Male",
+        "gt_pose": "Back_Over_Shoulder",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Back_Over_Shoulder",
+        "ref_pose": "Back_Over_Shoulder",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 75.09403933463692,
+        "t2i_head_pitch": 98.15625883217288,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her left over the shoulder and tilted up",
+        "pose_match": 1,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.8,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a man head turned to his left over the shoulder and tilted up\"\n- Visual Evidence: The image shows a man in three different poses. In the middle pose, his head is turned slightly to his left, and his head appears to be tilted up.\n- Match Score: 0.8",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2181,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 1.8438,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.6498
+            ],
+            [
+                "and",
+                0.4581
+            ],
+            [
+                "shoulders",
+                0.6141
+            ],
+            [
+                "portrait",
+                0.4164
+            ],
+            [
+                ",",
+                0.5552
+            ],
+            [
+                "photography",
+                0.8162
+            ],
+            [
+                ",",
+                0.5346
+            ],
+            [
+                "a",
+                0.3677
+            ],
+            [
+                "man",
+                0.3043
+            ],
+            [
+                "head",
+                0.5973
+            ],
+            [
+                "turned",
+                0.3612
+            ],
+            [
+                "to",
+                0.3362
+            ],
+            [
+                "his",
+                0.3077
+            ],
+            [
+                "left",
+                0.4084
+            ],
+            [
+                "over",
+                0.3053
+            ],
+            [
+                "the",
+                0.4149
+            ],
+            [
+                "shoulder",
+                0.4842
+            ],
+            [
+                "and",
+                0.3763
+            ],
+            [
+                "tilted",
+                0.41
+            ],
+            [
+                "up",
+                0.4173
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a man head turned to his left over the shoulder..jpg",
+        "prompt": "head and shoulders portrait, photography, a man head turned to his left over the shoulder.",
+        "gt_expression": "others",
+        "gt_gender": "Male",
+        "gt_pose": "Back_Over_Shoulder",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Back_Over_Shoulder",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -14.794693796197468,
+        "t2i_head_pitch": -14.899176170654421,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head tilted down",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.3,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a man head turned to his left over the shoulder\"\n- Visual Evidence: The image shows a man facing forward with his hand on his cheek. His head is not turned to his left over the shoulder as described.\n- Match Score: 0.3",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2551,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.4793,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.8338
+            ],
+            [
+                "and",
+                0.6682
+            ],
+            [
+                "shoulders",
+                0.8082
+            ],
+            [
+                "portrait",
+                0.892
+            ],
+            [
+                ",",
+                0.6782
+            ],
+            [
+                "photography",
+                0.9112
+            ],
+            [
+                ",",
+                0.6475
+            ],
+            [
+                "a",
+                0.5639
+            ],
+            [
+                "man",
+                0.6629
+            ],
+            [
+                "head",
+                0.7973
+            ],
+            [
+                "turned",
+                0.4528
+            ],
+            [
+                "to",
+                0.4773
+            ],
+            [
+                "his",
+                0.5895
+            ],
+            [
+                "left",
+                0.4306
+            ],
+            [
+                "over",
+                0.414
+            ],
+            [
+                "the",
+                0.5656
+            ],
+            [
+                "shoulder",
+                0.3493
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a man head turned to his left..jpg",
+        "prompt": "head and shoulders portrait, photography, a man head turned to his left.",
+        "gt_expression": "others",
+        "gt_gender": "Male",
+        "gt_pose": "Head_Turn_Left",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Back_Over_Shoulder",
+        "ref_pose": "Head_Turn_Left",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 58.888006119882654,
+        "t2i_head_pitch": 3.0559816674576794,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her left over the shoulder",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a man head turned to his left\"\n- Visual Evidence: The image shows a man in three different poses: facing forward, turned slightly to the left, and turned more to the left.\n- Match Score: 1.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2391,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.7314,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.8141
+            ],
+            [
+                "and",
+                0.6373
+            ],
+            [
+                "shoulders",
+                0.7796
+            ],
+            [
+                "portrait",
+                0.8178
+            ],
+            [
+                ",",
+                0.7033
+            ],
+            [
+                "photography",
+                0.8766
+            ],
+            [
+                ",",
+                0.6628
+            ],
+            [
+                "a",
+                0.5704
+            ],
+            [
+                "man",
+                0.6564
+            ],
+            [
+                "head",
+                0.7838
+            ],
+            [
+                "turned",
+                0.5668
+            ],
+            [
+                "to",
+                0.5812
+            ],
+            [
+                "his",
+                0.5808
+            ],
+            [
+                "left",
+                0.4983
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a man head turned to his right and tilted down..jpg",
+        "prompt": "head and shoulders portrait, photography, a man head turned to his right and tilted down.",
+        "gt_expression": "others",
+        "gt_gender": "Male",
+        "gt_pose": "Head_Turn_Right",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Head_Turn_Left",
+        "ref_pose": "Head_Turn_Right",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 28.497538741244696,
+        "t2i_head_pitch": -11.899709796518195,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her left and tilted down",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.3,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a man head turned to his right and tilted down\"\n- Visual Evidence: The image shows a woman with her head turned slightly to her right, but it does not show her head tilted down.\n- Match Score: 0.3",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2468,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 1.8994,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.7104
+            ],
+            [
+                "and",
+                0.3695
+            ],
+            [
+                "shoulders",
+                0.8228
+            ],
+            [
+                "portrait",
+                0.8089
+            ],
+            [
+                ",",
+                0.4203
+            ],
+            [
+                "photography",
+                0.9013
+            ],
+            [
+                ",",
+                0.4244
+            ],
+            [
+                "a",
+                0.206
+            ],
+            [
+                "man",
+                0.032
+            ],
+            [
+                "head",
+                0.4663
+            ],
+            [
+                "turned",
+                0.2824
+            ],
+            [
+                "to",
+                0.1923
+            ],
+            [
+                "his",
+                0.1656
+            ],
+            [
+                "right",
+                0.3887
+            ],
+            [
+                "and",
+                0.2196
+            ],
+            [
+                "tilted",
+                0.2933
+            ],
+            [
+                "down",
+                0.1908
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a man head turned to his right and tilted up..jpg",
+        "prompt": "head and shoulders portrait, photography, a man head turned to his right and tilted up.",
+        "gt_expression": "others",
+        "gt_gender": "Male",
+        "gt_pose": "Head_Turn_Right",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Head_Turn_Right",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -7.424497782394569,
+        "t2i_head_pitch": -14.908633751599602,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head tilted down",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.0,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a man head turned to his right and tilted up\"\n- Visual Evidence: The image shows a woman facing slightly to her left with her head tilted up.\n- Match Score: 0.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2392,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.2362,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.8066
+            ],
+            [
+                "and",
+                0.4885
+            ],
+            [
+                "shoulders",
+                0.8566
+            ],
+            [
+                "portrait",
+                0.8429
+            ],
+            [
+                ",",
+                0.5216
+            ],
+            [
+                "photography",
+                0.8846
+            ],
+            [
+                ",",
+                0.5104
+            ],
+            [
+                "a",
+                0.3714
+            ],
+            [
+                "man",
+                0.1004
+            ],
+            [
+                "head",
+                0.7154
+            ],
+            [
+                "turned",
+                0.5096
+            ],
+            [
+                "to",
+                0.442
+            ],
+            [
+                "his",
+                0.3034
+            ],
+            [
+                "right",
+                0.5051
+            ],
+            [
+                "and",
+                0.3928
+            ],
+            [
+                "tilted",
+                0.4688
+            ],
+            [
+                "up",
+                0.4488
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a man head turned to his right over the shoulder and tilted down..jpg",
+        "prompt": "head and shoulders portrait, photography, a man head turned to his right over the shoulder and tilted down.",
+        "gt_expression": "others",
+        "gt_gender": "Male",
+        "gt_pose": "Back_Over_Shoulder",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Back_Over_Shoulder",
+        "ref_pose": "Back_Over_Shoulder",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -82.30023136573027,
+        "t2i_head_pitch": -69.76359614215797,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her right over the shoulder and tilted down",
+        "pose_match": 1,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.3,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a man head turned to his right over the shoulder and tilted down.\"\n- Visual Evidence: The image shows a man in a head and shoulders portrait. He is facing forward with slight variations in head position across three poses. The head is not turned to the right over the shoulder nor tilted down as described.\n- Match Score: 0.3",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2336,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 2.3784,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.8217
+            ],
+            [
+                "and",
+                0.6557
+            ],
+            [
+                "shoulders",
+                0.8341
+            ],
+            [
+                "portrait",
+                0.8112
+            ],
+            [
+                ",",
+                0.6816
+            ],
+            [
+                "photography",
+                0.8815
+            ],
+            [
+                ",",
+                0.657
+            ],
+            [
+                "a",
+                0.5295
+            ],
+            [
+                "man",
+                0.6403
+            ],
+            [
+                "head",
+                0.7772
+            ],
+            [
+                "turned",
+                0.5767
+            ],
+            [
+                "to",
+                0.494
+            ],
+            [
+                "his",
+                0.5453
+            ],
+            [
+                "right",
+                0.4769
+            ],
+            [
+                "over",
+                0.3723
+            ],
+            [
+                "the",
+                0.5482
+            ],
+            [
+                "shoulder",
+                0.641
+            ],
+            [
+                "and",
+                0.5173
+            ],
+            [
+                "tilted",
+                0.4914
+            ],
+            [
+                "down",
+                0.4569
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a man head turned to his right over the shoulder and tilted up..jpg",
+        "prompt": "head and shoulders portrait, photography, a man head turned to his right over the shoulder and tilted up.",
+        "gt_expression": "others",
+        "gt_gender": "Male",
+        "gt_pose": "Back_Over_Shoulder",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Back_Over_Shoulder",
+        "ref_pose": "Back_Over_Shoulder",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -61.67784695764851,
+        "t2i_head_pitch": 27.40114546797317,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her right over the shoulder and tilted up",
+        "pose_match": 1,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.2,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a man head turned to his right over the shoulder and tilted up\"\n- Visual Evidence: The image shows a woman with her head turned to her right, but it does not match the description of a man. The head is not tilted up as described.\n- Match Score: 0.2",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2074,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 1.7003,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.6825
+            ],
+            [
+                "and",
+                0.3731
+            ],
+            [
+                "shoulders",
+                0.7193
+            ],
+            [
+                "portrait",
+                0.6712
+            ],
+            [
+                ",",
+                0.453
+            ],
+            [
+                "photography",
+                0.8834
+            ],
+            [
+                ",",
+                0.447
+            ],
+            [
+                "a",
+                0.2255
+            ],
+            [
+                "man",
+                0.041
+            ],
+            [
+                "head",
+                0.4971
+            ],
+            [
+                "turned",
+                0.3466
+            ],
+            [
+                "to",
+                0.2119
+            ],
+            [
+                "his",
+                0.1541
+            ],
+            [
+                "right",
+                0.2929
+            ],
+            [
+                "over",
+                0.2205
+            ],
+            [
+                "the",
+                0.327
+            ],
+            [
+                "shoulder",
+                0.4087
+            ],
+            [
+                "and",
+                0.2254
+            ],
+            [
+                "tilted",
+                0.3368
+            ],
+            [
+                "up",
+                0.2565
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a man head turned to his right over the shoulder..jpg",
+        "prompt": "head and shoulders portrait, photography, a man head turned to his right over the shoulder.",
+        "gt_expression": "others",
+        "gt_gender": "Male",
+        "gt_pose": "Back_Over_Shoulder",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Back_Over_Shoulder",
+        "ref_pose": "Back_Over_Shoulder",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 64.31893959094306,
+        "t2i_head_pitch": -6.016694850094112,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her left over the shoulder",
+        "pose_match": 1,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a man head turned to his right over the shoulder\"\n- Visual Evidence: The image shows a man in a head and shoulders portrait, with his head turned to his right, looking over his shoulder.\n- Match Score: 1.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2475,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 3.0556,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.8779
+            ],
+            [
+                "and",
+                0.715
+            ],
+            [
+                "shoulders",
+                0.8888
+            ],
+            [
+                "portrait",
+                0.8833
+            ],
+            [
+                ",",
+                0.7444
+            ],
+            [
+                "photography",
+                0.9158
+            ],
+            [
+                ",",
+                0.7285
+            ],
+            [
+                "a",
+                0.6181
+            ],
+            [
+                "man",
+                0.4526
+            ],
+            [
+                "head",
+                0.8556
+            ],
+            [
+                "turned",
+                0.6756
+            ],
+            [
+                "to",
+                0.6087
+            ],
+            [
+                "his",
+                0.5738
+            ],
+            [
+                "right",
+                0.5749
+            ],
+            [
+                "over",
+                0.4979
+            ],
+            [
+                "the",
+                0.6289
+            ],
+            [
+                "shoulder",
+                0.734
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a man head turned to his right..jpg",
+        "prompt": "head and shoulders portrait, photography, a man head turned to his right.",
+        "gt_expression": "others",
+        "gt_gender": "Male",
+        "gt_pose": "Head_Turn_Right",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Head_Turn_Right",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 13.478479427859929,
+        "t2i_head_pitch": 7.0905737892242975,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head facing forward straight",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a man head turned to his right\"\n- Visual Evidence: The image shows a man in a head and shoulders portrait, with his head turned to his right.\n- Match Score: 1.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2541,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.9561,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.8354
+            ],
+            [
+                "and",
+                0.6612
+            ],
+            [
+                "shoulders",
+                0.7881
+            ],
+            [
+                "portrait",
+                0.8175
+            ],
+            [
+                ",",
+                0.7151
+            ],
+            [
+                "photography",
+                0.8697
+            ],
+            [
+                ",",
+                0.6774
+            ],
+            [
+                "a",
+                0.588
+            ],
+            [
+                "man",
+                0.6909
+            ],
+            [
+                "head",
+                0.816
+            ],
+            [
+                "turned",
+                0.6137
+            ],
+            [
+                "to",
+                0.5919
+            ],
+            [
+                "his",
+                0.6055
+            ],
+            [
+                "right",
+                0.5104
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a woman head facing forward straight..jpg",
+        "prompt": "head and shoulders portrait, photography, a woman head facing forward straight.",
+        "gt_expression": "confuse",
+        "gt_gender": "Female",
+        "gt_pose": "Frontal",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Head_Turn_Right",
+        "ref_pose": "Frontal",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -21.796590449908088,
+        "t2i_head_pitch": -13.110347651590239,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her right and tilted down",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: head and shoulders portrait, photography, a woman head facing forward straight\n- Visual Evidence: The image shows a head and shoulders portrait of a woman facing forward. Her head is straight, and she is wearing a white top.\n- Match Score: 1.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2527,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 3.4328,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.8107
+            ],
+            [
+                "and",
+                0.6672
+            ],
+            [
+                "shoulders",
+                0.8378
+            ],
+            [
+                "portrait",
+                0.8348
+            ],
+            [
+                ",",
+                0.7657
+            ],
+            [
+                "photography",
+                0.8757
+            ],
+            [
+                ",",
+                0.7146
+            ],
+            [
+                "a",
+                0.6804
+            ],
+            [
+                "woman",
+                0.7653
+            ],
+            [
+                "head",
+                0.7834
+            ],
+            [
+                "facing",
+                0.6473
+            ],
+            [
+                "forward",
+                0.6886
+            ],
+            [
+                "straight",
+                0.709
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a woman head tilted down..jpg",
+        "prompt": "head and shoulders portrait, photography, a woman head tilted down.",
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Frontal",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Back_Over_Shoulder",
+        "ref_pose": "Frontal",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 64.63990315703636,
+        "t2i_head_pitch": -50.85442380214323,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her left over the shoulder and tilted down",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.9,
+        "t2i_scenario_reasoning": "- Extracted Context: head and shoulders portrait, photography, a woman head tilted down.\n- Visual Evidence: The image shows a head and shoulders portrait of a woman. Her head is slightly tilted down as described.\n- Match Score: 0.9",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2758,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.5646,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.7184
+            ],
+            [
+                "and",
+                0.5926
+            ],
+            [
+                "shoulders",
+                0.8273
+            ],
+            [
+                "portrait",
+                0.8324
+            ],
+            [
+                ",",
+                0.7226
+            ],
+            [
+                "photography",
+                0.8793
+            ],
+            [
+                ",",
+                0.71
+            ],
+            [
+                "a",
+                0.6513
+            ],
+            [
+                "woman",
+                0.7468
+            ],
+            [
+                "head",
+                0.6203
+            ],
+            [
+                "tilted",
+                0.4776
+            ],
+            [
+                "down",
+                0.4006
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a woman head tilted up..jpg",
+        "prompt": "head and shoulders portrait, photography, a woman head tilted up.",
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Frontal",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Frontal",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -5.09586865609967,
+        "t2i_head_pitch": -15.234317001815157,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head tilted down",
+        "pose_match": 1,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: head and shoulders portrait, photography, a woman head tilted up.\n- Visual Evidence: The image shows a head and shoulders portrait of a woman. Her head is slightly tilted upwards.\n- Match Score: 1.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2668,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 3.3851,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.8616
+            ],
+            [
+                "and",
+                0.7101
+            ],
+            [
+                "shoulders",
+                0.8657
+            ],
+            [
+                "portrait",
+                0.8629
+            ],
+            [
+                ",",
+                0.7948
+            ],
+            [
+                "photography",
+                0.8948
+            ],
+            [
+                ",",
+                0.7867
+            ],
+            [
+                "a",
+                0.7502
+            ],
+            [
+                "woman",
+                0.8039
+            ],
+            [
+                "head",
+                0.8462
+            ],
+            [
+                "tilted",
+                0.6034
+            ],
+            [
+                "up",
+                0.6105
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a woman head turned to her left and tilted down..jpg",
+        "prompt": "head and shoulders portrait, photography, a woman head turned to her left and tilted down.",
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Head_Turn_Left",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Back_Over_Shoulder",
+        "ref_pose": "Head_Turn_Left",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 80.03089134479107,
+        "t2i_head_pitch": -0.5427412532711955,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her left over the shoulder",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.7,
+        "t2i_scenario_reasoning": "- Extracted Context: head and shoulders portrait, a woman head turned to her left and tilted down.\n- Visual Evidence: The image shows a head and shoulders portrait of a woman. Her head is turned slightly to her left, but she is not tilted down.\n- Match Score: 0.7",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2636,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 3.2246,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.8793
+            ],
+            [
+                "and",
+                0.7026
+            ],
+            [
+                "shoulders",
+                0.8839
+            ],
+            [
+                "portrait",
+                0.8657
+            ],
+            [
+                ",",
+                0.7423
+            ],
+            [
+                "photography",
+                0.893
+            ],
+            [
+                ",",
+                0.7102
+            ],
+            [
+                "a",
+                0.6685
+            ],
+            [
+                "woman",
+                0.7651
+            ],
+            [
+                "head",
+                0.8644
+            ],
+            [
+                "turned",
+                0.666
+            ],
+            [
+                "to",
+                0.6669
+            ],
+            [
+                "her",
+                0.677
+            ],
+            [
+                "left",
+                0.5633
+            ],
+            [
+                "and",
+                0.6426
+            ],
+            [
+                "tilted",
+                0.5965
+            ],
+            [
+                "down",
+                0.5248
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a woman head turned to her left and tilted up..jpg",
+        "prompt": "head and shoulders portrait, photography, a woman head turned to her left and tilted up.",
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Head_Turn_Left",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Back_Over_Shoulder",
+        "ref_pose": "Head_Turn_Left",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -86.86831910176303,
+        "t2i_head_pitch": 25.272552193755786,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her right over the shoulder and tilted up",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: head and shoulders portrait, a woman head turned to her left and tilted up.\n- Visual Evidence: The image shows a head and shoulders portrait of a woman. Her head is turned slightly to her left and tilted upwards.\n- Match Score: 1.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2682,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 3.3584,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.8549
+            ],
+            [
+                "and",
+                0.715
+            ],
+            [
+                "shoulders",
+                0.869
+            ],
+            [
+                "portrait",
+                0.8609
+            ],
+            [
+                ",",
+                0.7414
+            ],
+            [
+                "photography",
+                0.9027
+            ],
+            [
+                ",",
+                0.7083
+            ],
+            [
+                "a",
+                0.6749
+            ],
+            [
+                "woman",
+                0.774
+            ],
+            [
+                "head",
+                0.8395
+            ],
+            [
+                "turned",
+                0.6614
+            ],
+            [
+                "to",
+                0.6622
+            ],
+            [
+                "her",
+                0.6906
+            ],
+            [
+                "left",
+                0.5785
+            ],
+            [
+                "and",
+                0.6558
+            ],
+            [
+                "tilted",
+                0.6844
+            ],
+            [
+                "up",
+                0.6894
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a woman head turned to her left over the shoulder and tilted down..jpg",
+        "prompt": "head and shoulders portrait, photography, a woman head turned to her left over the shoulder and tilted down.",
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Head_Turn_Left",
+        "ref_pose": "Back_Over_Shoulder",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 38.8697697526095,
+        "t2i_head_pitch": 42.546378355423286,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her left and tilted up",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.7,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a woman head turned to her left over the shoulder and tilted down\"\n- Visual Evidence: The image shows a woman in a head and shoulders portrait, with her head turned to her left. However, her head does not appear to be tilted down.\n- Match Score: 0.7",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2693,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 3.1426,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.8809
+            ],
+            [
+                "and",
+                0.7085
+            ],
+            [
+                "shoulders",
+                0.8812
+            ],
+            [
+                "portrait",
+                0.8456
+            ],
+            [
+                ",",
+                0.7262
+            ],
+            [
+                "photography",
+                0.8847
+            ],
+            [
+                ",",
+                0.7041
+            ],
+            [
+                "a",
+                0.6636
+            ],
+            [
+                "woman",
+                0.7726
+            ],
+            [
+                "head",
+                0.885
+            ],
+            [
+                "turned",
+                0.684
+            ],
+            [
+                "to",
+                0.6239
+            ],
+            [
+                "her",
+                0.6823
+            ],
+            [
+                "left",
+                0.5435
+            ],
+            [
+                "over",
+                0.5236
+            ],
+            [
+                "the",
+                0.6567
+            ],
+            [
+                "shoulder",
+                0.7726
+            ],
+            [
+                "and",
+                0.6263
+            ],
+            [
+                "tilted",
+                0.6289
+            ],
+            [
+                "down",
+                0.6262
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a woman head turned to her left over the shoulder and tilted up..jpg",
+        "prompt": "head and shoulders portrait, photography, a woman head turned to her left over the shoulder and tilted up.",
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Back_Over_Shoulder",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -4.106329006156852,
+        "t2i_head_pitch": 52.655382172776896,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head tilted up",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.4,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a woman head turned to her left over the shoulder and tilted up\"\n- Visual Evidence: The image shows two women standing side by side, both facing forward. The woman on the right has her head turned slightly to her left, but not over the shoulder as described. The head is not tilted up.\n- Match Score: 0.4",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2466,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 1.9,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.5027
+            ],
+            [
+                "and",
+                0.4461
+            ],
+            [
+                "shoulders",
+                0.643
+            ],
+            [
+                "portrait",
+                0.5358
+            ],
+            [
+                ",",
+                0.4546
+            ],
+            [
+                "photography",
+                0.849
+            ],
+            [
+                ",",
+                0.469
+            ],
+            [
+                "a",
+                0.2866
+            ],
+            [
+                "woman",
+                0.3994
+            ],
+            [
+                "head",
+                0.4443
+            ],
+            [
+                "turned",
+                0.3281
+            ],
+            [
+                "to",
+                0.2386
+            ],
+            [
+                "her",
+                0.4112
+            ],
+            [
+                "left",
+                0.3254
+            ],
+            [
+                "over",
+                0.3118
+            ],
+            [
+                "the",
+                0.3921
+            ],
+            [
+                "shoulder",
+                0.5567
+            ],
+            [
+                "and",
+                0.2904
+            ],
+            [
+                "tilted",
+                0.355
+            ],
+            [
+                "up",
+                0.3367
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a woman head turned to her left over the shoulder..jpg",
+        "prompt": "head and shoulders portrait, photography, a woman head turned to her left over the shoulder.",
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Back_Over_Shoulder",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 13.844946401245352,
+        "t2i_head_pitch": 31.16501463957529,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head tilted up",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: head and shoulders portrait, photography, a woman head turned to her left over the shoulder.\n- Visual Evidence: The image shows a head and shoulders portrait of a woman. Her head is turned slightly to her left, showing her profile.\n- Match Score: 1.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2438,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 3.5984,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.88
+            ],
+            [
+                "and",
+                0.7157
+            ],
+            [
+                "shoulders",
+                0.8672
+            ],
+            [
+                "portrait",
+                0.8598
+            ],
+            [
+                ",",
+                0.7495
+            ],
+            [
+                "photography",
+                0.8997
+            ],
+            [
+                ",",
+                0.7181
+            ],
+            [
+                "a",
+                0.6807
+            ],
+            [
+                "woman",
+                0.7718
+            ],
+            [
+                "head",
+                0.8609
+            ],
+            [
+                "turned",
+                0.6066
+            ],
+            [
+                "to",
+                0.5524
+            ],
+            [
+                "her",
+                0.6746
+            ],
+            [
+                "left",
+                0.5157
+            ],
+            [
+                "over",
+                0.4827
+            ],
+            [
+                "the",
+                0.656
+            ],
+            [
+                "shoulder",
+                0.6921
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a woman head turned to her left..jpg",
+        "prompt": "head and shoulders portrait, photography, a woman head turned to her left.",
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Head_Turn_Left",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Back_Over_Shoulder",
+        "ref_pose": "Head_Turn_Left",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -78.09396834989644,
+        "t2i_head_pitch": 7.052585342699526,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her right over the shoulder",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: head and shoulders portrait, photography, a woman head turned to her left.\n- Visual Evidence: The image shows a head and shoulders portrait of a woman. Her head is turned slightly to her left.\n- Match Score: 1.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2756,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 3.6449,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.8396
+            ],
+            [
+                "and",
+                0.681
+            ],
+            [
+                "shoulders",
+                0.8377
+            ],
+            [
+                "portrait",
+                0.8426
+            ],
+            [
+                ",",
+                0.7205
+            ],
+            [
+                "photography",
+                0.8897
+            ],
+            [
+                ",",
+                0.6596
+            ],
+            [
+                "a",
+                0.6539
+            ],
+            [
+                "woman",
+                0.758
+            ],
+            [
+                "head",
+                0.8242
+            ],
+            [
+                "turned",
+                0.6123
+            ],
+            [
+                "to",
+                0.6059
+            ],
+            [
+                "her",
+                0.6388
+            ],
+            [
+                "left",
+                0.5087
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a woman head turned to her right and tilted down..jpg",
+        "prompt": "head and shoulders portrait, photography, a woman head turned to her right and tilted down.",
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Head_Turn_Right",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Back_Over_Shoulder",
+        "ref_pose": "Head_Turn_Right",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 75.49079958727789,
+        "t2i_head_pitch": 7.441426623383727,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her left over the shoulder",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.7,
+        "t2i_scenario_reasoning": "- Extracted Context: head and shoulders portrait, a woman head turned to her right and tilted down.\n- Visual Evidence: The image shows a head and shoulders portrait of a woman. Her head is turned slightly to her right, but she is not tilted down.\n- Match Score: 0.7",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2736,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 3.232,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.855
+            ],
+            [
+                "and",
+                0.7032
+            ],
+            [
+                "shoulders",
+                0.8903
+            ],
+            [
+                "portrait",
+                0.883
+            ],
+            [
+                ",",
+                0.7692
+            ],
+            [
+                "photography",
+                0.9109
+            ],
+            [
+                ",",
+                0.7335
+            ],
+            [
+                "a",
+                0.6969
+            ],
+            [
+                "woman",
+                0.7778
+            ],
+            [
+                "head",
+                0.8379
+            ],
+            [
+                "turned",
+                0.6262
+            ],
+            [
+                "to",
+                0.6313
+            ],
+            [
+                "her",
+                0.7018
+            ],
+            [
+                "right",
+                0.5671
+            ],
+            [
+                "and",
+                0.6512
+            ],
+            [
+                "tilted",
+                0.6198
+            ],
+            [
+                "down",
+                0.5301
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a woman head turned to her right and tilted up..jpg",
+        "prompt": "head and shoulders portrait, photography, a woman head turned to her right and tilted up.",
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Head_Turn_Right",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Head_Turn_Right",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 14.56026922316562,
+        "t2i_head_pitch": 14.882221005832864,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head tilted up",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.9,
+        "t2i_scenario_reasoning": "- Extracted Context: head and shoulders portrait, a woman head turned to her right and tilted up.\n- Visual Evidence: The image shows a head and shoulders portrait of a woman. Her head is turned slightly to her right and tilted upwards.\n- Match Score: 0.9",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2785,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.7592,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.7584
+            ],
+            [
+                "and",
+                0.6216
+            ],
+            [
+                "shoulders",
+                0.8485
+            ],
+            [
+                "portrait",
+                0.8329
+            ],
+            [
+                ",",
+                0.6839
+            ],
+            [
+                "photography",
+                0.8948
+            ],
+            [
+                ",",
+                0.6576
+            ],
+            [
+                "a",
+                0.6194
+            ],
+            [
+                "woman",
+                0.7188
+            ],
+            [
+                "head",
+                0.7228
+            ],
+            [
+                "turned",
+                0.5069
+            ],
+            [
+                "to",
+                0.5235
+            ],
+            [
+                "her",
+                0.6443
+            ],
+            [
+                "right",
+                0.5187
+            ],
+            [
+                "and",
+                0.5685
+            ],
+            [
+                "tilted",
+                0.5994
+            ],
+            [
+                "up",
+                0.6077
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a woman head turned to her right over the shoulder and tilted down..jpg",
+        "prompt": "head and shoulders portrait, photography, a woman head turned to her right over the shoulder and tilted down.",
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Back_Over_Shoulder",
+        "ref_pose": "Back_Over_Shoulder",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 75.81643064657062,
+        "t2i_head_pitch": 3.829232567697769,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her left over the shoulder",
+        "pose_match": 1,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.4,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a woman head turned to her right over the shoulder and tilted down\"\n- Visual Evidence: The image shows a woman facing forward with her head slightly tilted, but not turned to her right over the shoulder as described.\n- Match Score: 0.4",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2651,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 3.4151,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.8753
+            ],
+            [
+                "and",
+                0.7192
+            ],
+            [
+                "shoulders",
+                0.8936
+            ],
+            [
+                "portrait",
+                0.891
+            ],
+            [
+                ",",
+                0.7849
+            ],
+            [
+                "photography",
+                0.9163
+            ],
+            [
+                ",",
+                0.7477
+            ],
+            [
+                "a",
+                0.6899
+            ],
+            [
+                "woman",
+                0.7833
+            ],
+            [
+                "head",
+                0.8586
+            ],
+            [
+                "turned",
+                0.665
+            ],
+            [
+                "to",
+                0.6016
+            ],
+            [
+                "her",
+                0.6959
+            ],
+            [
+                "right",
+                0.5702
+            ],
+            [
+                "over",
+                0.5179
+            ],
+            [
+                "the",
+                0.6732
+            ],
+            [
+                "shoulder",
+                0.7853
+            ],
+            [
+                "and",
+                0.6425
+            ],
+            [
+                "tilted",
+                0.6618
+            ],
+            [
+                "down",
+                0.6341
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a woman head turned to her right over the shoulder and tilted up..jpg",
+        "prompt": "head and shoulders portrait, photography, a woman head turned to her right over the shoulder and tilted up.",
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Back_Over_Shoulder",
+        "ref_pose": "Back_Over_Shoulder",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -72.85663227977511,
+        "t2i_head_pitch": 20.757058206783398,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her right over the shoulder and tilted up",
+        "pose_match": 1,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.9,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a woman head turned to her right over the shoulder and tilted up\"\n- Visual Evidence: The image shows a woman in a head and shoulders portrait. Her head is turned to her right, and her gaze is directed slightly upwards.\n- Match Score: 0.9",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2613,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 2.8098,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.8144
+            ],
+            [
+                "and",
+                0.6444
+            ],
+            [
+                "shoulders",
+                0.8535
+            ],
+            [
+                "portrait",
+                0.8273
+            ],
+            [
+                ",",
+                0.7058
+            ],
+            [
+                "photography",
+                0.8949
+            ],
+            [
+                ",",
+                0.6648
+            ],
+            [
+                "a",
+                0.6066
+            ],
+            [
+                "woman",
+                0.6959
+            ],
+            [
+                "head",
+                0.7703
+            ],
+            [
+                "turned",
+                0.5655
+            ],
+            [
+                "to",
+                0.5089
+            ],
+            [
+                "her",
+                0.6467
+            ],
+            [
+                "right",
+                0.4877
+            ],
+            [
+                "over",
+                0.4821
+            ],
+            [
+                "the",
+                0.6304
+            ],
+            [
+                "shoulder",
+                0.7694
+            ],
+            [
+                "and",
+                0.5707
+            ],
+            [
+                "tilted",
+                0.6229
+            ],
+            [
+                "up",
+                0.6578
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a woman head turned to her right over the shoulder..jpg",
+        "prompt": "head and shoulders portrait, photography, a woman head turned to her right over the shoulder.",
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Back_Over_Shoulder",
+        "ref_pose": "Back_Over_Shoulder",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 81.6838240157075,
+        "t2i_head_pitch": -19.538707605793206,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her left over the shoulder and tilted down",
+        "pose_match": 1,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a woman head turned to her right over the shoulder\"\n- Visual Evidence: The image shows a woman facing slightly to her right with her head turned over her shoulder, fitting the description.\n- Match Score: 1.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2834,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 3.4436,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.8711
+            ],
+            [
+                "and",
+                0.7078
+            ],
+            [
+                "shoulders",
+                0.8813
+            ],
+            [
+                "portrait",
+                0.8716
+            ],
+            [
+                ",",
+                0.7833
+            ],
+            [
+                "photography",
+                0.9057
+            ],
+            [
+                ",",
+                0.7431
+            ],
+            [
+                "a",
+                0.6882
+            ],
+            [
+                "woman",
+                0.7718
+            ],
+            [
+                "head",
+                0.8437
+            ],
+            [
+                "turned",
+                0.5726
+            ],
+            [
+                "to",
+                0.5163
+            ],
+            [
+                "her",
+                0.6934
+            ],
+            [
+                "right",
+                0.5254
+            ],
+            [
+                "over",
+                0.4831
+            ],
+            [
+                "the",
+                0.6813
+            ],
+            [
+                "shoulder",
+                0.7793
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "head and shoulders portrait, photography, a woman head turned to her right..jpg",
+        "prompt": "head and shoulders portrait, photography, a woman head turned to her right.",
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Head_Turn_Right",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Head_Turn_Right",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -8.793484877782667,
+        "t2i_head_pitch": -21.644667970724058,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head tilted down",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: \"a woman head turned to her right\"\n- Visual Evidence: The image shows a woman in three different poses. In the middle panel, her head is turned to her right, matching the description.\n- Match Score: 1.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2543,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.5144,
+        "fga_orig_tokens": [
+            [
+                "head",
+                0.7473
+            ],
+            [
+                "and",
+                0.5147
+            ],
+            [
+                "shoulders",
+                0.7416
+            ],
+            [
+                "portrait",
+                0.7295
+            ],
+            [
+                ",",
+                0.625
+            ],
+            [
+                "photography",
+                0.8479
+            ],
+            [
+                ",",
+                0.5713
+            ],
+            [
+                "a",
+                0.5112
+            ],
+            [
+                "woman",
+                0.6629
+            ],
+            [
+                "head",
+                0.7188
+            ],
+            [
+                "turned",
+                0.4697
+            ],
+            [
+                "to",
+                0.4505
+            ],
+            [
+                "her",
+                0.5456
+            ],
+            [
+                "right",
+                0.369
+            ]
+        ]
+    }
+]

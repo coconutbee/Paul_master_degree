@@ -1,0 +1,574 @@
+[
+    {
+        "Filename": "0009_bodyshot_photography_boy_head_turned_to_his_right_over_the_shoulder_and_tilted_up.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0009_bodyshot_photography_boy_head_turned_to_his_right_over_the_shoulder_and_tilted_up.jpg",
+        "Prediction_Class": "head turned to his/her left over the shoulder",
+        "Angles": {
+            "BodyYaw": -83.9,
+            "BodyRoll": 8.7,
+            "HeadYaw": -4.6,
+            "HeadPitch": -9.5,
+            "HeadRoll": -61.5,
+            "DeltaYaw": 79.3
+        }
+    },
+    {
+        "Filename": "0018_bodyshot_photography_girl_head_turned_to_her_left_over_the_shoulder_and_tilted_up.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0018_bodyshot_photography_girl_head_turned_to_her_left_over_the_shoulder_and_tilted_up.jpg",
+        "Prediction_Class": "head turned to his/her right and tilted up",
+        "Angles": {
+            "BodyYaw": 44.0,
+            "BodyRoll": -16.4,
+            "HeadYaw": 10.1,
+            "HeadPitch": 175.0,
+            "HeadRoll": -47.8,
+            "DeltaYaw": -34.0
+        }
+    },
+    {
+        "Filename": "0027_bodyshot_photography_woman_head_tilted_up.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0027_bodyshot_photography_woman_head_tilted_up.jpg",
+        "Prediction_Class": "head tilted up",
+        "Angles": {
+            "BodyYaw": -6.1,
+            "BodyRoll": -1.2,
+            "HeadYaw": 2.9,
+            "HeadPitch": 26.0,
+            "HeadRoll": 18.8,
+            "DeltaYaw": 9.0
+        }
+    },
+    {
+        "Filename": "0000_bodyshot_photography_boy_head_facing_forward_straight.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0000_bodyshot_photography_boy_head_facing_forward_straight.jpg",
+        "Prediction_Class": "head tilted down",
+        "Angles": {
+            "BodyYaw": -4.2,
+            "BodyRoll": 1.3,
+            "HeadYaw": -15.1,
+            "HeadPitch": -17.5,
+            "HeadRoll": 33.5,
+            "DeltaYaw": -11.0
+        }
+    },
+    {
+        "Filename": "0001_bodyshot_photography_boy_head_turned_to_his_left.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0001_bodyshot_photography_boy_head_turned_to_his_left.jpg",
+        "Prediction_Class": "head facing forward straight",
+        "Angles": {
+            "BodyYaw": -23.4,
+            "BodyRoll": 0.3,
+            "HeadYaw": -6.7,
+            "HeadPitch": -8.8,
+            "HeadRoll": -3.0,
+            "DeltaYaw": 16.7
+        }
+    },
+    {
+        "Filename": "0002_bodyshot_photography_boy_head_turned_to_his_right.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0002_bodyshot_photography_boy_head_turned_to_his_right.jpg",
+        "Prediction_Class": "head turned to his/her left over the shoulder",
+        "Angles": {
+            "BodyYaw": -71.8,
+            "BodyRoll": 15.5,
+            "HeadYaw": -18.4,
+            "HeadPitch": -8.2,
+            "HeadRoll": -35.2,
+            "DeltaYaw": 53.4
+        }
+    },
+    {
+        "Filename": "0003_bodyshot_photography_boy_head_turned_to_his_left_over_the_shoulder.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0003_bodyshot_photography_boy_head_turned_to_his_left_over_the_shoulder.jpg",
+        "Prediction_Class": "head turned to his/her left over the shoulder and tilted up",
+        "Angles": {
+            "BodyYaw": 85.1,
+            "BodyRoll": -10.0,
+            "HeadYaw": -63.5,
+            "HeadPitch": 71.1,
+            "HeadRoll": -175.0,
+            "DeltaYaw": -148.5
+        }
+    },
+    {
+        "Filename": "0004_bodyshot_photography_boy_head_turned_to_his_right_over_the_shoulder.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0004_bodyshot_photography_boy_head_turned_to_his_right_over_the_shoulder.jpg",
+        "Prediction_Class": "head turned to his/her left over the shoulder and tilted down",
+        "Angles": {
+            "BodyYaw": -84.1,
+            "BodyRoll": 27.6,
+            "HeadYaw": -21.5,
+            "HeadPitch": -10.6,
+            "HeadRoll": -30.9,
+            "DeltaYaw": 62.5
+        }
+    },
+    {
+        "Filename": "0005_bodyshot_photography_boy_head_tilted_up.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0005_bodyshot_photography_boy_head_tilted_up.jpg",
+        "Prediction_Class": "head turned to his/her left over the shoulder and tilted up",
+        "Angles": {
+            "BodyYaw": -56.8,
+            "BodyRoll": 9.7,
+            "HeadYaw": -6.8,
+            "HeadPitch": 26.8,
+            "HeadRoll": 9.7,
+            "DeltaYaw": 50.0
+        }
+    },
+    {
+        "Filename": "0006_bodyshot_photography_boy_head_tilted_down.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0006_bodyshot_photography_boy_head_tilted_down.jpg",
+        "Prediction_Class": "head turned to his/her right over the shoulder",
+        "Angles": {
+            "BodyYaw": -87.5,
+            "BodyRoll": 30.4,
+            "HeadYaw": 45.7,
+            "HeadPitch": 3.5,
+            "HeadRoll": -107.7,
+            "DeltaYaw": 133.2
+        }
+    },
+    {
+        "Filename": "0007_bodyshot_photography_boy_head_turned_to_his_left_over_the_shoulder_and_tilted_up.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0007_bodyshot_photography_boy_head_turned_to_his_left_over_the_shoulder_and_tilted_up.jpg",
+        "Prediction_Class": "head turned to his/her right over the shoulder and tilted up",
+        "Angles": {
+            "BodyYaw": 67.4,
+            "BodyRoll": 6.1,
+            "HeadYaw": 14.4,
+            "HeadPitch": 18.8,
+            "HeadRoll": -23.2,
+            "DeltaYaw": -53.1
+        }
+    },
+    {
+        "Filename": "0008_bodyshot_photography_boy_head_turned_to_his_left_over_the_shoulder_and_tilted_down.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0008_bodyshot_photography_boy_head_turned_to_his_left_over_the_shoulder_and_tilted_down.jpg",
+        "Prediction_Class": "head turned to his/her left over the shoulder and tilted down",
+        "Angles": {
+            "BodyYaw": -78.0,
+            "BodyRoll": -2.0,
+            "HeadYaw": -20.2,
+            "HeadPitch": -17.6,
+            "HeadRoll": -25.1,
+            "DeltaYaw": 57.8
+        }
+    },
+    {
+        "Filename": "0010_bodyshot_photography_boy_head_turned_to_his_right_over_the_shoulder_and_tilted_down.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0010_bodyshot_photography_boy_head_turned_to_his_right_over_the_shoulder_and_tilted_down.jpg",
+        "Prediction_Class": "head turned to his/her left over the shoulder and tilted down",
+        "Angles": {
+            "BodyYaw": -84.3,
+            "BodyRoll": -2.8,
+            "HeadYaw": -19.6,
+            "HeadPitch": -97.6,
+            "HeadRoll": 3.5,
+            "DeltaYaw": 64.7
+        }
+    },
+    {
+        "Filename": "0011_bodyshot_photography_girl_head_facing_forward_straight.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0011_bodyshot_photography_girl_head_facing_forward_straight.jpg",
+        "Prediction_Class": "head tilted down",
+        "Angles": {
+            "BodyYaw": -1.5,
+            "BodyRoll": -1.4,
+            "HeadYaw": -11.6,
+            "HeadPitch": -13.6,
+            "HeadRoll": 18.0,
+            "DeltaYaw": -10.1
+        }
+    },
+    {
+        "Filename": "0012_bodyshot_photography_girl_head_turned_to_her_left.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0012_bodyshot_photography_girl_head_turned_to_her_left.jpg",
+        "Prediction_Class": "head turned to his/her left over the shoulder and tilted up",
+        "Angles": {
+            "BodyYaw": 78.9,
+            "BodyRoll": -1.6,
+            "HeadYaw": -62.9,
+            "HeadPitch": 58.2,
+            "HeadRoll": -157.8,
+            "DeltaYaw": -141.8
+        }
+    },
+    {
+        "Filename": "0013_bodyshot_photography_girl_head_turned_to_her_right.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0013_bodyshot_photography_girl_head_turned_to_her_right.jpg",
+        "Prediction_Class": "head turned to his/her right over the shoulder and tilted down",
+        "Angles": {
+            "BodyYaw": -91.6,
+            "BodyRoll": 9.0,
+            "HeadYaw": 64.5,
+            "HeadPitch": -134.2,
+            "HeadRoll": 108.3,
+            "DeltaYaw": 156.1
+        }
+    },
+    {
+        "Filename": "0014_bodyshot_photography_girl_head_turned_to_her_left_over_the_shoulder.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0014_bodyshot_photography_girl_head_turned_to_her_left_over_the_shoulder.jpg",
+        "Prediction_Class": "head turned to his/her right over the shoulder",
+        "Angles": {
+            "BodyYaw": 85.0,
+            "BodyRoll": -7.9,
+            "HeadYaw": 20.4,
+            "HeadPitch": -4.0,
+            "HeadRoll": 19.6,
+            "DeltaYaw": -64.7
+        }
+    },
+    {
+        "Filename": "0015_bodyshot_photography_girl_head_turned_to_her_right_over_the_shoulder.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0015_bodyshot_photography_girl_head_turned_to_her_right_over_the_shoulder.jpg",
+        "Prediction_Class": "head turned to his/her left over the shoulder",
+        "Angles": {
+            "BodyYaw": -80.7,
+            "BodyRoll": 22.0,
+            "HeadYaw": -12.2,
+            "HeadPitch": -3.3,
+            "HeadRoll": -44.5,
+            "DeltaYaw": 68.5
+        }
+    },
+    {
+        "Filename": "0016_bodyshot_photography_girl_head_tilted_up.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0016_bodyshot_photography_girl_head_tilted_up.jpg",
+        "Prediction_Class": "head turned to his/her right over the shoulder and tilted up",
+        "Angles": {
+            "BodyYaw": 61.0,
+            "BodyRoll": 10.7,
+            "HeadYaw": -15.3,
+            "HeadPitch": 24.2,
+            "HeadRoll": -33.7,
+            "DeltaYaw": -76.3
+        }
+    },
+    {
+        "Filename": "0017_bodyshot_photography_girl_head_tilted_down.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0017_bodyshot_photography_girl_head_tilted_down.jpg",
+        "Prediction_Class": "head turned to his/her right and tilted down",
+        "Angles": {
+            "BodyYaw": 66.8,
+            "BodyRoll": 2.2,
+            "HeadYaw": 24.9,
+            "HeadPitch": -80.5,
+            "HeadRoll": 39.7,
+            "DeltaYaw": -42.0
+        }
+    },
+    {
+        "Filename": "0019_bodyshot_photography_girl_head_turned_to_her_left_over_the_shoulder_and_tilted_down.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0019_bodyshot_photography_girl_head_turned_to_her_left_over_the_shoulder_and_tilted_down.jpg",
+        "Prediction_Class": "head turned to his/her left over the shoulder and tilted down",
+        "Angles": {
+            "BodyYaw": 69.8,
+            "BodyRoll": 0.7,
+            "HeadYaw": -34.5,
+            "HeadPitch": -12.8,
+            "HeadRoll": -48.7,
+            "DeltaYaw": -104.3
+        }
+    },
+    {
+        "Filename": "0020_bodyshot_photography_girl_head_turned_to_her_right_over_the_shoulder_and_tilted_up.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0020_bodyshot_photography_girl_head_turned_to_her_right_over_the_shoulder_and_tilted_up.jpg",
+        "Prediction_Class": "head turned to his/her right over the shoulder and tilted down",
+        "Angles": {
+            "BodyYaw": -86.9,
+            "BodyRoll": 4.8,
+            "HeadYaw": 49.1,
+            "HeadPitch": -147.6,
+            "HeadRoll": 92.2,
+            "DeltaYaw": 136.0
+        }
+    },
+    {
+        "Filename": "0021_bodyshot_photography_girl_head_turned_to_her_right_over_the_shoulder_and_tilted_down.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0021_bodyshot_photography_girl_head_turned_to_her_right_over_the_shoulder_and_tilted_down.jpg",
+        "Prediction_Class": "head turned to his/her left over the shoulder and tilted down",
+        "Angles": {
+            "BodyYaw": -93.1,
+            "BodyRoll": 30.6,
+            "HeadYaw": -30.6,
+            "HeadPitch": -22.4,
+            "HeadRoll": -48.3,
+            "DeltaYaw": 62.5
+        }
+    },
+    {
+        "Filename": "0022_bodyshot_photography_woman_head_facing_forward_straight.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0022_bodyshot_photography_woman_head_facing_forward_straight.jpg",
+        "Prediction_Class": "head facing forward straight",
+        "Angles": {
+            "BodyYaw": -10.2,
+            "BodyRoll": -0.4,
+            "HeadYaw": -6.7,
+            "HeadPitch": -6.8,
+            "HeadRoll": 9.1,
+            "DeltaYaw": 3.5
+        }
+    },
+    {
+        "Filename": "0023_bodyshot_photography_woman_head_turned_to_her_left.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0023_bodyshot_photography_woman_head_turned_to_her_left.jpg",
+        "Prediction_Class": "head turned to his/her left over the shoulder",
+        "Angles": {
+            "BodyYaw": 86.0,
+            "BodyRoll": 0.4,
+            "HeadYaw": -51.3,
+            "HeadPitch": -6.5,
+            "HeadRoll": -109.1,
+            "DeltaYaw": -137.3
+        }
+    },
+    {
+        "Filename": "0024_bodyshot_photography_woman_head_turned_to_her_right.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0024_bodyshot_photography_woman_head_turned_to_her_right.jpg",
+        "Prediction_Class": "head turned to his/her left over the shoulder",
+        "Angles": {
+            "BodyYaw": 87.5,
+            "BodyRoll": -6.2,
+            "HeadYaw": -19.5,
+            "HeadPitch": 9.9,
+            "HeadRoll": -98.8,
+            "DeltaYaw": -107.0
+        }
+    },
+    {
+        "Filename": "0025_bodyshot_photography_woman_head_turned_to_her_left_over_the_shoulder.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0025_bodyshot_photography_woman_head_turned_to_her_left_over_the_shoulder.jpg",
+        "Prediction_Class": "head turned to his/her right over the shoulder",
+        "Angles": {
+            "BodyYaw": 80.3,
+            "BodyRoll": -13.6,
+            "HeadYaw": 15.8,
+            "HeadPitch": -4.4,
+            "HeadRoll": 28.3,
+            "DeltaYaw": -64.5
+        }
+    },
+    {
+        "Filename": "0026_bodyshot_photography_woman_head_turned_to_her_right_over_the_shoulder.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0026_bodyshot_photography_woman_head_turned_to_her_right_over_the_shoulder.jpg",
+        "Prediction_Class": "head turned to his/her left over the shoulder",
+        "Angles": {
+            "BodyYaw": -82.1,
+            "BodyRoll": 7.2,
+            "HeadYaw": -15.7,
+            "HeadPitch": -8.4,
+            "HeadRoll": -42.8,
+            "DeltaYaw": 66.4
+        }
+    },
+    {
+        "Filename": "0028_bodyshot_photography_woman_head_tilted_down.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0028_bodyshot_photography_woman_head_tilted_down.jpg",
+        "Prediction_Class": "head turned to his/her left over the shoulder and tilted up",
+        "Angles": {
+            "BodyYaw": -51.4,
+            "BodyRoll": -0.7,
+            "HeadYaw": -1.1,
+            "HeadPitch": 10.2,
+            "HeadRoll": 50.2,
+            "DeltaYaw": 50.4
+        }
+    },
+    {
+        "Filename": "0029_bodyshot_photography_woman_head_turned_to_her_left_over_the_shoulder_and_tilted_up.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0029_bodyshot_photography_woman_head_turned_to_her_left_over_the_shoulder_and_tilted_up.jpg",
+        "Prediction_Class": "head turned to his/her right over the shoulder and tilted up",
+        "Angles": {
+            "BodyYaw": 84.9,
+            "BodyRoll": 30.0,
+            "HeadYaw": 13.1,
+            "HeadPitch": 22.1,
+            "HeadRoll": 19.6,
+            "DeltaYaw": -71.7
+        }
+    },
+    {
+        "Filename": "0030_bodyshot_photography_woman_head_turned_to_her_left_over_the_shoulder_and_tilted_down.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0030_bodyshot_photography_woman_head_turned_to_her_left_over_the_shoulder_and_tilted_down.jpg",
+        "Prediction_Class": "head turned to his/her left and tilted down",
+        "Angles": {
+            "BodyYaw": -30.3,
+            "BodyRoll": 2.1,
+            "HeadYaw": 0.3,
+            "HeadPitch": -174.2,
+            "HeadRoll": -30.2,
+            "DeltaYaw": 30.6
+        }
+    },
+    {
+        "Filename": "0031_bodyshot_photography_woman_head_turned_to_her_right_over_the_shoulder_and_tilted_up.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0031_bodyshot_photography_woman_head_turned_to_her_right_over_the_shoulder_and_tilted_up.jpg",
+        "Prediction_Class": "head tilted up",
+        "Angles": {
+            "BodyYaw": 16.3,
+            "BodyRoll": -2.4,
+            "HeadYaw": -2.4,
+            "HeadPitch": 25.6,
+            "HeadRoll": -27.3,
+            "DeltaYaw": -18.7
+        }
+    },
+    {
+        "Filename": "0032_bodyshot_photography_woman_head_turned_to_her_right_over_the_shoulder_and_tilted_down.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0032_bodyshot_photography_woman_head_turned_to_her_right_over_the_shoulder_and_tilted_down.jpg",
+        "Prediction_Class": "head turned to his/her left over the shoulder and tilted down",
+        "Angles": {
+            "BodyYaw": -85.4,
+            "BodyRoll": -2.6,
+            "HeadYaw": -37.9,
+            "HeadPitch": -17.5,
+            "HeadRoll": 2.8,
+            "DeltaYaw": 47.5
+        }
+    },
+    {
+        "Filename": "0033_bodyshot_photography_man_head_facing_forward_straight.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0033_bodyshot_photography_man_head_facing_forward_straight.jpg",
+        "Prediction_Class": "head facing forward straight",
+        "Angles": {
+            "BodyYaw": 14.9,
+            "BodyRoll": -1.5,
+            "HeadYaw": -7.8,
+            "HeadPitch": -4.5,
+            "HeadRoll": 9.7,
+            "DeltaYaw": -22.7
+        }
+    },
+    {
+        "Filename": "0034_bodyshot_photography_man_head_turned_to_his_left.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0034_bodyshot_photography_man_head_turned_to_his_left.jpg",
+        "Prediction_Class": "head facing forward straight",
+        "Angles": {
+            "BodyYaw": 0.0,
+            "BodyRoll": 0.0,
+            "HeadYaw": 0.0,
+            "HeadPitch": 0.0,
+            "HeadRoll": 0.0,
+            "DeltaYaw": 0.0
+        }
+    },
+    {
+        "Filename": "0035_bodyshot_photography_man_head_turned_to_his_right.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0035_bodyshot_photography_man_head_turned_to_his_right.jpg",
+        "Prediction_Class": "head turned to his/her right over the shoulder and tilted up",
+        "Angles": {
+            "BodyYaw": -81.5,
+            "BodyRoll": 14.5,
+            "HeadYaw": 30.8,
+            "HeadPitch": 17.1,
+            "HeadRoll": -91.1,
+            "DeltaYaw": 112.3
+        }
+    },
+    {
+        "Filename": "0036_bodyshot_photography_man_head_turned_to_his_left_over_the_shoulder.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0036_bodyshot_photography_man_head_turned_to_his_left_over_the_shoulder.jpg",
+        "Prediction_Class": "head turned to his/her right over the shoulder and tilted down",
+        "Angles": {
+            "BodyYaw": 94.4,
+            "BodyRoll": -43.3,
+            "HeadYaw": 38.8,
+            "HeadPitch": -22.7,
+            "HeadRoll": -12.1,
+            "DeltaYaw": -55.6
+        }
+    },
+    {
+        "Filename": "0037_bodyshot_photography_man_head_turned_to_his_right_over_the_shoulder.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0037_bodyshot_photography_man_head_turned_to_his_right_over_the_shoulder.jpg",
+        "Prediction_Class": "head turned to his/her right and tilted down",
+        "Angles": {
+            "BodyYaw": 76.4,
+            "BodyRoll": -1.7,
+            "HeadYaw": 43.4,
+            "HeadPitch": -115.4,
+            "HeadRoll": -33.1,
+            "DeltaYaw": -32.9
+        }
+    },
+    {
+        "Filename": "0038_bodyshot_photography_man_head_tilted_up.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0038_bodyshot_photography_man_head_tilted_up.jpg",
+        "Prediction_Class": "head turned to his/her left over the shoulder and tilted up",
+        "Angles": {
+            "BodyYaw": -7.1,
+            "BodyRoll": 2.7,
+            "HeadYaw": 45.6,
+            "HeadPitch": 109.8,
+            "HeadRoll": -9.2,
+            "DeltaYaw": 52.7
+        }
+    },
+    {
+        "Filename": "0039_bodyshot_photography_man_head_tilted_down.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0039_bodyshot_photography_man_head_tilted_down.jpg",
+        "Prediction_Class": "head turned to his/her right over the shoulder",
+        "Angles": {
+            "BodyYaw": 59.4,
+            "BodyRoll": -1.9,
+            "HeadYaw": -24.1,
+            "HeadPitch": -8.4,
+            "HeadRoll": -17.6,
+            "DeltaYaw": -83.6
+        }
+    },
+    {
+        "Filename": "0040_bodyshot_photography_man_head_turned_to_his_left_over_the_shoulder_and_tilted_up.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0040_bodyshot_photography_man_head_turned_to_his_left_over_the_shoulder_and_tilted_up.jpg",
+        "Prediction_Class": "head turned to his/her right over the shoulder",
+        "Angles": {
+            "BodyYaw": 76.0,
+            "BodyRoll": -14.6,
+            "HeadYaw": 4.7,
+            "HeadPitch": -5.5,
+            "HeadRoll": -81.5,
+            "DeltaYaw": -71.2
+        }
+    },
+    {
+        "Filename": "0041_bodyshot_photography_man_head_turned_to_his_left_over_the_shoulder_and_tilted_down.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0041_bodyshot_photography_man_head_turned_to_his_left_over_the_shoulder_and_tilted_down.jpg",
+        "Prediction_Class": "head tilted down",
+        "Angles": {
+            "BodyYaw": 13.5,
+            "BodyRoll": 3.5,
+            "HeadYaw": 16.8,
+            "HeadPitch": -171.9,
+            "HeadRoll": 91.2,
+            "DeltaYaw": 3.2
+        }
+    },
+    {
+        "Filename": "0042_bodyshot_photography_man_head_turned_to_his_right_over_the_shoulder_and_tilted_up.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0042_bodyshot_photography_man_head_turned_to_his_right_over_the_shoulder_and_tilted_up.jpg",
+        "Prediction_Class": "head turned to his/her left over the shoulder and tilted up",
+        "Angles": {
+            "BodyYaw": -86.0,
+            "BodyRoll": 12.5,
+            "HeadYaw": -35.2,
+            "HeadPitch": 46.8,
+            "HeadRoll": -8.6,
+            "DeltaYaw": 50.8
+        }
+    },
+    {
+        "Filename": "0043_bodyshot_photography_man_head_turned_to_his_right_over_the_shoulder_and_tilted_down.jpg",
+        "Path": "/media/ee303/disk2/style_generation/diffusers/pixart_pose_alignment_v5/0043_bodyshot_photography_man_head_turned_to_his_right_over_the_shoulder_and_tilted_down.jpg",
+        "Prediction_Class": "head turned to his/her right over the shoulder and tilted down",
+        "Angles": {
+            "BodyYaw": 10.3,
+            "BodyRoll": 42.6,
+            "HeadYaw": -71.8,
+            "HeadPitch": -111.9,
+            "HeadRoll": 30.0,
+            "DeltaYaw": -82.1
+        }
+    }
+]

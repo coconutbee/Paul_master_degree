@@ -1,0 +1,60 @@
+{"id": "boy", "pose_condition": "head facing forward straight", "prompt": "body shot, photography, boy, head facing forward straight."}
+{"id": "boy", "pose_condition": "head turned left", "prompt": "body shot, photography, boy, head turned left."}
+{"id": "boy", "pose_condition": "head turned right", "prompt": "body shot, photography, boy, head turned right."}
+{"id": "boy", "pose_condition": "head tilted up", "prompt": "body shot, photography, boy, head tilted up."}
+{"id": "boy", "pose_condition": "head tilted down", "prompt": "body shot, photography, boy, head tilted down."}
+{"id": "boy", "pose_condition": "head turned left and tilted up", "prompt": "body shot, photography, boy, head turned left and tilted up."}
+{"id": "boy", "pose_condition": "head turned left and tilted down", "prompt": "body shot, photography, boy, head turned left and tilted down."}
+{"id": "boy", "pose_condition": "head turned right and tilted up", "prompt": "body shot, photography, boy, head turned right and tilted up."}
+{"id": "boy", "pose_condition": "head turned right and tilted down", "prompt": "body shot, photography, boy, head turned right and tilted down."}
+{"id": "boy", "pose_condition": "looking fully backward over the left shoulder, extreme head turn", "prompt": "body shot, photography, boy, looking fully backward over the left shoulder, extreme head turn."}
+{"id": "boy", "pose_condition": "looking fully backward over the left shoulder, extreme head turn, chin-raised high", "prompt": "body shot, photography, boy, looking fully backward over the left shoulder, extreme head turn, chin-raised high."}
+{"id": "boy", "pose_condition": "looking fully backward over the left shoulder, extreme head turn, chin-tucked deep", "prompt": "body shot, photography, boy, looking fully backward over the left shoulder, extreme head turn, chin-tucked deep."}
+{"id": "boy", "pose_condition": "looking fully backward over the right shoulder, extreme head turn", "prompt": "body shot, photography, boy, looking fully backward over the right shoulder, extreme head turn."}
+{"id": "boy", "pose_condition": "looking fully backward over the right shoulder, extreme head turn, chin-raised high", "prompt": "body shot, photography, boy, looking fully backward over the right shoulder, extreme head turn, chin-raised high."}
+{"id": "boy", "pose_condition": "looking fully backward over the right shoulder, extreme head turn, chin-tucked deep", "prompt": "body shot, photography, boy, looking fully backward over the right shoulder, extreme head turn, chin-tucked deep."}
+{"id": "girl", "pose_condition": "head facing forward straight", "prompt": "body shot, photography, girl, head facing forward straight."}
+{"id": "girl", "pose_condition": "head turned left", "prompt": "body shot, photography, girl, head turned left."}
+{"id": "girl", "pose_condition": "head turned right", "prompt": "body shot, photography, girl, head turned right."}
+{"id": "girl", "pose_condition": "head tilted up", "prompt": "body shot, photography, girl, head tilted up."}
+{"id": "girl", "pose_condition": "head tilted down", "prompt": "body shot, photography, girl, head tilted down."}
+{"id": "girl", "pose_condition": "head turned left and tilted up", "prompt": "body shot, photography, girl, head turned left and tilted up."}
+{"id": "girl", "pose_condition": "head turned left and tilted down", "prompt": "body shot, photography, girl, head turned left and tilted down."}
+{"id": "girl", "pose_condition": "head turned right and tilted up", "prompt": "body shot, photography, girl, head turned right and tilted up."}
+{"id": "girl", "pose_condition": "head turned right and tilted down", "prompt": "body shot, photography, girl, head turned right and tilted down."}
+{"id": "girl", "pose_condition": "looking fully backward over the left shoulder, extreme head turn", "prompt": "body shot, photography, girl, looking fully backward over the left shoulder, extreme head turn."}
+{"id": "girl", "pose_condition": "looking fully backward over the left shoulder, extreme head turn, chin-raised high", "prompt": "body shot, photography, girl, looking fully backward over the left shoulder, extreme head turn, chin-raised high."}
+{"id": "girl", "pose_condition": "looking fully backward over the left shoulder, extreme head turn, chin-tucked deep", "prompt": "body shot, photography, girl, looking fully backward over the left shoulder, extreme head turn, chin-tucked deep."}
+{"id": "girl", "pose_condition": "looking fully backward over the right shoulder, extreme head turn", "prompt": "body shot, photography, girl, looking fully backward over the right shoulder, extreme head turn."}
+{"id": "girl", "pose_condition": "looking fully backward over the right shoulder, extreme head turn, chin-raised high", "prompt": "body shot, photography, girl, looking fully backward over the right shoulder, extreme head turn, chin-raised high."}
+{"id": "girl", "pose_condition": "looking fully backward over the right shoulder, extreme head turn, chin-tucked deep", "prompt": "body shot, photography, girl, looking fully backward over the right shoulder, extreme head turn, chin-tucked deep."}
+{"id": "woman", "pose_condition": "head facing forward straight", "prompt": "body shot, photography, woman, head facing forward straight."}
+{"id": "woman", "pose_condition": "head turned left", "prompt": "body shot, photography, woman, head turned left."}
+{"id": "woman", "pose_condition": "head turned right", "prompt": "body shot, photography, woman, head turned right."}
+{"id": "woman", "pose_condition": "head tilted up", "prompt": "body shot, photography, woman, head tilted up."}
+{"id": "woman", "pose_condition": "head tilted down", "prompt": "body shot, photography, woman, head tilted down."}
+{"id": "woman", "pose_condition": "head turned left and tilted up", "prompt": "body shot, photography, woman, head turned left and tilted up."}
+{"id": "woman", "pose_condition": "head turned left and tilted down", "prompt": "body shot, photography, woman, head turned left and tilted down."}
+{"id": "woman", "pose_condition": "head turned right and tilted up", "prompt": "body shot, photography, woman, head turned right and tilted up."}
+{"id": "woman", "pose_condition": "head turned right and tilted down", "prompt": "body shot, photography, woman, head turned right and tilted down."}
+{"id": "woman", "pose_condition": "looking fully backward over the left shoulder, extreme head turn", "prompt": "body shot, photography, woman, looking fully backward over the left shoulder, extreme head turn."}
+{"id": "woman", "pose_condition": "looking fully backward over the left shoulder, extreme head turn, chin-raised high", "prompt": "body shot, photography, woman, looking fully backward over the left shoulder, extreme head turn, chin-raised high."}
+{"id": "woman", "pose_condition": "looking fully backward over the left shoulder, extreme head turn, chin-tucked deep", "prompt": "body shot, photography, woman, looking fully backward over the left shoulder, extreme head turn, chin-tucked deep."}
+{"id": "woman", "pose_condition": "looking fully backward over the right shoulder, extreme head turn", "prompt": "body shot, photography, woman, looking fully backward over the right shoulder, extreme head turn."}
+{"id": "woman", "pose_condition": "looking fully backward over the right shoulder, extreme head turn, chin-raised high", "prompt": "body shot, photography, woman, looking fully backward over the right shoulder, extreme head turn, chin-raised high."}
+{"id": "woman", "pose_condition": "looking fully backward over the right shoulder, extreme head turn, chin-tucked deep", "prompt": "body shot, photography, woman, looking fully backward over the right shoulder, extreme head turn, chin-tucked deep."}
+{"id": "man", "pose_condition": "head facing forward straight", "prompt": "body shot, photography, man, head facing forward straight."}
+{"id": "man", "pose_condition": "head turned left", "prompt": "body shot, photography, man, head turned left."}
+{"id": "man", "pose_condition": "head turned right", "prompt": "body shot, photography, man, head turned right."}
+{"id": "man", "pose_condition": "head tilted up", "prompt": "body shot, photography, man, head tilted up."}
+{"id": "man", "pose_condition": "head tilted down", "prompt": "body shot, photography, man, head tilted down."}
+{"id": "man", "pose_condition": "head turned left and tilted up", "prompt": "body shot, photography, man, head turned left and tilted up."}
+{"id": "man", "pose_condition": "head turned left and tilted down", "prompt": "body shot, photography, man, head turned left and tilted down."}
+{"id": "man", "pose_condition": "head turned right and tilted up", "prompt": "body shot, photography, man, head turned right and tilted up."}
+{"id": "man", "pose_condition": "head turned right and tilted down", "prompt": "body shot, photography, man, head turned right and tilted down."}
+{"id": "man", "pose_condition": "looking fully backward over the left shoulder, extreme head turn", "prompt": "body shot, photography, man, looking fully backward over the left shoulder, extreme head turn."}
+{"id": "man", "pose_condition": "looking fully backward over the left shoulder, extreme head turn, chin-raised high", "prompt": "body shot, photography, man, looking fully backward over the left shoulder, extreme head turn, chin-raised high."}
+{"id": "man", "pose_condition": "looking fully backward over the left shoulder, extreme head turn, chin-tucked deep", "prompt": "body shot, photography, man, looking fully backward over the left shoulder, extreme head turn, chin-tucked deep."}
+{"id": "man", "pose_condition": "looking fully backward over the right shoulder, extreme head turn", "prompt": "body shot, photography, man, looking fully backward over the right shoulder, extreme head turn."}
+{"id": "man", "pose_condition": "looking fully backward over the right shoulder, extreme head turn, chin-raised high", "prompt": "body shot, photography, man, looking fully backward over the right shoulder, extreme head turn, chin-raised high."}
+{"id": "man", "pose_condition": "looking fully backward over the right shoulder, extreme head turn, chin-tucked deep", "prompt": "body shot, photography, man, looking fully backward over the right shoulder, extreme head turn, chin-tucked deep."}

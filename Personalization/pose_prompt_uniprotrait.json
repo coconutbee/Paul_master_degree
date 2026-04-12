@@ -1,0 +1,3122 @@
+[
+    {
+        "id": "00128",
+        "image": "00128_A young woman, back view, looking to the left..png",
+        "prompt": "A young woman, back view, looking to the left.",
+        "t2i_id_similarity": 0.6942,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_View_Side_Looking_Away",
+        "ref_pose": "No_Body",
+        "t2i_pose": "Body_Turn_Right_Face_Front",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.9,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, back view, looking to the left.\n- Visual Evidence: The image shows a young woman from the back, looking slightly to her left.\n- Match Score: 0.9",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2561,
+        "t2i_clip_id_i2i": 0.8877,
+        "t2i_dino_id_i2i": 0.7721,
+        "t2i_final_score": 0.3471,
+        "fga_orig_score": 2.751,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.4008
+            ],
+            [
+                "young",
+                0.4613
+            ],
+            [
+                "woman",
+                0.5864
+            ],
+            [
+                ",",
+                0.4104
+            ],
+            [
+                "back",
+                0.3111
+            ],
+            [
+                "view",
+                0.5816
+            ],
+            [
+                ",",
+                0.3669
+            ],
+            [
+                "looking",
+                0.4573
+            ],
+            [
+                "to",
+                0.3757
+            ],
+            [
+                "the",
+                0.304
+            ],
+            [
+                "left",
+                0.3765
+            ]
+        ]
+    },
+    {
+        "id": "00128",
+        "image": "00128_A young woman, back view, looking to the right..png",
+        "prompt": "A young woman, back view, looking to the right.",
+        "t2i_id_similarity": 0.676,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_View_Side_Looking_Away",
+        "ref_pose": "No_Body",
+        "t2i_pose": "Body_Turn_Right_Face_Front",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, back view, looking to the right.\n- Visual Evidence: The image shows a young woman from the back, with her head turned slightly to the right, looking over her shoulder.\n- Match Score: 1.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2442,
+        "t2i_clip_id_i2i": 0.9058,
+        "t2i_dino_id_i2i": 0.7473,
+        "t2i_final_score": 0.338,
+        "fga_orig_score": 2.903,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.4073
+            ],
+            [
+                "young",
+                0.4793
+            ],
+            [
+                "woman",
+                0.6077
+            ],
+            [
+                ",",
+                0.4238
+            ],
+            [
+                "back",
+                0.2892
+            ],
+            [
+                "view",
+                0.5795
+            ],
+            [
+                ",",
+                0.3815
+            ],
+            [
+                "looking",
+                0.4777
+            ],
+            [
+                "to",
+                0.3881
+            ],
+            [
+                "the",
+                0.3256
+            ],
+            [
+                "right",
+                0.408
+            ]
+        ]
+    },
+    {
+        "id": "00128",
+        "image": "00128_A young woman, frontal view, looking to the left..png",
+        "prompt": "A young woman, frontal view, looking to the left.",
+        "t2i_id_similarity": 0.7744,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Head_Turn_Left",
+        "ref_pose": "No_Body",
+        "t2i_pose": "Body_Lean_Left",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.5,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, frontal view, looking to the left.\n- Visual Evidence: The image shows a young woman in a frontal view, but she is looking directly at the camera, not to the left.\n- Match Score: 0.5",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2801,
+        "t2i_clip_id_i2i": 0.9264,
+        "t2i_dino_id_i2i": 0.9246,
+        "t2i_final_score": 0.3872,
+        "fga_orig_score": 3.6093,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.6066
+            ],
+            [
+                "young",
+                0.6109
+            ],
+            [
+                "woman",
+                0.6836
+            ],
+            [
+                ",",
+                0.6106
+            ],
+            [
+                "frontal",
+                0.7772
+            ],
+            [
+                "view",
+                0.7615
+            ],
+            [
+                ",",
+                0.5341
+            ],
+            [
+                "looking",
+                0.6592
+            ],
+            [
+                "to",
+                0.5779
+            ],
+            [
+                "the",
+                0.5084
+            ],
+            [
+                "left",
+                0.4642
+            ]
+        ]
+    },
+    {
+        "id": "00128",
+        "image": "00128_A young woman, frontal view, looking to the right..png",
+        "prompt": "A young woman, frontal view, looking to the right.",
+        "t2i_id_similarity": 0.7449,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Head_Turn_Right",
+        "ref_pose": "No_Body",
+        "t2i_pose": "Head_Tilt_Right",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.5,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, frontal view, looking to the right.\n- Visual Evidence: The image shows a young woman in a frontal view, but she is looking directly at the camera, not to the right.\n- Match Score: 0.5",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2774,
+        "t2i_clip_id_i2i": 0.9223,
+        "t2i_dino_id_i2i": 0.8719,
+        "t2i_final_score": 0.3725,
+        "fga_orig_score": 3.5023,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.6166
+            ],
+            [
+                "young",
+                0.5953
+            ],
+            [
+                "woman",
+                0.6417
+            ],
+            [
+                ",",
+                0.6072
+            ],
+            [
+                "frontal",
+                0.7716
+            ],
+            [
+                "view",
+                0.7562
+            ],
+            [
+                ",",
+                0.5176
+            ],
+            [
+                "looking",
+                0.6595
+            ],
+            [
+                "to",
+                0.5758
+            ],
+            [
+                "the",
+                0.5164
+            ],
+            [
+                "right",
+                0.4649
+            ]
+        ]
+    },
+    {
+        "id": "00128",
+        "image": "00128_A young woman, side view turned left, looking back over the right shoulder, looking up..png",
+        "prompt": "A young woman, side view turned left, looking back over the right shoulder, looking up.",
+        "t2i_id_similarity": 0.7494,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "ref_pose": "No_Body",
+        "t2i_pose": "Head_Turn_Right",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.3,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, side view turned left, looking back over the right shoulder, looking up.\n- Visual Evidence: The image shows a young woman facing the camera directly, not turned left or looking over her right shoulder.\n- Match Score: 0.3",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.297,
+        "t2i_clip_id_i2i": 0.9013,
+        "t2i_dino_id_i2i": 0.8266,
+        "t2i_final_score": 0.3747,
+        "fga_orig_score": 2.3289,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.3645
+            ],
+            [
+                "young",
+                0.4392
+            ],
+            [
+                "woman",
+                0.5885
+            ],
+            [
+                ",",
+                0.3504
+            ],
+            [
+                "side",
+                0.354
+            ],
+            [
+                "view",
+                0.5847
+            ],
+            [
+                "turned",
+                0.3715
+            ],
+            [
+                "left",
+                0.3475
+            ],
+            [
+                ",",
+                0.4016
+            ],
+            [
+                "looking",
+                0.42
+            ],
+            [
+                "back",
+                0.1789
+            ],
+            [
+                "over",
+                0.33
+            ],
+            [
+                "the",
+                0.3287
+            ],
+            [
+                "right",
+                0.3553
+            ],
+            [
+                "shoulder",
+                0.4874
+            ],
+            [
+                ",",
+                0.4299
+            ],
+            [
+                "looking",
+                0.4143
+            ],
+            [
+                "up",
+                0.3532
+            ]
+        ]
+    },
+    {
+        "id": "00128",
+        "image": "00128_A young woman, side view turned left, looking back over the right shoulder..png",
+        "prompt": "A young woman, side view turned left, looking back over the right shoulder.",
+        "t2i_id_similarity": 0.7352,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "ref_pose": "No_Body",
+        "t2i_pose": "Body_Turn_Right_Face_Front",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, side view turned left, looking back over the right shoulder.\n- Visual Evidence: The image shows a young woman facing slightly to the left with her head turned to look over her right shoulder.\n- Match Score: 1.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2738,
+        "t2i_clip_id_i2i": 0.8854,
+        "t2i_dino_id_i2i": 0.8036,
+        "t2i_final_score": 0.3676,
+        "fga_orig_score": 2.9805,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.4028
+            ],
+            [
+                "young",
+                0.4978
+            ],
+            [
+                "woman",
+                0.6399
+            ],
+            [
+                ",",
+                0.4443
+            ],
+            [
+                "side",
+                0.5268
+            ],
+            [
+                "view",
+                0.6099
+            ],
+            [
+                "turned",
+                0.5119
+            ],
+            [
+                "left",
+                0.4148
+            ],
+            [
+                ",",
+                0.4511
+            ],
+            [
+                "looking",
+                0.4382
+            ],
+            [
+                "back",
+                0.3418
+            ],
+            [
+                "over",
+                0.3941
+            ],
+            [
+                "the",
+                0.3033
+            ],
+            [
+                "right",
+                0.4113
+            ],
+            [
+                "shoulder",
+                0.6102
+            ]
+        ]
+    },
+    {
+        "id": "00128",
+        "image": "00128_A young woman, side view turned right, looking back over the left shoulder, looking down..png",
+        "prompt": "A young woman, side view turned right, looking back over the left shoulder, looking down.",
+        "t2i_id_similarity": 0.7313,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "ref_pose": "No_Body",
+        "t2i_pose": "Body_Turn_Right_Face_Front",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.3,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, side view turned right, looking back over the left shoulder, looking down.\n- Visual Evidence: The image shows a young woman facing forward with a slight turn to her right. She is not looking back over her left shoulder nor looking down.\n- Match Score: 0.3",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2783,
+        "t2i_clip_id_i2i": 0.9013,
+        "t2i_dino_id_i2i": 0.8542,
+        "t2i_final_score": 0.3656,
+        "fga_orig_score": 2.2159,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.351
+            ],
+            [
+                "young",
+                0.4232
+            ],
+            [
+                "woman",
+                0.543
+            ],
+            [
+                ",",
+                0.3532
+            ],
+            [
+                "side",
+                0.3554
+            ],
+            [
+                "view",
+                0.6148
+            ],
+            [
+                "turned",
+                0.3658
+            ],
+            [
+                "right",
+                0.3556
+            ],
+            [
+                ",",
+                0.4088
+            ],
+            [
+                "looking",
+                0.3959
+            ],
+            [
+                "back",
+                0.165
+            ],
+            [
+                "over",
+                0.2874
+            ],
+            [
+                "the",
+                0.3014
+            ],
+            [
+                "left",
+                0.3858
+            ],
+            [
+                "shoulder",
+                0.4962
+            ],
+            [
+                ",",
+                0.446
+            ],
+            [
+                "looking",
+                0.3069
+            ],
+            [
+                "down",
+                0.269
+            ]
+        ]
+    },
+    {
+        "id": "00128",
+        "image": "00128_A young woman, side view turned right, looking back over the left shoulder..png",
+        "prompt": "A young woman, side view turned right, looking back over the left shoulder.",
+        "t2i_id_similarity": 0.7394,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "ref_pose": "No_Body",
+        "t2i_pose": "Body_Lean_Left",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.0,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, side view turned right, looking back over the left shoulder.\n- Visual Evidence: The image shows a young woman facing forward with her hair styled in pigtails. She is not turned to the side, nor is she looking back over her left shoulder.\n- Match Score: 0.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2676,
+        "t2i_clip_id_i2i": 0.932,
+        "t2i_dino_id_i2i": 0.8367,
+        "t2i_final_score": 0.3697,
+        "fga_orig_score": 2.331,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.2874
+            ],
+            [
+                "young",
+                0.3702
+            ],
+            [
+                "woman",
+                0.521
+            ],
+            [
+                ",",
+                0.3041
+            ],
+            [
+                "side",
+                0.3313
+            ],
+            [
+                "view",
+                0.5118
+            ],
+            [
+                "turned",
+                0.3414
+            ],
+            [
+                "right",
+                0.3192
+            ],
+            [
+                ",",
+                0.3273
+            ],
+            [
+                "looking",
+                0.3221
+            ],
+            [
+                "back",
+                0.1727
+            ],
+            [
+                "over",
+                0.2907
+            ],
+            [
+                "the",
+                0.2112
+            ],
+            [
+                "left",
+                0.3537
+            ],
+            [
+                "shoulder",
+                0.4373
+            ]
+        ]
+    },
+    {
+        "id": "00432",
+        "image": "00432_A young woman, back view, looking to the left..png",
+        "prompt": "A young woman, back view, looking to the left.",
+        "t2i_id_similarity": 0.6461,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_View_Side_Looking_Away",
+        "ref_pose": "Body_Turn_Left_Face_Front",
+        "t2i_pose": "Body_Turn_Right_Face_Front",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.9,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, back view, looking to the left.\n- Visual Evidence: The image shows a young woman from the back, looking slightly to her left.\n- Match Score: 0.9",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2561,
+        "t2i_clip_id_i2i": 0.6403,
+        "t2i_dino_id_i2i": 0.6391,
+        "t2i_final_score": 0.3231,
+        "fga_orig_score": 2.751,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.4008
+            ],
+            [
+                "young",
+                0.4613
+            ],
+            [
+                "woman",
+                0.5864
+            ],
+            [
+                ",",
+                0.4104
+            ],
+            [
+                "back",
+                0.3111
+            ],
+            [
+                "view",
+                0.5816
+            ],
+            [
+                ",",
+                0.3669
+            ],
+            [
+                "looking",
+                0.4573
+            ],
+            [
+                "to",
+                0.3757
+            ],
+            [
+                "the",
+                0.304
+            ],
+            [
+                "left",
+                0.3765
+            ]
+        ]
+    },
+    {
+        "id": "00432",
+        "image": "00432_A young woman, back view, looking to the right..png",
+        "prompt": "A young woman, back view, looking to the right.",
+        "t2i_id_similarity": 0.6361,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_View_Side_Looking_Away",
+        "ref_pose": "Body_Turn_Left_Face_Front",
+        "t2i_pose": "Body_Turn_Right_Face_Front",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, back view, looking to the right.\n- Visual Evidence: The image shows a young woman from the back, with her head turned slightly to the right, looking over her shoulder.\n- Match Score: 1.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2442,
+        "t2i_clip_id_i2i": 0.6397,
+        "t2i_dino_id_i2i": 0.5955,
+        "t2i_final_score": 0.318,
+        "fga_orig_score": 2.903,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.4073
+            ],
+            [
+                "young",
+                0.4793
+            ],
+            [
+                "woman",
+                0.6077
+            ],
+            [
+                ",",
+                0.4238
+            ],
+            [
+                "back",
+                0.2892
+            ],
+            [
+                "view",
+                0.5795
+            ],
+            [
+                ",",
+                0.3815
+            ],
+            [
+                "looking",
+                0.4777
+            ],
+            [
+                "to",
+                0.3881
+            ],
+            [
+                "the",
+                0.3256
+            ],
+            [
+                "right",
+                0.408
+            ]
+        ]
+    },
+    {
+        "id": "00432",
+        "image": "00432_A young woman, frontal view, looking to the left..png",
+        "prompt": "A young woman, frontal view, looking to the left.",
+        "t2i_id_similarity": 0.6834,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Head_Turn_Left",
+        "ref_pose": "Body_Turn_Left_Face_Front",
+        "t2i_pose": "Body_Lean_Right",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.5,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, frontal view, looking to the left.\n- Visual Evidence: The image shows a young woman in a frontal view, but she is looking directly at the camera, not to the left.\n- Match Score: 0.5",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2801,
+        "t2i_clip_id_i2i": 0.6513,
+        "t2i_dino_id_i2i": 0.7102,
+        "t2i_final_score": 0.3417,
+        "fga_orig_score": 3.6093,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.6066
+            ],
+            [
+                "young",
+                0.6109
+            ],
+            [
+                "woman",
+                0.6836
+            ],
+            [
+                ",",
+                0.6106
+            ],
+            [
+                "frontal",
+                0.7772
+            ],
+            [
+                "view",
+                0.7615
+            ],
+            [
+                ",",
+                0.5341
+            ],
+            [
+                "looking",
+                0.6592
+            ],
+            [
+                "to",
+                0.5779
+            ],
+            [
+                "the",
+                0.5084
+            ],
+            [
+                "left",
+                0.4642
+            ]
+        ]
+    },
+    {
+        "id": "00432",
+        "image": "00432_A young woman, frontal view, looking to the right..png",
+        "prompt": "A young woman, frontal view, looking to the right.",
+        "t2i_id_similarity": 0.702,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Head_Turn_Right",
+        "ref_pose": "Body_Turn_Left_Face_Front",
+        "t2i_pose": "No_Body",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.5,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, frontal view, looking to the right.\n- Visual Evidence: The image shows a young woman in a frontal view, but she is looking directly at the camera, not to the right.\n- Match Score: 0.5",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2774,
+        "t2i_clip_id_i2i": 0.6545,
+        "t2i_dino_id_i2i": 0.6973,
+        "t2i_final_score": 0.351,
+        "fga_orig_score": 3.5023,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.6166
+            ],
+            [
+                "young",
+                0.5953
+            ],
+            [
+                "woman",
+                0.6417
+            ],
+            [
+                ",",
+                0.6072
+            ],
+            [
+                "frontal",
+                0.7716
+            ],
+            [
+                "view",
+                0.7562
+            ],
+            [
+                ",",
+                0.5176
+            ],
+            [
+                "looking",
+                0.6595
+            ],
+            [
+                "to",
+                0.5758
+            ],
+            [
+                "the",
+                0.5164
+            ],
+            [
+                "right",
+                0.4649
+            ]
+        ]
+    },
+    {
+        "id": "00432",
+        "image": "00432_A young woman, side view turned left, looking back over the right shoulder..png",
+        "prompt": "A young woman, side view turned left, looking back over the right shoulder.",
+        "t2i_id_similarity": 0.6707,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "ref_pose": "Body_Turn_Left_Face_Front",
+        "t2i_pose": "Body_Turn_Right_Face_Front",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, side view turned left, looking back over the right shoulder.\n- Visual Evidence: The image shows a young woman facing slightly to the left with her head turned to look over her right shoulder.\n- Match Score: 1.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2738,
+        "t2i_clip_id_i2i": 0.6224,
+        "t2i_dino_id_i2i": 0.6624,
+        "t2i_final_score": 0.3353,
+        "fga_orig_score": 2.9805,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.4028
+            ],
+            [
+                "young",
+                0.4978
+            ],
+            [
+                "woman",
+                0.6399
+            ],
+            [
+                ",",
+                0.4443
+            ],
+            [
+                "side",
+                0.5268
+            ],
+            [
+                "view",
+                0.6099
+            ],
+            [
+                "turned",
+                0.5119
+            ],
+            [
+                "left",
+                0.4148
+            ],
+            [
+                ",",
+                0.4511
+            ],
+            [
+                "looking",
+                0.4382
+            ],
+            [
+                "back",
+                0.3418
+            ],
+            [
+                "over",
+                0.3941
+            ],
+            [
+                "the",
+                0.3033
+            ],
+            [
+                "right",
+                0.4113
+            ],
+            [
+                "shoulder",
+                0.6102
+            ]
+        ]
+    },
+    {
+        "id": "00432",
+        "image": "00432_A young woman, side view turned right, looking back over the left shoulder, looking down..png",
+        "prompt": "A young woman, side view turned right, looking back over the left shoulder, looking down.",
+        "t2i_id_similarity": 0.7315,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "ref_pose": "Body_Turn_Left_Face_Front",
+        "t2i_pose": "Side_View_Right",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.3,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, side view turned right, looking back over the left shoulder, looking down.\n- Visual Evidence: The image shows a young woman facing forward with a slight turn to her right. She is not looking back over her left shoulder nor looking down.\n- Match Score: 0.3",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2783,
+        "t2i_clip_id_i2i": 0.6373,
+        "t2i_dino_id_i2i": 0.7141,
+        "t2i_final_score": 0.3658,
+        "fga_orig_score": 2.2159,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.351
+            ],
+            [
+                "young",
+                0.4232
+            ],
+            [
+                "woman",
+                0.543
+            ],
+            [
+                ",",
+                0.3532
+            ],
+            [
+                "side",
+                0.3554
+            ],
+            [
+                "view",
+                0.6148
+            ],
+            [
+                "turned",
+                0.3658
+            ],
+            [
+                "right",
+                0.3556
+            ],
+            [
+                ",",
+                0.4088
+            ],
+            [
+                "looking",
+                0.3959
+            ],
+            [
+                "back",
+                0.165
+            ],
+            [
+                "over",
+                0.2874
+            ],
+            [
+                "the",
+                0.3014
+            ],
+            [
+                "left",
+                0.3858
+            ],
+            [
+                "shoulder",
+                0.4962
+            ],
+            [
+                ",",
+                0.446
+            ],
+            [
+                "looking",
+                0.3069
+            ],
+            [
+                "down",
+                0.269
+            ]
+        ]
+    },
+    {
+        "id": "00432",
+        "image": "00432_A young woman, side view turned right, looking back over the left shoulder..png",
+        "prompt": "A young woman, side view turned right, looking back over the left shoulder.",
+        "t2i_id_similarity": 0.6997,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "ref_pose": "Body_Turn_Left_Face_Front",
+        "t2i_pose": "Body_Turn_Right_Face_Front",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.0,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, side view turned right, looking back over the left shoulder.\n- Visual Evidence: The image shows a young woman facing forward with her hair styled in pigtails. She is not turned to the side, nor is she looking back over her left shoulder.\n- Match Score: 0.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2676,
+        "t2i_clip_id_i2i": 0.6345,
+        "t2i_dino_id_i2i": 0.6749,
+        "t2i_final_score": 0.3498,
+        "fga_orig_score": 2.331,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.2874
+            ],
+            [
+                "young",
+                0.3702
+            ],
+            [
+                "woman",
+                0.521
+            ],
+            [
+                ",",
+                0.3041
+            ],
+            [
+                "side",
+                0.3313
+            ],
+            [
+                "view",
+                0.5118
+            ],
+            [
+                "turned",
+                0.3414
+            ],
+            [
+                "right",
+                0.3192
+            ],
+            [
+                ",",
+                0.3273
+            ],
+            [
+                "looking",
+                0.3221
+            ],
+            [
+                "back",
+                0.1727
+            ],
+            [
+                "over",
+                0.2907
+            ],
+            [
+                "the",
+                0.2112
+            ],
+            [
+                "left",
+                0.3537
+            ],
+            [
+                "shoulder",
+                0.4373
+            ]
+        ]
+    },
+    {
+        "id": "00432",
+        "image": "00432_A young woman, side view turned left, looking back over the right shoulder, looking up..png",
+        "prompt": "A young woman, side view turned left, looking back over the right shoulder, looking up.",
+        "t2i_id_similarity": 0.6617,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "ref_pose": "Body_Turn_Left_Face_Front",
+        "t2i_pose": "Body_Turn_Right_Face_Front",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.3,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, side view turned left, looking back over the right shoulder, looking up.\n- Visual Evidence: The image shows a young woman facing the camera directly, not turned left or looking over her right shoulder.\n- Match Score: 0.3",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.297,
+        "t2i_clip_id_i2i": 0.6418,
+        "t2i_dino_id_i2i": 0.677,
+        "t2i_final_score": 0.3308,
+        "fga_orig_score": 2.3289,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.3645
+            ],
+            [
+                "young",
+                0.4392
+            ],
+            [
+                "woman",
+                0.5885
+            ],
+            [
+                ",",
+                0.3504
+            ],
+            [
+                "side",
+                0.354
+            ],
+            [
+                "view",
+                0.5847
+            ],
+            [
+                "turned",
+                0.3715
+            ],
+            [
+                "left",
+                0.3475
+            ],
+            [
+                ",",
+                0.4016
+            ],
+            [
+                "looking",
+                0.42
+            ],
+            [
+                "back",
+                0.1789
+            ],
+            [
+                "over",
+                0.33
+            ],
+            [
+                "the",
+                0.3287
+            ],
+            [
+                "right",
+                0.3553
+            ],
+            [
+                "shoulder",
+                0.4874
+            ],
+            [
+                ",",
+                0.4299
+            ],
+            [
+                "looking",
+                0.4143
+            ],
+            [
+                "up",
+                0.3532
+            ]
+        ]
+    },
+    {
+        "id": "00587",
+        "image": "00587_A young woman, side view turned right, looking back over the left shoulder..png",
+        "prompt": "A young woman, side view turned right, looking back over the left shoulder.",
+        "t2i_id_similarity": 0.7336,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "ref_pose": "Head_Tilt_Right",
+        "t2i_pose": "Body_Turn_Right_Face_Front",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.0,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, side view turned right, looking back over the left shoulder.\n- Visual Evidence: The image shows a young woman facing forward with her hair styled in pigtails. She is not turned to the side, nor is she looking back over her left shoulder.\n- Match Score: 0.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2676,
+        "t2i_clip_id_i2i": 0.7437,
+        "t2i_dino_id_i2i": 0.6578,
+        "t2i_final_score": 0.3668,
+        "fga_orig_score": 2.331,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.2874
+            ],
+            [
+                "young",
+                0.3702
+            ],
+            [
+                "woman",
+                0.521
+            ],
+            [
+                ",",
+                0.3041
+            ],
+            [
+                "side",
+                0.3313
+            ],
+            [
+                "view",
+                0.5118
+            ],
+            [
+                "turned",
+                0.3414
+            ],
+            [
+                "right",
+                0.3192
+            ],
+            [
+                ",",
+                0.3273
+            ],
+            [
+                "looking",
+                0.3221
+            ],
+            [
+                "back",
+                0.1727
+            ],
+            [
+                "over",
+                0.2907
+            ],
+            [
+                "the",
+                0.2112
+            ],
+            [
+                "left",
+                0.3537
+            ],
+            [
+                "shoulder",
+                0.4373
+            ]
+        ]
+    },
+    {
+        "id": "00587",
+        "image": "00587_A young woman, back view, looking to the left..png",
+        "prompt": "A young woman, back view, looking to the left.",
+        "t2i_id_similarity": 0.6393,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_View_Side_Looking_Away",
+        "ref_pose": "Head_Tilt_Right",
+        "t2i_pose": "Side_View_Right",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.9,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, back view, looking to the left.\n- Visual Evidence: The image shows a young woman from the back, looking slightly to her left.\n- Match Score: 0.9",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2561,
+        "t2i_clip_id_i2i": 0.6915,
+        "t2i_dino_id_i2i": 0.5973,
+        "t2i_final_score": 0.3196,
+        "fga_orig_score": 2.751,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.4008
+            ],
+            [
+                "young",
+                0.4613
+            ],
+            [
+                "woman",
+                0.5864
+            ],
+            [
+                ",",
+                0.4104
+            ],
+            [
+                "back",
+                0.3111
+            ],
+            [
+                "view",
+                0.5816
+            ],
+            [
+                ",",
+                0.3669
+            ],
+            [
+                "looking",
+                0.4573
+            ],
+            [
+                "to",
+                0.3757
+            ],
+            [
+                "the",
+                0.304
+            ],
+            [
+                "left",
+                0.3765
+            ]
+        ]
+    },
+    {
+        "id": "00587",
+        "image": "00587_A young woman, back view, looking to the right..png",
+        "prompt": "A young woman, back view, looking to the right.",
+        "t2i_id_similarity": 0.4163,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_View_Side_Looking_Away",
+        "ref_pose": "Head_Tilt_Right",
+        "t2i_pose": "Back_View_Side_Looking_Away",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, back view, looking to the right.\n- Visual Evidence: The image shows a young woman from the back, with her head turned slightly to the right, looking over her shoulder.\n- Match Score: 1.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2442,
+        "t2i_clip_id_i2i": 0.709,
+        "t2i_dino_id_i2i": 0.59,
+        "t2i_final_score": 0.2082,
+        "fga_orig_score": 2.903,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.4073
+            ],
+            [
+                "young",
+                0.4793
+            ],
+            [
+                "woman",
+                0.6077
+            ],
+            [
+                ",",
+                0.4238
+            ],
+            [
+                "back",
+                0.2892
+            ],
+            [
+                "view",
+                0.5795
+            ],
+            [
+                ",",
+                0.3815
+            ],
+            [
+                "looking",
+                0.4777
+            ],
+            [
+                "to",
+                0.3881
+            ],
+            [
+                "the",
+                0.3256
+            ],
+            [
+                "right",
+                0.408
+            ]
+        ]
+    },
+    {
+        "id": "00587",
+        "image": "00587_A young woman, frontal view, looking to the left..png",
+        "prompt": "A young woman, frontal view, looking to the left.",
+        "t2i_id_similarity": 0.7094,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Head_Turn_Left",
+        "ref_pose": "Head_Tilt_Right",
+        "t2i_pose": "Frontal",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.5,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, frontal view, looking to the left.\n- Visual Evidence: The image shows a young woman in a frontal view, but she is looking directly at the camera, not to the left.\n- Match Score: 0.5",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2801,
+        "t2i_clip_id_i2i": 0.7704,
+        "t2i_dino_id_i2i": 0.6513,
+        "t2i_final_score": 0.3547,
+        "fga_orig_score": 3.6093,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.6066
+            ],
+            [
+                "young",
+                0.6109
+            ],
+            [
+                "woman",
+                0.6836
+            ],
+            [
+                ",",
+                0.6106
+            ],
+            [
+                "frontal",
+                0.7772
+            ],
+            [
+                "view",
+                0.7615
+            ],
+            [
+                ",",
+                0.5341
+            ],
+            [
+                "looking",
+                0.6592
+            ],
+            [
+                "to",
+                0.5779
+            ],
+            [
+                "the",
+                0.5084
+            ],
+            [
+                "left",
+                0.4642
+            ]
+        ]
+    },
+    {
+        "id": "00587",
+        "image": "00587_A young woman, frontal view, looking to the right..png",
+        "prompt": "A young woman, frontal view, looking to the right.",
+        "t2i_id_similarity": 0.7333,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Head_Turn_Right",
+        "ref_pose": "Head_Tilt_Right",
+        "t2i_pose": "Head_Tilt_Right",
+        "pose_match": 1,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.5,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, frontal view, looking to the right.\n- Visual Evidence: The image shows a young woman in a frontal view, but she is looking directly at the camera, not to the right.\n- Match Score: 0.5",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2774,
+        "t2i_clip_id_i2i": 0.7389,
+        "t2i_dino_id_i2i": 0.6507,
+        "t2i_final_score": 0.3666,
+        "fga_orig_score": 3.5023,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.6166
+            ],
+            [
+                "young",
+                0.5953
+            ],
+            [
+                "woman",
+                0.6417
+            ],
+            [
+                ",",
+                0.6072
+            ],
+            [
+                "frontal",
+                0.7716
+            ],
+            [
+                "view",
+                0.7562
+            ],
+            [
+                ",",
+                0.5176
+            ],
+            [
+                "looking",
+                0.6595
+            ],
+            [
+                "to",
+                0.5758
+            ],
+            [
+                "the",
+                0.5164
+            ],
+            [
+                "right",
+                0.4649
+            ]
+        ]
+    },
+    {
+        "id": "00587",
+        "image": "00587_A young woman, side view turned left, looking back over the right shoulder, looking up..png",
+        "prompt": "A young woman, side view turned left, looking back over the right shoulder, looking up.",
+        "t2i_id_similarity": 0.7205,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "ref_pose": "Head_Tilt_Right",
+        "t2i_pose": "Side_View_Right",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.3,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, side view turned left, looking back over the right shoulder, looking up.\n- Visual Evidence: The image shows a young woman facing the camera directly, not turned left or looking over her right shoulder.\n- Match Score: 0.3",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.297,
+        "t2i_clip_id_i2i": 0.7226,
+        "t2i_dino_id_i2i": 0.5974,
+        "t2i_final_score": 0.3603,
+        "fga_orig_score": 2.3289,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.3645
+            ],
+            [
+                "young",
+                0.4392
+            ],
+            [
+                "woman",
+                0.5885
+            ],
+            [
+                ",",
+                0.3504
+            ],
+            [
+                "side",
+                0.354
+            ],
+            [
+                "view",
+                0.5847
+            ],
+            [
+                "turned",
+                0.3715
+            ],
+            [
+                "left",
+                0.3475
+            ],
+            [
+                ",",
+                0.4016
+            ],
+            [
+                "looking",
+                0.42
+            ],
+            [
+                "back",
+                0.1789
+            ],
+            [
+                "over",
+                0.33
+            ],
+            [
+                "the",
+                0.3287
+            ],
+            [
+                "right",
+                0.3553
+            ],
+            [
+                "shoulder",
+                0.4874
+            ],
+            [
+                ",",
+                0.4299
+            ],
+            [
+                "looking",
+                0.4143
+            ],
+            [
+                "up",
+                0.3532
+            ]
+        ]
+    },
+    {
+        "id": "00587",
+        "image": "00587_A young woman, side view turned left, looking back over the right shoulder..png",
+        "prompt": "A young woman, side view turned left, looking back over the right shoulder.",
+        "t2i_id_similarity": 0.6421,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "ref_pose": "Head_Tilt_Right",
+        "t2i_pose": "Back_View_Side_Looking_Away",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, side view turned left, looking back over the right shoulder.\n- Visual Evidence: The image shows a young woman facing slightly to the left with her head turned to look over her right shoulder.\n- Match Score: 1.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2738,
+        "t2i_clip_id_i2i": 0.7299,
+        "t2i_dino_id_i2i": 0.6293,
+        "t2i_final_score": 0.3211,
+        "fga_orig_score": 2.9805,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.4028
+            ],
+            [
+                "young",
+                0.4978
+            ],
+            [
+                "woman",
+                0.6399
+            ],
+            [
+                ",",
+                0.4443
+            ],
+            [
+                "side",
+                0.5268
+            ],
+            [
+                "view",
+                0.6099
+            ],
+            [
+                "turned",
+                0.5119
+            ],
+            [
+                "left",
+                0.4148
+            ],
+            [
+                ",",
+                0.4511
+            ],
+            [
+                "looking",
+                0.4382
+            ],
+            [
+                "back",
+                0.3418
+            ],
+            [
+                "over",
+                0.3941
+            ],
+            [
+                "the",
+                0.3033
+            ],
+            [
+                "right",
+                0.4113
+            ],
+            [
+                "shoulder",
+                0.6102
+            ]
+        ]
+    },
+    {
+        "id": "00587",
+        "image": "00587_A young woman, side view turned right, looking back over the left shoulder, looking down..png",
+        "prompt": "A young woman, side view turned right, looking back over the left shoulder, looking down.",
+        "t2i_id_similarity": 0.6428,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "ref_pose": "Head_Tilt_Right",
+        "t2i_pose": "Body_Turn_Right_Face_Front",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.3,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, side view turned right, looking back over the left shoulder, looking down.\n- Visual Evidence: The image shows a young woman facing forward with a slight turn to her right. She is not looking back over her left shoulder nor looking down.\n- Match Score: 0.3",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2783,
+        "t2i_clip_id_i2i": 0.7493,
+        "t2i_dino_id_i2i": 0.6371,
+        "t2i_final_score": 0.3214,
+        "fga_orig_score": 2.2159,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.351
+            ],
+            [
+                "young",
+                0.4232
+            ],
+            [
+                "woman",
+                0.543
+            ],
+            [
+                ",",
+                0.3532
+            ],
+            [
+                "side",
+                0.3554
+            ],
+            [
+                "view",
+                0.6148
+            ],
+            [
+                "turned",
+                0.3658
+            ],
+            [
+                "right",
+                0.3556
+            ],
+            [
+                ",",
+                0.4088
+            ],
+            [
+                "looking",
+                0.3959
+            ],
+            [
+                "back",
+                0.165
+            ],
+            [
+                "over",
+                0.2874
+            ],
+            [
+                "the",
+                0.3014
+            ],
+            [
+                "left",
+                0.3858
+            ],
+            [
+                "shoulder",
+                0.4962
+            ],
+            [
+                ",",
+                0.446
+            ],
+            [
+                "looking",
+                0.3069
+            ],
+            [
+                "down",
+                0.269
+            ]
+        ]
+    },
+    {
+        "id": "00623",
+        "image": "00623_A young woman, back view, looking to the left..png",
+        "prompt": "A young woman, back view, looking to the left.",
+        "t2i_id_similarity": 0.0,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_View_Side_Looking_Away",
+        "ref_pose": "Head_Tilt_Right",
+        "t2i_pose": "Head_Turn_Right",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.9,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, back view, looking to the left.\n- Visual Evidence: The image shows a young woman from the back, looking slightly to her left.\n- Match Score: 0.9",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2561,
+        "t2i_clip_id_i2i": 0.7111,
+        "t2i_dino_id_i2i": 0.4632,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.751,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.4008
+            ],
+            [
+                "young",
+                0.4613
+            ],
+            [
+                "woman",
+                0.5864
+            ],
+            [
+                ",",
+                0.4104
+            ],
+            [
+                "back",
+                0.3111
+            ],
+            [
+                "view",
+                0.5816
+            ],
+            [
+                ",",
+                0.3669
+            ],
+            [
+                "looking",
+                0.4573
+            ],
+            [
+                "to",
+                0.3757
+            ],
+            [
+                "the",
+                0.304
+            ],
+            [
+                "left",
+                0.3765
+            ]
+        ]
+    },
+    {
+        "id": "00623",
+        "image": "00623_A young woman, back view, looking to the right..png",
+        "prompt": "A young woman, back view, looking to the right.",
+        "t2i_id_similarity": 0.0,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_View_Side_Looking_Away",
+        "ref_pose": "Head_Tilt_Right",
+        "t2i_pose": "Side_View_Right",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, back view, looking to the right.\n- Visual Evidence: The image shows a young woman from the back, with her head turned slightly to the right, looking over her shoulder.\n- Match Score: 1.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2442,
+        "t2i_clip_id_i2i": 0.7432,
+        "t2i_dino_id_i2i": 0.4752,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.903,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.4073
+            ],
+            [
+                "young",
+                0.4793
+            ],
+            [
+                "woman",
+                0.6077
+            ],
+            [
+                ",",
+                0.4238
+            ],
+            [
+                "back",
+                0.2892
+            ],
+            [
+                "view",
+                0.5795
+            ],
+            [
+                ",",
+                0.3815
+            ],
+            [
+                "looking",
+                0.4777
+            ],
+            [
+                "to",
+                0.3881
+            ],
+            [
+                "the",
+                0.3256
+            ],
+            [
+                "right",
+                0.408
+            ]
+        ]
+    },
+    {
+        "id": "00623",
+        "image": "00623_A young woman, frontal view, looking to the left..png",
+        "prompt": "A young woman, frontal view, looking to the left.",
+        "t2i_id_similarity": 0.7133,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Head_Turn_Left",
+        "ref_pose": "Head_Tilt_Right",
+        "t2i_pose": "Head_Tilt_Left",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.5,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, frontal view, looking to the left.\n- Visual Evidence: The image shows a young woman in a frontal view, but she is looking directly at the camera, not to the left.\n- Match Score: 0.5",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2801,
+        "t2i_clip_id_i2i": 0.8467,
+        "t2i_dino_id_i2i": 0.612,
+        "t2i_final_score": 0.3567,
+        "fga_orig_score": 3.6093,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.6066
+            ],
+            [
+                "young",
+                0.6109
+            ],
+            [
+                "woman",
+                0.6836
+            ],
+            [
+                ",",
+                0.6106
+            ],
+            [
+                "frontal",
+                0.7772
+            ],
+            [
+                "view",
+                0.7615
+            ],
+            [
+                ",",
+                0.5341
+            ],
+            [
+                "looking",
+                0.6592
+            ],
+            [
+                "to",
+                0.5779
+            ],
+            [
+                "the",
+                0.5084
+            ],
+            [
+                "left",
+                0.4642
+            ]
+        ]
+    },
+    {
+        "id": "00623",
+        "image": "00623_A young woman, frontal view, looking to the right..png",
+        "prompt": "A young woman, frontal view, looking to the right.",
+        "t2i_id_similarity": 0.6911,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Head_Turn_Right",
+        "ref_pose": "Head_Tilt_Right",
+        "t2i_pose": "Frontal",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.5,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, frontal view, looking to the right.\n- Visual Evidence: The image shows a young woman in a frontal view, but she is looking directly at the camera, not to the right.\n- Match Score: 0.5",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2774,
+        "t2i_clip_id_i2i": 0.8015,
+        "t2i_dino_id_i2i": 0.6041,
+        "t2i_final_score": 0.3456,
+        "fga_orig_score": 3.5023,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.6166
+            ],
+            [
+                "young",
+                0.5953
+            ],
+            [
+                "woman",
+                0.6417
+            ],
+            [
+                ",",
+                0.6072
+            ],
+            [
+                "frontal",
+                0.7716
+            ],
+            [
+                "view",
+                0.7562
+            ],
+            [
+                ",",
+                0.5176
+            ],
+            [
+                "looking",
+                0.6595
+            ],
+            [
+                "to",
+                0.5758
+            ],
+            [
+                "the",
+                0.5164
+            ],
+            [
+                "right",
+                0.4649
+            ]
+        ]
+    },
+    {
+        "id": "00623",
+        "image": "00623_A young woman, side view turned left, looking back over the right shoulder, looking up..png",
+        "prompt": "A young woman, side view turned left, looking back over the right shoulder, looking up.",
+        "t2i_id_similarity": 0.6928,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "ref_pose": "Head_Tilt_Right",
+        "t2i_pose": "Head_Tilt_Right",
+        "pose_match": 1,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.3,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, side view turned left, looking back over the right shoulder, looking up.\n- Visual Evidence: The image shows a young woman facing the camera directly, not turned left or looking over her right shoulder.\n- Match Score: 0.3",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.297,
+        "t2i_clip_id_i2i": 0.7603,
+        "t2i_dino_id_i2i": 0.5144,
+        "t2i_final_score": 0.3464,
+        "fga_orig_score": 2.3289,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.3645
+            ],
+            [
+                "young",
+                0.4392
+            ],
+            [
+                "woman",
+                0.5885
+            ],
+            [
+                ",",
+                0.3504
+            ],
+            [
+                "side",
+                0.354
+            ],
+            [
+                "view",
+                0.5847
+            ],
+            [
+                "turned",
+                0.3715
+            ],
+            [
+                "left",
+                0.3475
+            ],
+            [
+                ",",
+                0.4016
+            ],
+            [
+                "looking",
+                0.42
+            ],
+            [
+                "back",
+                0.1789
+            ],
+            [
+                "over",
+                0.33
+            ],
+            [
+                "the",
+                0.3287
+            ],
+            [
+                "right",
+                0.3553
+            ],
+            [
+                "shoulder",
+                0.4874
+            ],
+            [
+                ",",
+                0.4299
+            ],
+            [
+                "looking",
+                0.4143
+            ],
+            [
+                "up",
+                0.3532
+            ]
+        ]
+    },
+    {
+        "id": "00623",
+        "image": "00623_A young woman, side view turned left, looking back over the right shoulder..png",
+        "prompt": "A young woman, side view turned left, looking back over the right shoulder.",
+        "t2i_id_similarity": 0.7227,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "ref_pose": "Head_Tilt_Right",
+        "t2i_pose": "Body_Turn_Right_Face_Front",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, side view turned left, looking back over the right shoulder.\n- Visual Evidence: The image shows a young woman facing slightly to the left with her head turned to look over her right shoulder.\n- Match Score: 1.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2738,
+        "t2i_clip_id_i2i": 0.7649,
+        "t2i_dino_id_i2i": 0.5009,
+        "t2i_final_score": 0.3614,
+        "fga_orig_score": 2.9805,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.4028
+            ],
+            [
+                "young",
+                0.4978
+            ],
+            [
+                "woman",
+                0.6399
+            ],
+            [
+                ",",
+                0.4443
+            ],
+            [
+                "side",
+                0.5268
+            ],
+            [
+                "view",
+                0.6099
+            ],
+            [
+                "turned",
+                0.5119
+            ],
+            [
+                "left",
+                0.4148
+            ],
+            [
+                ",",
+                0.4511
+            ],
+            [
+                "looking",
+                0.4382
+            ],
+            [
+                "back",
+                0.3418
+            ],
+            [
+                "over",
+                0.3941
+            ],
+            [
+                "the",
+                0.3033
+            ],
+            [
+                "right",
+                0.4113
+            ],
+            [
+                "shoulder",
+                0.6102
+            ]
+        ]
+    },
+    {
+        "id": "00623",
+        "image": "00623_A young woman, side view turned right, looking back over the left shoulder, looking down..png",
+        "prompt": "A young woman, side view turned right, looking back over the left shoulder, looking down.",
+        "t2i_id_similarity": 0.7166,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "ref_pose": "Head_Tilt_Right",
+        "t2i_pose": "Body_Turn_Left_Face_Front",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.3,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, side view turned right, looking back over the left shoulder, looking down.\n- Visual Evidence: The image shows a young woman facing forward with a slight turn to her right. She is not looking back over her left shoulder nor looking down.\n- Match Score: 0.3",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2783,
+        "t2i_clip_id_i2i": 0.8081,
+        "t2i_dino_id_i2i": 0.529,
+        "t2i_final_score": 0.3583,
+        "fga_orig_score": 2.2159,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.351
+            ],
+            [
+                "young",
+                0.4232
+            ],
+            [
+                "woman",
+                0.543
+            ],
+            [
+                ",",
+                0.3532
+            ],
+            [
+                "side",
+                0.3554
+            ],
+            [
+                "view",
+                0.6148
+            ],
+            [
+                "turned",
+                0.3658
+            ],
+            [
+                "right",
+                0.3556
+            ],
+            [
+                ",",
+                0.4088
+            ],
+            [
+                "looking",
+                0.3959
+            ],
+            [
+                "back",
+                0.165
+            ],
+            [
+                "over",
+                0.2874
+            ],
+            [
+                "the",
+                0.3014
+            ],
+            [
+                "left",
+                0.3858
+            ],
+            [
+                "shoulder",
+                0.4962
+            ],
+            [
+                ",",
+                0.446
+            ],
+            [
+                "looking",
+                0.3069
+            ],
+            [
+                "down",
+                0.269
+            ]
+        ]
+    },
+    {
+        "id": "00623",
+        "image": "00623_A young woman, side view turned right, looking back over the left shoulder..png",
+        "prompt": "A young woman, side view turned right, looking back over the left shoulder.",
+        "t2i_id_similarity": 0.7144,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "ref_pose": "Head_Tilt_Right",
+        "t2i_pose": "Body_Turn_Right_Face_Front",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.0,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, side view turned right, looking back over the left shoulder.\n- Visual Evidence: The image shows a young woman facing forward with her hair styled in pigtails. She is not turned to the side, nor is she looking back over her left shoulder.\n- Match Score: 0.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2676,
+        "t2i_clip_id_i2i": 0.7962,
+        "t2i_dino_id_i2i": 0.6093,
+        "t2i_final_score": 0.3572,
+        "fga_orig_score": 2.331,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.2874
+            ],
+            [
+                "young",
+                0.3702
+            ],
+            [
+                "woman",
+                0.521
+            ],
+            [
+                ",",
+                0.3041
+            ],
+            [
+                "side",
+                0.3313
+            ],
+            [
+                "view",
+                0.5118
+            ],
+            [
+                "turned",
+                0.3414
+            ],
+            [
+                "right",
+                0.3192
+            ],
+            [
+                ",",
+                0.3273
+            ],
+            [
+                "looking",
+                0.3221
+            ],
+            [
+                "back",
+                0.1727
+            ],
+            [
+                "over",
+                0.2907
+            ],
+            [
+                "the",
+                0.2112
+            ],
+            [
+                "left",
+                0.3537
+            ],
+            [
+                "shoulder",
+                0.4373
+            ]
+        ]
+    },
+    {
+        "id": "00685",
+        "image": "00685_A young woman, back view, looking to the left..png",
+        "prompt": "A young woman, back view, looking to the left.",
+        "t2i_id_similarity": 0.7356,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_View_Side_Looking_Away",
+        "ref_pose": "Head_Tilt_Right",
+        "t2i_pose": "Body_Lean_Left",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.9,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, back view, looking to the left.\n- Visual Evidence: The image shows a young woman from the back, looking slightly to her left.\n- Match Score: 0.9",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2561,
+        "t2i_clip_id_i2i": 0.7415,
+        "t2i_dino_id_i2i": 0.3715,
+        "t2i_final_score": 0.3678,
+        "fga_orig_score": 2.751,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.4008
+            ],
+            [
+                "young",
+                0.4613
+            ],
+            [
+                "woman",
+                0.5864
+            ],
+            [
+                ",",
+                0.4104
+            ],
+            [
+                "back",
+                0.3111
+            ],
+            [
+                "view",
+                0.5816
+            ],
+            [
+                ",",
+                0.3669
+            ],
+            [
+                "looking",
+                0.4573
+            ],
+            [
+                "to",
+                0.3757
+            ],
+            [
+                "the",
+                0.304
+            ],
+            [
+                "left",
+                0.3765
+            ]
+        ]
+    },
+    {
+        "id": "00685",
+        "image": "00685_A young woman, back view, looking to the right..png",
+        "prompt": "A young woman, back view, looking to the right.",
+        "t2i_id_similarity": 0.7437,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_View_Side_Looking_Away",
+        "ref_pose": "Head_Tilt_Right",
+        "t2i_pose": "Body_Turn_Right_Face_Front",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, back view, looking to the right.\n- Visual Evidence: The image shows a young woman from the back, with her head turned slightly to the right, looking over her shoulder.\n- Match Score: 1.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2442,
+        "t2i_clip_id_i2i": 0.7414,
+        "t2i_dino_id_i2i": 0.3421,
+        "t2i_final_score": 0.3719,
+        "fga_orig_score": 2.903,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.4073
+            ],
+            [
+                "young",
+                0.4793
+            ],
+            [
+                "woman",
+                0.6077
+            ],
+            [
+                ",",
+                0.4238
+            ],
+            [
+                "back",
+                0.2892
+            ],
+            [
+                "view",
+                0.5795
+            ],
+            [
+                ",",
+                0.3815
+            ],
+            [
+                "looking",
+                0.4777
+            ],
+            [
+                "to",
+                0.3881
+            ],
+            [
+                "the",
+                0.3256
+            ],
+            [
+                "right",
+                0.408
+            ]
+        ]
+    },
+    {
+        "id": "00685",
+        "image": "00685_A young woman, frontal view, looking to the left..png",
+        "prompt": "A young woman, frontal view, looking to the left.",
+        "t2i_id_similarity": 0.6904,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Head_Turn_Left",
+        "ref_pose": "Head_Tilt_Right",
+        "t2i_pose": "Body_Turn_Right_Face_Front",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.5,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, frontal view, looking to the left.\n- Visual Evidence: The image shows a young woman in a frontal view, but she is looking directly at the camera, not to the left.\n- Match Score: 0.5",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2801,
+        "t2i_clip_id_i2i": 0.7605,
+        "t2i_dino_id_i2i": 0.3419,
+        "t2i_final_score": 0.3452,
+        "fga_orig_score": 3.6093,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.6066
+            ],
+            [
+                "young",
+                0.6109
+            ],
+            [
+                "woman",
+                0.6836
+            ],
+            [
+                ",",
+                0.6106
+            ],
+            [
+                "frontal",
+                0.7772
+            ],
+            [
+                "view",
+                0.7615
+            ],
+            [
+                ",",
+                0.5341
+            ],
+            [
+                "looking",
+                0.6592
+            ],
+            [
+                "to",
+                0.5779
+            ],
+            [
+                "the",
+                0.5084
+            ],
+            [
+                "left",
+                0.4642
+            ]
+        ]
+    },
+    {
+        "id": "00685",
+        "image": "00685_A young woman, frontal view, looking to the right..png",
+        "prompt": "A young woman, frontal view, looking to the right.",
+        "t2i_id_similarity": 0.7266,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Head_Turn_Right",
+        "ref_pose": "Head_Tilt_Right",
+        "t2i_pose": "Head_Tilt_Left",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.5,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, frontal view, looking to the right.\n- Visual Evidence: The image shows a young woman in a frontal view, but she is looking directly at the camera, not to the right.\n- Match Score: 0.5",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2774,
+        "t2i_clip_id_i2i": 0.7531,
+        "t2i_dino_id_i2i": 0.3226,
+        "t2i_final_score": 0.3633,
+        "fga_orig_score": 3.5023,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.6166
+            ],
+            [
+                "young",
+                0.5953
+            ],
+            [
+                "woman",
+                0.6417
+            ],
+            [
+                ",",
+                0.6072
+            ],
+            [
+                "frontal",
+                0.7716
+            ],
+            [
+                "view",
+                0.7562
+            ],
+            [
+                ",",
+                0.5176
+            ],
+            [
+                "looking",
+                0.6595
+            ],
+            [
+                "to",
+                0.5758
+            ],
+            [
+                "the",
+                0.5164
+            ],
+            [
+                "right",
+                0.4649
+            ]
+        ]
+    },
+    {
+        "id": "00685",
+        "image": "00685_A young woman, side view turned left, looking back over the right shoulder, looking up..png",
+        "prompt": "A young woman, side view turned left, looking back over the right shoulder, looking up.",
+        "t2i_id_similarity": 0.7443,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "ref_pose": "Head_Tilt_Right",
+        "t2i_pose": "Body_Lean_Left",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.3,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, side view turned left, looking back over the right shoulder, looking up.\n- Visual Evidence: The image shows a young woman facing the camera directly, not turned left or looking over her right shoulder.\n- Match Score: 0.3",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.297,
+        "t2i_clip_id_i2i": 0.7355,
+        "t2i_dino_id_i2i": 0.3712,
+        "t2i_final_score": 0.3721,
+        "fga_orig_score": 2.3289,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.3645
+            ],
+            [
+                "young",
+                0.4392
+            ],
+            [
+                "woman",
+                0.5885
+            ],
+            [
+                ",",
+                0.3504
+            ],
+            [
+                "side",
+                0.354
+            ],
+            [
+                "view",
+                0.5847
+            ],
+            [
+                "turned",
+                0.3715
+            ],
+            [
+                "left",
+                0.3475
+            ],
+            [
+                ",",
+                0.4016
+            ],
+            [
+                "looking",
+                0.42
+            ],
+            [
+                "back",
+                0.1789
+            ],
+            [
+                "over",
+                0.33
+            ],
+            [
+                "the",
+                0.3287
+            ],
+            [
+                "right",
+                0.3553
+            ],
+            [
+                "shoulder",
+                0.4874
+            ],
+            [
+                ",",
+                0.4299
+            ],
+            [
+                "looking",
+                0.4143
+            ],
+            [
+                "up",
+                0.3532
+            ]
+        ]
+    },
+    {
+        "id": "00685",
+        "image": "00685_A young woman, side view turned left, looking back over the right shoulder..png",
+        "prompt": "A young woman, side view turned left, looking back over the right shoulder.",
+        "t2i_id_similarity": 0.7629,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "ref_pose": "Head_Tilt_Right",
+        "t2i_pose": "Body_Turn_Right_Face_Front",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, side view turned left, looking back over the right shoulder.\n- Visual Evidence: The image shows a young woman facing slightly to the left with her head turned to look over her right shoulder.\n- Match Score: 1.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2738,
+        "t2i_clip_id_i2i": 0.7276,
+        "t2i_dino_id_i2i": 0.3583,
+        "t2i_final_score": 0.3815,
+        "fga_orig_score": 2.9805,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.4028
+            ],
+            [
+                "young",
+                0.4978
+            ],
+            [
+                "woman",
+                0.6399
+            ],
+            [
+                ",",
+                0.4443
+            ],
+            [
+                "side",
+                0.5268
+            ],
+            [
+                "view",
+                0.6099
+            ],
+            [
+                "turned",
+                0.5119
+            ],
+            [
+                "left",
+                0.4148
+            ],
+            [
+                ",",
+                0.4511
+            ],
+            [
+                "looking",
+                0.4382
+            ],
+            [
+                "back",
+                0.3418
+            ],
+            [
+                "over",
+                0.3941
+            ],
+            [
+                "the",
+                0.3033
+            ],
+            [
+                "right",
+                0.4113
+            ],
+            [
+                "shoulder",
+                0.6102
+            ]
+        ]
+    },
+    {
+        "id": "00685",
+        "image": "00685_A young woman, side view turned right, looking back over the left shoulder, looking down..png",
+        "prompt": "A young woman, side view turned right, looking back over the left shoulder, looking down.",
+        "t2i_id_similarity": 0.7089,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "ref_pose": "Head_Tilt_Right",
+        "t2i_pose": "Body_Lean_Left",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.3,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, side view turned right, looking back over the left shoulder, looking down.\n- Visual Evidence: The image shows a young woman facing forward with a slight turn to her right. She is not looking back over her left shoulder nor looking down.\n- Match Score: 0.3",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2783,
+        "t2i_clip_id_i2i": 0.7193,
+        "t2i_dino_id_i2i": 0.3549,
+        "t2i_final_score": 0.3544,
+        "fga_orig_score": 2.2159,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.351
+            ],
+            [
+                "young",
+                0.4232
+            ],
+            [
+                "woman",
+                0.543
+            ],
+            [
+                ",",
+                0.3532
+            ],
+            [
+                "side",
+                0.3554
+            ],
+            [
+                "view",
+                0.6148
+            ],
+            [
+                "turned",
+                0.3658
+            ],
+            [
+                "right",
+                0.3556
+            ],
+            [
+                ",",
+                0.4088
+            ],
+            [
+                "looking",
+                0.3959
+            ],
+            [
+                "back",
+                0.165
+            ],
+            [
+                "over",
+                0.2874
+            ],
+            [
+                "the",
+                0.3014
+            ],
+            [
+                "left",
+                0.3858
+            ],
+            [
+                "shoulder",
+                0.4962
+            ],
+            [
+                ",",
+                0.446
+            ],
+            [
+                "looking",
+                0.3069
+            ],
+            [
+                "down",
+                0.269
+            ]
+        ]
+    },
+    {
+        "id": "00685",
+        "image": "00685_A young woman, side view turned right, looking back over the left shoulder..png",
+        "prompt": "A young woman, side view turned right, looking back over the left shoulder.",
+        "t2i_id_similarity": 0.7357,
+        "gt_expression": "others",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "ref_pose": "Head_Tilt_Right",
+        "t2i_pose": "Body_Turn_Right_Face_Front",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.0,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman, side view turned right, looking back over the left shoulder.\n- Visual Evidence: The image shows a young woman facing forward with her hair styled in pigtails. She is not turned to the side, nor is she looking back over her left shoulder.\n- Match Score: 0.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2676,
+        "t2i_clip_id_i2i": 0.7641,
+        "t2i_dino_id_i2i": 0.343,
+        "t2i_final_score": 0.3679,
+        "fga_orig_score": 2.331,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.2874
+            ],
+            [
+                "young",
+                0.3702
+            ],
+            [
+                "woman",
+                0.521
+            ],
+            [
+                ",",
+                0.3041
+            ],
+            [
+                "side",
+                0.3313
+            ],
+            [
+                "view",
+                0.5118
+            ],
+            [
+                "turned",
+                0.3414
+            ],
+            [
+                "right",
+                0.3192
+            ],
+            [
+                ",",
+                0.3273
+            ],
+            [
+                "looking",
+                0.3221
+            ],
+            [
+                "back",
+                0.1727
+            ],
+            [
+                "over",
+                0.2907
+            ],
+            [
+                "the",
+                0.2112
+            ],
+            [
+                "left",
+                0.3537
+            ],
+            [
+                "shoulder",
+                0.4373
+            ]
+        ]
+    }
+]

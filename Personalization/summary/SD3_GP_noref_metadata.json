@@ -1,0 +1,2026 @@
+[
+    {
+        "id": "0",
+        "image": "A boy looks upward with wide eyes and a surprised expression as snowflakes fall on his face..jpg",
+        "prompt": "A boy looks upward with wide eyes and a surprised expression as snowflakes fall on his face.",
+        "gt_expression": "surprise",
+        "gt_gender": "Male",
+        "gt_pose": "Frontal",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Frontal",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -6.980428715737932,
+        "t2i_head_pitch": 27.425689983339502,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head tilted up",
+        "pose_match": 1,
+        "t2i_vlm_expression": "surprise",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: A boy looks upward with wide eyes and a surprised expression as snowflakes fall on his face.\n- Visual Evidence: The image shows a boy looking upward with a surprised expression. Snowflakes are visibly falling on his face and he is dressed in a winter coat.\n- Match Score: 1.0",
+        "expression_correct_t2i": 1,
+        "t2i_clip_t2i": 0.3833,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 4.3363,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.8786
+            ],
+            [
+                "boy",
+                0.8991
+            ],
+            [
+                "looks",
+                0.8581
+            ],
+            [
+                "upward",
+                0.8298
+            ],
+            [
+                "with",
+                0.8629
+            ],
+            [
+                "wide",
+                0.8707
+            ],
+            [
+                "eyes",
+                0.8864
+            ],
+            [
+                "and",
+                0.8203
+            ],
+            [
+                "a",
+                0.8774
+            ],
+            [
+                "surprised",
+                0.8432
+            ],
+            [
+                "expression",
+                0.896
+            ],
+            [
+                "as",
+                0.9159
+            ],
+            [
+                "snow",
+                0.9538
+            ],
+            [
+                "##fl",
+                0.8636
+            ],
+            [
+                "##akes",
+                0.9259
+            ],
+            [
+                "fall",
+                0.8967
+            ],
+            [
+                "on",
+                0.833
+            ],
+            [
+                "his",
+                0.8435
+            ],
+            [
+                "face",
+                0.9037
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "A girl faces downward with a shy smile, cheeks slightly blushing..jpg",
+        "prompt": "A girl faces downward with a shy smile, cheeks slightly blushing.",
+        "gt_expression": "happy",
+        "gt_gender": "Female",
+        "gt_pose": "Frontal",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Frontal",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -2.898561216260678,
+        "t2i_head_pitch": -39.527091047896604,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head tilted down",
+        "pose_match": 1,
+        "t2i_vlm_expression": "happy",
+        "t2i_scenario_score": 0.9,
+        "t2i_scenario_reasoning": "- Extracted Context: A girl faces downward with a shy smile, cheeks slightly blushing.\n- Visual Evidence: The image shows a girl with her eyes closed, a slight smile on her face, and her cheeks appear to be slightly blushing.\n- Match Score: 0.9",
+        "expression_correct_t2i": 1,
+        "t2i_clip_t2i": 0.3033,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 2.6843,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.4595
+            ],
+            [
+                "girl",
+                0.7008
+            ],
+            [
+                "faces",
+                0.392
+            ],
+            [
+                "downward",
+                0.387
+            ],
+            [
+                "with",
+                0.3679
+            ],
+            [
+                "a",
+                0.3641
+            ],
+            [
+                "shy",
+                0.2867
+            ],
+            [
+                "smile",
+                0.6518
+            ],
+            [
+                ",",
+                0.4446
+            ],
+            [
+                "cheeks",
+                0.5456
+            ],
+            [
+                "slightly",
+                0.4323
+            ],
+            [
+                "blushing",
+                0.2902
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "A girl turns her head left and giggles, eyes squinted, reacting to a friend’s joke..jpg",
+        "prompt": "A girl turns her head left and giggles, eyes squinted, reacting to a friend’s joke.",
+        "gt_expression": "happy",
+        "gt_gender": "Female",
+        "gt_pose": "Head_Turn_Left",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Head_Turn_Left",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -4.340011178957507,
+        "t2i_head_pitch": 51.09413399886475,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head tilted up",
+        "pose_match": 0,
+        "t2i_vlm_expression": "happy",
+        "t2i_scenario_score": 0.9,
+        "t2i_scenario_reasoning": "- Extracted Context: A girl turns her head left and giggles, eyes squinted, reacting to a friend’s joke.\n- Visual Evidence: The girl is smiling broadly, with her eyes closed, and appears to be engaged in a conversation with friends.\n- Match Score: 0.9",
+        "expression_correct_t2i": 1,
+        "t2i_clip_t2i": 0.2676,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.8339,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.5343
+            ],
+            [
+                "girl",
+                0.7065
+            ],
+            [
+                "turns",
+                0.3409
+            ],
+            [
+                "her",
+                0.5468
+            ],
+            [
+                "head",
+                0.6835
+            ],
+            [
+                "left",
+                0.422
+            ],
+            [
+                "and",
+                0.3214
+            ],
+            [
+                "giggles",
+                0.6561
+            ],
+            [
+                ",",
+                0.5109
+            ],
+            [
+                "eyes",
+                0.6882
+            ],
+            [
+                "squinted",
+                0.5598
+            ],
+            [
+                ",",
+                0.5094
+            ],
+            [
+                "reacting",
+                0.4825
+            ],
+            [
+                "to",
+                0.3019
+            ],
+            [
+                "a",
+                0.2997
+            ],
+            [
+                "friend",
+                0.4166
+            ],
+            [
+                "’",
+                0.4425
+            ],
+            [
+                "s",
+                0.3673
+            ],
+            [
+                "joke",
+                0.5199
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "A girl turns her head over her right shoulder, smiling playfully toward a friend calling her name..jpg",
+        "prompt": "A girl turns her head over her right shoulder, smiling playfully toward a friend calling her name.",
+        "gt_expression": "happy",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Back_Over_Shoulder",
+        "ref_pose": "Back_Over_Shoulder",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -69.61234622481948,
+        "t2i_head_pitch": 70.61236109552829,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her right over the shoulder and tilted up",
+        "pose_match": 1,
+        "t2i_vlm_expression": "happy",
+        "t2i_scenario_score": 0.7,
+        "t2i_scenario_reasoning": "- Extracted Context: A girl turns her head over her right shoulder, smiling playfully toward a friend calling her name.\n- Visual Evidence: The girl is smiling and looking towards someone off-camera, which could be interpreted as a friend calling her name. However, her head is not turned over her right shoulder as described.\n- Match Score: 0.7",
+        "expression_correct_t2i": 1,
+        "t2i_clip_t2i": 0.3046,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 2.098,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.4595
+            ],
+            [
+                "girl",
+                0.6372
+            ],
+            [
+                "turns",
+                0.363
+            ],
+            [
+                "her",
+                0.4371
+            ],
+            [
+                "head",
+                0.681
+            ],
+            [
+                "over",
+                0.4016
+            ],
+            [
+                "her",
+                0.4222
+            ],
+            [
+                "right",
+                0.3989
+            ],
+            [
+                "shoulder",
+                0.5391
+            ],
+            [
+                ",",
+                0.3988
+            ],
+            [
+                "smiling",
+                0.6194
+            ],
+            [
+                "playfully",
+                0.4421
+            ],
+            [
+                "toward",
+                0.2733
+            ],
+            [
+                "a",
+                0.3305
+            ],
+            [
+                "friend",
+                0.2573
+            ],
+            [
+                "calling",
+                0.0744
+            ],
+            [
+                "her",
+                0.2787
+            ],
+            [
+                "name",
+                0.0354
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "A lady turns her head back over her shoulder, lips slightly parted, showing a surprised expression..jpg",
+        "prompt": "A lady turns her head back over her shoulder, lips slightly parted, showing a surprised expression.",
+        "gt_expression": "surprise",
+        "gt_gender": "Female",
+        "gt_pose": "Back_Over_Shoulder",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Back_Over_Shoulder",
+        "ref_pose": "Back_Over_Shoulder",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -81.300982236796,
+        "t2i_head_pitch": -35.487268617509116,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her right over the shoulder and tilted down",
+        "pose_match": 1,
+        "t2i_vlm_expression": "surprise",
+        "t2i_scenario_score": 0.9,
+        "t2i_scenario_reasoning": "- Extracted Context: A lady turns her head back over her shoulder, lips slightly parted, showing a surprised expression.\n- Visual Evidence: The image shows a lady with her head turned slightly to the side, looking over her shoulder with a surprised expression. Her lips are slightly parted.\n- Match Score: 0.9",
+        "expression_correct_t2i": 1,
+        "t2i_clip_t2i": 0.2666,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 2.4551,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.3797
+            ],
+            [
+                "lady",
+                0.4393
+            ],
+            [
+                "turns",
+                0.4004
+            ],
+            [
+                "her",
+                0.4033
+            ],
+            [
+                "head",
+                0.5016
+            ],
+            [
+                "back",
+                0.4978
+            ],
+            [
+                "over",
+                0.4632
+            ],
+            [
+                "her",
+                0.4883
+            ],
+            [
+                "shoulder",
+                0.6657
+            ],
+            [
+                ",",
+                0.4017
+            ],
+            [
+                "lips",
+                0.5157
+            ],
+            [
+                "slightly",
+                0.6294
+            ],
+            [
+                "parted",
+                0.6203
+            ],
+            [
+                ",",
+                0.5685
+            ],
+            [
+                "showing",
+                0.633
+            ],
+            [
+                "a",
+                0.4657
+            ],
+            [
+                "surprised",
+                0.3238
+            ],
+            [
+                "expression",
+                0.6069
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "A man faces slightly downward, smiling proudly as sunlight shines on his face..jpg",
+        "prompt": "A man faces slightly downward, smiling proudly as sunlight shines on his face.",
+        "gt_expression": "happy",
+        "gt_gender": "Male",
+        "gt_pose": "Frontal",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Frontal",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -6.329060255725054,
+        "t2i_head_pitch": -52.31274329151776,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head tilted down",
+        "pose_match": 1,
+        "t2i_vlm_expression": "happy",
+        "t2i_scenario_score": 0.9,
+        "t2i_scenario_reasoning": "- Extracted Context: A man faces slightly downward, smiling proudly as sunlight shines on his face.\n- Visual Evidence: The image shows a man smiling with sunlight illuminating his face. He is facing slightly downward.\n- Match Score: 0.9",
+        "expression_correct_t2i": 1,
+        "t2i_clip_t2i": 0.3045,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 3.563,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.697
+            ],
+            [
+                "man",
+                0.8207
+            ],
+            [
+                "faces",
+                0.6093
+            ],
+            [
+                "slightly",
+                0.6555
+            ],
+            [
+                "downward",
+                0.6096
+            ],
+            [
+                ",",
+                0.7324
+            ],
+            [
+                "smiling",
+                0.8055
+            ],
+            [
+                "proudly",
+                0.6133
+            ],
+            [
+                "as",
+                0.7552
+            ],
+            [
+                "sunlight",
+                0.8681
+            ],
+            [
+                "shine",
+                0.7557
+            ],
+            [
+                "##s",
+                0.7715
+            ],
+            [
+                "on",
+                0.5479
+            ],
+            [
+                "his",
+                0.6779
+            ],
+            [
+                "face",
+                0.7377
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "A man leans his head toward his right shoulder, showing a puzzled or questioning look..jpg",
+        "prompt": "A man leans his head toward his right shoulder, showing a puzzled or questioning look.",
+        "gt_expression": "confuse",
+        "gt_gender": "Male",
+        "gt_pose": "Unknown",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Back_Over_Shoulder",
+        "ref_pose": "Unknown",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 50.30369889043271,
+        "t2i_head_pitch": 22.740984755723865,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her left over the shoulder and tilted up",
+        "pose_match": 0,
+        "t2i_vlm_expression": "sad",
+        "t2i_scenario_score": 0.9,
+        "t2i_scenario_reasoning": "- Extracted Context: A man leans his head toward his right shoulder, showing a puzzled or questioning look.\n- Visual Evidence: The man is leaning his head on his right hand, with a thoughtful or puzzled expression.\n- Match Score: 0.9",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2785,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.9482,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.5117
+            ],
+            [
+                "man",
+                0.7602
+            ],
+            [
+                "leans",
+                0.6558
+            ],
+            [
+                "his",
+                0.6079
+            ],
+            [
+                "head",
+                0.8301
+            ],
+            [
+                "toward",
+                0.595
+            ],
+            [
+                "his",
+                0.5898
+            ],
+            [
+                "right",
+                0.5748
+            ],
+            [
+                "shoulder",
+                0.6319
+            ],
+            [
+                ",",
+                0.5463
+            ],
+            [
+                "showing",
+                0.4639
+            ],
+            [
+                "a",
+                0.5078
+            ],
+            [
+                "puzzled",
+                0.3507
+            ],
+            [
+                "or",
+                0.5261
+            ],
+            [
+                "questioning",
+                0.3098
+            ],
+            [
+                "look",
+                0.6043
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "A man looks to his right, lips pursed as if whistling softly, with his head slightly raised..jpg",
+        "prompt": "A man looks to his right, lips pursed as if whistling softly, with his head slightly raised.",
+        "gt_expression": "neutral",
+        "gt_gender": "Male",
+        "gt_pose": "Head_Turn_Right",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Head_Turn_Right",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 10.41883193166565,
+        "t2i_head_pitch": 21.882056694979305,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head tilted up",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.8,
+        "t2i_scenario_reasoning": "- Extracted Context: A man looks to his right, lips pursed as if whistling softly, with his head slightly raised.\n- Visual Evidence: The image shows a man looking upwards with his lips pursed, which could suggest whistling softly. His head is slightly raised.\n- Match Score: 0.8",
+        "expression_correct_t2i": 1,
+        "t2i_clip_t2i": 0.2626,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.4957,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.5622
+            ],
+            [
+                "man",
+                0.7674
+            ],
+            [
+                "looks",
+                0.6406
+            ],
+            [
+                "to",
+                0.6348
+            ],
+            [
+                "his",
+                0.6011
+            ],
+            [
+                "right",
+                0.5814
+            ],
+            [
+                ",",
+                0.4023
+            ],
+            [
+                "lips",
+                0.4412
+            ],
+            [
+                "pursed",
+                0.3368
+            ],
+            [
+                "as",
+                0.5154
+            ],
+            [
+                "if",
+                0.4653
+            ],
+            [
+                "whistling",
+                0.1975
+            ],
+            [
+                "softly",
+                0.3745
+            ],
+            [
+                ",",
+                0.4437
+            ],
+            [
+                "with",
+                0.4488
+            ],
+            [
+                "his",
+                0.5054
+            ],
+            [
+                "head",
+                0.7909
+            ],
+            [
+                "slightly",
+                0.6099
+            ],
+            [
+                "raised",
+                0.5134
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "A man looks up and to his left with a thoughtful expression, as if remembering something..jpg",
+        "prompt": "A man looks up and to his left with a thoughtful expression, as if remembering something.",
+        "gt_expression": "confuse",
+        "gt_gender": "Male",
+        "gt_pose": "Head_Turn_Left",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Head_Turn_Left",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -8.054821857968856,
+        "t2i_head_pitch": 33.72306705426436,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head tilted up",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.7,
+        "t2i_scenario_reasoning": "- Extracted Context: A man looks up and to his left with a thoughtful expression, as if remembering something.\n- Visual Evidence: The man is looking upwards with a neutral expression. There is no clear indication of looking to his left specifically, and the expression may not strongly convey thoughtfulness or memory.\n- Match Score: 0.7",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2662,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 3.6202,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.7124
+            ],
+            [
+                "man",
+                0.8565
+            ],
+            [
+                "looks",
+                0.7961
+            ],
+            [
+                "up",
+                0.8123
+            ],
+            [
+                "and",
+                0.4895
+            ],
+            [
+                "to",
+                0.7286
+            ],
+            [
+                "his",
+                0.7524
+            ],
+            [
+                "left",
+                0.6428
+            ],
+            [
+                "with",
+                0.5645
+            ],
+            [
+                "a",
+                0.6336
+            ],
+            [
+                "thoughtful",
+                0.6399
+            ],
+            [
+                "expression",
+                0.7416
+            ],
+            [
+                ",",
+                0.77
+            ],
+            [
+                "as",
+                0.7244
+            ],
+            [
+                "if",
+                0.6665
+            ],
+            [
+                "remembering",
+                0.2446
+            ],
+            [
+                "something",
+                0.4215
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "A man slightly turns his face upward to the left, smiling confidently as wind moves his hair..jpg",
+        "prompt": "A man slightly turns his face upward to the left, smiling confidently as wind moves his hair.",
+        "gt_expression": "happy",
+        "gt_gender": "Male",
+        "gt_pose": "Head_Turn_Left",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Head_Turn_Left",
+        "ref_pose": "Head_Turn_Left",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 37.12179927688166,
+        "t2i_head_pitch": 66.68727081571589,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her left and tilted up",
+        "pose_match": 1,
+        "t2i_vlm_expression": "happy",
+        "t2i_scenario_score": 0.9,
+        "t2i_scenario_reasoning": "- Extracted Context: A man slightly turns his face upward to the left, smiling confidently as wind moves his hair.\n- Visual Evidence: The image shows a man with his head tilted upward, smiling broadly. His hair appears to be blown by the wind.\n- Match Score: 0.9",
+        "expression_correct_t2i": 1,
+        "t2i_clip_t2i": 0.3323,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 3.2266,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.6952
+            ],
+            [
+                "man",
+                0.837
+            ],
+            [
+                "slightly",
+                0.693
+            ],
+            [
+                "turns",
+                0.5382
+            ],
+            [
+                "his",
+                0.6845
+            ],
+            [
+                "face",
+                0.7298
+            ],
+            [
+                "upward",
+                0.7612
+            ],
+            [
+                "to",
+                0.7245
+            ],
+            [
+                "the",
+                0.6843
+            ],
+            [
+                "left",
+                0.6507
+            ],
+            [
+                ",",
+                0.7466
+            ],
+            [
+                "smiling",
+                0.7427
+            ],
+            [
+                "confidently",
+                0.7585
+            ],
+            [
+                "as",
+                0.7298
+            ],
+            [
+                "wind",
+                0.728
+            ],
+            [
+                "moves",
+                0.6298
+            ],
+            [
+                "his",
+                0.686
+            ],
+            [
+                "hair",
+                0.8154
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "A man tilts his head left with a relaxed smile, eyes glancing downward toward his pet dog..jpg",
+        "prompt": "A man tilts his head left with a relaxed smile, eyes glancing downward toward his pet dog.",
+        "gt_expression": "happy",
+        "gt_gender": "Male",
+        "gt_pose": "Unknown",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Head_Turn_Left",
+        "ref_pose": "Unknown",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 29.828785677883445,
+        "t2i_head_pitch": -6.213404378040028,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her left",
+        "pose_match": 0,
+        "t2i_vlm_expression": "happy",
+        "t2i_scenario_score": 0.9,
+        "t2i_scenario_reasoning": "- Extracted Context: A man tilts his head left with a relaxed smile, eyes glancing downward toward his pet dog.\n- Visual Evidence: The image shows a man smiling and looking down at a dog, which appears to be a golden retriever. The man's head is tilted slightly to the left.\n- Match Score: 0.9",
+        "expression_correct_t2i": 1,
+        "t2i_clip_t2i": 0.303,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.7906,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.6619
+            ],
+            [
+                "man",
+                0.8575
+            ],
+            [
+                "tilt",
+                0.4369
+            ],
+            [
+                "##s",
+                0.5846
+            ],
+            [
+                "his",
+                0.6589
+            ],
+            [
+                "head",
+                0.8209
+            ],
+            [
+                "left",
+                0.5494
+            ],
+            [
+                "with",
+                0.6175
+            ],
+            [
+                "a",
+                0.5976
+            ],
+            [
+                "relaxed",
+                0.7255
+            ],
+            [
+                "smile",
+                0.7604
+            ],
+            [
+                ",",
+                0.5996
+            ],
+            [
+                "eyes",
+                0.6682
+            ],
+            [
+                "glancing",
+                0.4808
+            ],
+            [
+                "downward",
+                0.5379
+            ],
+            [
+                "toward",
+                0.5247
+            ],
+            [
+                "his",
+                0.5282
+            ],
+            [
+                "pet",
+                0.717
+            ],
+            [
+                "dog",
+                0.8209
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "A man turns his head slightly to the right and smiles gently while looking at a small butterfly near his shoulder..jpg",
+        "prompt": "A man turns his head slightly to the right and smiles gently while looking at a small butterfly near his shoulder.",
+        "gt_expression": "happy",
+        "gt_gender": "Male",
+        "gt_pose": "Head_Turn_Right",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Head_Turn_Right",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -6.566692502591439,
+        "t2i_head_pitch": -1.7774322479304772,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head facing forward straight",
+        "pose_match": 0,
+        "t2i_vlm_expression": "happy",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: A man turns his head slightly to the right and smiles gently while looking at a small butterfly near his shoulder.\n- Visual Evidence: The image shows a man looking to his right with a smile. There is a butterfly on his shoulder.\n- Match Score: 1.0",
+        "expression_correct_t2i": 1,
+        "t2i_clip_t2i": 0.2828,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 3.4014,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.701
+            ],
+            [
+                "man",
+                0.9003
+            ],
+            [
+                "turns",
+                0.5621
+            ],
+            [
+                "his",
+                0.78
+            ],
+            [
+                "head",
+                0.85
+            ],
+            [
+                "slightly",
+                0.6691
+            ],
+            [
+                "to",
+                0.7169
+            ],
+            [
+                "the",
+                0.7274
+            ],
+            [
+                "right",
+                0.66
+            ],
+            [
+                "and",
+                0.6369
+            ],
+            [
+                "smiles",
+                0.8771
+            ],
+            [
+                "gently",
+                0.6969
+            ],
+            [
+                "while",
+                0.6662
+            ],
+            [
+                "looking",
+                0.5669
+            ],
+            [
+                "at",
+                0.3268
+            ],
+            [
+                "a",
+                0.7321
+            ],
+            [
+                "small",
+                0.7754
+            ],
+            [
+                "butterfly",
+                0.8346
+            ],
+            [
+                "near",
+                0.6648
+            ],
+            [
+                "his",
+                0.7132
+            ],
+            [
+                "shoulder",
+                0.4974
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "A teenage boy turns his head right and narrows his eyes with a playful smirk..jpg",
+        "prompt": "A teenage boy turns his head right and narrows his eyes with a playful smirk.",
+        "gt_expression": "happy",
+        "gt_gender": "Male",
+        "gt_pose": "Head_Turn_Right",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Head_Turn_Right",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -19.91589540045842,
+        "t2i_head_pitch": 16.735541430521966,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head tilted up",
+        "pose_match": 0,
+        "t2i_vlm_expression": "happy",
+        "t2i_scenario_score": 0.7,
+        "t2i_scenario_reasoning": "- Extracted Context: A teenage boy turns his head right and narrows his eyes with a playful smirk.\n- Visual Evidence: The image shows a teenage boy looking to his right with a slight smile, but his eyes are not visibly narrowed.\n- Match Score: 0.7",
+        "expression_correct_t2i": 1,
+        "t2i_clip_t2i": 0.2867,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.864,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.5482
+            ],
+            [
+                "teenage",
+                0.6879
+            ],
+            [
+                "boy",
+                0.6528
+            ],
+            [
+                "turns",
+                0.3111
+            ],
+            [
+                "his",
+                0.5722
+            ],
+            [
+                "head",
+                0.7034
+            ],
+            [
+                "right",
+                0.4672
+            ],
+            [
+                "and",
+                0.3604
+            ],
+            [
+                "narrows",
+                0.3645
+            ],
+            [
+                "his",
+                0.6121
+            ],
+            [
+                "eyes",
+                0.6711
+            ],
+            [
+                "with",
+                0.5492
+            ],
+            [
+                "a",
+                0.5981
+            ],
+            [
+                "playful",
+                0.5107
+            ],
+            [
+                "smirk",
+                0.7642
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "A woman looks down to her left, her mouth slightly open in a laugh, while holding a coffee cup..jpg",
+        "prompt": "A woman looks down to her left, her mouth slightly open in a laugh, while holding a coffee cup.",
+        "gt_expression": "happy",
+        "gt_gender": "Female",
+        "gt_pose": "Head_Turn_Left",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Head_Turn_Left",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 8.00420536217938,
+        "t2i_head_pitch": -16.5847449782107,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head tilted down",
+        "pose_match": 0,
+        "t2i_vlm_expression": "happy",
+        "t2i_scenario_score": 0.9,
+        "t2i_scenario_reasoning": "- Extracted Context: A woman looks down to her left, her mouth slightly open in a laugh, while holding a coffee cup.\n- Visual Evidence: The image shows a woman holding a white coffee cup, smiling and laughing with her eyes closed.\n- Match Score: 0.9",
+        "expression_correct_t2i": 1,
+        "t2i_clip_t2i": 0.3283,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 3.034,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.5914
+            ],
+            [
+                "woman",
+                0.8192
+            ],
+            [
+                "looks",
+                0.5497
+            ],
+            [
+                "down",
+                0.5759
+            ],
+            [
+                "to",
+                0.5796
+            ],
+            [
+                "her",
+                0.6437
+            ],
+            [
+                "left",
+                0.6498
+            ],
+            [
+                ",",
+                0.6368
+            ],
+            [
+                "her",
+                0.6219
+            ],
+            [
+                "mouth",
+                0.3203
+            ],
+            [
+                "slightly",
+                0.6004
+            ],
+            [
+                "open",
+                0.5827
+            ],
+            [
+                "in",
+                0.7253
+            ],
+            [
+                "a",
+                0.7437
+            ],
+            [
+                "laugh",
+                0.8177
+            ],
+            [
+                ",",
+                0.568
+            ],
+            [
+                "while",
+                0.5771
+            ],
+            [
+                "holding",
+                0.8279
+            ],
+            [
+                "a",
+                0.775
+            ],
+            [
+                "coffee",
+                0.8785
+            ],
+            [
+                "cup",
+                0.914
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "A woman looks sideways toward the left, brows raised, as if reacting in surprise..jpg",
+        "prompt": "A woman looks sideways toward the left, brows raised, as if reacting in surprise.",
+        "gt_expression": "surprise",
+        "gt_gender": "Female",
+        "gt_pose": "Head_Turn_Left",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Head_Turn_Left",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -18.612867787882312,
+        "t2i_head_pitch": -3.183761672801303,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head facing forward straight",
+        "pose_match": 0,
+        "t2i_vlm_expression": "confuse",
+        "t2i_scenario_score": 0.9,
+        "t2i_scenario_reasoning": "- Extracted Context: A woman looks sideways toward the left, brows raised, as if reacting in surprise.\n- Visual Evidence: The woman in the image is looking to the left with her brows slightly raised, which aligns with the description of reacting in surprise.\n- Match Score: 0.9",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2722,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.7868,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.5273
+            ],
+            [
+                "woman",
+                0.7716
+            ],
+            [
+                "looks",
+                0.6346
+            ],
+            [
+                "sideways",
+                0.6532
+            ],
+            [
+                "toward",
+                0.5007
+            ],
+            [
+                "the",
+                0.6254
+            ],
+            [
+                "left",
+                0.5515
+            ],
+            [
+                ",",
+                0.5183
+            ],
+            [
+                "brows",
+                0.5014
+            ],
+            [
+                "raised",
+                0.5567
+            ],
+            [
+                ",",
+                0.5981
+            ],
+            [
+                "as",
+                0.6386
+            ],
+            [
+                "if",
+                0.6204
+            ],
+            [
+                "reacting",
+                0.3289
+            ],
+            [
+                "in",
+                0.4204
+            ],
+            [
+                "surprise",
+                0.2518
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "A woman looks upward with her head tilted back slightly, expressing joy and laughter..jpg",
+        "prompt": "A woman looks upward with her head tilted back slightly, expressing joy and laughter.",
+        "gt_expression": "happy",
+        "gt_gender": "Female",
+        "gt_pose": "Frontal",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Back_Over_Shoulder",
+        "ref_pose": "Frontal",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 88.69081881765295,
+        "t2i_head_pitch": 44.47526696665852,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her left over the shoulder and tilted up",
+        "pose_match": 0,
+        "t2i_vlm_expression": "happy",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: A woman looks upward with her head tilted back slightly, expressing joy and laughter.\n- Visual Evidence: The image shows a woman with her head tilted back, smiling and laughing with her mouth open. Her right arm is raised, and she appears to be in a joyful state.\n- Match Score: 1.0",
+        "expression_correct_t2i": 1,
+        "t2i_clip_t2i": 0.2937,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.802,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.499
+            ],
+            [
+                "woman",
+                0.7463
+            ],
+            [
+                "looks",
+                0.4568
+            ],
+            [
+                "upward",
+                0.6485
+            ],
+            [
+                "with",
+                0.4566
+            ],
+            [
+                "her",
+                0.4432
+            ],
+            [
+                "head",
+                0.6919
+            ],
+            [
+                "tilted",
+                0.5433
+            ],
+            [
+                "back",
+                0.5609
+            ],
+            [
+                "slightly",
+                0.5698
+            ],
+            [
+                ",",
+                0.53
+            ],
+            [
+                "expressing",
+                0.5731
+            ],
+            [
+                "joy",
+                0.4259
+            ],
+            [
+                "and",
+                0.4289
+            ],
+            [
+                "laughter",
+                0.3648
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "A woman tilts her head backward with eyes closed, expressing satisfaction and calmness..jpg",
+        "prompt": "A woman tilts her head backward with eyes closed, expressing satisfaction and calmness.",
+        "gt_expression": "neutral",
+        "gt_gender": "Female",
+        "gt_pose": "Frontal",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Back_Over_Shoulder",
+        "ref_pose": "Frontal",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": -80.83659271942349,
+        "t2i_head_pitch": 48.21500442435581,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head turned to his/her right over the shoulder and tilted up",
+        "pose_match": 0,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: A woman tilts her head backward with eyes closed, expressing satisfaction and calmness.\n- Visual Evidence: The image shows a woman with her head tilted backward, eyes closed, and appears to be in a state of relaxation.\n- Match Score: 1.0",
+        "expression_correct_t2i": 1,
+        "t2i_clip_t2i": 0.2829,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 3.078,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.4968
+            ],
+            [
+                "woman",
+                0.7685
+            ],
+            [
+                "tilt",
+                0.5563
+            ],
+            [
+                "##s",
+                0.6265
+            ],
+            [
+                "her",
+                0.5353
+            ],
+            [
+                "head",
+                0.6823
+            ],
+            [
+                "backward",
+                0.5888
+            ],
+            [
+                "with",
+                0.4713
+            ],
+            [
+                "eyes",
+                0.4392
+            ],
+            [
+                "closed",
+                0.5546
+            ],
+            [
+                ",",
+                0.5891
+            ],
+            [
+                "expressing",
+                0.5407
+            ],
+            [
+                "satisfaction",
+                0.3375
+            ],
+            [
+                "and",
+                0.4626
+            ],
+            [
+                "calm",
+                0.3903
+            ],
+            [
+                "##ness",
+                0.5573
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "A woman with her head tilted right and eyes half-closed gives a soft, dreamy smile..jpg",
+        "prompt": "A woman with her head tilted right and eyes half-closed gives a soft, dreamy smile.",
+        "gt_expression": "happy",
+        "gt_gender": "Female",
+        "gt_pose": "Unknown",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Unknown",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 2.349434832210875,
+        "t2i_head_pitch": 33.991590482702385,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head tilted up",
+        "pose_match": 0,
+        "t2i_vlm_expression": "happy",
+        "t2i_scenario_score": 0.9,
+        "t2i_scenario_reasoning": "- Extracted Context: A woman with her head tilted right and eyes half-closed gives a soft, dreamy smile.\n- Visual Evidence: The image shows a woman with her eyes closed, smiling broadly, and tilting her head slightly to the right.\n- Match Score: 0.9",
+        "expression_correct_t2i": 1,
+        "t2i_clip_t2i": 0.2941,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 3.5875,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.6135
+            ],
+            [
+                "woman",
+                0.798
+            ],
+            [
+                "with",
+                0.5204
+            ],
+            [
+                "her",
+                0.543
+            ],
+            [
+                "head",
+                0.8082
+            ],
+            [
+                "tilted",
+                0.5023
+            ],
+            [
+                "right",
+                0.6087
+            ],
+            [
+                "and",
+                0.5228
+            ],
+            [
+                "eyes",
+                0.6848
+            ],
+            [
+                "half",
+                0.704
+            ],
+            [
+                "-",
+                0.8163
+            ],
+            [
+                "closed",
+                0.8084
+            ],
+            [
+                "gives",
+                0.5828
+            ],
+            [
+                "a",
+                0.5784
+            ],
+            [
+                "soft",
+                0.7506
+            ],
+            [
+                ",",
+                0.6589
+            ],
+            [
+                "dream",
+                0.6404
+            ],
+            [
+                "##y",
+                0.8048
+            ],
+            [
+                "smile",
+                0.7946
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "A young man looks straight but raises his eyebrows in curiosity, head slightly leaned forward..jpg",
+        "prompt": "A young man looks straight but raises his eyebrows in curiosity, head slightly leaned forward.",
+        "gt_expression": "confuse",
+        "gt_gender": "Male",
+        "gt_pose": "Frontal",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Frontal",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 3.338590266972848,
+        "t2i_head_pitch": 15.90000673553747,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head tilted up",
+        "pose_match": 1,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.3,
+        "t2i_scenario_reasoning": "- Extracted Context: A young man looks straight but raises his eyebrows in curiosity, head slightly leaned forward.\n- Visual Evidence: The image shows a young man looking straight ahead with a neutral expression. His eyebrows are not raised, and his head is not leaned forward.\n- Match Score: 0.3",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2783,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 3.507,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.687
+            ],
+            [
+                "young",
+                0.7305
+            ],
+            [
+                "man",
+                0.7545
+            ],
+            [
+                "looks",
+                0.7322
+            ],
+            [
+                "straight",
+                0.7209
+            ],
+            [
+                "but",
+                0.6446
+            ],
+            [
+                "raises",
+                0.3246
+            ],
+            [
+                "his",
+                0.5933
+            ],
+            [
+                "eyebrows",
+                0.7045
+            ],
+            [
+                "in",
+                0.5307
+            ],
+            [
+                "curiosity",
+                0.6195
+            ],
+            [
+                ",",
+                0.7067
+            ],
+            [
+                "head",
+                0.9046
+            ],
+            [
+                "slightly",
+                0.7517
+            ],
+            [
+                "leaned",
+                0.7316
+            ],
+            [
+                "forward",
+                0.7775
+            ]
+        ]
+    },
+    {
+        "id": "0",
+        "image": "A young woman tilts her head downward with a warm grin as she gazes at a cat resting on her lap..jpg",
+        "prompt": "A young woman tilts her head downward with a warm grin as she gazes at a cat resting on her lap.",
+        "gt_expression": "happy",
+        "gt_gender": "Female",
+        "gt_pose": "Frontal",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Frontal",
+        "ref_pose": "Frontal",
+        "ref_head_body_yaw": null,
+        "ref_head_pitch": null,
+        "ref_pose_status": "Prompt_GT",
+        "ref_pose_base_class": "Prompt_GT",
+        "t2i_head_body_yaw": 11.824116100947624,
+        "t2i_head_pitch": 64.78229917444185,
+        "t2i_pose_status": "OK",
+        "t2i_pose_base_class": "head tilted up",
+        "pose_match": 1,
+        "t2i_vlm_expression": "happy",
+        "t2i_scenario_score": 0.7,
+        "t2i_scenario_reasoning": "- Extracted Context: A young woman tilts her head downward with a warm grin as she gazes at a cat resting on her lap.\n- Visual Evidence: The image shows a young woman smiling and looking at a cat. The cat is sitting on a surface, but it is not clearly on her lap.\n- Match Score: 0.7",
+        "expression_correct_t2i": 1,
+        "t2i_clip_t2i": 0.3314,
+        "t2i_clip_id_i2i": null,
+        "t2i_dino_id_i2i": null,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 2.4783,
+        "fga_orig_tokens": [
+            [
+                "a",
+                0.4691
+            ],
+            [
+                "young",
+                0.7516
+            ],
+            [
+                "woman",
+                0.7786
+            ],
+            [
+                "tilt",
+                0.4062
+            ],
+            [
+                "##s",
+                0.3671
+            ],
+            [
+                "her",
+                0.4779
+            ],
+            [
+                "head",
+                0.5952
+            ],
+            [
+                "downward",
+                0.5199
+            ],
+            [
+                "with",
+                0.3186
+            ],
+            [
+                "a",
+                0.356
+            ],
+            [
+                "warm",
+                0.5302
+            ],
+            [
+                "grin",
+                0.4933
+            ],
+            [
+                "as",
+                0.4891
+            ],
+            [
+                "she",
+                0.5376
+            ],
+            [
+                "gazes",
+                0.5797
+            ],
+            [
+                "at",
+                0.5332
+            ],
+            [
+                "a",
+                0.6891
+            ],
+            [
+                "cat",
+                0.8777
+            ],
+            [
+                "resting",
+                0.5579
+            ],
+            [
+                "on",
+                0.4979
+            ],
+            [
+                "her",
+                0.5715
+            ],
+            [
+                "lap",
+                0.4287
+            ]
+        ]
+    }
+]

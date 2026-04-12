@@ -1,0 +1,60 @@
+{"id": "boy", "pose_condition": "head facing forward straight", "prompt": "body shot, photography, boy, head facing forward straight."}
+{"id": "boy", "pose_condition": "head turned left", "prompt": "body shot, photography, boy, head turned left."}
+{"id": "boy", "pose_condition": "head turned right", "prompt": "body shot, photography, boy, head turned right."}
+{"id": "boy", "pose_condition": "head tilted up", "prompt": "body shot, photography, boy, head tilted up."}
+{"id": "boy", "pose_condition": "head tilted down", "prompt": "body shot, photography, boy, head tilted down."}
+{"id": "boy", "pose_condition": "head turned left and tilted up", "prompt": "body shot, photography, boy, head turned left and tilted up."}
+{"id": "boy", "pose_condition": "head turned left and tilted down", "prompt": "body shot, photography, boy, head turned left and tilted down."}
+{"id": "boy", "pose_condition": "head turned right and tilted up", "prompt": "body shot, photography, boy, head turned right and tilted up."}
+{"id": "boy", "pose_condition": "head turned right and tilted down", "prompt": "body shot, photography, boy, head turned right and tilted down."}
+{"id": "boy", "pose_condition": "backward-glancing over the left shoulder", "prompt": "body shot, photography, boy, backward-glancing over the left shoulder."}
+{"id": "boy", "pose_condition": "backward-glancing over the left shoulder, chin-raised", "prompt": "body shot, photography, boy, backward-glancing over the left shoulder, chin-raised."}
+{"id": "boy", "pose_condition": "backward-glancing over the left shoulder, chin-tucked", "prompt": "body shot, photography, boy, backward-glancing over the left shoulder, chin-tucked."}
+{"id": "boy", "pose_condition": "backward-glancing over the right shoulder", "prompt": "body shot, photography, boy, backward-glancing over the right shoulder."}
+{"id": "boy", "pose_condition": "backward-glancing over the right shoulder, chin-raised", "prompt": "body shot, photography, boy, backward-glancing over the right shoulder, chin-raised."}
+{"id": "boy", "pose_condition": "backward-glancing over the right shoulder, chin-tucked", "prompt": "body shot, photography, boy, backward-glancing over the right shoulder, chin-tucked."}
+{"id": "girl", "pose_condition": "head facing forward straight", "prompt": "body shot, photography, girl, head facing forward straight."}
+{"id": "girl", "pose_condition": "head turned left", "prompt": "body shot, photography, girl, head turned left."}
+{"id": "girl", "pose_condition": "head turned right", "prompt": "body shot, photography, girl, head turned right."}
+{"id": "girl", "pose_condition": "head tilted up", "prompt": "body shot, photography, girl, head tilted up."}
+{"id": "girl", "pose_condition": "head tilted down", "prompt": "body shot, photography, girl, head tilted down."}
+{"id": "girl", "pose_condition": "head turned left and tilted up", "prompt": "body shot, photography, girl, head turned left and tilted up."}
+{"id": "girl", "pose_condition": "head turned left and tilted down", "prompt": "body shot, photography, girl, head turned left and tilted down."}
+{"id": "girl", "pose_condition": "head turned right and tilted up", "prompt": "body shot, photography, girl, head turned right and tilted up."}
+{"id": "girl", "pose_condition": "head turned right and tilted down", "prompt": "body shot, photography, girl, head turned right and tilted down."}
+{"id": "girl", "pose_condition": "backward-glancing over the left shoulder", "prompt": "body shot, photography, girl, backward-glancing over the left shoulder."}
+{"id": "girl", "pose_condition": "backward-glancing over the left shoulder, chin-raised", "prompt": "body shot, photography, girl, backward-glancing over the left shoulder, chin-raised."}
+{"id": "girl", "pose_condition": "backward-glancing over the left shoulder, chin-tucked", "prompt": "body shot, photography, girl, backward-glancing over the left shoulder, chin-tucked."}
+{"id": "girl", "pose_condition": "backward-glancing over the right shoulder", "prompt": "body shot, photography, girl, backward-glancing over the right shoulder."}
+{"id": "girl", "pose_condition": "backward-glancing over the right shoulder, chin-raised", "prompt": "body shot, photography, girl, backward-glancing over the right shoulder, chin-raised."}
+{"id": "girl", "pose_condition": "backward-glancing over the right shoulder, chin-tucked", "prompt": "body shot, photography, girl, backward-glancing over the right shoulder, chin-tucked."}
+{"id": "woman", "pose_condition": "head facing forward straight", "prompt": "body shot, photography, woman, head facing forward straight."}
+{"id": "woman", "pose_condition": "head turned left", "prompt": "body shot, photography, woman, head turned left."}
+{"id": "woman", "pose_condition": "head turned right", "prompt": "body shot, photography, woman, head turned right."}
+{"id": "woman", "pose_condition": "head tilted up", "prompt": "body shot, photography, woman, head tilted up."}
+{"id": "woman", "pose_condition": "head tilted down", "prompt": "body shot, photography, woman, head tilted down."}
+{"id": "woman", "pose_condition": "head turned left and tilted up", "prompt": "body shot, photography, woman, head turned left and tilted up."}
+{"id": "woman", "pose_condition": "head turned left and tilted down", "prompt": "body shot, photography, woman, head turned left and tilted down."}
+{"id": "woman", "pose_condition": "head turned right and tilted up", "prompt": "body shot, photography, woman, head turned right and tilted up."}
+{"id": "woman", "pose_condition": "head turned right and tilted down", "prompt": "body shot, photography, woman, head turned right and tilted down."}
+{"id": "woman", "pose_condition": "backward-glancing over the left shoulder", "prompt": "body shot, photography, woman, backward-glancing over the left shoulder."}
+{"id": "woman", "pose_condition": "backward-glancing over the left shoulder, chin-raised", "prompt": "body shot, photography, woman, backward-glancing over the left shoulder, chin-raised."}
+{"id": "woman", "pose_condition": "backward-glancing over the left shoulder, chin-tucked", "prompt": "body shot, photography, woman, backward-glancing over the left shoulder, chin-tucked."}
+{"id": "woman", "pose_condition": "backward-glancing over the right shoulder", "prompt": "body shot, photography, woman, backward-glancing over the right shoulder."}
+{"id": "woman", "pose_condition": "backward-glancing over the right shoulder, chin-raised", "prompt": "body shot, photography, woman, backward-glancing over the right shoulder, chin-raised."}
+{"id": "woman", "pose_condition": "backward-glancing over the right shoulder, chin-tucked", "prompt": "body shot, photography, woman, backward-glancing over the right shoulder, chin-tucked."}
+{"id": "man", "pose_condition": "head facing forward straight", "prompt": "body shot, photography, man, head facing forward straight."}
+{"id": "man", "pose_condition": "head turned left", "prompt": "body shot, photography, man, head turned left."}
+{"id": "man", "pose_condition": "head turned right", "prompt": "body shot, photography, man, head turned right."}
+{"id": "man", "pose_condition": "head tilted up", "prompt": "body shot, photography, man, head tilted up."}
+{"id": "man", "pose_condition": "head tilted down", "prompt": "body shot, photography, man, head tilted down."}
+{"id": "man", "pose_condition": "head turned left and tilted up", "prompt": "body shot, photography, man, head turned left and tilted up."}
+{"id": "man", "pose_condition": "head turned left and tilted down", "prompt": "body shot, photography, man, head turned left and tilted down."}
+{"id": "man", "pose_condition": "head turned right and tilted up", "prompt": "body shot, photography, man, head turned right and tilted up."}
+{"id": "man", "pose_condition": "head turned right and tilted down", "prompt": "body shot, photography, man, head turned right and tilted down."}
+{"id": "man", "pose_condition": "backward-glancing over the left shoulder", "prompt": "body shot, photography, man, backward-glancing over the left shoulder."}
+{"id": "man", "pose_condition": "backward-glancing over the left shoulder, chin-raised", "prompt": "body shot, photography, man, backward-glancing over the left shoulder, chin-raised."}
+{"id": "man", "pose_condition": "backward-glancing over the left shoulder, chin-tucked", "prompt": "body shot, photography, man, backward-glancing over the left shoulder, chin-tucked."}
+{"id": "man", "pose_condition": "backward-glancing over the right shoulder", "prompt": "body shot, photography, man, backward-glancing over the right shoulder."}
+{"id": "man", "pose_condition": "backward-glancing over the right shoulder, chin-raised", "prompt": "body shot, photography, man, backward-glancing over the right shoulder, chin-raised."}
+{"id": "man", "pose_condition": "backward-glancing over the right shoulder, chin-tucked", "prompt": "body shot, photography, man, backward-glancing over the right shoulder, chin-tucked."}

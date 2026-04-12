@@ -1,0 +1,311 @@
+import argparse
+import os
+import json
+import re
+import torch
+from tqdm import tqdm
+from lmdeploy import pipeline, PytorchEngineConfig, GenerationConfig
+from lmdeploy.vl import load_image
+
+# ==========================================
+# Utility: Smart File Search
+# ==========================================
+def try_find_file(base_path, filename_seed, extensions):
+    """
+    Search for file existence using variations of the filename (quotes, etc.)
+    """
+    if not filename_seed or not os.path.exists(base_path): 
+        return None, None
+
+    variants = [
+        filename_seed,
+        filename_seed.replace("'", "’"),
+        filename_seed.replace("'", "’").replace('"', '”')
+    ]
+    if filename_seed.endswith('.'):
+        variants.append(filename_seed[:-1])
+
+    for text in variants:
+        for ext in extensions:
+            # Check 1: direct combination
+            filename = f"{text}{ext}"
+            full_path = os.path.join(base_path, filename)
+            if os.path.exists(full_path): return full_path, filename
+            
+            # Check 2: Prepend "0_" (common in some datasets)
+            filename_0 = f"0_{text}{ext}"
+            full_path_0 = os.path.join(base_path, filename_0)
+            if os.path.exists(full_path_0): return full_path_0, filename_0
+    
+    return None, None
+
+def find_target_by_prompt(base_dir, prompt):
+    """Find T2I original image by Prompt"""
+    if not prompt or not os.path.exists(base_dir): return None, None
+    
+    valid_extensions = ['.png', '.jpg', '.jpeg']
+    
+    # Simple normalization for matching
+    def normalize(text):
+        return text.replace("’", "'").replace("‘", "'").strip()
+    
+    target_norm = normalize(prompt)
+    
+    # 1. Direct try (fastest)
+    path, name = try_find_file(base_dir, prompt, valid_extensions)
+    if path: return path, name
+
+    # 2. Iterate dir (slower but robust)
+    for filename in os.listdir(base_dir):
+        name_no_ext = os.path.splitext(filename)[0]
+        if normalize(name_no_ext) == target_norm:
+            return os.path.join(base_dir, filename), filename
+            
+    return None, None
+
+# ==========================================
+# Utility: Extract Score
+# ==========================================
+def extract_score(text: str) -> float:
+    match = re.search(r"(?:Match )?Score[:\s\n*]+([0-9]+(?:\.[0-9]+)?)", text, re.IGNORECASE)
+    if match:
+        try:
+            return float(match.group(1))
+        except ValueError:
+            return -1.0
+    return -1.0
+
+# ==========================================
+# System Prompts
+# ==========================================
+EXPRESSION_PROMPT = """
+Task: Classify the facial expression in the image into exactly one of the following categories.
+
+Allowed Categories:
+1. happy (e.g., smiling, laughing, joyful)
+2. surprise (e.g., raised eyebrows, open mouth, shocked)
+3. confuse (e.g., frowning, puzzled, unsure)
+4. neutral (e.g., blank face, calm, no strong emotion)
+5. sad (e.g., crying, frowning mouth corners, gloomy)
+6. others (e.g., angry, disgusted, fearful, or if the expression is unclear)
+
+Constraints:
+- You must ONLY output one word from the list above.
+- Do NOT output any punctuation.
+- If the expression is ambiguous, choose 'others'.
+"""
+
+def get_scenario_prompt(input_text):
+    return f"""
+Task: Scenario Consistency Check
+
+Input Text: "{input_text}"
+
+You need to perform a two-step analysis:
+Step 1: Text Extraction (Mental Process)
+Analyze the Input Text and extract the **"Unique Situational Descriptor"**. 
+- IGNORE: Gender, Standard Pose, and Basic Emotion labels.
+- TARGET: The specific *cause* of the emotion, the *environmental element*, or the *subtle physical detail*.
+
+Step 2: Visual Verification
+Look at the image. Does the visual content match the **"Unique Situational Descriptor"**?
+
+Output Format:
+- Extracted Context: ...
+- Visual Evidence: ...
+- Match Score: [0.0 to 1.0]
+
+Constraints:
+- 1.0: Specific scenario clearly visible.
+- 0.5: General vibe matches, specific detail missing.
+- 0.0: Scenario absent.
+"""
+
+# ==========================================
+# Core Processing Logic
+# ==========================================
+def process_task(task_name, swapped_dir, t2i_dir, json_path, pipe, gen_configs):
+    gen_config_expr, gen_config_scen = gen_configs
+    
+    print(f"\n🔹 Processing Task: [{task_name}]")
+    print(f"   📂 Swapped Dir: {swapped_dir}")
+    print(f"   📂 T2I Source:  {t2i_dir}")
+    
+    if not os.path.exists(json_path):
+        print(f"   ❌ JSON not found: {json_path}")
+        return None
+
+    with open(json_path, 'r', encoding='utf-8') as f:
+        data_list = json.load(f)
+
+    # Statistics
+    stats = {
+        'expr_correct_swap': 0, 'expr_total_swap': 0,
+        'scen_score_swap': 0.0, 'scen_count_swap': 0,
+        'expr_correct_t2i': 0, 'expr_total_t2i': 0,
+        'scen_score_t2i': 0.0, 'scen_count_t2i': 0
+    }
+
+    # Batch Processing
+    batch_size = 4
+    valid_extensions = ['.png', '.jpg', '.jpeg']
+
+    for i in tqdm(range(0, len(data_list), batch_size), desc=f"   Running {task_name}"):
+        batch_items = data_list[i : i + batch_size]
+        
+        # Inputs containers
+        expr_inputs = [] 
+        scen_inputs = []
+        # Store metadata to map results back: (item_index, type='swap'|'t2i')
+        map_indices = [] 
+
+        for idx, item in enumerate(batch_items):
+            prompt_text = item.get('prompt', '').strip()
+            raw_filename = item.get('image', '').strip()
+            
+            # --- 1. Prepare Swapped Image ---
+            swap_path, _ = try_find_file(swapped_dir, raw_filename, valid_extensions)
+            if swap_path:
+                try:
+                    img_swap = load_image(swap_path)
+                    
+                    # Add Expression Task
+                    expr_inputs.append((EXPRESSION_PROMPT, img_swap))
+                    # Add Scenario Task
+                    scen_inputs.append((get_scenario_prompt(prompt_text), img_swap))
+                    
+                    map_indices.append({'local_idx': idx, 'type': 'swap'})
+                except: pass
+            else:
+                item['vlm_expression'] = "not_found"
+                item['scenario_score'] = 0.0
+
+            # --- 2. Prepare T2I Image ---
+            t2i_path, _ = find_target_by_prompt(t2i_dir, prompt_text)
+            if t2i_path:
+                try:
+                    img_t2i = load_image(t2i_path)
+                    
+                    # Add Expression Task
+                    expr_inputs.append((EXPRESSION_PROMPT, img_t2i))
+                    # Add Scenario Task
+                    scen_inputs.append((get_scenario_prompt(prompt_text), img_t2i))
+                    
+                    map_indices.append({'local_idx': idx, 'type': 't2i'})
+                except: pass
+            else:
+                item['vlm_expression_t2i'] = "not_found"
+                item['scenario_score_t2i'] = 0.0
+
+        if not map_indices: continue
+
+        # --- Inference ---
+        try:
+            expr_resps = pipe(expr_inputs, gen_config=gen_config_expr)
+            scen_resps = pipe(scen_inputs, gen_config=gen_config_scen)
+            
+            # --- Map Results Back ---
+            for meta, r_expr, r_scen in zip(map_indices, expr_resps, scen_resps):
+                item = batch_items[meta['local_idx']]
+                img_type = meta['type']
+                
+                # Parse Expression
+                pred_expr = r_expr.text.strip().lower().replace(".", "").replace("'", "")
+                gt_expr = item.get('gt_expression', '').lower().strip()
+                
+                # Parse Scenario
+                scen_text = r_scen.text
+                scen_score = extract_score(scen_text)
+
+                if img_type == 'swap':
+                    item['vlm_expression'] = pred_expr
+                    item['scenario_score'] = scen_score
+                    item['scenario_reasoning'] = scen_text
+                    
+                    if gt_expr:
+                        is_corr = (pred_expr == gt_expr)
+                        item['expression_correct'] = 1 if is_corr else 0
+                        stats['expr_total_swap'] += 1
+                        if is_corr: stats['expr_correct_swap'] += 1
+                    
+                    if scen_score >= 0:
+                        stats['scen_score_swap'] += scen_score
+                        stats['scen_count_swap'] += 1
+
+                elif img_type == 't2i':
+                    item['vlm_expression_t2i'] = pred_expr
+                    item['scenario_score_t2i'] = scen_score
+                    item['scenario_reasoning_t2i'] = scen_text # Optional: save reasoning
+                    
+                    if gt_expr:
+                        is_corr = (pred_expr == gt_expr)
+                        item['expression_correct_t2i'] = 1 if is_corr else 0
+                        stats['expr_total_t2i'] += 1
+                        if is_corr: stats['expr_correct_t2i'] += 1
+                    
+                    if scen_score >= 0:
+                        stats['scen_score_t2i'] += scen_score
+                        stats['scen_count_t2i'] += 1
+
+        except Exception as e:
+            print(f"Error in batch: {e}")
+            continue
+
+    # Save JSON
+    with open(json_path, 'w', encoding='utf-8') as f:
+        json.dump(data_list, f, indent=4, ensure_ascii=False)
+
+    # Calculate Metrics
+    def safe_div(a, b): return a/b if b > 0 else 0.0
+    
+    return {
+        'name': task_name,
+        'acc_expr_swap': safe_div(stats['expr_correct_swap'], stats['expr_total_swap']) * 100,
+        'acc_expr_t2i': safe_div(stats['expr_correct_t2i'], stats['expr_total_t2i']) * 100,
+        'avg_scen_swap': safe_div(stats['scen_score_swap'], stats['scen_count_swap']),
+        'avg_scen_t2i': safe_div(stats['scen_score_t2i'], stats['scen_count_t2i'])
+    }
+
+# ==========================================
+# Main
+# ==========================================
+if __name__ == '__main__':
+    # 1. Load Model
+    print("🚀 Loading InternVL Model...")
+    backend_config = PytorchEngineConfig(tp=1, session_len=4096, cache_max_entry_count=0.2)
+    pipe = pipeline('OpenGVLab/InternVL3_5-8B', backend_config=backend_config)
+    
+    gen_config_expr = GenerationConfig(top_k=1, temperature=0.0)
+    gen_config_scen = GenerationConfig(top_k=1, temperature=0.1)
+    gen_configs = (gen_config_expr, gen_config_scen)
+
+    # 2. Config
+    DEFAULT_T2I_DIR = './pixart_outputs'
+    SOURCE_JSON = 'gt.json'
+
+    METHOD_DIRS = {
+        'PixArt': './faceswap_results/pixart',
+        # 'Janus': './faceswap_results/janus',
+        # 'Infinity': './faceswap_results/infinity',
+        # 'ShowO2': './faceswap_results/showo2'
+    }
+
+    results_summary = []
+    print(f"\n📋 Starting Batch VLM Evaluation (Source: {SOURCE_JSON})...")
+
+    for name, swapped_dir in METHOD_DIRS.items():
+        if not os.path.exists(swapped_dir):
+            print(f"⚠️ Skipping {name}: Directory not found")
+            continue
+
+        res = process_task(name, swapped_dir, DEFAULT_T2I_DIR, SOURCE_JSON, pipe, gen_configs)
+        if res: results_summary.append(res)
+
+    # Final Summary Table
+    print("\n" + "="*95)
+    print(f"{'Method':<10} | {'Expr Acc (Swap)':<15} | {'Expr Acc (T2I)':<15} | {'Scen Score (Swap)':<17} | {'Scen Score (T2I)':<17}")
+    print("-" * 95)
+    for res in results_summary:
+        print(f"{res['name']:<10} | {res['acc_expr_swap']:<15.2f}% | {res['acc_expr_t2i']:<15.2f}% | {res['avg_scen_swap']:<17.4f} | {res['avg_scen_t2i']:<17.4f}")
+    print("="*95)
+    print("✅ All tasks completed.")
