@@ -3,12 +3,12 @@ import pandas as pd
 def generate_caption(row):
     # 1. 解析性別 (根據路徑中是否有 'MEN' 判斷)
     image_path = row['image_path']
-    if 'MEN' in str(image_path).upper(): # 轉大寫比對較保險
-        gender = "man"
-        pronoun = "his"
-    else:
+    if 'WOMEN' in str(image_path).upper(): # 轉大寫比對較保險
         gender = "woman"
         pronoun = "her"
+    else:
+        gender = "man"
+        pronoun = "his"
     
     # 2. 解析 Yaw (左右偏轉)
     yaw = row['sam3d_head_body_yaw']
