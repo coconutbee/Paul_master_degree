@@ -79,13 +79,27 @@ Constraints: Output ONLY one word.
 def get_scenario_prompt(input_text):
     return f"""
 Task: Scenario Consistency Check
+
 Input Text: "{input_text}"
-Step 1: Text Extraction. Extract the "Unique Situational Descriptor" (cause, environment, detail).
-Step 2: Visual Verification. Does the image match?
+
+You need to perform a two-step analysis:
+Step 1: Text Extraction (Mental Process)
+Analyze the Input Text and extract the **"Unique Situational Descriptor"**. 
+- IGNORE: Gender, Standard Pose, and Basic Emotion labels.
+- TARGET: The specific *cause* of the emotion, the *environmental element*, or the *subtle physical detail*.
+
+Step 2: Visual Verification
+Look at the image. Does the visual content match the **"Unique Situational Descriptor"**?
+
 Output Format:
 - Extracted Context: ...
 - Visual Evidence: ...
 - Match Score: [0.0 to 1.0]
+
+Constraints:
+- 1.0: Specific scenario clearly visible.
+- 0.5: General vibe matches, specific detail missing.
+- 0.0: Scenario absent.
 """
 
 # ==========================================

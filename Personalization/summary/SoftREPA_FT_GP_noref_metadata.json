@@ -13,96 +13,96 @@
         "ref_head_pitch": null,
         "ref_pose_status": "Prompt_GT",
         "ref_pose_base_class": "Prompt_GT",
-        "t2i_head_body_yaw": -14.823429486007619,
-        "t2i_head_pitch": -7.223091774608513,
+        "t2i_head_body_yaw": -7.605126066492669,
+        "t2i_head_pitch": -17.19942993634799,
         "t2i_pose_status": "OK",
-        "t2i_pose_base_class": "head facing forward straight",
+        "t2i_pose_base_class": "head tilted down",
         "pose_match": 1,
         "t2i_vlm_expression": "neutral",
-        "t2i_scenario_score": 0.3,
-        "t2i_scenario_reasoning": "- Extracted Context: A boy looks upward with wide eyes and a surprised expression as snowflakes fall on his face.\n- Visual Evidence: The image shows a boy looking forward with a neutral expression, wearing a blue shirt with snowflakes on it. There is no indication of him looking upward or having a surprised expression.\n- Match Score: 0.3",
+        "t2i_scenario_score": 0.5,
+        "t2i_scenario_reasoning": "- Extracted Context: Snowflakes falling on his face.\n- Visual Evidence: Snowflakes are visible around the boy, but there is no direct evidence of snowflakes falling on his face in the image.\n- Match Score: 0.5",
         "expression_correct_t2i": 0,
-        "t2i_clip_t2i": 0.2043,
+        "t2i_clip_t2i": 0.2979,
         "t2i_clip_id_i2i": null,
         "t2i_dino_id_i2i": null,
         "t2i_final_score": 0.5,
-        "fga_orig_score": 2.5067,
+        "fga_orig_score": 2.9522,
         "fga_orig_tokens": [
             [
                 "a",
-                0.5211
+                0.7136
             ],
             [
                 "boy",
-                0.6437
+                0.8039
             ],
             [
                 "looks",
-                0.4939
+                0.7312
             ],
             [
                 "upward",
-                0.4616
+                0.5178
             ],
             [
                 "with",
-                0.4486
+                0.6429
             ],
             [
                 "wide",
-                0.4762
+                0.5323
             ],
             [
                 "eyes",
-                0.5488
+                0.6439
             ],
             [
                 "and",
-                0.4047
+                0.5592
             ],
             [
                 "a",
-                0.3923
+                0.6164
             ],
             [
                 "surprised",
-                0.235
+                0.2496
             ],
             [
                 "expression",
-                0.4749
+                0.6143
             ],
             [
                 "as",
-                0.6288
+                0.7961
             ],
             [
                 "snow",
-                0.8153
+                0.8824
             ],
             [
                 "##fl",
-                0.6487
+                0.877
             ],
             [
                 "##akes",
-                0.7775
+                0.8977
             ],
             [
                 "fall",
-                0.739
+                0.8597
             ],
             [
                 "on",
-                0.4202
+                0.7604
             ],
             [
                 "his",
-                0.5789
+                0.8137
             ],
             [
                 "face",
-                0.5973
+                0.8308
             ]
         ]
     },
@@ -120,68 +120,68 @@
         "ref_head_pitch": null,
         "ref_pose_status": "Prompt_GT",
         "ref_pose_base_class": "Prompt_GT",
-        "t2i_head_body_yaw": 1.7445376088602758,
-        "t2i_head_pitch": -36.89750931157394,
+        "t2i_head_body_yaw": -7.700496380041157,
+        "t2i_head_pitch": -14.596692478666327,
         "t2i_pose_status": "OK",
         "t2i_pose_base_class": "head tilted down",
         "pose_match": 1,
         "t2i_vlm_expression": "neutral",
-        "t2i_scenario_score": 0.9,
-        "t2i_scenario_reasoning": "- Extracted Context: A girl faces downward with a shy smile, cheeks slightly blushing.\n- Visual Evidence: The girl is looking down with a subtle smile, and her cheeks appear slightly blushed.\n- Match Score: 0.9",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: Cheeks slightly blushing.\n- Visual Evidence: The cheeks of the girl in the image appear to have a natural flush, indicating slight blushing.\n- Match Score: 1.0",
         "expression_correct_t2i": 0,
-        "t2i_clip_t2i": 0.2329,
+        "t2i_clip_t2i": 0.2362,
         "t2i_clip_id_i2i": null,
         "t2i_dino_id_i2i": null,
         "t2i_final_score": 0.5,
-        "fga_orig_score": 2.3383,
+        "fga_orig_score": 2.4536,
         "fga_orig_tokens": [
             [
                 "a",
-                0.3865
+                0.3903
             ],
             [
                 "girl",
-                0.6453
+                0.6002
             ],
             [
                 "faces",
-                0.3126
+                0.4
             ],
             [
                 "downward",
-                0.4471
+                0.445
             ],
             [
                 "with",
-                0.2534
+                0.2959
             ],
             [
                 "a",
-                0.2972
+                0.3354
             ],
             [
                 "shy",
-                0.2749
+                0.3105
             ],
             [
                 "smile",
-                0.3048
+                0.189
             ],
             [
                 ",",
-                0.3755
+                0.3987
             ],
             [
                 "cheeks",
-                0.4424
+                0.4808
             ],
             [
                 "slightly",
-                0.3884
+                0.4492
             ],
             [
                 "blushing",
-                0.3835
+                0.3889
             ]
         ]
     },
@@ -193,102 +193,102 @@
         "gt_gender": "Female",
         "gt_pose": "Head_Turn_Left",
         "t2i_pose_match": 0,
-        "t2i_pose": "Frontal",
+        "t2i_pose": "Back_Over_Shoulder",
         "ref_pose": "Head_Turn_Left",
         "ref_head_body_yaw": null,
         "ref_head_pitch": null,
         "ref_pose_status": "Prompt_GT",
         "ref_pose_base_class": "Prompt_GT",
-        "t2i_head_body_yaw": -18.197651228011438,
-        "t2i_head_pitch": -9.222855859828883,
+        "t2i_head_body_yaw": 49.00798952374031,
+        "t2i_head_pitch": -33.00388076190585,
         "t2i_pose_status": "OK",
-        "t2i_pose_base_class": "head facing forward straight",
+        "t2i_pose_base_class": "head turned to his/her left over the shoulder and tilted down",
         "pose_match": 0,
-        "t2i_vlm_expression": "happy",
-        "t2i_scenario_score": 0.8,
-        "t2i_scenario_reasoning": "- Extracted Context: A girl turns her head left and giggles, eyes squinted, reacting to a friend’s joke.\n- Visual Evidence: The girl on the left is turning her head slightly to the left and appears to be laughing.\n- Match Score: 0.8",
-        "expression_correct_t2i": 1,
-        "t2i_clip_t2i": 0.2472,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.5,
+        "t2i_scenario_reasoning": "- Extracted Context: The girl is reacting to a friend’s joke.\n- Visual Evidence: The girl is looking to the side, possibly at her friend, and has a neutral expression.\n- Match Score: 0.5",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2341,
         "t2i_clip_id_i2i": null,
         "t2i_dino_id_i2i": null,
         "t2i_final_score": 0.0,
-        "fga_orig_score": 1.8463,
+        "fga_orig_score": 2.0214,
         "fga_orig_tokens": [
             [
                 "a",
-                0.1732
+                0.3112
             ],
             [
                 "girl",
-                0.345
+                0.4197
             ],
             [
                 "turns",
-                0.1988
+                0.3487
             ],
             [
                 "her",
-                0.2213
+                0.3051
             ],
             [
                 "head",
-                0.383
+                0.4986
             ],
             [
                 "left",
-                0.3054
+                0.3758
             ],
             [
                 "and",
-                0.1059
+                0.1591
             ],
             [
                 "giggles",
-                0.1825
+                0.1118
             ],
             [
                 ",",
-                0.1637
+                0.2403
             ],
             [
                 "eyes",
-                0.2652
+                0.391
             ],
             [
                 "squinted",
-                0.1099
+                0.2284
             ],
             [
                 ",",
-                0.2332
+                0.335
             ],
             [
                 "reacting",
-                0.1007
+                0.2243
             ],
             [
                 "to",
-                0.0419
+                0.125
             ],
             [
                 "a",
-                0.0504
+                0.1438
             ],
             [
                 "friend",
-                0.2174
+                0.1668
             ],
             [
                 "’",
-                0.1099
+                0.211
             ],
             [
                 "s",
-                0.0636
+                0.1059
             ],
             [
                 "joke",
-                0.0606
+                0.0825
             ]
         ]
     },
@@ -299,99 +299,99 @@
         "gt_expression": "happy",
         "gt_gender": "Female",
         "gt_pose": "Back_Over_Shoulder",
-        "t2i_pose_match": 0,
-        "t2i_pose": "Head_Turn_Right",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Back_Over_Shoulder",
         "ref_pose": "Back_Over_Shoulder",
         "ref_head_body_yaw": null,
         "ref_head_pitch": null,
         "ref_pose_status": "Prompt_GT",
         "ref_pose_base_class": "Prompt_GT",
-        "t2i_head_body_yaw": -38.008630005467445,
-        "t2i_head_pitch": -32.275001764327385,
+        "t2i_head_body_yaw": 70.95338792314068,
+        "t2i_head_pitch": 21.080917329146835,
         "t2i_pose_status": "OK",
-        "t2i_pose_base_class": "head turned to his/her right and tilted down",
-        "pose_match": 0,
+        "t2i_pose_base_class": "head turned to his/her left over the shoulder and tilted up",
+        "pose_match": 1,
         "t2i_vlm_expression": "happy",
-        "t2i_scenario_score": 0.8,
-        "t2i_scenario_reasoning": "- Extracted Context: A girl turns her head over her right shoulder, smiling playfully toward a friend calling her name.\n- Visual Evidence: The image shows a girl smiling and looking slightly to her left. She appears to be outdoors with greenery in the background.\n- Match Score: 0.8",
+        "t2i_scenario_score": 0.7,
+        "t2i_scenario_reasoning": "- Extracted Context: A friend calling her name.\n- Visual Evidence: The girl is smiling and looking slightly to her side, which could indicate she is responding to someone off-camera.\n- Match Score: 0.7",
         "expression_correct_t2i": 1,
-        "t2i_clip_t2i": 0.2758,
+        "t2i_clip_t2i": 0.2496,
         "t2i_clip_id_i2i": null,
         "t2i_dino_id_i2i": null,
-        "t2i_final_score": 0.0,
-        "fga_orig_score": 1.7928,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 2.0066,
         "fga_orig_tokens": [
             [
                 "a",
-                0.2859
+                0.2967
             ],
             [
                 "girl",
-                0.5743
+                0.5168
             ],
             [
                 "turns",
-                0.3244
+                0.2768
             ],
             [
                 "her",
-                0.4151
+                0.4203
             ],
             [
                 "head",
-                0.6787
+                0.5706
             ],
             [
                 "over",
-                0.3216
+                0.3518
             ],
             [
                 "her",
-                0.409
+                0.425
             ],
             [
                 "right",
-                0.3502
+                0.3852
             ],
             [
                 "shoulder",
-                0.3896
+                0.482
             ],
             [
                 ",",
-                0.2312
+                0.2358
             ],
             [
                 "smiling",
-                0.4636
+                0.4533
             ],
             [
                 "playfully",
-                0.2183
+                0.2329
             ],
             [
                 "toward",
-                0.0923
+                0.1304
             ],
             [
                 "a",
-                0.043
+                0.0855
             ],
             [
                 "friend",
-                0.0295
+                0.0416
             ],
             [
                 "calling",
-                0.0166
+                0.0486
             ],
             [
                 "her",
-                0.1404
+                0.2042
             ],
             [
                 "name",
-                0.0141
+                0.0236
             ]
         ]
     },
@@ -402,99 +402,99 @@
         "gt_expression": "surprise",
         "gt_gender": "Female",
         "gt_pose": "Back_Over_Shoulder",
-        "t2i_pose_match": 0,
-        "t2i_pose": "Head_Turn_Right",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Back_Over_Shoulder",
         "ref_pose": "Back_Over_Shoulder",
         "ref_head_body_yaw": null,
         "ref_head_pitch": null,
         "ref_pose_status": "Prompt_GT",
         "ref_pose_base_class": "Prompt_GT",
-        "t2i_head_body_yaw": -23.3527198157995,
-        "t2i_head_pitch": 37.85015540927495,
+        "t2i_head_body_yaw": 82.18194412756043,
+        "t2i_head_pitch": 37.13165924733394,
         "t2i_pose_status": "OK",
-        "t2i_pose_base_class": "head turned to his/her right and tilted up",
-        "pose_match": 0,
-        "t2i_vlm_expression": "surprise",
-        "t2i_scenario_score": 0.9,
-        "t2i_scenario_reasoning": "- Extracted Context: A lady turns her head back over her shoulder, lips slightly parted, showing a surprised expression.\n- Visual Evidence: The image shows a lady turning her head to the side, with her lips slightly parted and a surprised expression on her face.\n- Match Score: 0.9",
-        "expression_correct_t2i": 1,
-        "t2i_clip_t2i": 0.2309,
+        "t2i_pose_base_class": "head turned to his/her left over the shoulder and tilted up",
+        "pose_match": 1,
+        "t2i_vlm_expression": "neutral",
+        "t2i_scenario_score": 0.3,
+        "t2i_scenario_reasoning": "- Extracted Context: The lady's surprised expression is likely due to something unexpected happening behind her.\n- Visual Evidence: The image shows a lady looking over her shoulder with a neutral expression, not clearly showing surprise.\n- Match Score: 0.3",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.239,
         "t2i_clip_id_i2i": null,
         "t2i_dino_id_i2i": null,
-        "t2i_final_score": 0.0,
-        "fga_orig_score": 2.274,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 2.8262,
         "fga_orig_tokens": [
             [
                 "a",
-                0.2479
+                0.3571
             ],
             [
                 "lady",
-                0.3062
+                0.5945
             ],
             [
                 "turns",
-                0.3491
+                0.4019
             ],
             [
                 "her",
-                0.258
+                0.455
             ],
             [
                 "head",
-                0.5027
+                0.6943
             ],
             [
                 "back",
-                0.3682
+                0.4787
             ],
             [
                 "over",
-                0.3048
+                0.4464
             ],
             [
                 "her",
-                0.2941
+                0.5156
             ],
             [
                 "shoulder",
-                0.4692
+                0.6827
             ],
             [
                 ",",
-                0.1831
+                0.3715
             ],
             [
                 "lips",
-                0.2348
+                0.5089
             ],
             [
                 "slightly",
-                0.4321
+                0.592
             ],
             [
                 "parted",
-                0.4868
+                0.6339
             ],
             [
                 ",",
-                0.3269
+                0.517
             ],
             [
                 "showing",
-                0.3295
+                0.5286
             ],
             [
                 "a",
-                0.2148
+                0.3793
             ],
             [
                 "surprised",
-                0.2127
+                0.3102
             ],
             [
                 "expression",
-                0.311
+                0.5405
             ]
         ]
     },
@@ -505,87 +505,87 @@
         "gt_expression": "happy",
         "gt_gender": "Male",
         "gt_pose": "Frontal",
-        "t2i_pose_match": 1,
-        "t2i_pose": "Frontal",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Head_Turn_Right",
         "ref_pose": "Frontal",
         "ref_head_body_yaw": null,
         "ref_head_pitch": null,
         "ref_pose_status": "Prompt_GT",
         "ref_pose_base_class": "Prompt_GT",
-        "t2i_head_body_yaw": -9.270874274237036,
-        "t2i_head_pitch": -26.59360719202786,
+        "t2i_head_body_yaw": -20.60626276195235,
+        "t2i_head_pitch": -20.819841371149565,
         "t2i_pose_status": "OK",
-        "t2i_pose_base_class": "head tilted down",
-        "pose_match": 1,
+        "t2i_pose_base_class": "head turned to his/her right and tilted down",
+        "pose_match": 0,
         "t2i_vlm_expression": "happy",
         "t2i_scenario_score": 0.0,
-        "t2i_scenario_reasoning": "- Extracted Context: A man faces slightly downward, smiling proudly as sunlight shines on his face.\n- Visual Evidence: The image shows a woman facing forward, smiling, with no indication of sunlight shining on her face.\n- Match Score: 0.0",
+        "t2i_scenario_reasoning": "- Extracted Context: Sunlight shining on his face\n- Visual Evidence: The image shows a man with a bright smile, but there is no visible sunlight shining on his face.\n- Match Score: 0.0",
         "expression_correct_t2i": 1,
-        "t2i_clip_t2i": 0.2008,
+        "t2i_clip_t2i": 0.2596,
         "t2i_clip_id_i2i": null,
         "t2i_dino_id_i2i": null,
-        "t2i_final_score": 0.5,
-        "fga_orig_score": 1.207,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.7094,
         "fga_orig_tokens": [
             [
                 "a",
-                0.0955
+                0.6081
             ],
             [
                 "man",
-                0.0195
+                0.7938
             ],
             [
                 "faces",
-                0.059
+                0.4422
             ],
             [
                 "slightly",
-                0.1962
+                0.5655
             ],
             [
                 "downward",
-                0.25
+                0.5038
             ],
             [
                 ",",
-                0.1555
+                0.5941
             ],
             [
                 "smiling",
-                0.328
+                0.7521
             ],
             [
                 "proudly",
-                0.2298
+                0.6096
             ],
             [
                 "as",
-                0.123
+                0.4875
             ],
             [
                 "sunlight",
-                0.0668
+                0.2671
             ],
             [
                 "shine",
-                0.0465
+                0.1725
             ],
             [
                 "##s",
-                0.0513
+                0.1978
             ],
             [
                 "on",
-                0.0664
+                0.2193
             ],
             [
                 "his",
-                0.0346
+                0.6412
             ],
             [
                 "face",
-                0.092
+                0.3387
             ]
         ]
     },
@@ -603,84 +603,84 @@
         "ref_head_pitch": null,
         "ref_pose_status": "Prompt_GT",
         "ref_pose_base_class": "Prompt_GT",
-        "t2i_head_body_yaw": 15.165569046818865,
-        "t2i_head_pitch": -13.877789645932324,
+        "t2i_head_body_yaw": -18.31367061012033,
+        "t2i_head_pitch": -9.233905413839011,
         "t2i_pose_status": "OK",
-        "t2i_pose_base_class": "head tilted down",
+        "t2i_pose_base_class": "head facing forward straight",
         "pose_match": 0,
         "t2i_vlm_expression": "neutral",
-        "t2i_scenario_score": 0.2,
-        "t2i_scenario_reasoning": "- Extracted Context: A man leans his head toward his right shoulder, showing a puzzled or questioning look.\n- Visual Evidence: The image shows a man facing forward with a neutral expression. He is not leaning his head toward his right shoulder, nor does he appear to be showing a puzzled or questioning look.\n- Match Score: 0.2",
+        "t2i_scenario_score": 0.0,
+        "t2i_scenario_reasoning": "- Extracted Context: Leaning head toward the right shoulder\n- Visual Evidence: The person is facing slightly to the left with their head in a neutral position.\n- Match Score: 0.0",
         "expression_correct_t2i": 0,
-        "t2i_clip_t2i": 0.2243,
+        "t2i_clip_t2i": 0.2525,
         "t2i_clip_id_i2i": null,
         "t2i_dino_id_i2i": null,
         "t2i_final_score": 0.0,
-        "fga_orig_score": 2.2527,
+        "fga_orig_score": 3.2415,
         "fga_orig_tokens": [
             [
                 "a",
-                0.3752
+                0.5497
             ],
             [
                 "man",
-                0.5885
+                0.7668
             ],
             [
                 "leans",
-                0.2308
+                0.489
             ],
             [
                 "his",
-                0.4189
+                0.6278
             ],
             [
                 "head",
-                0.591
+                0.7726
             ],
             [
                 "toward",
-                0.2449
+                0.5142
             ],
             [
                 "his",
-                0.3714
+                0.6086
             ],
             [
                 "right",
-                0.3729
+                0.5641
             ],
             [
                 "shoulder",
-                0.4385
+                0.5846
             ],
             [
                 ",",
-                0.3599
+                0.5839
             ],
             [
                 "showing",
-                0.4563
+                0.6487
             ],
             [
                 "a",
-                0.3348
+                0.6104
             ],
             [
                 "puzzled",
-                0.2897
+                0.5849
             ],
             [
                 "or",
-                0.3911
+                0.5916
             ],
             [
                 "questioning",
-                0.3217
+                0.5826
             ],
             [
                 "look",
-                0.5451
+                0.7271
             ]
         ]
     },
@@ -691,103 +691,103 @@
         "gt_expression": "neutral",
         "gt_gender": "Male",
         "gt_pose": "Head_Turn_Right",
-        "t2i_pose_match": 1,
-        "t2i_pose": "Head_Turn_Right",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Frontal",
         "ref_pose": "Head_Turn_Right",
         "ref_head_body_yaw": null,
         "ref_head_pitch": null,
         "ref_pose_status": "Prompt_GT",
         "ref_pose_base_class": "Prompt_GT",
-        "t2i_head_body_yaw": -32.56377524221372,
-        "t2i_head_pitch": 3.365245268559139,
+        "t2i_head_body_yaw": -9.210973970520824,
+        "t2i_head_pitch": 3.1083765799178664,
         "t2i_pose_status": "OK",
-        "t2i_pose_base_class": "head turned to his/her right",
-        "pose_match": 1,
+        "t2i_pose_base_class": "head facing forward straight",
+        "pose_match": 0,
         "t2i_vlm_expression": "neutral",
-        "t2i_scenario_score": 0.9,
-        "t2i_scenario_reasoning": "- Extracted Context: A man looks to his right, lips pursed as if whistling softly, with his head slightly raised.\n- Visual Evidence: The man in the center of the image is looking slightly to his right with his lips pursed, and his head is slightly raised.\n- Match Score: 0.9",
+        "t2i_scenario_score": 0.5,
+        "t2i_scenario_reasoning": "- Extracted Context: Lips pursed as if whistling softly\n- Visual Evidence: The person's lips are closed, but there is no clear indication of whistling.\n- Match Score: 0.5",
         "expression_correct_t2i": 1,
-        "t2i_clip_t2i": 0.2331,
+        "t2i_clip_t2i": 0.2482,
         "t2i_clip_id_i2i": null,
         "t2i_dino_id_i2i": null,
-        "t2i_final_score": 0.5,
-        "fga_orig_score": 1.9123,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.6077,
         "fga_orig_tokens": [
             [
                 "a",
-                0.4232
+                0.526
             ],
             [
                 "man",
-                0.4594
+                0.7653
             ],
             [
                 "looks",
-                0.2742
+                0.6769
             ],
             [
                 "to",
-                0.2984
+                0.6303
             ],
             [
                 "his",
-                0.3367
+                0.6227
             ],
             [
                 "right",
-                0.4641
+                0.6041
             ],
             [
                 ",",
-                0.2134
+                0.4335
             ],
             [
                 "lips",
-                0.4391
+                0.3435
             ],
             [
                 "pursed",
-                0.1804
+                0.2894
             ],
             [
                 "as",
-                0.3344
+                0.3821
             ],
             [
                 "if",
-                0.2021
+                0.3102
             ],
             [
                 "whistling",
-                0.0543
+                0.1318
             ],
             [
                 "softly",
-                0.1231
+                0.3329
             ],
             [
                 ",",
-                0.3429
+                0.4649
             ],
             [
                 "with",
-                0.2711
+                0.4434
             ],
             [
                 "his",
-                0.2697
+                0.549
             ],
             [
                 "head",
-                0.4396
+                0.8121
             ],
             [
                 "slightly",
-                0.3922
+                0.5876
             ],
             [
                 "raised",
-                0.2369
+                0.3786
             ]
         ]
     },
@@ -805,88 +805,88 @@
         "ref_head_pitch": null,
         "ref_pose_status": "Prompt_GT",
         "ref_pose_base_class": "Prompt_GT",
-        "t2i_head_body_yaw": -16.36520225783558,
-        "t2i_head_pitch": -10.168674496166318,
+        "t2i_head_body_yaw": 3.5747432707770743,
+        "t2i_head_pitch": -9.58534277280301,
         "t2i_pose_status": "OK",
-        "t2i_pose_base_class": "head tilted down",
+        "t2i_pose_base_class": "head facing forward straight",
         "pose_match": 0,
-        "t2i_vlm_expression": "neutral",
-        "t2i_scenario_score": 0.3,
-        "t2i_scenario_reasoning": "- Extracted Context: A man looks up and to his left with a thoughtful expression, as if remembering something.\n- Visual Evidence: The man is looking to his right with a neutral expression.\n- Match Score: 0.3",
+        "t2i_vlm_expression": "surprise",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: Remembering something\n- Visual Evidence: The man is looking up and to his left with a thoughtful expression.\n- Match Score: 1.0",
         "expression_correct_t2i": 0,
-        "t2i_clip_t2i": 0.2314,
+        "t2i_clip_t2i": 0.239,
         "t2i_clip_id_i2i": null,
         "t2i_dino_id_i2i": null,
         "t2i_final_score": 0.0,
-        "fga_orig_score": 3.3167,
+        "fga_orig_score": 3.0379,
         "fga_orig_tokens": [
             [
                 "a",
-                0.6565
+                0.6553
             ],
             [
                 "man",
-                0.8123
+                0.8054
             ],
             [
                 "looks",
-                0.7606
+                0.7274
             ],
             [
                 "up",
-                0.5129
+                0.4402
             ],
             [
                 "and",
-                0.4711
+                0.4271
             ],
             [
                 "to",
-                0.6847
+                0.6256
             ],
             [
                 "his",
-                0.7252
+                0.7161
             ],
             [
                 "left",
-                0.6561
+                0.5918
             ],
             [
                 "with",
-                0.5458
+                0.5648
             ],
             [
                 "a",
-                0.6277
+                0.6224
             ],
             [
                 "thoughtful",
-                0.6419
+                0.663
             ],
             [
                 "expression",
-                0.7829
+                0.7687
             ],
             [
                 ",",
-                0.7551
+                0.7232
             ],
             [
                 "as",
-                0.7209
+                0.7033
             ],
             [
                 "if",
-                0.692
+                0.672
             ],
             [
                 "remembering",
-                0.2433
+                0.3092
             ],
             [
                 "something",
-                0.3853
+                0.4068
             ]
         ]
     },
@@ -904,92 +904,92 @@
         "ref_head_pitch": null,
         "ref_pose_status": "Prompt_GT",
         "ref_pose_base_class": "Prompt_GT",
-        "t2i_head_body_yaw": -33.490277224484956,
-        "t2i_head_pitch": -13.846606181271113,
+        "t2i_head_body_yaw": -29.675913147781962,
+        "t2i_head_pitch": 9.451898441717837,
         "t2i_pose_status": "OK",
-        "t2i_pose_base_class": "head turned to his/her right and tilted down",
+        "t2i_pose_base_class": "head turned to his/her right",
         "pose_match": 0,
         "t2i_vlm_expression": "happy",
-        "t2i_scenario_score": 0.9,
-        "t2i_scenario_reasoning": "- Extracted Context: A man slightly turns his face upward to the left, smiling confidently as wind moves his hair.\n- Visual Evidence: The image shows a man with his hair being blown to the left, smiling. He is slightly turned to the left.\n- Match Score: 0.9",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: Wind moves his hair.\n- Visual Evidence: The person's hair is visibly being blown to the right, indicating the presence of wind.\n- Match Score: 1.0",
         "expression_correct_t2i": 1,
-        "t2i_clip_t2i": 0.2452,
+        "t2i_clip_t2i": 0.2922,
         "t2i_clip_id_i2i": null,
         "t2i_dino_id_i2i": null,
         "t2i_final_score": 0.0,
-        "fga_orig_score": 2.3043,
+        "fga_orig_score": 3.0886,
         "fga_orig_tokens": [
             [
                 "a",
-                0.3358
+                0.6512
             ],
             [
                 "man",
-                0.1091
+                0.7484
             ],
             [
                 "slightly",
-                0.3011
+                0.6032
             ],
             [
                 "turns",
-                0.3326
+                0.432
             ],
             [
                 "his",
-                0.1664
+                0.6708
             ],
             [
                 "face",
-                0.4978
+                0.6146
             ],
             [
                 "upward",
-                0.3477
+                0.4775
             ],
             [
                 "to",
-                0.4272
+                0.6207
             ],
             [
                 "the",
-                0.4272
+                0.658
             ],
             [
                 "left",
-                0.5314
+                0.603
             ],
             [
                 ",",
-                0.4203
+                0.7043
             ],
             [
                 "smiling",
-                0.3935
+                0.7452
             ],
             [
                 "confidently",
-                0.531
+                0.74
             ],
             [
                 "as",
-                0.4657
+                0.6546
             ],
             [
                 "wind",
-                0.5898
+                0.6942
             ],
             [
                 "moves",
-                0.4422
+                0.6128
             ],
             [
                 "his",
-                0.1301
+                0.6482
             ],
             [
                 "hair",
-                0.7082
+                0.8251
             ]
         ]
     },
@@ -1007,96 +1007,96 @@
         "ref_head_pitch": null,
         "ref_pose_status": "Prompt_GT",
         "ref_pose_base_class": "Prompt_GT",
-        "t2i_head_body_yaw": -11.192062197340743,
-        "t2i_head_pitch": -17.269249676773512,
+        "t2i_head_body_yaw": 15.3972778413437,
+        "t2i_head_pitch": -19.59954302690302,
         "t2i_pose_status": "OK",
         "t2i_pose_base_class": "head tilted down",
         "pose_match": 0,
         "t2i_vlm_expression": "happy",
-        "t2i_scenario_score": 0.3,
-        "t2i_scenario_reasoning": "- Extracted Context: A man tilts his head left with a relaxed smile, eyes glancing downward toward his pet dog.\n- Visual Evidence: The man is smiling and looking directly at the camera, not tilting his head left or glancing downward at his dog.\n- Match Score: 0.3",
+        "t2i_scenario_score": 0.0,
+        "t2i_scenario_reasoning": "- Extracted Context: Eyes glancing downward toward his pet dog.\n- Visual Evidence: The person in the image has their eyes closed and is not looking down at anything specific.\n- Match Score: 0.0",
         "expression_correct_t2i": 1,
-        "t2i_clip_t2i": 0.2989,
+        "t2i_clip_t2i": 0.19,
         "t2i_clip_id_i2i": null,
         "t2i_dino_id_i2i": null,
         "t2i_final_score": 0.0,
-        "fga_orig_score": 2.8556,
+        "fga_orig_score": 1.2571,
         "fga_orig_tokens": [
             [
                 "a",
-                0.6793
+                0.0715
             ],
             [
                 "man",
-                0.8658
+                0.0328
             ],
             [
                 "tilt",
-                0.3573
+                0.1306
             ],
             [
                 "##s",
-                0.341
+                0.0697
             ],
             [
                 "his",
-                0.6843
+                0.0246
             ],
             [
                 "head",
-                0.4482
+                0.5837
             ],
             [
                 "left",
-                0.545
+                0.2538
             ],
             [
                 "with",
-                0.5436
+                0.1132
             ],
             [
                 "a",
-                0.6079
+                0.142
             ],
             [
                 "relaxed",
-                0.683
+                0.4984
             ],
             [
                 "smile",
-                0.8182
+                0.4181
             ],
             [
                 ",",
-                0.5273
+                0.1579
             ],
             [
                 "eyes",
-                0.5373
+                0.7376
             ],
             [
                 "glancing",
-                0.3631
+                0.1992
             ],
             [
                 "downward",
-                0.39
+                0.3019
             ],
             [
                 "toward",
-                0.2732
+                0.0141
             ],
             [
                 "his",
-                0.5586
+                0.0108
             ],
             [
                 "pet",
-                0.8173
+                0.0085
             ],
             [
                 "dog",
-                0.9005
+                0.0058
             ]
         ]
     },
@@ -1107,111 +1107,111 @@
         "gt_expression": "happy",
         "gt_gender": "Male",
         "gt_pose": "Head_Turn_Right",
-        "t2i_pose_match": 0,
-        "t2i_pose": "Head_Turn_Left",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Head_Turn_Right",
         "ref_pose": "Head_Turn_Right",
         "ref_head_body_yaw": null,
         "ref_head_pitch": null,
         "ref_pose_status": "Prompt_GT",
         "ref_pose_base_class": "Prompt_GT",
-        "t2i_head_body_yaw": 31.74995348029722,
-        "t2i_head_pitch": -3.789648358891853,
+        "t2i_head_body_yaw": -21.860402896165805,
+        "t2i_head_pitch": 2.5266592990107313,
         "t2i_pose_status": "OK",
-        "t2i_pose_base_class": "head turned to his/her left",
-        "pose_match": 0,
+        "t2i_pose_base_class": "head turned to his/her right",
+        "pose_match": 1,
         "t2i_vlm_expression": "happy",
-        "t2i_scenario_score": 0.7,
-        "t2i_scenario_reasoning": "- Extracted Context: A man turns his head slightly to the right and smiles gently while looking at a small butterfly near his shoulder.\n- Visual Evidence: The man is smiling and looking to his right. There are several butterflies around him, but none are clearly near his shoulder.\n- Match Score: 0.7",
+        "t2i_scenario_score": 0.5,
+        "t2i_scenario_reasoning": "- Extracted Context: A small butterfly near the shoulder.\n- Visual Evidence: There are butterflies near the person, but not specifically near the shoulder.\n- Match Score: 0.5",
         "expression_correct_t2i": 1,
-        "t2i_clip_t2i": 0.3171,
+        "t2i_clip_t2i": 0.3111,
         "t2i_clip_id_i2i": null,
         "t2i_dino_id_i2i": null,
-        "t2i_final_score": 0.0,
-        "fga_orig_score": 2.8029,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 2.6066,
         "fga_orig_tokens": [
             [
                 "a",
-                0.6437
+                0.614
             ],
             [
                 "man",
-                0.8534
+                0.8504
             ],
             [
                 "turns",
-                0.5291
+                0.3226
             ],
             [
                 "his",
-                0.7042
+                0.7141
             ],
             [
                 "head",
-                0.791
+                0.6448
             ],
             [
                 "slightly",
-                0.573
+                0.4577
             ],
             [
                 "to",
-                0.6274
+                0.4493
             ],
             [
                 "the",
-                0.6812
+                0.5914
             ],
             [
                 "right",
-                0.6011
+                0.5345
             ],
             [
                 "and",
-                0.5317
+                0.4641
             ],
             [
                 "smiles",
-                0.709
+                0.7804
             ],
             [
                 "gently",
-                0.5704
+                0.5428
             ],
             [
                 "while",
-                0.6371
+                0.5764
             ],
             [
                 "looking",
-                0.4606
+                0.3124
             ],
             [
                 "at",
-                0.2521
+                0.1432
             ],
             [
                 "a",
-                0.6407
+                0.6673
             ],
             [
                 "small",
-                0.6642
+                0.625
             ],
             [
                 "butterfly",
-                0.7419
+                0.7434
             ],
             [
                 "near",
-                0.6537
+                0.5878
             ],
             [
                 "his",
-                0.6836
+                0.6729
             ],
             [
                 "shoulder",
-                0.7181
+                0.583
             ]
         ]
     },
@@ -1222,87 +1222,87 @@
         "gt_expression": "happy",
         "gt_gender": "Male",
         "gt_pose": "Head_Turn_Right",
-        "t2i_pose_match": 1,
-        "t2i_pose": "Head_Turn_Right",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Frontal",
         "ref_pose": "Head_Turn_Right",
         "ref_head_body_yaw": null,
         "ref_head_pitch": null,
         "ref_pose_status": "Prompt_GT",
         "ref_pose_base_class": "Prompt_GT",
-        "t2i_head_body_yaw": -29.52350816842133,
-        "t2i_head_pitch": -4.504911674688188,
+        "t2i_head_body_yaw": 15.817108150954068,
+        "t2i_head_pitch": 8.834327233785288,
         "t2i_pose_status": "OK",
-        "t2i_pose_base_class": "head turned to his/her right",
-        "pose_match": 1,
+        "t2i_pose_base_class": "head facing forward straight",
+        "pose_match": 0,
         "t2i_vlm_expression": "neutral",
-        "t2i_scenario_score": 0.3,
-        "t2i_scenario_reasoning": "- Extracted Context: A teenage boy turns his head right and narrows his eyes with a playful smirk.\n- Visual Evidence: The image shows a teenage boy looking to his right, but his eyes are not narrowed, and he does not have a playful smirk.\n- Match Score: 0.3",
+        "t2i_scenario_score": 0.0,
+        "t2i_scenario_reasoning": "- Extracted Context: The teenage boy narrows his eyes with a playful smirk after turning his head right.\n- Visual Evidence: The image shows a person with a thoughtful expression, not a playful smirk, and there is no indication of turning the head right or narrowing the eyes.\n- Match Score: 0.0",
         "expression_correct_t2i": 0,
-        "t2i_clip_t2i": 0.2611,
+        "t2i_clip_t2i": 0.2329,
         "t2i_clip_id_i2i": null,
         "t2i_dino_id_i2i": null,
-        "t2i_final_score": 0.5,
-        "fga_orig_score": 2.8011,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.2852,
         "fga_orig_tokens": [
             [
                 "a",
-                0.5274
+                0.3298
             ],
             [
                 "teenage",
-                0.7207
+                0.4859
             ],
             [
                 "boy",
-                0.6586
+                0.2016
             ],
             [
                 "turns",
-                0.4294
+                0.322
             ],
             [
                 "his",
-                0.5648
+                0.1758
             ],
             [
                 "head",
-                0.6822
+                0.5557
             ],
             [
                 "right",
-                0.4786
+                0.3806
             ],
             [
                 "and",
-                0.3028
+                0.1764
             ],
             [
                 "narrows",
-                0.2604
+                0.2752
             ],
             [
                 "his",
-                0.5955
+                0.1766
             ],
             [
                 "eyes",
-                0.4308
+                0.3108
             ],
             [
                 "with",
-                0.4873
+                0.3256
             ],
             [
                 "a",
-                0.5383
+                0.358
             ],
             [
                 "playful",
-                0.3903
+                0.2741
             ],
             [
                 "smirk",
-                0.7037
+                0.3824
             ]
         ]
     },
@@ -1314,110 +1314,110 @@
         "gt_gender": "Female",
         "gt_pose": "Head_Turn_Left",
         "t2i_pose_match": 0,
-        "t2i_pose": "Head_Turn_Right",
+        "t2i_pose": "Frontal",
         "ref_pose": "Head_Turn_Left",
         "ref_head_body_yaw": null,
         "ref_head_pitch": null,
         "ref_pose_status": "Prompt_GT",
         "ref_pose_base_class": "Prompt_GT",
-        "t2i_head_body_yaw": -22.64159913598034,
-        "t2i_head_pitch": -27.172948217503475,
+        "t2i_head_body_yaw": -15.884958541772276,
+        "t2i_head_pitch": -27.945326269675604,
         "t2i_pose_status": "OK",
-        "t2i_pose_base_class": "head turned to his/her right and tilted down",
+        "t2i_pose_base_class": "head tilted down",
         "pose_match": 0,
         "t2i_vlm_expression": "happy",
-        "t2i_scenario_score": 0.6,
-        "t2i_scenario_reasoning": "- Extracted Context: A woman looks down to her left, her mouth slightly open in a laugh, while holding a coffee cup.\n- Visual Evidence: The woman is smiling and holding a coffee cup, but she is not looking down to her left; she is looking forward. Additionally, there is a pitcher of coffee beside her.\n- Match Score: 0.6",
+        "t2i_scenario_score": 1.0,
+        "t2i_scenario_reasoning": "- Extracted Context: Holding a coffee cup\n- Visual Evidence: The woman is holding a coffee cup with both hands.\n- Match Score: 1.0",
         "expression_correct_t2i": 1,
-        "t2i_clip_t2i": 0.3197,
+        "t2i_clip_t2i": 0.3282,
         "t2i_clip_id_i2i": null,
         "t2i_dino_id_i2i": null,
         "t2i_final_score": 0.0,
-        "fga_orig_score": 2.6332,
+        "fga_orig_score": 2.9612,
         "fga_orig_tokens": [
             [
                 "a",
-                0.5005
+                0.582
             ],
             [
                 "woman",
-                0.7591
+                0.7982
             ],
             [
                 "looks",
-                0.3803
+                0.4445
             ],
             [
                 "down",
-                0.3868
+                0.4022
             ],
             [
                 "to",
-                0.3604
+                0.4303
             ],
             [
                 "her",
-                0.5659
+                0.6246
             ],
             [
                 "left",
-                0.6196
+                0.6329
             ],
             [
                 ",",
-                0.5279
+                0.6176
             ],
             [
                 "her",
-                0.5228
+                0.5974
             ],
             [
                 "mouth",
-                0.286
+                0.3701
             ],
             [
                 "slightly",
-                0.522
+                0.5722
             ],
             [
                 "open",
-                0.5404
+                0.5633
             ],
             [
                 "in",
-                0.5434
+                0.645
             ],
             [
                 "a",
-                0.5997
+                0.7014
             ],
             [
                 "laugh",
-                0.6684
+                0.7424
             ],
             [
                 ",",
-                0.5108
+                0.5818
             ],
             [
                 "while",
-                0.5022
+                0.5564
             ],
             [
                 "holding",
-                0.8566
+                0.861
             ],
             [
                 "a",
-                0.7768
+                0.8052
             ],
             [
                 "coffee",
-                0.8827
+                0.8642
             ],
             [
                 "cup",
-                0.9079
+                0.9151
             ]
         ]
     },
@@ -1435,84 +1435,84 @@
         "ref_head_pitch": null,
         "ref_pose_status": "Prompt_GT",
         "ref_pose_base_class": "Prompt_GT",
-        "t2i_head_body_yaw": -1.1867583808077034,
-        "t2i_head_pitch": -9.959350941257966,
+        "t2i_head_body_yaw": -6.260692794754032,
+        "t2i_head_pitch": -26.917449388151383,
         "t2i_pose_status": "OK",
-        "t2i_pose_base_class": "head facing forward straight",
+        "t2i_pose_base_class": "head tilted down",
         "pose_match": 0,
         "t2i_vlm_expression": "neutral",
         "t2i_scenario_score": 0.0,
-        "t2i_scenario_reasoning": "- Extracted Context: A woman looks sideways toward the left, brows raised, as if reacting in surprise.\n- Visual Evidence: The woman in the image is facing forward with a neutral expression, not looking sideways or showing raised brows indicating surprise.\n- Match Score: 0.0",
+        "t2i_scenario_reasoning": "- Extracted Context: Reacting in surprise\n- Visual Evidence: The woman is looking sideways with a neutral expression, not showing surprise.\n- Match Score: 0.0",
         "expression_correct_t2i": 0,
-        "t2i_clip_t2i": 0.2446,
+        "t2i_clip_t2i": 0.2415,
         "t2i_clip_id_i2i": null,
         "t2i_dino_id_i2i": null,
         "t2i_final_score": 0.0,
-        "fga_orig_score": 2.401,
+        "fga_orig_score": 2.4409,
         "fga_orig_tokens": [
             [
                 "a",
-                0.3716
+                0.4349
             ],
             [
                 "woman",
-                0.6229
+                0.7297
             ],
             [
                 "looks",
-                0.3923
+                0.5018
             ],
             [
                 "sideways",
-                0.4755
+                0.4934
             ],
             [
                 "toward",
-                0.3688
+                0.4161
             ],
             [
                 "the",
-                0.433
+                0.5312
             ],
             [
                 "left",
-                0.4586
+                0.4919
             ],
             [
                 ",",
-                0.2615
+                0.3478
             ],
             [
                 "brows",
-                0.3836
+                0.3557
             ],
             [
                 "raised",
-                0.3683
+                0.4205
             ],
             [
                 ",",
-                0.4069
+                0.5174
             ],
             [
                 "as",
-                0.4178
+                0.5293
             ],
             [
                 "if",
-                0.4209
+                0.5164
             ],
             [
                 "reacting",
-                0.2706
+                0.3378
             ],
             [
                 "in",
-                0.2463
+                0.3459
             ],
             [
                 "surprise",
-                0.1229
+                0.1452
             ]
         ]
     },
@@ -1530,80 +1530,80 @@
         "ref_head_pitch": null,
         "ref_pose_status": "Prompt_GT",
         "ref_pose_base_class": "Prompt_GT",
-        "t2i_head_body_yaw": 82.04533048624853,
-        "t2i_head_pitch": 4.68296840217997,
+        "t2i_head_body_yaw": -45.611407176736414,
+        "t2i_head_pitch": -11.100235591605568,
         "t2i_pose_status": "OK",
-        "t2i_pose_base_class": "head turned to his/her left over the shoulder",
+        "t2i_pose_base_class": "head turned to his/her right over the shoulder and tilted down",
         "pose_match": 0,
         "t2i_vlm_expression": "happy",
-        "t2i_scenario_score": 0.6,
-        "t2i_scenario_reasoning": "- Extracted Context: A woman looks upward with her head tilted back slightly, expressing joy and laughter.\n- Visual Evidence: The woman in the image is smiling and looking slightly to the side, but her head is not tilted back significantly.\n- Match Score: 0.6",
+        "t2i_scenario_score": 0.5,
+        "t2i_scenario_reasoning": "- Extracted Context: The woman is expressing joy and laughter with her head tilted back slightly.\n- Visual Evidence: The woman is smiling and looking slightly to the side, but her head is not tilted back.\n- Match Score: 0.5",
         "expression_correct_t2i": 1,
-        "t2i_clip_t2i": 0.2038,
+        "t2i_clip_t2i": 0.2332,
         "t2i_clip_id_i2i": null,
         "t2i_dino_id_i2i": null,
         "t2i_final_score": 0.0,
-        "fga_orig_score": 2.1765,
+        "fga_orig_score": 2.2805,
         "fga_orig_tokens": [
             [
                 "a",
-                0.3001
+                0.3474
             ],
             [
                 "woman",
-                0.62
+                0.6608
             ],
             [
                 "looks",
-                0.383
+                0.4456
             ],
             [
                 "upward",
-                0.2441
+                0.3592
             ],
             [
                 "with",
-                0.2966
+                0.3167
             ],
             [
                 "her",
-                0.3579
+                0.3767
             ],
             [
                 "head",
-                0.6997
+                0.5981
             ],
             [
                 "tilted",
-                0.4566
+                0.4703
             ],
             [
                 "back",
-                0.3745
+                0.519
             ],
             [
                 "slightly",
-                0.4914
+                0.5361
             ],
             [
                 ",",
-                0.3061
+                0.3593
             ],
             [
                 "expressing",
-                0.2375
+                0.3174
             ],
             [
                 "joy",
-                0.1468
+                0.1295
             ],
             [
                 "and",
-                0.2036
+                0.2652
             ],
             [
                 "laughter",
-                0.1002
+                0.1013
             ]
         ]
     },
@@ -1614,91 +1614,91 @@
         "gt_expression": "neutral",
         "gt_gender": "Female",
         "gt_pose": "Frontal",
-        "t2i_pose_match": 1,
-        "t2i_pose": "Frontal",
+        "t2i_pose_match": 0,
+        "t2i_pose": "Back_Over_Shoulder",
         "ref_pose": "Frontal",
         "ref_head_body_yaw": null,
         "ref_head_pitch": null,
         "ref_pose_status": "Prompt_GT",
         "ref_pose_base_class": "Prompt_GT",
-        "t2i_head_body_yaw": -18.76509716715441,
-        "t2i_head_pitch": 45.882610524856,
+        "t2i_head_body_yaw": -84.59845309029515,
+        "t2i_head_pitch": -16.910006212026104,
         "t2i_pose_status": "OK",
-        "t2i_pose_base_class": "head tilted up",
-        "pose_match": 1,
-        "t2i_vlm_expression": "sad",
-        "t2i_scenario_score": 0.3,
-        "t2i_scenario_reasoning": "- Extracted Context: A woman tilts her head backward with eyes closed, expressing satisfaction and calmness.\n- Visual Evidence: The woman in the image is looking downward with her eyes open, not tilted backward with eyes closed.\n- Match Score: 0.3",
+        "t2i_pose_base_class": "head turned to his/her right over the shoulder and tilted down",
+        "pose_match": 0,
+        "t2i_vlm_expression": "happy",
+        "t2i_scenario_score": 0.9,
+        "t2i_scenario_reasoning": "- Extracted Context: The woman tilts her head backward with eyes closed, expressing satisfaction and calmness.\n- Visual Evidence: The woman is tilting her head slightly backward with her eyes closed, appearing calm and content.\n- Match Score: 0.9",
         "expression_correct_t2i": 0,
-        "t2i_clip_t2i": 0.2545,
+        "t2i_clip_t2i": 0.2718,
         "t2i_clip_id_i2i": null,
         "t2i_dino_id_i2i": null,
-        "t2i_final_score": 0.5,
-        "fga_orig_score": 2.2636,
+        "t2i_final_score": 0.0,
+        "fga_orig_score": 2.687,
         "fga_orig_tokens": [
             [
                 "a",
-                0.2804
+                0.4227
             ],
             [
                 "woman",
-                0.4676
+                0.761
             ],
             [
                 "tilt",
-                0.2705
+                0.3607
             ],
             [
                 "##s",
-                0.2736
+                0.4557
             ],
             [
                 "her",
-                0.253
+                0.483
             ],
             [
                 "head",
-                0.3661
+                0.3955
             ],
             [
                 "backward",
-                0.2478
+                0.4021
             ],
             [
                 "with",
-                0.2482
+                0.4407
             ],
             [
                 "eyes",
-                0.5445
+                0.5489
             ],
             [
                 "closed",
-                0.4441
+                0.5953
             ],
             [
                 ",",
-                0.3384
+                0.5434
             ],
             [
                 "expressing",
-                0.284
+                0.5363
             ],
             [
                 "satisfaction",
-                0.162
+                0.2817
             ],
             [
                 "and",
-                0.2359
+                0.4082
             ],
             [
                 "calm",
-                0.1739
+                0.3886
             ],
             [
                 "##ness",
-                0.2726
+                0.5471
             ]
         ]
     },
@@ -1710,102 +1710,102 @@
         "gt_gender": "Female",
         "gt_pose": "Unknown",
         "t2i_pose_match": 0,
-        "t2i_pose": "Back_Over_Shoulder",
+        "t2i_pose": "Frontal",
         "ref_pose": "Unknown",
         "ref_head_body_yaw": null,
         "ref_head_pitch": null,
         "ref_pose_status": "Prompt_GT",
         "ref_pose_base_class": "Prompt_GT",
-        "t2i_head_body_yaw": 41.318332766905705,
-        "t2i_head_pitch": 1.0834909930063361,
+        "t2i_head_body_yaw": -4.089805211433801,
+        "t2i_head_pitch": -8.800218287171504,
         "t2i_pose_status": "OK",
-        "t2i_pose_base_class": "head turned to his/her left over the shoulder",
+        "t2i_pose_base_class": "head facing forward straight",
         "pose_match": 0,
         "t2i_vlm_expression": "happy",
-        "t2i_scenario_score": 0.9,
-        "t2i_scenario_reasoning": "- Extracted Context: A woman with her head tilted right and eyes half-closed gives a soft, dreamy smile.\n- Visual Evidence: The image shows a woman with her eyes closed, smiling softly. Her head appears to be slightly tilted.\n- Match Score: 0.9",
+        "t2i_scenario_score": 0.0,
+        "t2i_scenario_reasoning": "- Extracted Context: Head tilted right and eyes half-closed\n- Visual Evidence: The woman's head is facing forward, and her eyes are fully open.\n- Match Score: 0.0",
         "expression_correct_t2i": 1,
-        "t2i_clip_t2i": 0.2713,
+        "t2i_clip_t2i": 0.3149,
         "t2i_clip_id_i2i": null,
         "t2i_dino_id_i2i": null,
         "t2i_final_score": 0.0,
-        "fga_orig_score": 2.9578,
+        "fga_orig_score": 3.0784,
         "fga_orig_tokens": [
             [
                 "a",
-                0.4875
+                0.5388
             ],
             [
                 "woman",
-                0.7266
+                0.7994
             ],
             [
                 "with",
-                0.4528
+                0.5356
             ],
             [
                 "her",
-                0.4594
+                0.5574
             ],
             [
                 "head",
-                0.6786
+                0.7763
             ],
             [
                 "tilted",
-                0.438
+                0.4917
             ],
             [
                 "right",
-                0.4969
+                0.5457
             ],
             [
                 "and",
-                0.3769
+                0.4808
             ],
             [
                 "eyes",
-                0.4123
+                0.554
             ],
             [
                 "half",
-                0.5541
+                0.6402
             ],
             [
                 "-",
-                0.7365
+                0.7778
             ],
             [
                 "closed",
-                0.6754
+                0.353
             ],
             [
                 "gives",
-                0.408
+                0.4756
             ],
             [
                 "a",
-                0.4627
+                0.498
             ],
             [
                 "soft",
-                0.7157
+                0.7034
             ],
             [
                 ",",
-                0.5687
+                0.551
             ],
             [
                 "dream",
-                0.5455
+                0.5349
             ],
             [
                 "##y",
-                0.7188
+                0.762
             ],
             [
                 "smile",
-                0.4109
+                0.7492
             ]
         ]
     },
@@ -1817,90 +1817,90 @@
         "gt_gender": "Male",
         "gt_pose": "Frontal",
         "t2i_pose_match": 0,
-        "t2i_pose": "Head_Turn_Right",
+        "t2i_pose": "Head_Turn_Left",
         "ref_pose": "Frontal",
         "ref_head_body_yaw": null,
         "ref_head_pitch": null,
         "ref_pose_status": "Prompt_GT",
         "ref_pose_base_class": "Prompt_GT",
-        "t2i_head_body_yaw": -24.575837873438086,
-        "t2i_head_pitch": -32.856211490446086,
+        "t2i_head_body_yaw": 25.57475544062076,
+        "t2i_head_pitch": 20.126042785563715,
         "t2i_pose_status": "OK",
-        "t2i_pose_base_class": "head turned to his/her right and tilted down",
+        "t2i_pose_base_class": "head turned to his/her left and tilted up",
         "pose_match": 0,
         "t2i_vlm_expression": "neutral",
-        "t2i_scenario_score": 0.3,
-        "t2i_scenario_reasoning": "- Extracted Context: A young man looks straight but raises his eyebrows in curiosity, head slightly leaned forward.\n- Visual Evidence: The images show a young man with a neutral expression, looking straight ahead. His eyebrows are not raised, and his head is not leaned forward.\n- Match Score: 0.3",
+        "t2i_scenario_score": 0.5,
+        "t2i_scenario_reasoning": "- Extracted Context: Curiosity due to head slightly leaned forward and raised eyebrows.\n- Visual Evidence: The person is looking straight with a hand near the face, but the head is not visibly leaned forward, and the eyebrows are not distinctly raised.\n- Match Score: 0.5",
         "expression_correct_t2i": 0,
-        "t2i_clip_t2i": 0.2419,
+        "t2i_clip_t2i": 0.233,
         "t2i_clip_id_i2i": null,
         "t2i_dino_id_i2i": null,
         "t2i_final_score": 0.0,
-        "fga_orig_score": 2.4217,
+        "fga_orig_score": 1.5385,
         "fga_orig_tokens": [
             [
                 "a",
-                0.5013
+                0.2687
             ],
             [
                 "young",
-                0.5652
+                0.3521
             ],
             [
                 "man",
-                0.5984
+                0.0888
             ],
             [
                 "looks",
-                0.5058
+                0.2471
             ],
             [
                 "straight",
-                0.5199
+                0.2981
             ],
             [
                 "but",
-                0.4157
+                0.1757
             ],
             [
                 "raises",
-                0.1793
+                0.0752
             ],
             [
                 "his",
-                0.4194
+                0.0548
             ],
             [
                 "eyebrows",
-                0.3192
+                0.2557
             ],
             [
                 "in",
-                0.3753
+                0.2929
             ],
             [
                 "curiosity",
-                0.4547
+                0.3732
             ],
             [
                 ",",
-                0.4005
+                0.3058
             ],
             [
                 "head",
-                0.7604
+                0.6573
             ],
             [
                 "slightly",
-                0.5707
+                0.4226
             ],
             [
                 "leaned",
-                0.6023
+                0.5278
             ],
             [
                 "forward",
-                0.6566
+                0.4244
             ]
         ]
     },
@@ -1911,115 +1911,115 @@
         "gt_expression": "happy",
         "gt_gender": "Female",
         "gt_pose": "Frontal",
-        "t2i_pose_match": 0,
-        "t2i_pose": "Back_Over_Shoulder",
+        "t2i_pose_match": 1,
+        "t2i_pose": "Frontal",
         "ref_pose": "Frontal",
         "ref_head_body_yaw": null,
         "ref_head_pitch": null,
         "ref_pose_status": "Prompt_GT",
         "ref_pose_base_class": "Prompt_GT",
-        "t2i_head_body_yaw": 47.218081512873034,
-        "t2i_head_pitch": -36.97646654055539,
+        "t2i_head_body_yaw": 8.876304277095624,
+        "t2i_head_pitch": -23.217455071817696,
         "t2i_pose_status": "OK",
-        "t2i_pose_base_class": "head turned to his/her left over the shoulder and tilted down",
-        "pose_match": 0,
-        "t2i_vlm_expression": "happy",
-        "t2i_scenario_score": 0.9,
-        "t2i_scenario_reasoning": "- Extracted Context: A young woman tilts her head downward with a warm grin as she gazes at a cat resting on her lap.\n- Visual Evidence: The image shows a young woman smiling and looking at a cat resting on her lap. The cat is lying on its back, and the woman appears to be affectionately interacting with it.\n- Match Score: 0.9",
-        "expression_correct_t2i": 1,
-        "t2i_clip_t2i": 0.3124,
+        "t2i_pose_base_class": "head tilted down",
+        "pose_match": 1,
+        "t2i_vlm_expression": "sad",
+        "t2i_scenario_score": 0.0,
+        "t2i_scenario_reasoning": "- Extracted Context: The young woman gazes at a cat resting on her lap.\n- Visual Evidence: The image shows a young woman looking down, but there is no cat visible on her lap.\n- Match Score: 0.0",
+        "expression_correct_t2i": 0,
+        "t2i_clip_t2i": 0.2769,
         "t2i_clip_id_i2i": null,
         "t2i_dino_id_i2i": null,
-        "t2i_final_score": 0.0,
-        "fga_orig_score": 2.194,
+        "t2i_final_score": 0.5,
+        "fga_orig_score": 1.601,
         "fga_orig_tokens": [
             [
                 "a",
-                0.2792
+                0.2424
             ],
             [
                 "young",
-                0.6223
+                0.6517
             ],
             [
                 "woman",
-                0.4423
+                0.6508
             ],
             [
                 "tilt",
-                0.311
+                0.3674
             ],
             [
                 "##s",
-                0.2031
+                0.2581
             ],
             [
                 "her",
-                0.2536
+                0.3305
             ],
             [
                 "head",
-                0.5106
+                0.4485
             ],
             [
                 "downward",
-                0.3913
+                0.4797
             ],
             [
                 "with",
-                0.1588
+                0.1897
             ],
             [
                 "a",
-                0.1619
+                0.1832
             ],
             [
                 "warm",
-                0.422
+                0.2832
             ],
             [
                 "grin",
-                0.2356
+                0.165
             ],
             [
                 "as",
-                0.2144
+                0.1702
             ],
             [
                 "she",
-                0.2668
+                0.3726
             ],
             [
                 "gazes",
-                0.1217
+                0.2108
             ],
             [
                 "at",
-                0.1478
+                0.0196
             ],
             [
                 "a",
-                0.5964
+                0.0192
             ],
             [
                 "cat",
-                0.814
+                0.0109
             ],
             [
                 "resting",
-                0.6069
+                0.0861
             ],
             [
                 "on",
-                0.6094
+                0.0463
             ],
             [
                 "her",
-                0.546
+                0.1916
             ],
             [
                 "lap",
-                0.7038
+                0.3368
             ]
         ]
     }

@@ -20,18 +20,25 @@ run_one() {
     --pose-python "$POSE_PYTHON_BIN"
 }
 
-# SoftREPA fine-tuning
-run_one "/media/ee303/4TB/SoftREPA/generated/PP_with_dc_t" "SoftREPA_FT_PP_noref"
-run_one "/media/ee303/4TB/SoftREPA/generated/GP_with_dc_t" "SoftREPA_FT_GP_noref"
+# # SoftREPA fine-tuning
+# run_one "/media/ee303/4TB/SoftREPA/generated/PP_with_dc_t" "SoftREPA_FT_PP_noref"
+# run_one "/media/ee303/4TB/SoftREPA/generated/GP_with_dc_t" "SoftREPA_FT_GP_noref"
 
-# SD3 vanilla
-run_one "/media/ee303/4TB/SoftREPA/generated/GP_vanilla" "SD3_GP_noref"
-run_one "/media/ee303/4TB/SoftREPA/generated/PP_vanilla" "SD3_PP_noref"
+# # SD3 vanilla
+# run_one "/media/ee303/4TB/SoftREPA/generated/GP_vanilla" "SD3_GP_noref"
+# run_one "/media/ee303/4TB/SoftREPA/generated/PP_vanilla" "SD3_PP_noref"
 
-# SoftREPA
-run_one "/media/ee303/4TB/SoftREPA/generated/GP_SoftREPA" "SoftREPA_GP_noref"
-run_one "/media/ee303/4TB/SoftREPA/generated/PP_SoftREPA" "SoftREPA_PP_noref"
+# # SoftREPA
+# run_one "/media/ee303/4TB/SoftREPA/generated/GP_SoftREPA" "SoftREPA_GP_noref"
+# run_one "/media/ee303/4TB/SoftREPA/generated/PP_SoftREPA" "SoftREPA_PP_noref"
 
-# Lumina
-run_one "/media/ee303/4TB/SoftREPA/generated/lumina/GP" "Lumina_GP_noref"
-run_one "/media/ee303/4TB/SoftREPA/generated/lumina/PP" "Lumina_PP_noref"
+# # Lumina
+# run_one "/media/ee303/4TB/SoftREPA/generated/lumina/GP" "Lumina_GP_noref"
+# run_one "/media/ee303/4TB/SoftREPA/generated/lumina/PP" "Lumina_PP_noref"
+
+# # SoftREPA fine-tuning_v2
+# run_one "/media/ee303/4TB/SoftREPA/generated/PP_FT_v2" "SoftREPA_FT_PP_noref"
+# run_one "/media/ee303/4TB/SoftREPA/generated/GP_FT_v2" "SoftREPA_FT_GP_noref"
+
+# # Infinity 
+run_one "/media/ee303/disk2/JACK/ECCV_DATA/T2I_360_prompts" "Infinity_PP_noref"
