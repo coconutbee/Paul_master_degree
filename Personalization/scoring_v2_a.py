@@ -7,16 +7,29 @@ import numpy as np
 # ==========================================
 # 權重設定 (Total = 1.0)
 # ==========================================
-# 這些權重對應到 JSON 中的欄位名稱
-WEIGHTS = {
+POSE_WEIGHTS = {
     'expression': 0.0,
-     'scenario':   0.0,
-    # 'gender':     0.17, # Gender 暫時不計分
-    'pose':       0.5,
-    'id':         0.5
+    'scenario': 0.0,
+    'pose': 0.5,
+    'id': 0.5
 }
 
-def calculate_single_item_score(item, prefix):
+SCENARIO_WEIGHTS = {
+    'expression': 0.25,
+    'scenario': 0.25,
+    'pose': 0.25,
+    'id': 0.25
+}
+
+
+def get_task_weights(task_name):
+    task = (task_name or "").strip().lower()
+    if "scenario" in task or "scen" in task:
+        return SCENARIO_WEIGHTS
+    return POSE_WEIGHTS
+
+
+def calculate_single_item_score(item, prefix, weights):
     """
     計算單個項目的加權總分。
     prefix: 'swap_' 或 't2i_' (對應 JSON 欄位前綴)
@@ -58,10 +71,10 @@ def calculate_single_item_score(item, prefix):
 
     # === 加權計算 (Score 0~1) ===
     final_score = (
-        (s_exp  * WEIGHTS['expression']) +
-        (s_scen * WEIGHTS['scenario']) +
-        (s_pose * WEIGHTS['pose']) +
-        (s_id   * WEIGHTS['id'])
+        (s_exp  * weights['expression']) +
+        (s_scen * weights['scenario']) +
+        (s_pose * weights['pose']) +
+        (s_id   * weights['id'])
     )
     
     return round(final_score, 4), s_exp, s_scen, s_pose, s_id
@@ -77,6 +90,7 @@ def main(json_path, task_name, mode='full'):
 
     # 用來收集數據做 DataFrame 分析
     df_data = []
+    weights = get_task_weights(task_name)
 
     print(f"📊 Calculating scores for task [{task_name}] ({len(data_list)} images) | Mode: {mode.upper()}")
     
@@ -86,7 +100,11 @@ def main(json_path, task_name, mode='full'):
         }
 
         # --- 計算 T2I 分數 (所有模式) ---
-        score_t2i, exp_t2i, scen_t2i, pose_t2i, id_t2i = calculate_single_item_score(item, prefix='t2i_')
+        score_t2i, exp_t2i, scen_t2i, pose_t2i, id_t2i = calculate_single_item_score(
+            item,
+            prefix='t2i_',
+            weights=weights,
+        )
         item['t2i_final_score'] = score_t2i
         
         row_data.update({
@@ -99,7 +117,11 @@ def main(json_path, task_name, mode='full'):
 
         # --- 計算 Swap 分數 (僅 Full 模式) ---
         if mode == 'full':
-            score_swap, exp_swap, scen_swap, pose_swap, id_swap = calculate_single_item_score(item, prefix='swap_') # swap 通常欄位前綴較亂，這裡假設我們已統一
+            score_swap, exp_swap, scen_swap, pose_swap, id_swap = calculate_single_item_score(
+                item,
+                prefix='swap_',
+                weights=weights,
+            ) # swap 通常欄位前綴較亂，這裡假設我們已統一
             # 如果欄位是舊版命名 (無 swap_ 前綴)，需手動調整 `calculate_single_item_score` 或確保 JSON 欄位一致
             # 這裡我們假設 pose_eval 和 id_eval 腳本已經產生了標準的 `swap_` 前綴欄位，
             # 若 id 是 `swap_id_similarity`，pose 是 `swap_pose_match`
