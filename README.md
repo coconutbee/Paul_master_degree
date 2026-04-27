@@ -116,3 +116,21 @@ bash run_unified_v3.sh --folder /media/ee303/disk2/JACK/ECCV_DATA/T2I_20_prompts
 ## 9. Runtime Reference
 - Lumina: 13 seconds
 - SoftREPA: 4 seconds
+
+## 10. Prompt correction with gender, age, and pose information
+```bash
+bash /media/ee303/4TB/SoftREPA/tools/run_gender_race_pipeline.sh
+```
+
+## Qwen Inference
+./sam3-body/qwen_infer.py
+./sam3-body/qwen_batch_infer.py
+
+
+## Prompt Refinement
+```bash
+bash /media/ee303/4TB/SoftREPA/tools/run_gender_race_pipeline.sh  /media/ee303/4TB/SoftREPA/celeb_imgs /media/ee303/4TB/SoftREPA/tools/final_prompt.csv
+```
+
+## DeepFashion Data Analysis
+./sam3-body/analyze_captions.py
