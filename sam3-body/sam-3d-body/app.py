@@ -8,7 +8,7 @@ st.set_page_config(layout="wide", page_title="SAM-3D Pose Visualizer")
 st.title("📸 SAM-3D 姿勢預測品質檢查工具")
 
 # 1. 讀取資料
-csv_path = "/media/ee303/4TB/paul/Paul_master_degree/sam3-body/sam-3d-body/pitch_corrected_results.csv" # <--- 修改為你的 CSV 路徑
+csv_path = "/media/ee303/4TB/sam3-body/sam-3d-body/laion_gender_age_race_labeled.csv" # <--- 修改為你的 CSV 路徑
 if not os.path.exists(csv_path):
     st.error(f"找不到檔案: {csv_path}")
     st.stop()
