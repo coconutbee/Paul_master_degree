@@ -132,5 +132,25 @@ bash /media/ee303/4TB/SoftREPA/tools/run_gender_race_pipeline.sh
 bash /media/ee303/4TB/SoftREPA/tools/run_gender_race_pipeline.sh  /media/ee303/4TB/SoftREPA/celeb_imgs /media/ee303/4TB/SoftREPA/tools/final_prompt.csv
 ```
 
+##  Refinement with more famous celebrities. And Using Infinity to generate refined captions
+```bash
+bash /media/ee303/4TB/SoftREPA/tools/run_gender_race_pipeline.sh  /media/ee303/4TB/SoftREPA/more_famous /media/ee303/4TB/SoftREPA/tools/final_prompt.csv # label frontal images with gender, age, and race
+```
+
+## Data Processing
+Before refinement:
+- /media/ee303/4TB/laion_HR/filter_person.py # Calculate person_count and person_detected.
+- /media/ee303/4TB/laion_HR/plot_person_pie.py # Plot the distribution of person_count and person_detected.
+- /media/ee303/4TB/sam3-body/sam-3d-body/infer_v4.py # Predict yaw and pitch.
+- /media/ee303/4TB/sam3-body/label.py # Map yaw and pitch to posture prompts.
+
+After refinement:
+- /media/ee303/4TB/SoftREPA/tools/deepface/race_label.py # label race from previously labeled images.
+- /media/ee303/4TB/sam3-body/label_refinement.py # Refine captions with gender, age, and race information.
+
+## Compare tools
+- /media/ee303/4TB/sam3-body/app.py # compare before and after refinement in Streamlit app.
+- /media/ee303/4TB/sam3-body/analyze_captions.py # analyze the distribution of gender, yaw, and pitch.
+
 ## DeepFashion Data Analysis
 ./sam3-body/analyze_captions.py
