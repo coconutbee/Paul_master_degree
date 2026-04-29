@@ -107,9 +107,11 @@ def _map_gender_and_age_to_role(age, gender_label):
         return ("woman", "her") if is_adult else ("girl", "her")
     return "unknown", "their"
 
-def generate_caption(row):
+def generate_row_outputs(row):
     # 1. 解析性別 (根據路徑中是否有 'MEN' 判斷)
     image_path = row['image_path']
+    pred_age = None
+    pred_gender = None
     if 'WOMEN' in str(image_path).upper(): # 轉大寫比對較保險
         gender = "woman"
         pronoun = "her"
@@ -123,40 +125,47 @@ def generate_caption(row):
     # 2. 解析 Yaw (左右偏轉)
     yaw = row['sam3d_head_body_yaw']
     if yaw > 40:
-        yaw_desc = f"turning {pronoun} head to {pronoun} left over the shoulder"
+        yaw_desc = f"turned {pronoun} head to {pronoun} left over the shoulder"
     elif yaw < -40:
-        yaw_desc = f"turning {pronoun} head to {pronoun} right over the shoulder"
+        yaw_desc = f"turned {pronoun} head to {pronoun} right over the shoulder"
     elif 20 < yaw:
-        yaw_desc = f"turning {pronoun} head to {pronoun} left"
+        yaw_desc = f"turned {pronoun} head to {pronoun} left"
     elif yaw < -20:
-        yaw_desc = f"turning {pronoun} head to {pronoun} right"
+        yaw_desc = f"turned {pronoun} head to {pronoun} right"
     else:
         yaw_desc = "facing forward"
         
     # 3. 解析 Pitch (上下抬頭)
     pitch = row['sam3d_head_pitch']
     if pitch > 25:
-        pitch_desc = "tilted up"
+        pitch_desc = "chin up"
     elif pitch < -25:
-        pitch_desc = "tilted down"
+        pitch_desc = "chin down"
     else:
         pitch_desc = "looking straight"
-        
-    return f"A {gender} {yaw_desc} and {pitch_desc}"
+
+    return pd.Series({
+        'caption': f"A {gender} {yaw_desc} and {pitch_desc}",
+        'mivolo_age': pred_age,
+        'mivolo_gender': pred_gender,
+    })
 
 # --- 核心修改部分 ---
+from tqdm import tqdm # 1. 引入 tqdm
 
-# 1. 讀取 CSV 檔案
-# 請確保 input.csv 的第一行（Header）有名稱為 'image_path', 'sam3d_head_body_yaw', 'sam3d_head_pitch' 的欄位
-csv_input_path = '/media/ee303/4TB/paul/Paul_master_degree/sam3-body/sam-3d-body/pitch_corrected_with_person.csv' 
+# 讀取 CSV 檔案
+csv_input_path = '/media/ee303/4TB/sam3-body/sam-3d-body/pitch_corrected_with_person.csv' 
 df = pd.read_csv(csv_input_path)
 
-# 2. 產生 Caption
-df['caption'] = df.apply(generate_caption, axis=1)
+# 2. 開啟 tqdm 的 pandas 擴充功能
+tqdm.pandas(desc="處理圖片中")
 
-# 3. 檢查結果 (印出前 5 筆)
-print(df[['image_path', 'caption']].head())
+# 3. 產生 caption，並把 MiVOLO 推論出的 age / gender 一起存下來
+df[['caption', 'mivolo_age', 'mivolo_gender']] = df.progress_apply(generate_row_outputs, axis=1)
 
-# 4. 存檔成新的 CSV
-df.to_csv('/media/ee303/4TB/paul/Paul_master_degree/sam3-body/sam-3d-body/pitch_corrected_labeled.csv', index=False)
+# 檢查結果 (印出前 5 筆)
+print(df[['image_path', 'caption', 'mivolo_age', 'mivolo_gender']].head())
+
+# 存檔成新的 CSV
+df.to_csv('/media/ee303/4TB/sam3-body/sam-3d-body/laion_gender_age.csv', index=False)
 print("處理完成，結果已儲存至 pitch_corrected_labeled.csv")

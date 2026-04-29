@@ -8,8 +8,12 @@ import os
 plt.style.use('ggplot')
 sns.set_palette("pastel")
 
-csv_path = '/media/ee303/4TB/sam3-body/sam3_labeled.csv'
+csv_path = '/media/ee303/4TB/sam3-body/sam-3d-body/laion_gender_age_race_labeled.csv'
 df = pd.read_csv(csv_path)
+
+# 僅篩選出 person_detected == 1 的資料
+if 'person_detected' in df.columns:
+    df = df[df['person_count'] == 1]
 
 # 定義正規表達式提取 caption 中的 gender, yaw_desc, pitch_desc
 # 格式: A {gender} {yaw_desc} and {pitch_desc}
@@ -24,6 +28,9 @@ df_clean = df.dropna(subset=['gender', 'yaw_desc', 'pitch_desc']).copy()
 
 # 將 yaw_desc 中的 his 與 her 統一代換為 their，避免因為性別影響動作分類
 df_clean['yaw_desc'] = df_clean['yaw_desc'].str.replace(r'\b(?:his|her)\b', 'their', regex=True)
+
+# 排除 yaw_desc 包含 facing forward 的資料
+df_clean = df_clean[~df_clean['yaw_desc'].str.contains('facing forward', case=False, na=False)]
 
 print(f"總資料筆數: {len(df)}")
 print(f"成功解析筆數: {len(df_clean)}")
