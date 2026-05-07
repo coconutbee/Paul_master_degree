@@ -70,6 +70,8 @@ POSE_REGEX_RULES = [
     (r"over the shoulder", "Back_Over_Shoulder"),
     (r"head turned to (?:his|her|his/her) left", "Head_Turn_Left"),
     (r"head turned to (?:his|her|his/her) right", "Head_Turn_Right"),
+    (r"turned (?:his|her|his/her) head to (?:his|her|his/her) left", "Head_Turn_Left"),
+    (r"turned (?:his|her|his/her) head to (?:his|her|his/her) right", "Head_Turn_Right"),
     (r"looking to (?:his|her|the) left", "Head_Turn_Left"),
     (r"looking to (?:his|her|the) right", "Head_Turn_Right"),
     (r"head facing forward straight", "Frontal"),
@@ -89,8 +91,18 @@ POSE_REGEX_RULES = [
 # 2. 定義標註邏輯函數
 # ==========================================
 
+def normalize_prompt_text(text):
+    """
+    Normalize prompt text only for matching rules.
+    Some generated metadata stores spaces as underscores, e.g.
+    A_white_young_boy_turned_his_head_to_his_left_and_chin_down
+    """
+    if not isinstance(text, str):
+        return ""
+    return re.sub(r"\s+", " ", text.replace("_", " ")).strip()
+
 def get_expression(text):
-    text_lower = text.lower()
+    text_lower = normalize_prompt_text(text).lower()
     for label, keywords in EXPRESSION_MAPPING_RULES.items():
         for keyword in keywords:
             if keyword in text_lower:
@@ -98,7 +110,7 @@ def get_expression(text):
     return "others"
 
 def get_gender(text):
-    text_lower = text.lower()
+    text_lower = normalize_prompt_text(text).lower()
     is_male = False
     is_female = False
     
@@ -118,7 +130,7 @@ def get_gender(text):
     else: return "Unknown"
 
 def get_pose(text):
-    text_lower = text.lower()
+    text_lower = normalize_prompt_text(text).lower()
     
     # 關鍵步驟：依照字串長度排序 (由長到短)
     # 這樣可以避免 "looks up" 先匹配到 "looks up and to his left" 的情況

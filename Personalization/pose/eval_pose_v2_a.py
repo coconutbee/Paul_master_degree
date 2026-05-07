@@ -8,48 +8,68 @@ import sys
 from tqdm import tqdm
 
 
-DEFAULT_SAM3D_MODULE = "/media/ee303/4tb/Will/Paul_master_degree/sam3-body/sam-3d-body/infer_v2.py"
+DEFAULT_SAM3D_MODULE = "/media/ee303/4TB/sam3-body/sam-3d-body/infer_v2.py"
 DEFAULT_SAM3D_REPO_ID = "facebook/sam-3d-body-dinov3"
 CANONICAL_POSE_LABELS = {
     "head facing forward straight",
     "head tilted up",
     "head tilted down",
+    "head chin up",
+    "head chin down",
     "head turned to his/her left",
     "head turned to his/her left and tilted up",
     "head turned to his/her left and tilted down",
+    "head turned to his/her left and chin up",
+    "head turned to his/her left and chin down",
     "head turned to his/her right",
     "head turned to his/her right and tilted up",
     "head turned to his/her right and tilted down",
+    "head turned to his/her right and chin up",
+    "head turned to his/her right and chin down",
     "head turned to his/her left over the shoulder",
     "head turned to his/her left over the shoulder and tilted up",
     "head turned to his/her left over the shoulder and tilted down",
+    "head turned to his/her left over the shoulder and chin up",
+    "head turned to his/her left over the shoulder and chin down",
     "head turned to his/her right over the shoulder",
     "head turned to his/her right over the shoulder and tilted up",
     "head turned to his/her right over the shoulder and tilted down",
+    "head turned to his/her right over the shoulder and chin up",
+    "head turned to his/her right over the shoulder and chin down",
 }
 COARSE_POSE_FAMILIES = {
     "Frontal": {
         "head facing forward straight",
         "head tilted up",
         "head tilted down",
+        "head chin up",
+        "head chin down",
     },
     "Head_Turn_Left": {
         "head turned to his/her left",
         "head turned to his/her left and tilted up",
         "head turned to his/her left and tilted down",
+        "head turned to his/her left and chin up",
+        "head turned to his/her left and chin down",
     },
     "Head_Turn_Right": {
         "head turned to his/her right",
         "head turned to his/her right and tilted up",
         "head turned to his/her right and tilted down",
+        "head turned to his/her right and chin up",
+        "head turned to his/her right and chin down",
     },
     "Back_Over_Shoulder": {
         "head turned to his/her left over the shoulder",
         "head turned to his/her left over the shoulder and tilted up",
         "head turned to his/her left over the shoulder and tilted down",
+        "head turned to his/her left over the shoulder and chin up",
+        "head turned to his/her left over the shoulder and chin down",
         "head turned to his/her right over the shoulder",
         "head turned to his/her right over the shoulder and tilted up",
         "head turned to his/her right over the shoulder and tilted down",
+        "head turned to his/her right over the shoulder and chin up",
+        "head turned to his/her right over the shoulder and chin down",
     },
 }
 POSE_EVAL_LABELS = CANONICAL_POSE_LABELS | set(COARSE_POSE_FAMILIES)
@@ -90,18 +110,18 @@ def _text_has_any(text, patterns):
 def _canonical_pose_label(direction=None, pitch="straight", over_shoulder=False):
     if direction is None:
         if pitch == "up":
-            return "head tilted up"
+            return "head chin up"
         if pitch == "down":
-            return "head tilted down"
+            return "head chin down"
         return "head facing forward straight"
 
     label = f"head turned to his/her {direction}"
     if over_shoulder:
         label += " over the shoulder"
     if pitch == "up":
-        label += " and tilted up"
+        label += " and chin up"
     elif pitch == "down":
-        label += " and tilted down"
+        label += " and chin down"
     return label
 
 
@@ -165,7 +185,8 @@ def _extract_pitch(text):
     if _text_has_any(
         text,
         [
-            r"head tilted up",
+            r"head tilted down",
+            r"chin up",
             r"tilted up",
             r"looks upward",
             r"looking upward",
@@ -185,6 +206,7 @@ def _extract_pitch(text):
         text,
         [
             r"head tilted down",
+            r"chin down",
             r"tilted down",
             r"looks downward",
             r"looking downward",
@@ -307,9 +329,9 @@ def _pose_label_components(label):
     else:
         direction = None
 
-    if "tilted up" in parsed:
+    if "chin up" in parsed:
         pitch = "up"
-    elif "tilted down" in parsed:
+    elif "chin down" in parsed:
         pitch = "down"
     else:
         pitch = "straight"
@@ -478,29 +500,29 @@ def classify_base_class(yaw, pitch):
         if -25 <= p <= 25:
             return "head turned to his/her left"
         if p > 25:
-            return "head turned to his/her left and tilted up"
-        return "head turned to his/her left and tilted down"
+            return "head turned to his/her left and chin up"
+        return "head turned to his/her left and chin down"
 
     if -40 <= y < -20:
         if -25 <= p <= 25:
             return "head turned to his/her right"
         if p > 25:
-            return "head turned to his/her right and tilted up"
-        return "head turned to his/her right and tilted down"
+            return "head turned to his/her right and chin up"
+        return "head turned to his/her right and chin down"
 
     if y > 40:
         if -25 <= p <= 25:
             return "head turned to his/her left over the shoulder"
         if p > 25:
-            return "head turned to his/her left over the shoulder and tilted up"
-        return "head turned to his/her left over the shoulder and tilted down"
+            return "head turned to his/her left over the shoulder and chin up"
+        return "head turned to his/her left over the shoulder and chin down"
 
     if y < -40:
         if -25 <= p <= 25:
             return "head turned to his/her right over the shoulder"
         if p > 25:
-            return "head turned to his/her right over the shoulder and tilted up"
-        return "head turned to his/her right over the shoulder and tilted down"
+            return "head turned to his/her right over the shoulder and chin up"
+        return "head turned to his/her right over the shoulder and chin down"
 
     return "Error!!!!!!!"
 
