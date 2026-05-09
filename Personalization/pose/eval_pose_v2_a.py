@@ -10,101 +10,18 @@ from tqdm import tqdm
 
 DEFAULT_SAM3D_MODULE = "/media/ee303/4TB/sam3-body/sam-3d-body/infer_v2.py"
 DEFAULT_SAM3D_REPO_ID = "facebook/sam-3d-body-dinov3"
-CANONICAL_POSE_LABELS = {
-    "head facing forward straight",
-    "head tilted up",
-    "head tilted down",
-    "head chin up",
-    "head chin down",
-    "head turned to his/her left",
-    "head turned to his/her left and tilted up",
-    "head turned to his/her left and tilted down",
-    "head turned to his/her left and chin up",
-    "head turned to his/her left and chin down",
-    "head turned to his/her right",
-    "head turned to his/her right and tilted up",
-    "head turned to his/her right and tilted down",
-    "head turned to his/her right and chin up",
-    "head turned to his/her right and chin down",
-    "head turned to his/her left over the shoulder",
-    "head turned to his/her left over the shoulder and tilted up",
-    "head turned to his/her left over the shoulder and tilted down",
-    "head turned to his/her left over the shoulder and chin up",
-    "head turned to his/her left over the shoulder and chin down",
-    "head turned to his/her right over the shoulder",
-    "head turned to his/her right over the shoulder and tilted up",
-    "head turned to his/her right over the shoulder and tilted down",
-    "head turned to his/her right over the shoulder and chin up",
-    "head turned to his/her right over the shoulder and chin down",
+YAW_DESCS = {
+    "forward": "facing forward",
+    "left": "turned his/her head to his/her left",
+    "right": "turned his/her head to his/her right",
+    "left_over_shoulder": "turned his/her head to his/her left over the shoulder",
+    "right_over_shoulder": "turned his/her head to his/her right over the shoulder",
 }
-COARSE_POSE_FAMILIES = {
-    "Frontal": {
-        "head facing forward straight",
-        "head tilted up",
-        "head tilted down",
-        "head chin up",
-        "head chin down",
-    },
-    "Head_Turn_Left": {
-        "head turned to his/her left",
-        "head turned to his/her left and tilted up",
-        "head turned to his/her left and tilted down",
-        "head turned to his/her left and chin up",
-        "head turned to his/her left and chin down",
-    },
-    "Head_Turn_Right": {
-        "head turned to his/her right",
-        "head turned to his/her right and tilted up",
-        "head turned to his/her right and tilted down",
-        "head turned to his/her right and chin up",
-        "head turned to his/her right and chin down",
-    },
-    "Back_Over_Shoulder": {
-        "head turned to his/her left over the shoulder",
-        "head turned to his/her left over the shoulder and tilted up",
-        "head turned to his/her left over the shoulder and tilted down",
-        "head turned to his/her left over the shoulder and chin up",
-        "head turned to his/her left over the shoulder and chin down",
-        "head turned to his/her right over the shoulder",
-        "head turned to his/her right over the shoulder and tilted up",
-        "head turned to his/her right over the shoulder and tilted down",
-        "head turned to his/her right over the shoulder and chin up",
-        "head turned to his/her right over the shoulder and chin down",
-    },
+PITCH_DESCS = {
+    "straight": "looking straight",
+    "up": "chin up",
+    "down": "chin down",
 }
-POSE_EVAL_LABELS = CANONICAL_POSE_LABELS | set(COARSE_POSE_FAMILIES)
-BODY_MISSING_STATUSES = {
-    "Not_Found",
-    "Read_Failed",
-    "No_Person",
-    "Degenerate_Face_Geometry",
-    "Degenerate_Shoulder_Geometry",
-}
-NON_COMPARABLE_LABELS = {"Error", "Not_Found", "No_Body", "Img_Missing", "Ref_Missing", "Unknown"}
-LEGACY_LABEL_MAP = {
-    "head_slight_left": "head turned to his/her left",
-    "side_view_left": "head turned to his/her left",
-    "body_turn_left_face_front": "head turned to his/her left",
-    "head_slight_right": "head turned to his/her right",
-    "side_view_right": "head turned to his/her right",
-    "body_turn_right_face_front": "head turned to his/her right",
-    "head_tilt_up": "head tilted up",
-    "head_tilt_down": "head tilted down",
-    "head_tilt_left": "Frontal",
-    "head_tilt_right": "Frontal",
-    "body_lean_left": "Frontal",
-    "body_lean_right": "Frontal",
-    "back_view_straight": "Frontal",
-    "back_view_side_looking_away": "Back_Over_Shoulder",
-}
-
-
-def _normalize_prompt_text(text):
-    return str(text).replace("’", "'").replace("‘", "'").strip().lower()
-
-
-def _text_has_any(text, patterns):
-    return any(re.search(pattern, text) for pattern in patterns)
 
 
 def _canonical_pose_label(direction=None, pitch="straight", over_shoulder=False):
@@ -125,181 +42,119 @@ def _canonical_pose_label(direction=None, pitch="straight", over_shoulder=False)
     return label
 
 
-def _extract_direction(text):
-    yaw_patterns = {
-        "left": [
-            r"head turned to (?:his|her|their|his/her) left",
-            r"(?:turn|look|face|glance|gaze)\w*[^.]{0,40}\bleft\b",
-            r"\bsideways toward the left\b",
-            r"\bto (?:his|her|their) left\b",
-            r"\bover (?:his|her|their) left shoulder\b",
-            r"\bover the left shoulder\b",
-            r"\bto the left\b",
-        ],
-        "right": [
-            r"head turned to (?:his|her|their|his/her) right",
-            r"(?:turn|look|face|glance|gaze)\w*[^.]{0,40}\bright\b",
-            r"\bsideways toward the right\b",
-            r"\bto (?:his|her|their) right\b",
-            r"\bover (?:his|her|their) right shoulder\b",
-            r"\bover the right shoulder\b",
-            r"\bto the right\b",
-        ],
-    }
-    roll_only = _text_has_any(
-        text,
-        [
-            r"(?:tilt|lean)\w*[^.]{0,25}\bleft\b",
-            r"(?:tilt|lean)\w*[^.]{0,25}\bright\b",
-        ],
-    ) and not _text_has_any(
-        text,
-        [
-            r"(?:turn|look|face|glance|gaze)\w*[^.]{0,40}\bleft\b",
-            r"(?:turn|look|face|glance|gaze)\w*[^.]{0,40}\bright\b",
-            r"over (?:his|her|their)? ?shoulder",
-        ],
-    )
-    if roll_only:
-        return None
+CANONICAL_POSE_LABELS = {
+    _canonical_pose_label(direction=None, pitch=pitch)
+    for pitch in PITCH_DESCS
+} | {
+    _canonical_pose_label(direction=direction, pitch=pitch, over_shoulder=over_shoulder)
+    for direction in ("left", "right")
+    for over_shoulder in (False, True)
+    for pitch in PITCH_DESCS
+}
+COARSE_POSE_FAMILIES = {
+    "Frontal": {
+        "facing forward",
+        "chin up",
+        "chin down",
+    },
+    "Head_Turn_Left": {
+        "turned his/her head to his/her left",
+        "turned his/her head to his/her left and chin up",
+        "turned his/her head to his/her left and chin down",
+    },
+    "Head_Turn_Right": {
+        "turned his/her head to his/her right",
+        "turned his/her head to his/her right and chin up",
+        "turned his/her head to his/her right and chin down",
+    },
+    "Back_Over_Shoulder": {
+        "turned his/her head to his/her left over the shoulder",
+        "turned his/her head to his/her left over the shoulder and chin up",
+        "turned his/her head to his/her left over the shoulder and chin down",
+        "turned his/her head to his/her right over the shoulder",
+        "turned his/her head to his/her right over the shoulder and chin up",
+        "turned his/her head to his/her right over the shoulder and chin down",
+    },
+}
+POSE_EVAL_LABELS = CANONICAL_POSE_LABELS | set(COARSE_POSE_FAMILIES)
+BODY_MISSING_STATUSES = {
+    "Not_Found",
+    "Read_Failed",
+    "No_Person",
+    "Degenerate_Face_Geometry",
+    "Degenerate_Shoulder_Geometry",
+}
+NON_COMPARABLE_LABELS = {"Error", "Not_Found", "No_Body", "Img_Missing", "Ref_Missing", "Unknown"}
+LEGACY_LABEL_MAP = {
+    "head_slight_left": "head turned to his/her left",
+    "side_view_left": "head turned to his/her left",
+    "body_turn_left_face_front": "head turned to his/her left",
+    "head_slight_right": "head turned to his/her right",
+    "side_view_right": "head turned to his/her right",
+    "body_turn_right_face_front": "head turned to his/her right",
+    "head_tilt_up": "head chin up",
+    "head_tilt_down": "head chin down",
+    "head_tilt_left": "Frontal",
+    "head_tilt_right": "Frontal",
+    "body_lean_left": "Frontal",
+    "body_lean_right": "Frontal",
+    "back_view_straight": "Frontal",
+    "back_view_side_looking_away": "Back_Over_Shoulder",
+}
 
-    for direction, patterns in yaw_patterns.items():
-        if _text_has_any(text, patterns):
-            return direction
-    return None
+
+def _normalize_prompt_text(text):
+    normalized = str(text).replace("’", "'").replace("‘", "'")
+    normalized = normalized.replace("_", " ")
+    return re.sub(r"\s+", " ", normalized).strip().lower()
 
 
-def _extract_pitch(text):
-    if _text_has_any(
-        text,
-        [
-            r"head facing forward straight",
-            r"looks straight",
-            r"looking straight",
-            r"faces? forward",
-            r"facing forward",
-        ],
-    ):
-        return "straight"
+def _extract_yaw_desc(text):
+    pronoun = r"(?:his|her|their|his/her)"
+    yaw_patterns = [
+        ("left", True, rf"(?:turned {pronoun} head to {pronoun} left|head turned to {pronoun} left) over the shoulder"),
+        ("right", True, rf"(?:turned {pronoun} head to {pronoun} right|head turned to {pronoun} right) over the shoulder"),
+        ("left", False, rf"(?:turned {pronoun} head to {pronoun} left|head turned to {pronoun} left)"),
+        ("right", False, rf"(?:turned {pronoun} head to {pronoun} right|head turned to {pronoun} right)"),
+    ]
+    for direction, over_shoulder, pattern in yaw_patterns:
+        if re.search(pattern, text):
+            return direction, over_shoulder
+    if re.search(r"\bfacing forward\b|\bfaces? forward\b|\bhead facing forward straight\b", text):
+        return None, False
+    return None, None
 
-    if _text_has_any(
-        text,
-        [
-            r"head tilted down",
-            r"chin up",
-            r"tilted up",
-            r"looks upward",
-            r"looking upward",
-            r"looks up",
-            r"looking up",
-            r"upward",
-            r"tilted back",
-            r"tilts? (?:his|her|their)? head backward",
-            r"head slightly raised",
-            r"face(?:s|d|ing)?[^.]{0,20}upward",
-            r"raises? (?:his|her|their)? head",
-        ],
-    ):
+
+def _extract_pitch_desc(text):
+    if re.search(r"\bchin up\b|\bhead chin up\b", text):
         return "up"
-
-    if _text_has_any(
-        text,
-        [
-            r"head tilted down",
-            r"chin down",
-            r"tilted down",
-            r"looks downward",
-            r"looking downward",
-            r"looks down",
-            r"looking down",
-            r"faces?[^.]{0,20}downward",
-            r"facing[^.]{0,20}downward",
-            r"glancing downward",
-            r"gazing downward",
-            r"downward",
-            r"lowered gaze",
-            r"head bowed",
-        ],
-    ):
+    if re.search(r"\bchin down\b|\bhead chin down\b", text):
         return "down"
-
+    if re.search(r"\blooking straight\b|\blooks straight\b|\bhead facing forward straight\b", text):
+        return "straight"
     return "straight"
 
 
-def _has_roll_only_tilt(text):
-    return _text_has_any(
-        text,
-        [
-            r"head tilted left",
-            r"head tilted right",
-            r"tilts? (?:his|her|their)? head left",
-            r"tilts? (?:his|her|their)? head right",
-            r"leans? (?:his|her|their)? head left",
-            r"leans? (?:his|her|their)? head right",
-            r"leans? (?:his|her|their)? head toward (?:his|her|their)? ?left shoulder",
-            r"leans? (?:his|her|their)? head toward (?:his|her|their)? ?right shoulder",
-            r"with (?:his|her|their)? head tilted left",
-            r"with (?:his|her|their)? head tilted right",
-        ],
-    )
-
-
 def parse_pose_label(raw_label_or_text):
+    raw_text = str(raw_label_or_text).replace("’", "'").replace("‘", "'").strip().lower()
     text = _normalize_prompt_text(raw_label_or_text)
     if not text:
         return "Unknown"
 
     for label in POSE_EVAL_LABELS:
-        if text == label.lower():
+        if raw_text == label.lower() or text == _normalize_prompt_text(label):
             return label
 
-    legacy_label = LEGACY_LABEL_MAP.get(text)
+    legacy_label = LEGACY_LABEL_MAP.get(raw_text) or LEGACY_LABEL_MAP.get(text)
     if legacy_label:
         return legacy_label
 
-    if re.search(r"head turned to (?:his|her|their|his/her) left", text):
-        direction = "left"
-    elif re.search(r"head turned to (?:his|her|their|his/her) right", text):
-        direction = "right"
-    else:
-        direction = _extract_direction(text)
+    direction, over_shoulder = _extract_yaw_desc(text)
+    pitch = _extract_pitch_desc(text)
 
-    over_shoulder = _text_has_any(
-        text,
-        [
-            r"over the shoulder",
-            r"over (?:his|her|their)(?: left| right)? shoulder",
-            r"over the (?:left|right) shoulder",
-            r"back over (?:his|her|their)? ?shoulder",
-            r"looking back over",
-        ],
-    )
-    pitch = _extract_pitch(text)
-
-    if over_shoulder and direction is None:
-        return "Back_Over_Shoulder"
-    if direction is not None:
-        return _canonical_pose_label(direction=direction, pitch=pitch, over_shoulder=over_shoulder)
-
-    if pitch != "straight":
-        return _canonical_pose_label(pitch=pitch)
-
-    if _has_roll_only_tilt(text):
-        return "head facing forward straight"
-
-    if _text_has_any(
-        text,
-        [
-            r"face(?:s|d|ing)? forward",
-            r"looks straight",
-            r"looking straight",
-            r"head facing forward straight",
-            r"frontal",
-        ],
-    ):
-        return "head facing forward straight"
-
-    return "Unknown"
+    if over_shoulder is None:
+        return "Unknown"
+    return _canonical_pose_label(direction=direction, pitch=pitch, over_shoulder=over_shoulder)
 
 
 def normalize_gt_pose_label(raw_label_or_text, prompt_fallback=""):
@@ -343,38 +198,101 @@ def _pose_label_components(label):
     }
 
 
-def pose_labels_match(lhs, rhs):
+def _yaw_desc_from_parts(parts):
+    if parts["direction"] is None:
+        return YAW_DESCS["forward"]
+
+    key = parts["direction"]
+    if parts["over_shoulder"]:
+        key = f"{key}_over_shoulder"
+    return YAW_DESCS[key]
+
+
+def _pitch_desc_from_parts(parts):
+    return PITCH_DESCS[parts["pitch"]]
+
+
+def _yaw_parts_match(gt_parts, pred_parts):
+    if gt_parts["direction"] is None:
+        return pred_parts["direction"] is None and not pred_parts["over_shoulder"]
+
+    if gt_parts["direction"] != pred_parts["direction"]:
+        return False
+
+    if gt_parts["over_shoulder"] == pred_parts["over_shoulder"]:
+        return True
+
+    # Special rule: a normal left/right GT accepts same-direction over-shoulder output.
+    return not gt_parts["over_shoulder"] and pred_parts["over_shoulder"]
+
+
+def pose_component_score(lhs, rhs):
     left = parse_pose_label(lhs)
     right = parse_pose_label(rhs)
 
     if left in NON_COMPARABLE_LABELS or right in NON_COMPARABLE_LABELS:
-        return False
-    if left == right:
-        return True
+        return {
+            "score": 0.0,
+            "yaw_match": 0,
+            "pitch_match": 0,
+            "gt_yaw": "Unknown",
+            "gt_pitch": "Unknown",
+            "pred_yaw": "Unknown",
+            "pred_pitch": "Unknown",
+        }
 
     left_parts = _pose_label_components(left)
     right_parts = _pose_label_components(right)
-    if (
-        left_parts
-        and right_parts
-        and left_parts["direction"] is None
-        and not left_parts["over_shoulder"]
-        and left_parts["pitch"] in {"up", "down"}
-        and right_parts["pitch"] == left_parts["pitch"]
-    ):
-        return True
-    if (
-        left_parts
-        and right_parts
-        and left_parts["direction"] is not None
-        and left_parts["direction"] == right_parts["direction"]
-        and left_parts["pitch"] == right_parts["pitch"]
-        and not left_parts["over_shoulder"]
-        and right_parts["over_shoulder"]
-    ):
-        return True
+    if not left_parts or not right_parts:
+        return {
+            "score": 0.0,
+            "yaw_match": 0,
+            "pitch_match": 0,
+            "gt_yaw": "Unknown",
+            "gt_pitch": "Unknown",
+            "pred_yaw": "Unknown",
+            "pred_pitch": "Unknown",
+        }
 
-    return False
+    yaw_match = int(_yaw_parts_match(left_parts, right_parts))
+    pitch_match = int(left_parts["pitch"] == right_parts["pitch"])
+    return {
+        "score": (yaw_match + pitch_match) / 2.0,
+        "yaw_match": yaw_match,
+        "pitch_match": pitch_match,
+        "gt_yaw": _yaw_desc_from_parts(left_parts),
+        "gt_pitch": _pitch_desc_from_parts(left_parts),
+        "pred_yaw": _yaw_desc_from_parts(right_parts),
+        "pred_pitch": _pitch_desc_from_parts(right_parts),
+    }
+
+
+def pose_labels_match(lhs, rhs):
+    return pose_component_score(lhs, rhs)["score"] == 1.0
+
+
+def write_pose_component_score(item, prefix, gt_pose_label, pred_pose_label):
+    score = pose_component_score(gt_pose_label, pred_pose_label)
+    item["gt_yaw"] = score["gt_yaw"]
+    item["gt_pitch"] = score["gt_pitch"]
+    item[f"{prefix}_yaw"] = score["pred_yaw"]
+    item[f"{prefix}_pitch"] = score["pred_pitch"]
+    item[f"{prefix}_yaw_match"] = score["yaw_match"]
+    item[f"{prefix}_pitch_match"] = score["pitch_match"]
+    item[f"{prefix}_pose_match"] = score["score"]
+    if prefix == "t2i":
+        item["pose_match"] = score["score"]
+    return score["score"]
+
+
+def write_gt_pose_components(item, gt_pose_label):
+    parts = _pose_label_components(gt_pose_label)
+    if not parts:
+        item["gt_yaw"] = "Unknown"
+        item["gt_pitch"] = "Unknown"
+        return
+    item["gt_yaw"] = _yaw_desc_from_parts(parts)
+    item["gt_pitch"] = _pitch_desc_from_parts(parts)
 
 
 def is_valid_pose_label(label):
@@ -493,8 +411,8 @@ def classify_base_class(yaw, pitch):
         if -25 <= p <= 25:
             return "head facing forward straight"
         if p > 25:
-            return "head tilted up"
-        return "head tilted down"
+            return "head chin up"
+        return "head chin down"
 
     if 20 < y <= 40:
         if -25 <= p <= 25:
@@ -603,9 +521,9 @@ def relabel_pose_metadata_json(json_path):
         "accuracy_swap": 0.0,
         "valid_samples_swap": 0,
     }
-    correct_t2i = 0
+    correct_t2i = 0.0
     total_t2i = 0
-    correct_swap = 0
+    correct_swap = 0.0
     total_swap = 0
 
     for item in data_list:
@@ -624,22 +542,20 @@ def relabel_pose_metadata_json(json_path):
         gt_pose_label = prompt_gt_label
 
         item["gt_pose"] = gt_pose_label
+        write_gt_pose_components(item, gt_pose_label)
 
         t2i_pose_label = recompute_pose_from_stored_angles(item, "t2i")
-        is_correct_t2i = int(pose_labels_match(gt_pose_label, t2i_pose_label))
-        item["t2i_pose_match"] = is_correct_t2i
-        item["pose_match"] = is_correct_t2i
+        t2i_score = write_pose_component_score(item, "t2i", gt_pose_label, t2i_pose_label)
         if is_valid_pose_label(gt_pose_label):
             total_t2i += 1
-            correct_t2i += is_correct_t2i
+            correct_t2i += t2i_score
 
         if any(key in item for key in ("swap_pose", "swap_pose_status", "swap_pose_base_class", "swap_pose_match")):
             swap_pose_label = recompute_pose_from_stored_angles(item, "swap")
-            is_correct_swap = int(pose_labels_match(gt_pose_label, swap_pose_label))
-            item["swap_pose_match"] = is_correct_swap
+            swap_score = write_pose_component_score(item, "swap", gt_pose_label, swap_pose_label)
             if is_valid_pose_label(gt_pose_label):
                 total_swap += 1
-                correct_swap += is_correct_swap
+                correct_swap += swap_score
 
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(data_list, f, indent=4, ensure_ascii=False)
@@ -675,9 +591,9 @@ def process_pose_evaluation(
     print(f"Loaded JSON with {len(data_list)} items.")
 
     stats = {
-        "correct_t2i": 0,
+        "correct_t2i": 0.0,
         "total_t2i": 0,
-        "correct_swap": 0,
+        "correct_swap": 0.0,
         "total_swap": 0,
         "ref_not_found": 0,
         "t2i_not_found": 0,
@@ -735,6 +651,7 @@ def process_pose_evaluation(
         gt_pose_label = prompt_gt_label
 
         item["gt_pose"] = gt_pose_label
+        write_gt_pose_components(item, gt_pose_label)
         item["ref_pose"] = ref_pose_label
         item["ref_head_body_yaw"] = gt_pose_meta.get("head_body_yaw")
         item["ref_head_pitch"] = gt_pose_meta.get("head_pitch")
@@ -745,6 +662,8 @@ def process_pose_evaluation(
             stats["t2i_not_found"] += 1
             item["t2i_pose"] = "Img_Missing"
             item["t2i_pose_match"] = 0
+            item["t2i_yaw_match"] = 0
+            item["t2i_pitch_match"] = 0
             item["pose_match"] = 0
         else:
             t2i_pose_label, t2i_pose_meta = predict_pose_label_with_sam3d(t2i_path, estimator, infer_module)
@@ -754,12 +673,10 @@ def process_pose_evaluation(
             item["t2i_pose_status"] = t2i_pose_meta.get("status")
             item["t2i_pose_base_class"] = t2i_pose_meta.get("base_class")
 
-            is_correct_t2i = int(pose_labels_match(gt_pose_label, t2i_pose_label))
-            item["t2i_pose_match"] = is_correct_t2i
-            item["pose_match"] = is_correct_t2i
+            t2i_score = write_pose_component_score(item, "t2i", gt_pose_label, t2i_pose_label)
 
             if is_valid_pose_label(gt_pose_label):
-                stats["correct_t2i"] += is_correct_t2i
+                stats["correct_t2i"] += t2i_score
                 stats["total_t2i"] += 1
 
         if mode == "full" and swap_dir:
@@ -768,6 +685,8 @@ def process_pose_evaluation(
                 stats["swap_not_found"] += 1
                 item["swap_pose"] = "Img_Missing"
                 item["swap_pose_match"] = 0
+                item["swap_yaw_match"] = 0
+                item["swap_pitch_match"] = 0
             else:
                 swap_pose_label, swap_pose_meta = predict_pose_label_with_sam3d(swap_path, estimator, infer_module)
                 item["swap_pose"] = swap_pose_label
@@ -776,11 +695,10 @@ def process_pose_evaluation(
                 item["swap_pose_status"] = swap_pose_meta.get("status")
                 item["swap_pose_base_class"] = swap_pose_meta.get("base_class")
 
-                is_correct_swap = int(pose_labels_match(gt_pose_label, swap_pose_label))
-                item["swap_pose_match"] = is_correct_swap
+                swap_score = write_pose_component_score(item, "swap", gt_pose_label, swap_pose_label)
 
                 if is_valid_pose_label(gt_pose_label):
-                    stats["correct_swap"] += is_correct_swap
+                    stats["correct_swap"] += swap_score
                     stats["total_swap"] += 1
 
     with open(json_path, "w", encoding="utf-8") as f:

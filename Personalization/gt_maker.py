@@ -11,7 +11,7 @@ import re
 EXPRESSION_MAPPING_RULES = {
     'happy': ['happy', 'grin', 'smile', 'smiles', 'grinning', 'smiling', 'laugh', 'giggles', 'joy', 'smirk', 'joyful', 'enjoy'],
     'surprise': ['surprised', 'surprise', 'amazed', 'astonished', 'skeptical', 'shock'],
-    'confuse': ['confuse', 'forward', 'puzzled', 'questioning', 'thoughtful', 'confused'],
+    'confuse': ['confuse', 'frown', 'puzzled', 'questioning', 'thoughtful', 'confused'],
     'neutral': ['neutral', 'lips pursed', 'satisfaction', 'calmness', 'dreamy', 'serene', 'calm'],
     'sad': ['sad', 'sadness', 'crying', 'gloomy', 'depressed'], 
     'others': ['others']
@@ -22,71 +22,18 @@ MALE_KEYWORDS = [r'\bman\b', r'\bboy\b', r'\bmale\b', r'\bmen\b', r'\bguy\b']
 FEMALE_KEYWORDS = [r'\bwoman\b', r'\bgirl\b', r'\bfemale\b', r'\blady\b', r'\bwomen\b']
 
 # --- Pose Mapping ---
-# 評分端 eval_pose_v2 的最終標籤空間目前固定為下列四類。
-EVAL_POSE_LABELS = {
-    "Frontal",
-    "Head_Turn_Left",
-    "Head_Turn_Right",
-    "Back_Over_Shoulder",
+YAW_DESCS = {
+    "forward": "facing forward",
+    "left": "turned his/her head to his/her left",
+    "right": "turned his/her head to his/her right",
+    "left_over_shoulder": "turned his/her head to his/her left over the shoulder",
+    "right_over_shoulder": "turned his/her head to his/her right over the shoulder",
 }
-
-# 先做精確 phrase 規則，再用 regex 做變形兜底。
-POSE_MAPPING_RULES = {
-    # --- Back View 類 ---
-    "turns her head back over her shoulder": "Back_Over_Shoulder",
-    "turns her head over her right shoulder": "Back_Over_Shoulder",
-    "looking back over the left shoulder": "Back_Over_Shoulder",
-    "looking back over the right shoulder": "Back_Over_Shoulder",
-    "back view, looking to the left": "Back_Over_Shoulder",
-    "back view, looking to the right": "Back_Over_Shoulder",
-
-    # --- Head Turn 類 ---
-    "turns her head left": "Head_Turn_Left",
-    "looks sideways toward the left": "Head_Turn_Left",
-    "frontal view, looking to the left": "Head_Turn_Left",
-    "looks down to her left": "Head_Turn_Left",
-    "looks up and to his left": "Head_Turn_Left",
-    "turns his face upward to the left": "Head_Turn_Left",
-
-    "turns his head right": "Head_Turn_Right",
-    "looks to his right": "Head_Turn_Right",
-    "turns his head slightly to the right": "Head_Turn_Right",
-    "frontal view, looking to the right": "Head_Turn_Right",
-
-    # --- Frontal 類 ---
-    "looks straight": "Frontal",
-    "tilts her head downward": "Frontal",
-    "faces downward": "Frontal",
-    "faces slightly downward": "Frontal",
-    "looks upward, head tilted back": "Frontal",
-    "looks upward": "Frontal",
-    "tilts her head backward": "Frontal",
-    "head facing forward straight": "Frontal",
-    "head tilted down": "Frontal",
-    "head tilted up": "Frontal",
+PITCH_DESCS = {
+    "straight": "looking straight",
+    "up": "chin up",
+    "down": "chin down",
 }
-
-POSE_REGEX_RULES = [
-    (r"over the shoulder", "Back_Over_Shoulder"),
-    (r"head turned to (?:his|her|his/her) left", "Head_Turn_Left"),
-    (r"head turned to (?:his|her|his/her) right", "Head_Turn_Right"),
-    (r"turned (?:his|her|his/her) head to (?:his|her|his/her) left", "Head_Turn_Left"),
-    (r"turned (?:his|her|his/her) head to (?:his|her|his/her) right", "Head_Turn_Right"),
-    (r"looking to (?:his|her|the) left", "Head_Turn_Left"),
-    (r"looking to (?:his|her|the) right", "Head_Turn_Right"),
-    (r"head facing forward straight", "Frontal"),
-    (r"head tilted (?:up|down)", "Frontal"),
-]
-
-'''
-"正面": ["Frontal", "Head_Slight_Right", "Head_Slight_Left"],
-
-"背對": ["Back_View_Straight", "Back_Over_Shoulder", "Back_View_Side_Looking_Away"],
-
-"側向": ["Head_Turn_Right", "Head_Turn_Left", "Body_Turn_Right_Face_Front", "Body_Turn_Left_Face_Front", "Side_View_Right", "Side_View_Left"],
-
-"傾斜/歪頭": ["Body_Lean_Right", "Body_Lean_Left", "Head_Tilt_Right", "Head_Tilt_Left"]
-'''
 # ==========================================
 # 2. 定義標註邏輯函數
 # ==========================================
@@ -129,23 +76,64 @@ def get_gender(text):
     elif is_female: return "Female"
     else: return "Unknown"
 
-def get_pose(text):
-    text_lower = normalize_prompt_text(text).lower()
-    
-    # 關鍵步驟：依照字串長度排序 (由長到短)
-    # 這樣可以避免 "looks up" 先匹配到 "looks up and to his left" 的情況
-    sorted_keys = sorted(POSE_MAPPING_RULES.keys(), key=len, reverse=True)
-    
-    for key in sorted_keys:
-        # 使用簡單的 substring check，只要 prompt 包含這個規則就當作匹配
-        if key.lower() in text_lower:
-            return POSE_MAPPING_RULES[key]
+def _canonical_pose_label(yaw, pitch):
+    if yaw == "forward":
+        if pitch == "up":
+            return "head chin up"
+        if pitch == "down":
+            return "head chin down"
+        return "head facing forward straight"
 
-    for pattern, label in POSE_REGEX_RULES:
-        if re.search(pattern, text_lower):
-            return label
-            
+    if yaw in {"left", "right", "left_over_shoulder", "right_over_shoulder"}:
+        direction = "left" if "left" in yaw else "right"
+        label = f"head turned to his/her {direction}"
+        if yaw.endswith("_over_shoulder"):
+            label += " over the shoulder"
+        if pitch == "up":
+            label += " and chin up"
+        elif pitch == "down":
+            label += " and chin down"
+        return label
+
     return "Unknown"
+
+def get_yaw(text):
+    text_lower = normalize_prompt_text(text).lower()
+    pronoun = r"(?:his|her|their|his/her)"
+
+    yaw_patterns = [
+        ("left_over_shoulder", rf"(?:turned {pronoun} head to {pronoun} left|head turned to {pronoun} left) over the shoulder"),
+        ("right_over_shoulder", rf"(?:turned {pronoun} head to {pronoun} right|head turned to {pronoun} right) over the shoulder"),
+        ("left", rf"(?:turned {pronoun} head to {pronoun} left|head turned to {pronoun} left)"),
+        ("right", rf"(?:turned {pronoun} head to {pronoun} right|head turned to {pronoun} right)"),
+    ]
+    for yaw, pattern in yaw_patterns:
+        if re.search(pattern, text_lower):
+            return YAW_DESCS[yaw]
+
+    if re.search(r"\bfacing forward\b|\bfaces? forward\b|\bhead facing forward straight\b", text_lower):
+        return YAW_DESCS["forward"]
+
+    return "Unknown"
+
+def get_pitch(text):
+    text_lower = normalize_prompt_text(text).lower()
+    if re.search(r"\bchin up\b|\bhead chin up\b", text_lower):
+        return PITCH_DESCS["up"]
+    if re.search(r"\bchin down\b|\bhead chin down\b", text_lower):
+        return PITCH_DESCS["down"]
+    if re.search(r"\blooking straight\b|\blooks straight\b|\bhead facing forward straight\b", text_lower):
+        return PITCH_DESCS["straight"]
+    return PITCH_DESCS["straight"]
+
+def get_pose(text):
+    yaw_desc = get_yaw(text)
+    pitch_desc = get_pitch(text)
+    yaw_key = next((key for key, desc in YAW_DESCS.items() if desc == yaw_desc), None)
+    pitch_key = next((key for key, desc in PITCH_DESCS.items() if desc == pitch_desc), None)
+    if yaw_key is None or pitch_key is None:
+        return "Unknown"
+    return _canonical_pose_label(yaw_key, pitch_key)
 
 # ==========================================
 # 3. 主程式
@@ -166,6 +154,8 @@ def process_json_data(input_data):
         # 進行標註
         item["gt_expression"] = get_expression(prompt)
         item["gt_gender"] = get_gender(prompt)
+        item["gt_yaw"] = get_yaw(prompt)
+        item["gt_pitch"] = get_pitch(prompt)
         item["gt_pose"] = get_pose(prompt)
         
         labeled_data.append(item)
