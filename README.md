@@ -75,24 +75,24 @@ python sample.py \
     --prompt_csv "/media/ee303/4TB/SoftREPA/tools/8prompt.csv" \
     --sample_folder_dir "8prompt/"
 ```
-** Emu3.5 T2I**
+**Emu3.5 T2I**
 ```bash
 cd ./Emu3.5
 python inference.py
 ```
-** Janus-Pro 7B T2I**
+**Janus-Pro 7B T2I**
 ```bash
 conda activate diffusers
 cd /media/ee303/disk1/Janus
 python inference.py
 ```
-** Flux2 T2I**
+**Flux2 T2I**
 ```bash
 conda activate paul
 cd /media/ee303/4TB/flux2
 python inference.py
 ```
-** Sana1.5 T2I**
+**Sana1.5 T2I**
 ```bash
 conda activate paul
 cd /media/ee303/4TB/Sana
