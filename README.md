@@ -65,6 +65,41 @@ cd ./Infinity
 bash scripts/batch_infer.sh ./SoftREPA/tools/final_prompt_test_result_all_pose.csv generated/Posture_prompts/
 ```
 
+**Hart T2I**
+```bash
+cd ./hart
+python sample.py \
+    --model_path "hart-0.7b-1024px/llm" \
+    --text_model_path "hart-0.7b-1024px/llm" \
+    --shield_model_path "shieldgemma-2b" \
+    --prompt_csv "/media/ee303/4TB/SoftREPA/tools/8prompt.csv" \
+    --sample_folder_dir "8prompt/"
+```
+** Emu3.5 T2I**
+```bash
+cd ./Emu3.5
+python inference.py
+```
+** Janus-Pro 7B T2I**
+```bash
+conda activate diffusers
+cd /media/ee303/disk1/Janus
+python inference.py
+```
+** Flux2 T2I**
+```bash
+conda activate paul
+cd /media/ee303/4TB/flux2
+python inference.py
+```
+** Sana1.5 T2I**
+```bash
+conda activate paul
+cd /media/ee303/4TB/Sana
+python inference.py
+```
+**Note: For Hart, Emu3.5, Janus-Pro 7B, Flux2, and Sana1.5, ensure the `prompt_csv` or input paths are correctly set to read from the aligned prompts CSV.*
+
 ## 5. Benchmarking, Analytics & Visualization
 Run pipeline metrics across generated samples (CLIP, DINO, HPS, ImageReward, FID with COCO-val 1K, LPIPS).
 *   **Execute Evaluator**: 
