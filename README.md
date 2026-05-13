@@ -1,156 +1,74 @@
-# SoftREPA Project Notes
+# T2I Personalization & Pose Alignment Workspace
 
-## 1. Project Overview
-SoftREPA is trained with paired COCO data and DeepFashion data.
+This file serves as the main directory for data processing, pose alignment, and Text-to-Image (T2I) multi-model benchmarks.
 
-- Paired COCO dataset: 118K images
-- DeepFashion dataset: 25K images
+## 1. Data Processing Pipeline (Before Refinement)
+Tools used to filter datasets, detect humans, and establish base metrics.
+- Computes `person_count` and `person_detected`: `python /media/ee303/4TB/laion_HR/filter_person.py`
+- Plot distribution of counts: `python /media/ee303/4TB/laion_HR/plot_person_pie.py`
+- Analyzes DeepFashion Data Captions: `python /media/ee303/4TB/sam3-body/analyze_captions.py`
 
-![Architecture](Architecture.png)
-![Scoring Module](Scoring_Module.png)
+## 2. Pose & Labeling Pipeline 
+Predicts head poses and maps them to descriptive prompts (e.g. *turned his head to his left*).
+*   **Predict Yaw and Pitch**: `python /media/ee303/4TB/sam3-body/sam-3d-body/infer_v4.py` (or `infer_v2.py` / `sam3_results.csv`)
+*   **Angle rules**:
+    *   `yaw > 40` or `yaw < -40`: turn head left/right over shoulder
+    *   `yaw > 20` or `yaw < -20`: turn head left/right
+    *   `-25 < yaw < 25`: face forward
+    *   `pitch > 25`: chin up
+    *   `pitch < -25`: chin down
+*   **Map Angles to Prompts**: `python /media/ee303/4TB/sam3-body/label.py`
 
-SoftREPA also uses Diffusion-DPO (Direct Preference Optimization for Diffusion) and DDPO (Denoising Diffusion Policy Optimization).
+## 3. Prompt Refinement (Gender, Age, Race)
+Updates subject info via DeepFace & Qwen to refine captions properly.
+*   **Standard Auto Pipeline**: `bash /media/ee303/4TB/SoftREPA/tools/run_gender_race_pipeline.sh /media/ee303/4TB/SoftREPA/celeb_imgs /media/ee303/4TB/SoftREPA/tools/final_prompt.csv`
+*   **Famous Celebrities Pipeline**: `bash /media/ee303/4TB/SoftREPA/tools/run_gender_race_pipeline.sh /media/ee303/4TB/SoftREPA/more_famous /media/ee303/4TB/SoftREPA/tools/final_prompt.csv`
+*   **DeepFace labeler**: `python /media/ee303/4TB/SoftREPA/tools/deepface/race_label.py`
+*   **Format Rewrite**: `python /media/ee303/4TB/SoftREPA/tools/rewrite_caption_rf.py`
+*   **Qwen Utils**: `/media/ee303/4TB/sam3-body/qwen_infer.py` & `qwen_batch_infer.py`
 
-![Diffusion DPO](image.png)
+## 4. Multi-Model Inference (T2I Generation)
+All models read carefully aligned prompts from: 
+`/media/ee303/4TB/SoftREPA/tools/final_prompt_test_result_all_pose.csv`
 
-$$
-\mathcal{L}_{DPO}(\theta; \theta_{\text{ref}}) = -\mathbb{E}_{(x_w, x_l, c)} \left[ \log \sigma \left( \beta \cdot (\text{err}(x_l, \theta) - \text{err}(x_l, \theta_{\text{ref}})) - \beta \cdot (\text{err}(x_w, \theta) - \text{err}(x_w, \theta_{\text{ref}})) \right) \right]
-$$
+### Environment execution map:
+| Model | Directory | Execution Details | Est. Latency |
+|-------|-----------|-------------------|--------------|
+| **SoftREPA** | `/media/ee303/4TB/SoftREPA` | `python sample.py --model sd3 --use_dc --use_dc_t True...` | ~4.0s |
+| **Lumina** | `/media/ee303/4TB/SoftREPA/Lumina` | `python Lumina_inference.py` | ~13.0s |
+| **Flux2** | `/media/ee303/4TB/flux2` | `conda activate t2i; python inference.py` | ~3.0s |
+| **Sana1.5** | `/media/ee303/4TB/Sana` | `conda activate t2i; python inference.py` | ~3.0s~ |
+| **Emu3.5** | `/media/ee303/4TB/Emu3.5` | `conda activate t2i; python sample.py --cfg configs/example_config_t2i.py` | ~2.0s |
+| **Janus-Pro 7B** | `/media/ee303/disk1/Janus` | `conda activate t2i; python inference.py` | ~7.0s |
+| **Infinity** | `/media/ee303/4TB/Infinity` | `conda activate t2i; bash scripts/batch_infer.sh` | ~0.5s |
+| **Hart** | `/media/ee303/4TB/hart` | `conda activate hart; python sample.py` | ~0.4s |
 
-![DPO Diagram 1](image-1.png)
-![DPO Diagram 2](image-2.png)
+## 5. Benchmarking & Analytics (Personalization)
+Run pipeline metrics across generated samples.
+*   **Execute Evaluator**: 
+    ```bash
+    cd /media/ee303/4TB/Personalization
+    bash series_run.sh
+    ```
+*   **Interactive Streamlit Review UI**:
+    ```bash
+    cd /media/ee303/4TB/Personalization
+    conda activate pslz
+    streamlit run pose_result_analyzer_app.py
+    ```
+*   **Streamlit (Before vs After Refinement)**: `streamlit run /media/ee303/4TB/sam3-body/app.py`
 
+## 6. (Legacy) SoftREPA Training Details
+- Paired COCO dataset (118K) & DeepFashion dataset (25K in `4TB/DeepFashion_Training_Final`)
+- Uses Diffusion-DPO and DDPO for policy optimization.
 
-## 2. Reward Function
-- Reward model selection
-![Reward Model Selection](image-3.png)
+## 7. LAION-17K Dataset
+- /media/ee303/4TB/Personalization/laion_gender_age_race_long_captioned_prompt19_bible.csv
 
-- Reward score
-![Reward Score](image-4.png)
-
-- Mean reward score
-![Mean Reward Score](image-5.png)
-
-
-## 3. Data Path
-- DeepFashion training data:
-    - /media/ee303/4TB/DeepFashion_Training_Final
-
-
-## 4. Pose Pipeline (Yaw/Pitch)
-### 4.1 Predict yaw and pitch
-- Script:
-    - ./sam-3d-body/infer_v2.py
-- Output CSV:
-    - ./sam3-body/sam3_results.csv
-
-### 4.2 Angle rules
-- yaw > 40 or yaw < -40: turn head left/right over shoulder
-- yaw > 20 or yaw < -20: turn head left/right
-- -20 < yaw < 20: face forward
-- pitch > 10: look up
-- pitch < -10: look down
-
-### 4.3 Map angles to posture prompts
-- Script:
-    - ./sam3-body/label.py
-
-
-## 5. Prepare and Train T2I
-### 5.1 Prepare training data
-- Script:
-    - ./SoftREPA/prepare_training_data_from_csv.py
-- Output:
-    - ./sam3-body/sam3_labeded_training/deepfashion
-
-### 5.2 Train model
-- Script:
-    - ./SoftREPA/run_train_single_gpu.sh
-- Output:
-    - ./SoftREPA/data/deepfashion
-
-
-## 6. Inference
-### 6.1 SoftREPA T2I
+## Long caption label
 ```bash
-python sample.py \
-    --model sd3 --use_dc --use_dc_t True \
-    --n_dc_tokens 4 --n_dc_layers 5 \
-    --img_size 1024 \
-    --NFE 28 --cfg_scale 4 \
-    --load_dir "tokens/sd3" \
-    --save_dir "generated/SoftREPA" \
-    --datadir "./Generic_prompts"  # or Posture_prompts
+cd /media/ee303/4TB/Gemma
+conda activate paul
+python long_prompt_label.py
 ```
-
-### 6.2 Lumina T2I
-```bash
-python Lumina_inference.py \
-    --input /media/ee303/4TB/SoftREPA/Posture_prompts/pose_prompts.jsonl \
-    --output_dir generated/lumina/PP
-```
-
-## 7. Visualization
-- Use show_image.py to visualize generated images in a grid format.
-```bash
-python show_image.py -f generated/SoftREPA -c 15 
-python show_image.py -f generated/lumina/PP -c 15
-```
-
-## 8. Planned Benchmark
-- Use 15 posture prompts to compare multiple T2I models (PhotoMaker v2, UniPortrait, PuLID, etc.)
-- Metrics:
-    - CLIP
-    - DINO
-    - HPS
-    - ImageReward
-    - FID (SoftREPA uses COCO-val 1K)
-    - LPIPS
-    - Latency
-```bash
-cd /media/ee303/4TB/Personalization
-bash run_unified_v3.sh --folder /media/ee303/disk2/JACK/ECCV_DATA/T2I_20_prompts --swap /media/ee303/disk2/JACK/ECCV_DATA/Infinity_20prompts --name infinity_noref --output infinity_noref_metadata.json --summary-jsonl metrics_summary.jsonl
-```
-
-
-## 9. Runtime Reference
-- Lumina: 13 seconds
-- SoftREPA: 4 seconds
-
-## 10. Prompt correction with gender, age, and pose information
-```bash
-bash /media/ee303/4TB/SoftREPA/tools/run_gender_race_pipeline.sh
-```
-
-## Qwen Inference
-./sam3-body/qwen_infer.py
-./sam3-body/qwen_batch_infer.py
-
-
-## Prompt Refinement
-```bash
-bash /media/ee303/4TB/SoftREPA/tools/run_gender_race_pipeline.sh  /media/ee303/4TB/SoftREPA/celeb_imgs /media/ee303/4TB/SoftREPA/tools/final_prompt.csv
-```
-
-##  Refinement with more famous celebrities. And Using Infinity to generate refined captions
-```bash
-bash /media/ee303/4TB/SoftREPA/tools/run_gender_race_pipeline.sh  /media/ee303/4TB/SoftREPA/more_famous /media/ee303/4TB/SoftREPA/tools/final_prompt.csv # label frontal images with gender, age, and race
-```
-
-## Data Processing
-Before refinement:
-- /media/ee303/4TB/laion_HR/filter_person.py # Calculate person_count and person_detected.
-- /media/ee303/4TB/laion_HR/plot_person_pie.py # Plot the distribution of person_count and person_detected.
-- /media/ee303/4TB/sam3-body/sam-3d-body/infer_v4.py # Predict yaw and pitch.
-- /media/ee303/4TB/sam3-body/label.py # Map yaw and pitch to posture prompts.
-
-After refinement:
-- /media/ee303/4TB/SoftREPA/tools/deepface/race_label.py # label race from previously labeled images.
-- /media/ee303/4TB/sam3-body/label_refinement.py # Refine captions with gender, age, and race information.
-
-## Compare tools
-- /media/ee303/4TB/sam3-body/app.py # compare before and after refinement in Streamlit app.
-- /media/ee303/4TB/sam3-body/analyze_captions.py # analyze the distribution of gender, yaw, and pitch.
-
-## DeepFashion Data Analysis
-./sam3-body/analyze_captions.py
+Noted: modify 'system prompt' from '/media/ee303/4TB/Gemma/prompt.py'
