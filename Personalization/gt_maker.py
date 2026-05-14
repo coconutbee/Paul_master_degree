@@ -100,12 +100,13 @@ def _canonical_pose_label(yaw, pitch):
 def get_yaw(text):
     text_lower = normalize_prompt_text(text).lower()
     pronoun = r"(?:his|her|their|his/her|the)"
+    verb = r"(?:turned|turning|turns)"
 
     yaw_patterns = [
-        ("left_over_shoulder", rf"(?:turned {pronoun} head to {pronoun} left|head turned to {pronoun} left|turning {pronoun} head to {pronoun} left) over the shoulders?"),
-        ("right_over_shoulder", rf"(?:turned {pronoun} head to {pronoun} right|head turned to {pronoun} right|turning {pronoun} head to {pronoun} right) over the shoulders?"),
-        ("left", rf"(?:turned {pronoun} head to {pronoun} left|head turned to {pronoun} left|turning {pronoun} head to {pronoun} left)"),
-        ("right", rf"(?:turned {pronoun} head to {pronoun} right|head turned to {pronoun} right|turning {pronoun} head to {pronoun} right)"),
+        ("left_over_shoulder", rf"(?:{verb} {pronoun} head to {pronoun} left|head {verb} to {pronoun} left) over the shoulders?"),
+        ("right_over_shoulder", rf"(?:{verb} {pronoun} head to {pronoun} right|head {verb} to {pronoun} right) over the shoulders?"),
+        ("left", rf"(?:{verb} {pronoun} head to {pronoun} left|head {verb} to {pronoun} left)"),
+        ("right", rf"(?:{verb} {pronoun} head to {pronoun} right|head {verb} to {pronoun} right)"),
     ]
     for yaw, pattern in yaw_patterns:
         if re.search(pattern, text_lower):
