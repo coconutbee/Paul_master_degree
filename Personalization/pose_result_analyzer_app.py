@@ -15,6 +15,9 @@ DEFAULT_METHOD_ROOTS = {
     "Flux2_PP": "/media/ee303/4TB/flux2/prompt_test_512/ori",
     "Sana1.5_PP": "/media/ee303/4TB/Sana/prompt_test_512/ori",
     "Infinity_PP": "/media/ee303/4TB/Infinity/generated/modify_short_prompt",
+    "hart_PP": "/media/ee303/4TB/hart/generated",
+    "Emu3.5_PP": "/media/ee303/4TB/Emu3.5/prompt_test_512/ori_4_8B",
+    "Janus-Pro_7B_PP": "/media/ee303/disk1/Janus/prompt_test_512/janus_generated_samples",
     "Lumina_PP": "/media/ee303/4TB/SoftREPA/generated/lumina/PP",
     "Lumina_GP": "/media/ee303/4TB/SoftREPA/generated/lumina/GP",
     "SD3_PP": "/media/ee303/4TB/SoftREPA/generated/PP_vanilla",
@@ -23,6 +26,8 @@ DEFAULT_METHOD_ROOTS = {
     "SoftREPA_GP": "/media/ee303/4TB/SoftREPA/generated/GP_SoftREPA",
     "SoftREPA_FT_PP": "/media/ee303/4TB/SoftREPA/generated/PP_FT_v2",
     "SoftREPA_FT_GP": "/media/ee303/4TB/SoftREPA/generated/GP_FT_v2",
+    "flux2_GP_20": "/media/ee303/4TB/flux2/prompt_test_512/wo_id_20prompt",
+    "infinity_GP_20": "/media/ee303/4TB/Infinity/generated/20prompt",
 }
 
 
@@ -44,6 +49,7 @@ def load_metadata(json_path):
         "pose_match",
         "t2i_yaw_match",
         "t2i_pitch_match",
+        "t2i_scenario_score",
     ]:
         if col not in df.columns:
             df[col] = 0.0
@@ -60,6 +66,7 @@ def load_metadata(json_path):
         "t2i_pitch",
         "t2i_pose",
         "t2i_pose_status",
+        "t2i_scenario_reasoning",
     ]
     for col in text_cols:
         if col not in df.columns:
@@ -98,7 +105,23 @@ def method_name_from_path(json_path):
 
 
 def list_summary_jsons(summary_dir):
-    if not summary_dir or not os.path.isdir(summary_dir):
+    if not summary_dir:
+        return []
+    
+    if os.path.isfile(summary_dir) and summary_dir.endswith(".jsonl"):
+        paths = []
+        try:
+            with open(summary_dir, "r", encoding="utf-8") as f:
+                for line in f:
+                    if line.strip():
+                        data = json.loads(line)
+                        if "json" in data and os.path.exists(data["json"]):
+                            paths.append(data["json"])
+        except Exception:
+            pass
+        return paths
+
+    if not os.path.isdir(summary_dir):
         return []
     return sorted(str(p) for p in Path(summary_dir).glob("*.json"))
 
@@ -123,6 +146,17 @@ def parse_method_roots(raw_text):
 
 def build_compare_frame(json_paths, key_col):
     frames = []
+    import re
+    # Function to unify prompt text so it aligns across all models
+    def normalize_prompt(text):
+        if not isinstance(text, str): return str(text)
+        # Some models use 'A_asian_man', some use 'asian_man' in their prompt fields.
+        # Remove common leading articles or underscores to make them identical
+        text = text.replace(" ", "_")
+        text = re.sub(r'^(A_|an_|a_)', '', text, flags=re.IGNORECASE)
+        # Sometimes people capitalize the first letter differently
+        return text.lower()
+
     for json_path in json_paths:
         df = load_metadata(json_path).copy()
         if df.empty or key_col not in df.columns:
@@ -130,7 +164,13 @@ def build_compare_frame(json_paths, key_col):
         method = method_name_from_path(json_path)
         df["method"] = method
         df["json_path"] = json_path
-        df["compare_key"] = df[key_col].astype(str)
+        
+        if key_col == "prompt":
+            df["compare_key"] = df[key_col].apply(normalize_prompt)
+        else:
+            # If using 'image' as align key, try to strip numeric prefixes
+            df["compare_key"] = df[key_col].apply(lambda x: re.sub(r'^([a-zA-Z0-9]+_)?(A_|an_)', r'\2', str(x)).rsplit('.', 1)[0].lower())
+            
         keep_cols = [
             "method",
             "json_path",
@@ -154,11 +194,17 @@ def build_compare_frame(json_paths, key_col):
             "pose_score",
             "error_type",
             "t2i_pose_status",
+            "t2i_scenario_score",
+            "t2i_scenario_reasoning",
         ]
         frames.append(df[[c for c in keep_cols if c in df.columns]])
     if not frames:
         return pd.DataFrame()
-    return pd.concat(frames, ignore_index=True)
+        
+    df_concat = pd.concat(frames, ignore_index=True)
+    # Remove duplicate prompts per method so a model only shows up once per test case
+    df_concat = df_concat.drop_duplicates(subset=["method", "compare_key"], keep="first")
+    return df_concat
 
 
 def render_method_card(row, method_roots, image_indexes, index_images):
@@ -184,14 +230,20 @@ def render_method_card(row, method_roots, image_indexes, index_images):
     pitch_text = f"{float(pitch):.2f}" if pd.notna(pitch) else "N/A"
 
     st.caption(f"score {score_text} | yaw_angle {yaw_text} | pitch_angle {pitch_text}")
-    compare = pd.DataFrame(
-        [
-            {"Component": "Yaw", "GT": row.get("gt_yaw"), "T2I": row.get("t2i_yaw"), "Match": row.get("t2i_yaw_match")},
-            {"Component": "Pitch", "GT": row.get("gt_pitch"), "T2I": row.get("t2i_pitch"), "Match": row.get("t2i_pitch_match")},
-            {"Component": "Pose", "GT": row.get("gt_pose"), "T2I": row.get("t2i_pose"), "Match": row.get("t2i_pose_match")},
-        ]
-    )
+    
+    comp_list = [
+        {"Component": "Yaw", "GT": row.get("gt_yaw"), "T2I": row.get("t2i_yaw"), "Match": row.get("t2i_yaw_match")},
+        {"Component": "Pitch", "GT": row.get("gt_pitch"), "T2I": row.get("t2i_pitch"), "Match": row.get("t2i_pitch_match")},
+        {"Component": "Pose", "GT": row.get("gt_pose"), "T2I": row.get("t2i_pose"), "Match": row.get("t2i_pose_match")},
+    ]
+    if "t2i_scenario_score" in row and pd.notna(row["t2i_scenario_score"]):
+        comp_list.append({"Component": "Scenario", "GT": "N/A", "T2I": "N/A", "Match": row.get("t2i_scenario_score")})
+        
+    compare = pd.DataFrame(comp_list)
     st.dataframe(compare, use_container_width=True, hide_index=True)
+    if "t2i_scenario_reasoning" in row and pd.notna(row["t2i_scenario_reasoning"]):
+        with st.expander("Scenario Reasoning"):
+            st.write(row["t2i_scenario_reasoning"])
 
 
 def render_method_comparison(summary_dir, method_roots, index_images):
@@ -221,6 +273,20 @@ def render_method_comparison(summary_dir, method_roots, index_images):
     key_counts = compare_df.groupby("compare_key")["method"].nunique().sort_values(ascending=False)
     min_methods = st.slider("Minimum methods available for prompt", 1, max(1, len(selected_methods)), min(2, max(1, len(selected_methods))))
     valid_keys = key_counts[key_counts >= min_methods].index.tolist()
+    
+    if not compare_df.empty:
+        method_counts = compare_df.groupby("method").size().sort_values()
+        min_method_name = method_counts.index[0]
+        min_method_count = method_counts.iloc[0]
+        
+        use_min_method_base = st.checkbox(
+            f"Restrict to prompts available in the smallest dataset ({min_method_name}: {min_method_count} items)", 
+            value=True
+        )
+        if use_min_method_base:
+            min_method_keys = set(compare_df[compare_df["method"] == min_method_name]["compare_key"])
+            valid_keys = [k for k in valid_keys if k in min_method_keys]
+
     if not valid_keys:
         st.warning("No prompt/image key is shared by the selected methods under the current threshold.")
         return
@@ -256,6 +322,7 @@ def render_method_comparison(summary_dir, method_roots, index_images):
         "t2i_pitch_match",
         "t2i_pose_match",
         "t2i_pose_status",
+        "t2i_scenario_score",
     ]
     st.dataframe(rows[[c for c in summary_cols if c in rows.columns]], use_container_width=True, hide_index=True)
 
@@ -299,7 +366,16 @@ def resolve_image_path(item, json_path, image_root, image_index):
         if candidate and os.path.exists(candidate):
             return candidate
 
-    return image_index.get(filename)
+    exact_match = image_index.get(filename)
+    if exact_match:
+        return exact_match
+
+    basename_no_ext = os.path.splitext(filename)[0]
+    for k, v in image_index.items():
+        if k.startswith(basename_no_ext + "_") or ("_" + basename_no_ext + "_" in k):
+            return v
+
+    return None
 
 
 def metric_pct(value):
@@ -348,11 +424,17 @@ def filter_dataframe(df):
         pred_pitches = ["All"] + sorted(df["t2i_pitch"].dropna().unique())
         pred_pitch = st.selectbox("T2I pitch", pred_pitches)
 
+        if "t2i_scenario_score" in df.columns:
+            scenario_options = ["All"] + [str(x) for x in sorted(df["t2i_scenario_score"].dropna().unique())]
+            scenario_choice = st.selectbox("Scenario score", scenario_options)
+
         query = st.text_input("Prompt/image contains")
 
     out = df.copy()
     if score_choice != "All":
         out = out[out["pose_score"] == float(score_choice)]
+    if "t2i_scenario_score" in df.columns and scenario_choice != "All":
+        out = out[out["t2i_scenario_score"] == float(scenario_choice)]
     if error_choice != "All":
         out = out[out["error_type"] == error_choice]
     if gt_yaw != "All":
@@ -397,14 +479,20 @@ def render_item_detail(item, json_path, image_root, image_index):
         a1.metric("head_body_yaw", f"{float(item['t2i_head_body_yaw']):.2f}" if pd.notna(item.get("t2i_head_body_yaw")) else "N/A")
         a2.metric("head_pitch", f"{float(item['t2i_head_pitch']):.2f}" if pd.notna(item.get("t2i_head_pitch")) else "N/A")
 
-        compare = pd.DataFrame(
-            [
-                {"Component": "Yaw", "GT": item.get("gt_yaw"), "T2I": item.get("t2i_yaw"), "Match": item.get("yaw_correct")},
-                {"Component": "Pitch", "GT": item.get("gt_pitch"), "T2I": item.get("t2i_pitch"), "Match": item.get("pitch_correct")},
-                {"Component": "Pose", "GT": item.get("gt_pose"), "T2I": item.get("t2i_pose"), "Match": item.get("pose_score")},
-            ]
-        )
+        comp_list = [
+            {"Component": "Yaw", "GT": item.get("gt_yaw"), "T2I": item.get("t2i_yaw"), "Match": item.get("yaw_correct")},
+            {"Component": "Pitch", "GT": item.get("gt_pitch"), "T2I": item.get("t2i_pitch"), "Match": item.get("pitch_correct")},
+            {"Component": "Pose", "GT": item.get("gt_pose"), "T2I": item.get("t2i_pose"), "Match": item.get("pose_score")},
+        ]
+        if "t2i_scenario_score" in item and pd.notna(item["t2i_scenario_score"]):
+            comp_list.append({"Component": "Scenario", "GT": "N/A", "T2I": "N/A", "Match": item.get("t2i_scenario_score")})
+            
+        compare = pd.DataFrame(comp_list)
         st.dataframe(compare, use_container_width=True, hide_index=True)
+        
+        if "t2i_scenario_reasoning" in item and pd.notna(item["t2i_scenario_reasoning"]):
+            with st.expander("Scenario Reasoning"):
+                st.write(item["t2i_scenario_reasoning"])
 
 
 def main():
@@ -439,19 +527,24 @@ def main():
 
     st.caption(f"Loaded {len(df)} rows from `{json_path}`. Showing {len(filtered)} rows after filters.")
 
-    c1, c2, c3, c4, c5 = st.columns(5)
-    c1.metric("Rows", len(filtered))
-    c2.metric("Avg pose score", metric_pct(filtered["pose_score"].mean() if len(filtered) else 0))
-    c3.metric("Yaw accuracy", metric_pct(filtered["yaw_correct"].mean() if len(filtered) else 0))
-    c4.metric("Pitch accuracy", metric_pct(filtered["pitch_correct"].mean() if len(filtered) else 0))
-    c5.metric("Full match", metric_pct((filtered["pose_score"] == 1.0).mean() if len(filtered) else 0))
+    cols = st.columns(6 if "t2i_scenario_score" in filtered.columns else 5)
+    cols[0].metric("Rows", len(filtered))
+    cols[1].metric("Avg pose score", metric_pct(filtered["pose_score"].mean() if len(filtered) else 0))
+    cols[2].metric("Yaw accuracy", metric_pct(filtered["yaw_correct"].mean() if len(filtered) else 0))
+    cols[3].metric("Pitch accuracy", metric_pct(filtered["pitch_correct"].mean() if len(filtered) else 0))
+    cols[4].metric("Full match", metric_pct((filtered["pose_score"] == 1.0).mean() if len(filtered) else 0))
+    if "t2i_scenario_score" in filtered.columns:
+        cols[5].metric("Avg scenario", f"{filtered['t2i_scenario_score'].mean():.2f}" if len(filtered) else "0.00")
 
     tabs = st.tabs(["Overview", "Error Distribution", "Browse Images", "Compare Methods", "Data Table"])
 
     with tabs[0]:
-        top_left, top_right = st.columns(2)
+        top_left, top_center, top_right = st.columns(3)
         with top_left:
             count_chart(filtered, "pose_score", "Pose score distribution")
+        with top_center:
+            if "t2i_scenario_score" in filtered.columns:
+                count_chart(filtered, "t2i_scenario_score", "Scenario score distribution")
         with top_right:
             count_chart(filtered, "error_type", "Error type distribution")
 
