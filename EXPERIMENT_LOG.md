@@ -146,13 +146,13 @@ SAM3D bug: head_body_yaw has a frontal dead zone (0 values in \|yaw\|≤20) → 
 
 ---
 
-# 2026-06-05 — T2I model comparison: pose accuracy across 5 generators (40 prompts)
+# 2026-06-05 — T2I model comparison: pose accuracy across 6 generators (40 prompts) [Janus-Pro added 2026-06-08]
 
-5 text-to-image models, each generating the SAME 40 pose prompts (1 img/prompt). Measure pose accuracy = does the generated head pose match the prompt's intended pose. `t2i_pose_compare/` (`SUMMARY.csv`, `{model}_pose_acc.csv`, `{model}_angles.json`, `pose_compare.png`). Runner `_run_t2i_pose_compare.sh` (stage A) + `_run_t2i_poseB.sh` (stage B re-run with user thresholds).
+6 text-to-image models (FLUX.2-klein, Sana, SoftREPA/SD3, Infinity, HART, **Janus-Pro-7B**), each generating the SAME 40 pose prompts (1 img/prompt). Measure pose accuracy = does the generated head pose match the prompt's intended pose. `t2i_pose_compare/` (`SUMMARY.csv` + `SUMMARY_with_janus.csv`, `{model}_pose_acc.csv`, `{model}_angles.json`, `pose_compare.png` + `angle_hist_with_janus.png`). Runner `_run_t2i_pose_compare.sh` (stage A) + `_run_t2i_poseB.sh` (stage B). **Janus-Pro added via `_run_janus_pose.sh` (folder `/media/ee303/disk1/Janus/prompt_test_512/Janu_40TP`); 6-model summary + histogram rebuilt by `make_t2i_compare.py`.**
 
 **Pipeline (2 stage, 2 env):** A) `extract_angles_c.py <folder> --out _angles.json` (env smplestx) → SMPLest-X head_yaw/pitch/head_to_torso. B) `eval_smplestx_vs_prompt.py --folder --angles --out` (env paul) → T5Gemma classifies the prompt's intended pose, maps angles→labels, computes yaw/pitch match.
 
-**Thresholds (user-specified, uniform across all 5):** yaw >15° = left/right, pitch >±15° = up/down, |head_to_torso_yaw| >25° = "over the shoulder". (Note: the older `pretrained/pose_acc_smplestx.csv` used the docstring rule pitch±25/OS35 — different; the `t2i_pose_compare/` numbers use 15/15/25.)
+**Thresholds (user-specified, uniform across all 6):** yaw >15° = left/right, pitch >±15° = up/down, |head_to_torso_yaw| >25° = "over the shoulder". (Note: the older `pretrained/pose_acc_smplestx.csv` used the docstring rule pitch±25/OS35 — different; the `t2i_pose_compare/` numbers use 15/15/25.)
 
 | model | yaw acc | pitch acc | mean \|yaw\| | mean \|pitch\| | SMPLest-X fail |
 |---|---|---|---|---|---|
@@ -161,10 +161,11 @@ SAM3D bug: head_body_yaw has a frontal dead zone (0 values in \|yaw\|≤20) → 
 | softrepa | 42.5% | 37.5% | 59.6° | 15.8° | 0/40 |
 | infinity | 35.0% | 37.5% | 30.2° | 13.8° | 0/40 |
 | hart | 32.5% | 42.5% | 38.2° | 16.8° | 0/40 |
+| **janus-pro-7B** | **5.0%** | 25.0% | **5.5°** | 14.1° | 0/40 |
 
-**Takeaways.** flux2 best yaw fidelity (67.5%), sana 2nd (55%); infinity/hart worst (~33%). mean|yaw| shows *willingness to turn*: softrepa turns most (59.6°) but imprecise (42.5%); **infinity under-rotates (30°) → lowest yaw acc**; flux2 turns a lot (50°) AND accurately. Pitch ~37–42% for all (chin is hard for every T2I, model-independent). All 5 had a person detected in 40/40. All prompts specify chin → pitch denominator = 40.
+**Takeaways.** flux2 best yaw fidelity (67.5%), sana 2nd (55%); infinity/hart worst (~33%). mean|yaw| shows *willingness to turn*: softrepa turns most (59.6°) but imprecise (42.5%); **infinity under-rotates (30°) → lowest yaw acc**; flux2 turns a lot (50°) AND accurately. **Janus-Pro is by far the worst (yaw 5.0%): it essentially does NOT turn the head at all — mean |yaw| 5.5°, median 4°, near-frontal for nearly every prompt** (only 2/40 yaw-correct), and its pitch is the lowest too (25%, mostly wrong-signed). Pitch ~37–42% for the others (chin is hard for every T2I, model-independent). All 6 had a person detected in 40/40. All prompts specify chin → pitch denominator = 40.
 
-### Angle distributions (`angle_hist.png`, 5° bins): |yaw|, pitch split by prompt chin up/down
+### Angle distributions (`angle_hist.png` / `angle_hist_with_janus.png`, 5° bins): |yaw|, pitch split by prompt chin up/down
 Balanced design: each model has exactly 20 chin-up + 20 chin-down prompts. Median measured angle:
 
 | model | median \|yaw\| | chin-UP median pitch | chin-DOWN median pitch |
@@ -174,8 +175,9 @@ Balanced design: each model has exactly 20 chin-up + 20 chin-down prompts. Media
 | infinity | 30.7° | +15.8 | −5.8 |
 | softrepa | 59.5° | +18.5 | **+8.2** ⚠ |
 | hart | 43.3° | +24.2 | **+8.7** ⚠ |
+| **janus-pro-7B** | **4.0°** ⚠ | +14.9 | **+11.7** ⚠ |
 
-**The pitch failure is almost entirely chin-DOWN.** Chin-up is handled well by all (measured pitch peaks at +15–25°, clears the +15° threshold). Chin-down should be negative but the distributions straddle 0: flux2/sana/infinity only weakly negative (−3 to −6°), and **softrepa/hart actually go positive (median +8°) — they raise the chin when asked to lower it.** This is why pitch acc sits at ~40%; splitting up/down exposes it (the aggregate pitch_acc hid the asymmetry). |yaw| panel confirms infinity under-rotates (mass at 0–35°) while softrepa/sana/flux2 sit at 40–65°.
+**The pitch failure is almost entirely chin-DOWN.** Chin-up is handled well by all (measured pitch peaks at +15–25°, clears the +15° threshold). Chin-down should be negative but the distributions straddle 0: flux2/sana/infinity only weakly negative (−3 to −6°), and **softrepa/hart/janus actually go positive (median +8 to +12°) — they raise the chin when asked to lower it.** This is why pitch acc sits at ~40% (25% for janus); splitting up/down exposes it (the aggregate pitch_acc hid the asymmetry). |yaw| panel confirms infinity under-rotates (mass at 0–35°) and **janus collapses to ~0° (it does not turn at all)**, while softrepa/sana/flux2 sit at 40–65°. → reinforces adopting **flux2** as the backbone (best yaw fidelity *and* willingness to turn).
 
 
 # 2026-06-06 — FLUX.2 ID-personalization + pose (60 IDs × 40 prompts, 2400/exp)
@@ -415,3 +417,426 @@ Consolidated (100 imgs each; B0 = subset of the keep-id full-2400 for the same p
 **WINNER = `keep-id + dup-id ×3 + id-first`: CSIM 0.327 (2.4× the 0.138 keep-id baseline) at YAW 85.0% — ZERO pose loss, no stripping.** id-first ordering on the keep-identity path is the sweet spot: the ID block (placed first, ×3) dominates identity while the pose control is undisturbed (pose = baseline 85%). The only cost is PITCH (50→39; over-weighting ID flattens the chin — chin was always the weak axis). For more ID at a pose cost: `strip+dup4+idfirst` 0.385/74%, or `strip+dup5+idfirst` 0.462/59%. **Gen flags: `--dup-id 3 --id-first` (keep identity word). Next: validate the winner at full 2400 scale; the chin/PITCH drop is the remaining open axis.**
 
 **Generalization (fresh 5 IDs `08851,10771,11689,18327,19511`, `_run_idenh_gen.sh`):** keepid+dup3+idfirst = **0.324 f0 / YAW 87%** (vs 0.327/85% on the original 5; baseline 0.128/86%); strip+dup4+idfirst = 0.426/74% (vs 0.385/74%). **The winner is robust across ID sets — ~2.5× CSIM at zero pose loss.**
+
+### FULL-SCALE VALIDATION of the winner — `idpose_winner_full/` (2400; keepid+dup3+idfirst, verified-OTS controls; `_run_winner_full.sh`)
+| run (2400) | YAW | dir-only | OTS | PITCH | CSIM(aln) | CSIM(f0) | align% |
+|---|---|---|---|---|---|---|---|
+| exp1 (prompt-only ID) | 73.7% | ~94% | — | 46.8% | 0.153 | 0.134 | 87.6% |
+| verified-OTS (no dup) | **84.4%** | 90.2% | 72.9% | **50.8%** | 0.111 | 0.093 | 84.0% |
+| **WINNER keepid+dup3+idfirst** | 82.2% | 91.9% | 69.8% | 40.2% | **0.287** | **0.252** | 87.8% |
+
+Per-category yaw: left 100%, left-OTS 52%, right 98%, right-OTS 78%. → **At full scale the winner holds: CSIM(f0) 0.252 = 2.7× the verified-OTS keep-id baseline (0.093) and ~1.9× exp1 (0.134), while YAW 82.2% still beats exp1 by +8.5** (dup-id ×3 costs only −2.2 yaw vs the no-dup verified config). The 100-img estimate (0.327/85%) was slightly optimistic on 5 IDs; the honest full-2400 number is **0.252 CSIM at 82.2% YAW, keep-identity (no stripping)**. PITCH is the one regression (50.8→40.2 — over-weighting the frontal ID flattens the chin; chin was always the weak axis). **Bottom line: the verified-OTS pose curation (yaw 84.4% > exp1) + `--dup-id 3 --id-first` ID up-weighting (CSIM 2.7×) together give the best joint pose+ID operating point found.** Gen: `flux2_id_pose_matched.py --ids all --dup-id 3 --id-first --ots-exag-left <p24> --ots-exag-right <p15>` (keep identity word).
+
+### PITCH proof-of-concept: chin-rotated controls — chin-DOWN is a model limit (mostly negative)
+Can encoding chin in the control recover PITCH (the winner's regression)? Synthesised chin-up/down sam3d controls (`sam3-body/sam-3d-body/make_pitch_control.py` — rotates head joints {nose,eyes,ears} about the LEFT-RIGHT axis through the neck, body pixel-exact, auto-signs by nose-elevation), used via `flux2_id_pose_matched.py --chin-pitch` (loads `{control}_sam3d_{chinup,chindown}.png` for chin prompts). 100 imgs (winner config + `--chin-pitch`), vs the winner-full subset (same 5 IDs × 20 prompts):
+
+| config | YAW | PITCH | chin-UP acc | chin-DOWN acc | median pitch up / down |
+|---|---|---|---|---|---|
+| winner (no chin-pitch) | 85% | 39% | 88% | **7%** | +18.8° / **+1.9°** |
+| + chin-pitch controls | 86% | 43% | **95%** | 8% | +18.5° / **+0.7°** |
+
+→ **Chin-rotated controls lift chin-UP a little (88→95%, overall PITCH 39→43%) but do NOT fix chin-DOWN (7→8%): output median pitch stays ~0° when it should be < −15°.** FLUX won't render a chin-down head even when the 2D skeleton clearly encodes it — the **same model-resistance pattern as left-OTS** (and as every T2I in the 5-model comparison, where chin-down was the universal failure). **Chin-down is a fundamental FLUX.2-klein limit, not a control-quality problem** — the skeleton's chin-down signal isn't read, just as left-over-shoulder isn't. CSIM unaffected (0.327→0.336). Net: PITCH is capped; the winner's PITCH drop is partly recoverable on chin-UP but chin-DOWN is out of reach via in-context 2D skeletons.
+
+### New tooling this session (ID-enhance + pitch)
+`flux2_id_pose_matched.py` flags: `--dup-id N`, `--dup-ctrl N` (rejected), `--id-first`, `--id-dir`, `--chin-pitch`, plus the earlier `--ots-strongest`, `--ots-exag-left/right`. Synthesis: `make_exaggerated_ots.py` (head yaw rotation), `make_pitch_control.py` (head pitch rotation), `make_id_facecrop.py` (mediapipe face crops, rejected). Eval helpers: `normalize_idfile.py`, `idenh_report.py`. Runners: `_run_idenh_round{1..5}.sh`, `_run_idenh_gen.sh`, `_run_winner_full.sh`, `_run_pitch_poc.sh`, `_run_otsverified_full.sh`, `_run_step_sweep.sh`.
+
+# 2026-06-09 — Minimal learnable ID-token module (AdaFace→projector→K tokens→concat): NEGATIVE
+
+**Goal (narrow, deliberately minimal).** Test whether projecting a frozen-AdaFace identity feature
+into **K learnable tokens, concatenated to the MM-DiT visual-token sequence**, improves identity
+preservation — with **nothing else added** (no LoRA, no step-dependent attention bias, no attention
+routing, no pose loss, no sigma-schedule change). Only a small projector trains; FLUX.2-klein +
+AdaFace are frozen. The minimal member of the IP-Adapter/PhotoMaker family. Design in
+`LEARNABLE_ID_TOKEN_design.md`.
+
+### Architecture (confirmed conceptually sound)
+```
+ID image →(adaface, frozen) AdaFace ir_101 → id_emb[B,512] →(TRAINABLE) IDTokenProjector
+  (LN→Linear512→1024→GELU→Linear→K·128) → id_tokens[B,K,128]  →  appended as one more
+  reference block to image_latents → frozen x_embedder(128→3072) → joint attention in MM-DiT.
+```
+Tokens enter in the **packed reference space `in_channels=128`** (same path as VAE reference
+images), so **no transformer surgery** — only `image_latents`/`image_latent_ids` are extended
+(`append_id_tokens`, RoPE 4-D `(T,H,W,L)` with the next free T-slot `T=10·(n_refs+1)`, `W=0..K-1`).
+At inference the injection is a monkeypatch on `pipe.prepare_image_latents` so the entire real
+`__call__` (scheduler/mu/decode) is reused unchanged.
+
+### Pipeline (env-split, 3 stages) + scripts created this session
+| Stage | Env | Script | Output |
+|---|---|---|---|
+| A. ID embeddings | `adaface` | `prep_id_embeds.py` | `id_cache_train/` (2000 face-detectable LAION embeds [2000,512] + `index.csv`), `id_cache_eval/` (60 ID embeds + `names.txt`) |
+| B. Train projector | `softrepa` | `train_id_tokens.py` (+ `id_token_module.py`) | `id_projector.pt` — frozen FLUX, custom flow-matching loop, **grad-checkpointed** (backprop reaches the projector *through* the frozen 4B transformer) |
+| C. Eval | `softrepa`+`smplestx`+`adaface` | `flux2_id_tokens_gen.py` (`--use-id-tokens`), reuses `eval_angles_resume.py`/`make_idpose_poseacc.py`/`eval_adaface_idref.py`/`idenh_report.py` | 4-arm CSIM+pose |
+Runners `_run_idtok_train.sh` (waits for the GPU window → 5-step smoke → 4000-step train) +
+`_run_idtok_genC.sh`. Training data: `Gemma/laion_gender_age_race_long_captioned_extension_prompt25_race_fixed_viewer.csv`
+(2000 `sam3d_status==OK` + face-detectable rows; ID = the target image's **own** face so the only
+face signal is the AdaFace token; skeleton = bank-matched by `long_caption` pose). 4000 steps,
+1024px, K=8, lr 1e-4.
+
+### Result — 100 imgs/arm (20 balanced prompts × 5 IDs, verified-OTS controls, seed 42, 4 steps)
+Baseline here = **skeleton + prompt only, NO ID image** (the true no-ID-conditioning floor; this is
+*not* the prior exp1 baseline, which fed the ID image as a VAE block → ~0.13). The only variable is
+whether K=8 projected AdaFace tokens are appended.
+
+| arm | n | CSIM(aln) | CSIM(f0) | align% | YAW | PITCH |
+|---|---|---|---|---|---|---|
+| baseline keep-id | 100 | 0.0152 | 0.0137 | 90% | **85.0%** | 55.0% |
+| **+ID-tokens keep-id** | 100 | 0.0120 | 0.0120 | 100% | **85.0%** | 55.0% |
+| baseline strip | 100 | 0.0056 | 0.0033 | 60% | 70.0% | 70.0% |
+| **+ID-tokens strip** | 100 | 0.0068 | 0.0042 | 61% | 72.0% | 67.0% |
+
+**Verdict: NEGATIVE — the minimal token injection does NOT transfer identity.** CSIM stays at the
+no-conditioning floor: keep 0.0137→0.0120 (slightly *down*), strip 0.0033→0.0042 (negligible, within
+noise). Pose is untouched (YAW 85% keep, identical to baseline — the tokens don't fight the skeleton).
+
+**Why it failed (mechanism, evidenced):**
+1. **Training loss never decreased** — flat ~0.67–0.76 from step 50 to 4000. Among ~8200 visual
+   tokens (4096 gen + 4096 skeleton + 8 ID), the 8 ID tokens give the projector negligible leverage
+   to reduce the flow-matching reconstruction loss against a frozen backbone → the projector receives
+   almost no gradient signal → learns nothing useful.
+2. **The injection path is correct and live** (not a wiring bug): +ID-tokens outputs differ from
+   baseline by mean |Δpixel| = 1.9/255 — the tokens *do* enter the MM-DiT and perturb the image, but
+   the perturbation is **identity-neutral**. The frozen `x_embedder` (trained on VAE-latent stats)
+   maps the projector's 128-d vectors to embeddings the attention largely ignores.
+
+**Contrast with what works.** `dup-id` (full 2400: CSIM 0.252) feeds a **full VAE-encoded ID image
+block** the model already knows how to attend to; that's a ~1024-token reference, not 8 abstract
+tokens, and needs no training. The minimal AdaFace-token route is the cleaner *idea* (identity-pure,
+pose-invariant, same space as the CSIM metric) but is too weakly coupled to a frozen distilled
+backbone to learn anything from MSE alone.
+
+**Implication for next steps (all beyond the deliberately-minimal scope of this run):** the token
+needs stronger coupling and/or a stronger signal — e.g. inject post-`x_embedder` at d_model=3072
+(more expressive, needs transformer hooks), many more tokens, an **identity-aligned auxiliary loss**
+(decode prediction → AdaFace CSIM term) so the projector gets direct identity gradient instead of
+diluted reconstruction gradient, or a cross-attention IP-Adapter rather than soft-prompt concat.
+For now, `dup-id 3 + id-first` (CSIM 0.252, no training) remains the best ID lever; this experiment
+cleanly rules out the *minimal* projector+concat variant.
+
+## 2026-06-09 (follow-up) — Identity-aligned auxiliary loss ABLATION: gradient flows, CSIM still doesn't move (NEGATIVE)
+
+**One hypothesis, one variable.** The section above diagnosed the null as "the projector gets no
+useful gradient from MSE." This ablation adds a **direct identity gradient** and asks only: does CSIM
+*start to move*? Everything else is held identical to the null — concat injection unchanged, backbone
+frozen, skeleton kept, K=8, no cross-attention, no sigma-schedule change. **Only** `total = mse +
+λ·id_loss` is added, where `id_loss = 1 − cos(AdaFace(decode(x0_pred)), id_emb_target)`, gated to
+near-clean timesteps (σ<0.3) so the one-step `x0_pred` is sharp enough for AdaFace. 200 IDs, 512px.
+
+**The crux — keeping the id-loss differentiable to the projector.** The whole chain
+`proj → transformer → v_pred → x0_pred(=noisy−σ·v_pred) → vae.decode → align → AdaFace → CSIM` must
+retain grad, or the projector gets zero ID signal (= the null again). The standard AdaFace alignment
+(`align.get_aligned_face`, MTCNN on a file path → PIL crop) is **non-differentiable** and would detach
+the graph. **Solution:** precompute each training image's face-alignment transform **offline** (env
+`adaface`, which has cv2) and at train time apply it to the *decoded prediction* with a **pure-torch
+`grid_sample` warp** (env `softrepa` has no kornia/cv2). The transform is the EXACT cv2 4-DOF
+*similarity* `tfm` (a 6-DOF affine lstsq fit does NOT match it — caught by validation), converted to the
+`F.affine_grid` convention `theta = normIn⁻¹·inv([tfm;0,0,1])·normOut`; validated vs cv2 warp to
+mean-pixel-diff **0.21** → 200/200 cached thetas. (Tooling: `prep_id_embeds.py --save-align`
+→ `id_cache_train200/align_theta.npy`; `train_id_tokens.py --id-loss --lambda-id --id-sigma-max`;
+runners `_run_idtok_idloss.sh`, `_run_idtok_idloss_genC.sh`.)
+
+**Self-controlled run: λ=0 (MSE only) vs λ=0.5, identical data/skeleton/seed.**
+
+| signal | λ=0 (control) | λ=0.5 |
+|---|---|---|
+| **in-loop val-CSIM** (held-out 16, fixed σ=0.2) | 0.451 → 0.451 (flat) | 0.451 → 0.451 (flat) |
+| projector **grad-norm** (step 250 → 2000) | 0.011 → 0.139 | 0.006 → **0.21 @1750** → 0.177 |
+| train `id_loss` (diluted by fire-rate ~0.2) | — | 0.10 → 0.09 (noisy, no clear trend) |
+
+**Decisive end-to-end generation CSIM** (full denoise from noise, identity ONLY from the tokens — no
+target leakage; 100 imgs = 20 prompts × 5 eval IDs, verified-OTS controls, 1024px):
+
+| arm | CSIM(aln) | CSIM(f0) | align% |
+|---|---|---|---|
+| baseline (no token) | 0.0152 | 0.0137 | 90% |
+| id-loss **λ=0** projector | 0.0156 | 0.0147 | 94% |
+| id-loss **λ=0.5** projector | 0.0150 | 0.0143 | 95% |
+
+**Verdict: NEGATIVE — and it moves the diagnosis.** The auxiliary loss **does** deliver a direct
+identity gradient (λ=0.5 grad-norm exceeds λ=0 throughout training — gradient genuinely reaches the
+projector through decode→AdaFace, the make-or-break the prior section lacked). **Yet CSIM does not
+move:** the in-loop val proxy is flat (0.451 both), and decisively the end-to-end generation CSIM is
+**0.0143 (λ=0.5) ≈ 0.0147 (λ=0) ≈ 0.0137 (baseline)** — all indistinguishable at the no-conditioning
+floor. So the binding constraint is **NOT** the absence of an identity gradient (the prior hypothesis);
+it is the **injection mechanism + frozen guidance-distilled backbone**: 8 abstract tokens concatenated
+through the frozen `x_embedder` cannot steer identity even when trained against a direct AdaFace signal.
+(The tiny apparent train-`id_loss` wiggle on the *training* faces' one-step decode did not generalize —
+flat on held-out val, floor at generation.)
+
+**Caveats.** (i) The σ=0.2 val proxy is contaminated (`x0_pred ≈ 0.8·x0 + …` leaks the true target),
+so its flatness is weak evidence on its own — the end-to-end generation CSIM is the load-bearing
+result. (ii) Pose was not evaluated for the two id-loss arms (no `pose_acc.csv`); id-tokens don't carry
+pose, so this is immaterial to the verdict.
+
+**Implication.** Both levers on the *training signal* are now exhausted (MSE → null; +direct identity
+loss → still null). The next experiment must change the **injection**, not the loss: post-`x_embedder`
+injection at d_model=3072, many more tokens, or a cross-attention IP-Adapter — i.e. give the identity
+condition a pathway the frozen MM-DiT actually attends to, rather than a soft-prompt concat it ignores.
+
+## 2026-06-09 (follow-up 2) — Cross-attention IP-Adapter injection: mechanism works, doesn't generalize at ablation scale (NEGATIVE)
+
+Changes the injection from concat to a **decoupled cross-attention IP-Adapter** on FLUX.2-klein's MM-DiT
+(`ip_adapter_flux2.py`): every attention layer (5 double + 20 single = 25) gets a parallel image-prompt
+attention `attn_out += ip_scale·SDPA(Q_joint, Wk_ip·id, Wv_ip·id)`; id tokens come from the projector at
+d_model=3072 and are routed via `attention_kwargs→joint_attention_kwargs` (FLUX threads them to every
+processor; non-reentrant checkpointing keeps grad). Trainable: per-layer `Wk_ip/Wv_ip/norm_k_ip` (fp32)
++ projector = **471.9M + 25.7M**; backbone frozen. New: `--inject ip` in `train_id_tokens.py`,
+`flux2_ip_gen.py` (inference via `attention_kwargs`), TensorBoard logging (`train/id_csim`=1−id_loss =
+decoded-image ID CSIM, `val/csim`, mse, grad-norm). 1000 IDs (`id_cache_train1000`), 512px.
+
+**Mechanism is verified live** (the precondition concat lacked): install smoke gives output that responds
+strongly to `ip_scale` and **IP grad-norm 1.12 / projector 0.80** — gradient reaches the cross-attn K/V
+through the frozen checkpointed backbone (≫ the ≤0.05 of any concat run).
+
+### Run A — IP + MSE-only (canonical IP-Adapter training, 3000 steps)
+| arm | CSIM(f0) |
+|---|---|
+| baseline (no token) | 0.0137 |
+| ip_scale 0.5 | 0.0158 |
+| ip_scale 1.0 | 0.0109 |
+| ip_scale 1.5 | **−0.0124** (destructive) |
+
+**Training MSE never moved** (flat ~0.51–0.58/3000 steps); val-CSIM flat (0.437). Root cause = the
+**objective, not the mechanism**: reconstructing the target whose own latents already carry its identity
+makes the IP condition *redundant* for MSE → no pressure to use it (same failure as concat-MSE). CSIM
+goes *negative* at scale 1.5 = the (undertrained, near-random) IP perturbs destructively, not toward ID.
+
+### Run B — IP + id_loss (the synthesis: capable mechanism + a signal that demands identity, λ=0.5, σ<0.3, 2000 steps)
+| signal | result |
+|---|---|
+| `train/id_csim` (training faces, decoded one-step) | **rises 0.23 → ~0.5–0.7** ✅ optimizes |
+| `val/csim` (held-out, σ=0.2 proxy) | **flat 0.482 → 0.481** ❌ |
+| end-to-end CSIM (held-out **eval IDs**, ip_scale 1.0 / 1.5) | **0.0013 / 0.0038** ❌ (≤ baseline 0.0137) |
+
+**Verdict: optimizes the training objective but does NOT generalize — it overfits.** The id_loss fires at
+σ<0.3 where the decoded prediction *already contains the target* (latent leakage `x0_pred≈0.7·x0+…`); the
+IP learns to nudge that already-present face — a per-sample correction **exploiting leakage**, not learning
+to use the AdaFace condition. At inference (full denoise from noise, no leakage) it has nothing
+generalizable and even degrades faces (CSIM≈0). 471.9M IP params on **1000 IDs / 2000 steps** is also
+vastly under the IP-Adapter data regime (millions of images), so memorization dominates.
+
+### Net across the 4-experiment arc (concat×{MSE,id_loss}, IP×{MSE,id_loss})
+The cross-attn **mechanism is capable** (grad flows strongly; Run-B train objective provably optimizes —
+the first config to do so), but **no config achieved generalizable ID injection** into the frozen
+guidance-distilled FLUX.2-klein at this ablation scale. Concat can't inject at all (grad ~0 or
+identity-neutral); IP can inject but, with small data + a low-σ id_loss that's gameable via target
+leakage, it overfits. **Genuine paths forward (beyond ablation scope):** (a) the real IP-Adapter data
+regime (≫1000 IDs); (b) an id_loss that can't exploit leakage — compute it at **high σ / on full
+generations** (identity must come only from the condition); (c) drop/cropped reference so the condition
+is non-redundant. `dup-id 3 + id-first` (CSIM 0.252, no training) remains the only working ID lever so far.
+
+### Run C — IP + id_loss, QUALITY-preserving (gated IP + margin-clamp + TB image monitor)
+Motivated by "id_csim up but image quality DOWN" — id_loss is a recognition-cosine objective that gets
+*hacked* into high-freq artifacts. Three fixes: ① **gated IP** (learnable per-layer scalar gate, init 0.1
+so the base model's quality is preserved at start and IP adds gently — exact-0 dead-locks the K/V grad);
+③ **margin-clamped id_loss** `relu(0.6−cos)` (stop pushing once decoded CSIM hits 0.6 → no over-optimising
+into artifacts); ⑤ **TensorBoard decoded-image logging** (`val/decoded`) to watch quality vs identity live.
+
+| signal | result |
+|---|---|
+| `train/ip_gate_mean` | **0.10 → 0.09 (gate CLOSES)** — the model actively suppresses the IP |
+| `val/csim` (held-out) | flat 0.482 |
+| end-to-end CSIM (eval IDs, ip_scale 0.5 / 1.0) | **0.0131 / 0.0002** (≈ baseline 0.0137 / ~0) |
+
+→ The quality fix works (quality preserved) **but the gate closing is the smoking gun:** given no
+generalizable identity signal, the model's optimum is to *turn the IP off* → ID is never transferred.
+Quality is preserved precisely by **not injecting**. (Visually confirmed by the user: the reference ID is
+not applied to the outputs at all.)
+
+### ROOT CAUSE (definitive, across all 5 configs) — the training OBJECTIVE never forces use of the condition
+Every run trains by **reconstructing the target image whose identity is already in the noised latents**, so
+the ID condition is **redundant** — the model can minimise the loss without it, and (Run C proves) actively
+**learns to ignore/suppress it** (gate 0.10→0.09). This is **orthogonal to the injection mechanism** (concat
+vs cross-attn) **and to quality tweaks** (gate/clamp): all five configs fail to transfer ID at inference
+(held-out generation CSIM ≈ 0.001–0.016, never above the prompt-only floor). **The σ<0.3 `id_csim` "rising
+to 0.5–0.7" was a misleading proxy** — it measured the *target leaking through* on training faces, not real
+ID transfer; only the held-out end-to-end generation CSIM is trustworthy.
+
+**To actually transfer ID, the objective must make the condition the ONLY identity source:**
+(a) **full-generation id_loss** — periodically sample from pure noise with the IP condition and AdaFace-CSIM
+the *final* image (backprop through sampling); the only way to win is to use the condition; (b) much more
+data + the standard adapter regime (≫1000 IDs, GPU-days, à la InstantID/PuLID); (c) reference ≠ target view.
+Until then, **training-free `dup-id` (keepid+dup3+idfirst, CSIM 0.252, ~2.7× baseline) is the ONLY lever that
+visibly swaps identity** in this codebase (`idenh_qualitative.png`).
+
+### Tooling this arc
+`ip_adapter_flux2.py` (Flux2IPAttnProcessor / Flux2IPParallelProcessor with learnable `gate` +
+`install_ip_adapter(gate_init)`/`ip_state_dict`/`load_ip`), `train_id_tokens.py --inject ip --ip-scale
+--gate-init --id-margin --img-every` + TensorBoard (`runs/`: `train/id_csim,ip_gate_mean`, `val/csim`,
+`val/decoded` images), `flux2_ip_gen.py`, runners `_run_idtok_ip.sh`, `_run_idtok_ip_idloss.sh`,
+`_run_idtok_ip_quality.sh`. (Installed `tensorboard` into env `softrepa`.)
+
+## 2026-06-10 — Full-generation id_loss (the leakage-free objective): correct in principle, still fails at ablation scale (NEGATIVE)
+
+The fix the prior diagnosis demanded: instead of a leakage-prone one-step x0 id_loss, **generate from pure
+noise through a DIFFERENTIABLE K-step Euler sampling with the IP condition, decode the FINAL image,
+MTCNN-detect+align (in-process), AdaFace-CSIM vs target** (`fullgen_id_loss.py`). From noise there is no
+target leakage, so the only way to lower the loss is to USE the condition. `--id-loss-mode fullgen` in the
+trainer; the val + `train/id_csim` are now the **real generation CSIM** (val on truly held-out IDs excluded
+from training), TB logs the actual generated images (`val/generated`). `mse-weight 0` (the MSE-reconstruct
+anchor wants the IP OFF — it was what closed the gate — so it is dropped). Config: gen-steps 4, 512px, gate
+0.1, λ 1.0, 1000 IDs, 2000 steps. **Standalone-verified the make-or-break:** face detected in the generated
+image, **gradient flows strongly through the whole sampling (IP grad 2.66, proj 1.86)**, ~2 s/step, 23 GB.
+
+| metric (2000 steps) | result |
+|---|---|
+| `val/csim` held-out **real generation** CSIM | bounces −0.08…+0.07, **mean ≈ 0, no trend** |
+| `train/id_csim` (real gen) | noisy ~0.01–0.15, no rise; gate **0.10 → 0.096 (drifts down)** |
+| Stage-C eval IDs s1.0 / s1.5 | CSIM 0.0038 / 0.0000, **align% 22% / 7%** (vs 90% baseline) |
+
+**Verdict: NEGATIVE — and the align% collapse is the new evidence.** The objective is now *correct* (no
+leakage; gradient proven to flow), yet on this budget the 471M IP K/V **cannot find a generalizable identity
+direction** (held-out CSIM flat ≈ 0), and the strong-but-noisy per-sample full-gen gradient mostly
+**destroys the face** — only 22% (s1.0) / 7% (s1.5) of generated images still have a *detectable* face (vs
+90%). The gate even drifts *down*: the model "wants less IP" because the injection is net-harmful.
+
+**Two compounding walls (the real conclusion of the whole investigation):**
+1. **Data/compute.** Learning face-ID injection from scratch is data-hungry — InstantID/PuLID use *millions*
+   of face images + GPU-days. 1000 IDs / 2000 steps / ~30 min is 3–4 orders of magnitude short; the per-step
+   signal (one random ID/skeleton/seed) is too noisy for 471M params to converge.
+2. **The distilled backbone is fragile.** FLUX.2-klein is a guidance-distilled *4-step* model with a narrow
+   generation manifold; strong external IP injection knocks generation off-manifold → **faces stop forming**
+   (the align% collapse). A non-distilled / many-step base would tolerate injection far better.
+
+### FINAL conclusion (concat × {MSE, id_loss}; IP × {MSE, id_loss(onestep), id_loss(fullgen), gated+clamped})
+**No learnable from-scratch approach transferred identity** into the frozen distilled FLUX.2-klein at
+ablation scale — across both injection mechanisms and the full ladder of training signals up to the
+theoretically-correct full-generation id_loss. The mechanism (cross-attn) and the objective (full-gen) are
+each correct in principle; the binding constraints are **data/compute scale + the fragile distilled
+manifold**, not a fixable detail. **The only lever that visibly swaps identity remains training-free
+`dup-id` (keepid+dup3+idfirst, CSIM 0.252).** A real learnable adapter here would need: a much larger face
+set (full LAION-10k+ / a face dataset), many more steps + LR schedule, likely a non-distilled base or a
+pretrained face-adapter as init — a serious training run, not an ablation. New tooling: `fullgen_id_loss.py`,
+`train_id_tokens.py --id-loss-mode fullgen --gen-steps --mse-weight`, `_run_idtok_fullgen.sh`. (Installed
+`opencv-python-headless`==4.10 + pinned `numpy`==1.26.3 in env `softrepa` for in-process MTCNN.)
+
+## 2026-06-10 (overnight) — Paper-inspired injections (EasyControl, XVerse) + ID↔quality Pareto
+
+User directive: read `docs/paper/` for directions, run experiments to lift ID CSIM without hurting quality
+or overfitting; and if ID is decent, validate pose + image quality. Studied **UniCTokens** (per-concept
+test-time tuning — not zero-shot, N/A), **EasyControl** (ICCV25: Condition-Injection-LoRA — reuse frozen
+W_k/W_v + rank-r LoRA, concat cond K/V into the *single softmax* → bounded/gentle, ~15M params), and
+**XVerse** (NeurIPS25, the sharpest: *"injecting control through attention deviates the sampling
+trajectory and reduces quality"* = our align-collapse; their fix = inject via **AdaLN text-stream
+modulation**, with VAE features only as auxiliary detail). Every strong method uses **rich VAE/CLIP image
+features, never a 512-d vector** — which is why our AdaFace-token track is weak and training-free dup-id (VAE
+image ref) works.
+
+### Three new injection mechanisms tried (all gentle/low-param; full-gen id_loss; 1000 IDs / 512px)
+| inject | trainable | quality (gen face-detect) | held-out gen CSIM | verdict |
+|---|---|---|---|---|
+| **EasyControl-LoRA** + AdaFace token | 4.9M LoRA + 6.4M proj | preserved (fire ~0.8) | **flat ~0.0** | AdaFace token too weak |
+| **EasyControl-LoRA** + VAE-image cond ("learnable dup-id") | 4.9M LoRA only | preserved (fire ~0.8) | **flat ~0.01** | LoRA can't amplify the gentle concat |
+| **XVerse modulation** (temb += MLP(AdaFace), AdaLN) lr5e-4 | 1.8M MLP | **collapses (fire 0.20→0.04)** | flat | over-push drives AdaLN off-manifold |
+| **XVerse modulation** lr1e-4 + margin0.4 | 1.8M MLP | preserved (fire ~0.84) | **flat ~0.0** | gentle → stable but no ID gain |
+
+→ Confirms (now **8 learnable configs**, every injection × objective) that held-out CSIM **does not move**
+at this data/compute scale. EasyControl/XVerse fix the *quality* side (gentle injection keeps faces
+detectable — fire stays ~0.8, no align-collapse) but cannot conjure a generalizable identity mapping from
+1000 IDs. New tooling: `ip_adapter_flux2.py` (`Flux2EasyCtrl*Processor`/`install_easycontrol`,
+`IDModulationInjector`/`install_id_modulation`), `train_id_tokens.py --inject {easycontrol,modulation}
+--lora-rank --cond-source {adaface,vaeimg} --cond-size`, `fullgen_id_loss.vae_cond_tokens`,
+`_run_idtok_{lduid,modulation,modulation2}.sh`.
+
+### dup-id is the working operating point — its ID↔pose↔QUALITY characterized (the conditional deliverable)
+Since training-free **dup-id (keepid+dup3+idfirst) is the only thing that lifts ID** (full-2400 CSIM **0.252**),
+validated it on pose **and** image quality (user asked):
+- **Pose:** **YAW 82.2%** (left 100 / left-OTS 52 / right 98 / right-OTS 78), PITCH 40.2% (chin-down is the
+  known model limit). i.e. pose is **good** and unharmed by dup-id.
+- **Quality / distortion (`quality_assess.py`, no-ref Laplacian sharpness; 350 random imgs, SAME prompts):**
+  dup-id **does soften** the image — **sharpness 47 vs 87** for the no-dup verified-OTS config (faces still
+  form: align 87.8%, so no gross distortion, but visibly smoother). Montage `quality_dupid_vs_nodup.png`.
+- **ID↔sharpness Pareto** (dup count, consistent 100-img subset): dup2 **0.199**/sharp 60 → dup3+idfirst
+  **0.327**/52 → dup4+idfirst **0.352**/37 → dup5 **0.462**/12. **More dup = more ID, softer image.** So the
+  user picks an operating point on this curve; dup3+idfirst is the knee (good ID, moderate softening).
+
+(EasyControl-AdaFace, learnable-dup-id, modulation-lr5e-4 killed early once flat/collapsing; modulation2
+final Stage-C: CSIM **0.0116** ≈ baseline 0.0137, align 50% — confirms flat.)
+
+### The softening IS cheaply fixable — dup-id + unsharp (training-free, ID preserved) — **FULL 2400**
+The only quality cost of dup-id is reduced sharpness; a post-hoc **unsharp mask (amt 1.0, radius 2)**
+recovers it with negligible ID loss. Validated on the **full 2400** (`idpose_winner_unsharp/`,
+`_run_unsharp_eval.sh`, `quality_assess.py`):
+| (n=2400) | CSIM(f0) | align% | sharpness |
+|---|---|---|---|
+| dup-id (raw) | **0.252** | 87.8% | 47.8 |
+| **dup-id + unsharp 1.0** | **0.249** | 87.3% | **166.8** |
+→ sharpening **3.5×** (47.8→166.8, now *above* the no-dup ~87) for only **−0.003 CSIM** and no align change.
+amt 1.0 slightly over-sharpens (no-dup level is ~amt 0.5); tune amt to taste. **So "high ID without quality
+loss" is achievable *today*: dup-id (keepid+dup3+idfirst) for ID + a cheap unsharp post-process for
+sharpness.** Pose is unaffected by sharpening (YAW stays 82.2%).
+
+**Bottom line for the user:** no learnable adapter beat dup-id at this scale (8 mechanisms, incl. the two
+most-relevant papers EasyControl + XVerse — they fix *quality* but can't learn ID from 1000 IDs).
+**Recommended operating point: dup-id `keepid+dup3+idfirst` (CSIM 0.252, YAW 82.2%, pose unharmed) +
+unsharp(1.0) to undo the softening (full-2400: CSIM 0.249, sharpness 47.8→166.8).** Tune ID↔sharpness via dup-count
+(dup2→dup5: CSIM 0.20→0.46). A learnable adapter that lifts ID *natively* needs the real regime
+(≫1000 IDs + non-distilled/longer-step base), not an ablation.
+
+### Lever A — demographic-matched prompts: the one real ID gain (training-free) ✅
+Diagnosis of the dup-id winner's CSIM: it's **bimodal** (median 0.29, p10 0.04 / p90 0.54 → 30% strong >0.4,
+**21% fail <0.1**), pose-neutral (L/R/OTS all ~0.28), with **huge per-ID spread (0.03→0.50)**. The fails are
+ID-specific; a big chunk is the **prompt's identity word conflicting with the ID's demographic** — each ID is
+paired with all 40 pose prompts, ~half of which carry the wrong gender/race word ("A black man…" over an
+asian-woman ID → CSIM≈0). The 40 prompts only cover {white,black,latino,middle-eastern} — **no asian/indian**,
+yet ~15 IDs are asian/indian → always race-mismatched.
+
+**Validated the lever before building it.** Labelled the 60 eval IDs' gender/race/age with **`google/gemma-4-E2B-it`**
+(`Gemma/gemma_id_demographics.py` → `eval_id_demographics_gemma.csv`) — NOT DeepFace, whose race/age is too noisy
+(Gemma vs DeepFace agree only 62% gender / 75% race; DeepFace over-called male). Splitting the winner's CSIM by
+Gemma-match gives a clean ordering: **gender+race match 0.306 / gender-only 0.303 / race-only 0.217 / neither 0.201**
+→ if every output were matched, expected mean ≈ **0.306** (vs 0.252); gender is the dominant factor.
+
+**Lever A = rewrite each prompt's demographic to the ID's** (`flux2_id_pose_matched.py --demo-csv`: `rewrite_demo`
+swaps the leading "A <race> <age> <man|woman>" + head pronoun to the ID's; pose/scene clauses untouched). **100-img
+validation (same 5 IDs × 20 prompts, seed-matched):**
+| | CSIM(f0) | align% |
+|---|---|---|
+| winner (keep-id) | 0.327 | 92% |
+| **lever A (demo-match)** | **0.386** | 90% |
+→ **+0.059 (+18%)**, *above* the estimate. Per-ID: the previously-mismatched demographics gain most (00901 man/white
+0.42→0.56, 01264 woman 0.24→0.33, 08281 middle-eastern 0.29→0.34); already-strong IDs flat (08788 0.50).
+
+**FULL 2400 (`leverA_demomatch_full/`, definitive):**
+| (n=2400) | CSIM(f0) | CSIM(aln) | align% | YAW | PITCH |
+|---|---|---|---|---|---|
+| winner (keep-id) | 0.252 | 0.287 | 87.8% | 82.2% | 40.2% |
+| **lever A (demo-match)** | **0.306** | **0.353** | 86.6% | 80.4% | 38.7% |
+→ **+0.054 CSIM (+21%)** — exactly the estimate — for only **−1.8% YAW** (essentially free on pose) and negligible
+align/pitch. (Unsharp stacks on top: preserves CSIM, restores sharpness, as in the dup-id+unsharp table above.)
+
+**FINAL recommendation: dup-id `keepid+dup3+idfirst` + verified-OTS + Gemma demographic-matched prompts (lever A)
++ unsharp.** Lever A is the first thing to beat plain dup-id on ID (training-free, ~free on pose, no quality cost):
+**CSIM 0.252→0.306 (+21%), YAW 82→80%.** Remaining drag = the ~10% reference/renderability fails (Fei-Fei/Stephen
+type), which demographic-matching can't fix — a better/face-cropped reference per ID is the next lever.
+Tooling: `Gemma/gemma_id_demographics.py` (gemma-4-E2B-it), `eval_id_demographics_gemma.csv`,
+`flux2_id_pose_matched.py --demo-csv` (`rewrite_demo`), `_run_leverA{,_full}.sh`.
+
+## ★ CURRENT STRONGEST VERSION (authoritative spec) — `leverA_demomatch_full/`
+
+**Pipeline (all training-free, FLUX.2-klein frozen, 4 steps, 1024px, seed 42):**
+1. **Pose control** = verified-OTS SAM-3D skeleton: left-OTS prompts→p24 skel, right-OTS→p15, all others→
+   category-matched skel (`build_matching`, by measured dir+OTS). VAE-encoded → one reference token block.
+2. **Identity** = the ID portrait, VAE-encoded → token block, **duplicated ×3** (`--dup-id 3`), placed
+   **first** in the reference order (`--id-first`). So `image = [ID, ID, ID, skeleton]`.
+3. **Prompt** = the pose prompt with its leading demographic descriptor + head pronoun **rewritten to the
+   ID's gemma-4-E2B-it gender/race/age** (`--demo-csv eval_id_demographics_gemma.csv`, `rewrite_demo`);
+   pose/scene clauses unchanged. Keep-identity (no strip).
+4. `pipe(image=[ID×3, skel], prompt=rewritten)` → **unsharp mask (amt 0.5–1.0)** post-process for sharpness.
+
+**Diff vs baselines** — `CSIM(aln)` = mean over **only the face-detected outputs**, with its count
+`n_detected/N`; `CSIM(f0)` = all outputs (undetected face = 0); pose = **yaw AND pitch** acc:
+| stage | what's added | CSIM(aln) ↑ | n_detected / N | CSIM(f0) ↑ | YAW ↑ | PITCH ↑ |
+|---|---|---|---|---|---|---|
+| no-ID (prompt+skel only) | — | 0.015 | 90/100 | 0.014 | 85.0% | 55.0% |
+| exp1 (prompt-only `[ID]`) | ID ref ×1 | 0.153 | 2102/2400 | 0.134 | 73.7% | 46.8% |
+| + SAM-3D control `[sam3d,ID]` | pose ctrl | 0.111 | 2016/2400 | 0.093 | **84.4%** | 50.8% |
+| **winner** `[ID×3,sam3d]` id-first | dup-id ×3 + id-first | 0.287 | 2106/2400 | 0.252 | 82.2% | 40.2% |
+| **★ STRONGEST** = winner + lever A | demographic-aligned prompt (+unsharp) | **0.353** | 2078/2400 | **0.306** | 80.4% | 38.7% |
+
+(face-detect rate stays ~87% across the ID stages — the CSIM gains are real, not alignment survivorship.)
+→ Strongest vs no-ID baseline: **CSIM 0.014→0.306 (~22×)**; vs prompt-only exp1: f0 0.134→0.306 (~2.3×);
+vs the previous-best winner: **+0.054 f0 (+21%) at −1.8% YAW**, sharpness restored by unsharp (CSIM −0.003).
+**Only added ingredient over the winner is a training-free textual prompt rewrite + a post-hoc unsharp.**
+Remaining weak axes (unchanged, both model-level limits): chin-down PITCH (~39%), and ~10% per-ID
+reference-renderability failures. Recorded in thesis `thesis_personalization/README.md` §3.3.4–3.3.5.
